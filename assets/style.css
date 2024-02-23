@@ -1,0 +1,57 @@
+* {
+  margin: 0px;
+}
+
+@font-face {
+  font-family: 'ShareTech';
+  src: url('Share Tech Mono 400.ttf'), format('truetype');
+}
+
+body {
+  background-color: #222222;
+  font-family: 'ShareTech', monospace;
+}
+
+p {
+  color: #F1E9E5;
+  margin: 30px;
+}
+
+a {
+  text-decoration: underline dotted #888;
+  color: #AEDBCE;
+}
+
+a:hover {
+  color: #39AEA9;
+  text-decoration: underline dotted #fff;
+  transition: 1500ms;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #ccc;
+  font-size: 25px;
+  margin: 20px 0px 10px 20px;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #ccc;
+  font-size: 25px;
+  margin: 20px 0px 10px 20px;
+}
+
+ul {
+  margin-top: 10px;
+  color: #F1E9E5;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.sourceCode { color: #ccc; }
+.sourceCode span { margin-left: 20px; }
