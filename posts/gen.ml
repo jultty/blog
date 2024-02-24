@@ -1,6 +1,7 @@
 #!/usr/bin/env utop
 
-let pandoc_params = "--css ../../assets/style.css -s --to html5 --metadata pagetitle='basename' "
+let pandoc_params = "--css ../../assets/style.css -s --to html5 " ^ 
+  "--metadata pagetitle='basename' --highlight-style zenburn "
 
 let vert md = begin
   if md <> "gen.ml" && md <> "html" then
