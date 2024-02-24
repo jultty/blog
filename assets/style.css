@@ -1,6 +1,4 @@
-* {
-  margin: 0px;
-}
+* { margin: 0px; }
 
 @font-face {
   font-family: 'ShareTech';
@@ -49,9 +47,7 @@ ul {
   color: #F1E9E5;
 }
 
-li {
-  margin-bottom: 10px;
-}
+li { margin-bottom: 10px; }
 
 .sourceCode pre {
   color: #ccc;
