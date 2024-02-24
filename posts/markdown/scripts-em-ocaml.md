@@ -1,6 +1,4 @@
----
-title: Scripts em OCaml
----
+# Scripts em OCaml
 
 Este blog gera suas postagens com o Pandoc, mas quem faz o trabalho lógico de identificar os arquivos e montar os comandos é um pequeno script em OCaml.
 
