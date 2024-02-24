@@ -4,14 +4,17 @@ Este blog gera suas postagens com o Pandoc, mas quem faz o trabalho lógico de i
 
 Descobri essa linguagem quando comecei a investigar como poderia substituir o Bash como uma linguagem para scripts. Eu acho que o Bash é excelente para cumprir essa função, apesar de bastante inseguro e propenso a erros. O que me incomodava mesmo era ver que todo aquele tempo escrevendo scripts com Bash poderia ser tempo aprendendo uma linguagem cujo conhecimento se transferisse para muitas outras aplicações.
 
-O script consiste nestas nove linhas apenas:
+O script se resume a:
 
 ```ocaml
-let pandoc_params = "--css ../../assets/style.css -s --to html5 --metadata pagetitle='basename' "
+let pandoc_params = 
+  "--css ../../assets/style.css -s --to html5 --metadata pagetitle='basename' "
 
 let vert md = begin
   if md <> "gen.ml" && md <> "html" then
-    ignore( Sys.command ("pandoc " ^ pandoc_params ^ md ^ " -o html/" ^ md ^ ".html ") )
+    ignore( Sys.command (
+      "pandoc " ^ pandoc_params ^ md ^ " -o html/" ^ md ^ ".html "
+    ) )
 end ;;
 
 let contents = Array.to_list (Sys.readdir ".") in
@@ -25,5 +28,5 @@ Em seguida, defino a função `vert`, que, caso o arquivo não se chame "gen.ml"
 Essa função então é aplicada com `List.map vert contents` a cada arquivo do diretório atual.
 
 ## Referências
-- [Pandoc Markdown CSS Theme](https://jez.io/pandoc-markdown-css-theme/)
 - [Walk a directory/Non-recursively - Rosetta Code](https://rosettacode.org/wiki/Walk_a_directory/Non-recursively#OCaml)
+- [Pandoc Markdown CSS Theme](https://jez.io/pandoc-markdown-css-theme/)
