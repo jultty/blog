@@ -53,5 +53,7 @@ li {
   margin-bottom: 10px;
 }
 
-.sourceCode { color: #ccc; }
-.sourceCode span { margin-left: 20px; }
+.sourceCode pre {
+  color: #ccc;
+  margin-left: 20px;
+}
