@@ -1,11 +1,11 @@
 #!/usr/bin/env utop
 
-let pandoc_params = "--css ../../assets/style.css -s --to html5 " ^
-  "--metadata pagetitle='basename' --highlight-style zenburn "
+let args css = "--css " ^ css ^ " -s --to html5 --highlight-style zenburn "
 
 let vert md = begin
-  let cmd = ("pandoc " ^ pandoc_params ^ md ^ " -o html/" ^ md ^ ".html ") in
-  ignore( Sys.command cmd )
+  Sys.command (
+    "pandoc " ^ args "../../assets/style.css" ^ md ^ " -o html/" ^ md ^ ".html "
+  )
 end ;;
 
 let contents = Sys.readdir "."
