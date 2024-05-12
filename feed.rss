@@ -5,14 +5,14 @@
       <link>http://blog.jutty.dev/</link>
       <description>jutty.dev: Blog</description>
       <language>pt-br</language>
-      <lastBuildDate>Sat, 12 May 2024 23:03:00 GMT--3</lastBuildDate>
+      <lastBuildDate>Sat, 11 May 2024 23:19:00 -0300</lastBuildDate>
       <docs>https://www.rssboard.org/rss-specification</docs>
       <item>
          <title>Scripts em OCaml</title>
-         <pubDate>Sat, 24 Feb 2024 03:22 GMT-3</pubDate>
+         <pubDate>Sat, 24 Feb 2024 03:22 -0300</pubDate>
          <link>https://blog.jutty.dev/posts/html/scripts-em-ocaml.md.html</link>
          <guid>https://blog.jutty.dev/posts/html/scripts-em-ocaml.md.html</guid>
-         <author>juno@jutty.dev (Juno Takano)</author
+         <author>juno@jutty.dev (Juno Takano)</author>
       </item>
    </channel>
 </rss>
