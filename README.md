@@ -2,7 +2,7 @@ A bare-bones personal website relying only on simple scripts.
 
 ## Next
 - [x] Set page titles dynamically
-- [ ] Handle header a11y
+- [x] Handle header a11y
 - [ ] Add post date
 - [ ] Add post authorship linked to author homepage
 - [ ] Add source code link on homepage
