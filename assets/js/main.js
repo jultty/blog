@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const item = document.createElement("li")
     const anchor = document.createElement("a")
     anchor.innerText = post.title
-    anchor.href = 'posts/html/' + post.slug + '.md.html'
+    anchor.href = 'posts/' + post.slug + '.html'
     item.appendChild(anchor)
     post_list.appendChild(item)
   })
