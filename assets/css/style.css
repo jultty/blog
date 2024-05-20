@@ -75,3 +75,31 @@ footer {
 .footer-back {
   float: right;
 }
+
+/* tablet */
+@media (min-width: 401px) {
+  .article { margin: 0 45px; }
+  .article p {
+    margin: 25px 0px;
+  }
+}
+
+/* widescreen */
+@media (min-width: 1000px) {
+  .article {
+    display: grid;
+    grid-template-columns: 1fr 700px 1fr;
+  }
+  .article p {
+    grid-column-start: 2;
+    margin: 15px;
+  }
+}
+
+/* phone */
+@media (max-width: 400px) {
+  .article { margin: 0 20px; }
+  .article p {
+    margin: 25px 0px;
+  }
+}
