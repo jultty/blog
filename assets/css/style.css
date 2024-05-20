@@ -82,6 +82,9 @@ footer {
   .article p {
     margin: 25px 0px;
   }
+  h1 {
+    margin-left: 45px;
+  }
 }
 
 /* widescreen */
@@ -93,6 +96,14 @@ footer {
   .article p {
     grid-column-start: 2;
     margin: 15px;
+  }
+  #title-container {
+    display: grid;
+    grid-template-columns: 1fr 700px 1fr;
+  }
+  #title-container h1 {
+    grid-column-start: 2;
+    margin: 80px 15px 30px 15px;
   }
 }
 
