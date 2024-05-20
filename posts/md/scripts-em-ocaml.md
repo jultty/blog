@@ -1,4 +1,8 @@
-# Scripts em OCaml
+---
+title: Scripts em OCaml
+author: Juno Takano
+date: 23 de fevereiro de 2024
+---
 
 Este blog gera suas postagens com o Pandoc, mas quem faz o trabalho lógico de identificar os arquivos e montar os comandos é um pequeno script em OCaml.
 

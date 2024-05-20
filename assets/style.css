@@ -5,13 +5,17 @@
   src: url('Share Tech Mono.ttf'), format('truetype');
 }
 
-body {
+html {
   background-color: #222222;
   font-family: 'ShareTech', monospace;
+  color: #F1E9E5;
+}
+
+.header-art {
+  color: #888
 }
 
 p {
-  color: #F1E9E5;
   margin: 30px;
 }
 
@@ -31,7 +35,7 @@ h1 {
   font-weight: bold;
   color: #ccc;
   font-size: 25px;
-  margin: 20px 0px 10px 20px;
+  margin: 40px 0px 10px 20px;
 }
 
 h2 {
@@ -52,4 +56,16 @@ li { margin-bottom: 10px; }
 .sourceCode pre {
   color: #ccc;
   padding: 20px;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+.footer-text {
+  padding: 20px 20px;
+}
+
+.footer-back {
+  float: right;
 }
