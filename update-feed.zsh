@@ -1,8 +1,20 @@
 #!/usr/bin/env zsh
-# dependencies: zsh, xmlstarlet, xmllint, jq
+# dependencies: zsh, xmlstarlet, xmllint
 
-alias xml="xmlstarlet"
 date="$(date +'%a, %d %b %Y %H:%M:%S %z')"
+
+function subnode {
+  local -r tag="${1}"
+  local -r value="${2}"
+  local path="${3:-rss/channel/new}"
+  local -r file="${4:-feed2.rss}"
+
+  if [[ -n $value ]]; then
+    /usr/bin/xmlstarlet ed -L --subnode "$path" -t elem -n "$tag" -v "$value" "$file"
+  else
+    /usr/bin/xmlstarlet ed -L --subnode "$path" -t elem -n "$tag" "$file"
+  fi
+}
 
 function insert {
   local -r title="$1"
@@ -14,14 +26,14 @@ function insert {
     return 0
   fi
 
-  xml ed --update rss/channel/lastBuildDate --value "$date" feed.rss > feed2.rss
+  xmlstarlet ed --update rss/channel/lastBuildDate --value "$date" feed.rss > feed2.rss
 
-  xml ed -L --subnode rss/channel     -t elem -n new feed2.rss
-  xml ed -L --subnode rss/channel/new -t elem -n title -v "$title" feed2.rss
-  xml ed -L --subnode rss/channel/new -t elem -n pubDate -v "$date" feed2.rss
-  xml ed -L --subnode rss/channel/new -t elem -n link -v "$url_root/$slug" feed2.rss
-  xml ed -L --subnode rss/channel/new -t elem -n guid -v "$url_root/$slug" feed2.rss
-  xml ed -L --subnode rss/channel/new -t elem -n author -v "$author" feed2.rss
+  subnode new '' rss/channel
+  subnode title "$title"
+  subnode pubDate "$date"
+  subnode link "$url_root/$slug"
+  subnode guid "$url_root/$slug"
+  subnode author "$author"
 
   sed -i 's/<new>/<item>/g' feed2.rss
   sed -i 's/<\/new>/<\/item>/g' feed2.rss
@@ -30,6 +42,7 @@ function insert {
     mv -v feed2.rss feed.rss
   else
     echo 'Generated an invalid feed, not overwriting'
+    rm -vf feed2.rss
     return 1
   fi
 
@@ -40,15 +53,9 @@ total=$(echo $index | wc -l)
 
 current=2
 while [[ $current -le $total ]]; do
-  echo processing $current
   lines=$(echo $index | tail -$((current)) | head -2)
   title=$(echo $lines | grep title: | cut -d: -f 2 | xargs)
   slug=$(echo $lines | grep slug: | cut -d: -f 2 | xargs)
-  echo title: $title
-  echo slug: $slug
   insert "$title" "$slug"
   ((current+=2))
 done
-
-echo -e "\nfeed.rss:"
-cat feed.rss | xq -x
