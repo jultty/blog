@@ -6,13 +6,13 @@
     <atom:link href="https://blog.jutty.dev/feed.rss" rel="self" type="application/rss+xml"/>
     <description>jutty.dev: Blog</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 May 2024 12:06:59 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 20 May 2024 14:35:27 -0300</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <item>
-      <title>Hello, Worldling</title>
-      <pubDate>Mon, 20 May 2024 12:06:59 -0300</pubDate>
-      <link>https://blog.jutty.dev/posts/hello-worldling.html</link>
-      <guid>https://blog.jutty.dev/posts/hello-worldling.html</guid>
+      <title>Meeting the BSD Family</title>
+      <pubDate>Mon, 20 May 2024 14:35:27 -0300</pubDate>
+      <link>https://blog.jutty.dev/posts/meeting-the-bsd-family.html</link>
+      <guid>https://blog.jutty.dev/posts/meeting-the-bsd-family.html</guid>
       <author>juno@jutty.dev (Juno Takano)</author>
     </item>
   </channel>

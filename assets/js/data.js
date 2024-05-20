@@ -12,8 +12,8 @@ function get_data() {
     "en": {
       "posts": [
         {
-          "title": "Hello, Worldling",
-          "slug": "hello-worldling",
+          "title": "Meeting the BSD Family",
+          "slug": "meeting-the-bsd-family",
           "date": "May 20, 2024"
         }
       ]
