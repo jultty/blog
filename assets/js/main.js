@@ -31,10 +31,10 @@ function localize_menu() {
 
   if (lang == 'pt') {
     home.innerText='Início'
-    rss.setAttribute('href', 'pt.rss')
+    rss.setAttribute('href', 'assets/rss/pt.rss')
   } else {
     home.innerText='Home'
-    rss.setAttribute('href', 'en.rss')
+    rss.setAttribute('href', 'assets/rss/en.rss')
   }
 }
 

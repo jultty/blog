@@ -82,5 +82,5 @@ function insert_from {
   done
 }
 
-insert_from "$index_pt" pt.rss
-insert_from "$index_en" en.rss
+insert_from "$index_pt" assets/rss/pt.rss
+insert_from "$index_en" assets/rss/en.rss
