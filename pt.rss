@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>jutty.dev: Blog</title>
+    <link>http://blog.jutty.dev/</link>
+    <atom:link href="https://blog.jutty.dev/feed.rss" rel="self" type="application/rss+xml"/>
+    <description>jutty.dev: Blog</description>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 20 May 2024 12:06:59 -0300</lastBuildDate>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <item>
+      <title>Scripts em OCaml</title>
+      <pubDate>Fri, 23 Feb 2024 21:23:00 -0300</pubDate>
+      <link>https://blog.jutty.dev/posts/scripts-em-ocaml.html</link>
+      <guid>https://blog.jutty.dev/posts/scripts-em-ocaml.html</guid>
+      <author>juno@jutty.dev (Juno Takano)</author>
+    </item>
+  </channel>
+</rss>

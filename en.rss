@@ -5,14 +5,14 @@
     <link>http://blog.jutty.dev/</link>
     <atom:link href="https://blog.jutty.dev/feed.rss" rel="self" type="application/rss+xml"/>
     <description>jutty.dev: Blog</description>
-    <language>pt-br</language>
-    <lastBuildDate>Sun, 19 May 2024 21:11:05 -0300</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 May 2024 12:06:59 -0300</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <item>
-      <title>Scripts em OCaml</title>
-      <pubDate>Fri, 23 Feb 2024 21:23:00 -0300</pubDate>
-      <link>https://blog.jutty.dev/posts/scripts-em-ocaml.html</link>
-      <guid>https://blog.jutty.dev/posts/scripts-em-ocaml.html</guid>
+      <title>Hello, Worldling</title>
+      <pubDate>Mon, 20 May 2024 12:06:59 -0300</pubDate>
+      <link>https://blog.jutty.dev/posts/hello-worldling.html</link>
+      <guid>https://blog.jutty.dev/posts/hello-worldling.html</guid>
       <author>juno@jutty.dev (Juno Takano)</author>
     </item>
   </channel>

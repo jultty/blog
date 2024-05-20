@@ -1,23 +1,22 @@
 function get_data() {
   return {
-    pt: {
-      posts: [
+    "pt": {
+      "posts": [
         {
-          title: "Scripts em OCaml",
-          slug: "scripts-em-ocaml",
-          date: "23/03/2024",
-        },
+          "title": "Scripts em OCaml",
+          "slug": "scripts-em-ocaml",
+          "date": "23/03/2024"
+        }
       ]
     },
-    en: {
-      posts: [
+    "en": {
+      "posts": [
         {
-          title: "Hello, Worldling",
-          slug: "hello-worldling",
-          date: "May 20, 2024",
-        },
+          "title": "Hello, Worldling",
+          "slug": "hello-worldling",
+          "date": "May 20, 2024"
+        }
       ]
     }
   }
 }
-
