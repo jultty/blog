@@ -20,6 +20,14 @@ html {
   margin-left: 20px;
 }
 
+#nav-posts {
+  margin-left: 40px;
+  margin-top: 40px;
+  color: #F1E9E5;
+}
+
+li { margin-bottom: 10px; }
+
 p {
   margin: 30px;
 }
@@ -50,13 +58,6 @@ h2 {
   font-size: 25px;
   margin: 20px 0px 10px 20px;
 }
-
-#nav-posts {
-  margin-top: 40px;
-  color: #F1E9E5;
-}
-
-li { margin-bottom: 10px; }
 
 .sourceCode pre {
   color: #ccc;
