@@ -66,13 +66,15 @@ $endfor$
 <footer>
 <hr/>
 <div class="footer-text">
+<span id="author-pre-text">posted by</span>
 $for(author)$
-<span class="author">$author$</span>,
+<span class="author">$author$</span>
 $endfor$
+<span id="date-pre-text">on</span>
 $if(date)$
 <span class="date">$date$</span>
 <span class="footer-back" aria-role="nav" aria-label="Navigate back">
-↩ <a id="footer-back-link" href="../index.html">Voltar</a>
+↩ <a id="footer-back-link" href="../index.html">Back</a>
 </span>
 $endif$
 </div>
