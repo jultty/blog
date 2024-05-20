@@ -3,8 +3,8 @@ A bare-bones personal website relying only on simple scripts.
 ## Next
 - [x] Set page titles dynamically
 - [x] Handle header a11y
-- [ ] Add post date
-- [ ] Add post authorship linked to author homepage
+- [x] Add post date
+- [x] Add post author
 - [ ] Add source code link on homepage
 - [ ] Update data object programmatically on HTML post generation
 - [ ] Style inline `<code>` tags
