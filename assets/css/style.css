@@ -70,6 +70,10 @@ h2 {
   margin: 20px 0px 10px 20px;
 }
 
+.article p {
+  margin: 25px 0px;
+}
+
 .sourceCode pre {
   color: #ccc;
   padding: 20px;
@@ -89,10 +93,10 @@ footer {
 
 /* tablet */
 @media (min-width: 401px) {
-  .article { margin: 0 45px; }
-  .article p {
-    margin: 25px 0px;
+  .article {
+    margin: 0 45px;
   }
+
   h1 {
     margin-left: 45px;
   }
@@ -101,27 +105,17 @@ footer {
 /* widescreen */
 @media (min-width: 1000px) {
   .article {
-    display: grid;
-    grid-template-columns: 1fr 700px 1fr;
+    margin: 0 30%;
   }
-  .article p {
-    grid-column-start: 2;
-    margin: 15px;
-  }
-  #title-container {
-    display: grid;
-    grid-template-columns: 1fr 700px 1fr;
-  }
-  #title-container h1 {
-    grid-column-start: 2;
-    margin: 80px 15px 30px 15px;
+
+  h1 {
+    margin-left: 45px;
   }
 }
 
 /* phone */
 @media (max-width: 400px) {
-  .article { margin: 0 20px; }
-  .article p {
-    margin: 25px 0px;
+  .article {
+    margin: 0 20px;
   }
 }
