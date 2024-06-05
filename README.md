@@ -11,4 +11,5 @@ A bare-bones personal website relying only on simple scripts.
 - [ ] Create a custom syntax highlighting style 
   - See: <https://pandoc.org/chunkedhtml-demo/13-syntax-highlighting.html>
 - [x] Add an RSS feed
+  - [ ] Links RSS feed
 - [ ] Add tags

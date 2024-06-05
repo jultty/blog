@@ -1,8 +1,6 @@
 const userLang = navigator.language || navigator.userLanguage
 let lang = userLang.includes('pt') ? 'pt' : 'en'
 
-console.log('post-l10n.js loaded:', lang)
-
 if (lang == 'pt') {
   const footer_back = document.getElementById('footer-back-link')
   const author_pre = document.getElementById('author-pre-text')

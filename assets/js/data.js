@@ -19,7 +19,8 @@ function get_data() {
     "links": [
       {
         "title": "Capital Offense How to Handle Abbreviations in CamelCase - Approxion",
-        "url": "https://www.approxion.com/capital-offenses-how-to-handle-abbreviations-in-camelcase/"
+        "url": "https://www.approxion.com/capital-offenses-how-to-handle-abbreviations-in-camelcase/",
+        "date": "23/03/2024"
       }
     ]
   }

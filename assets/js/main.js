@@ -1,8 +1,5 @@
 const data = get_data()
 
-const userLang = navigator.language || navigator.userLanguage
-let lang = userLang.includes('pt') ? 'pt' : 'en'
-
 function populate_posts() {
   data.posts[lang].forEach(post => {
     const posts = document.getElementById('nav-posts')
@@ -25,51 +22,6 @@ function parse_date(date) {
     .replace(`/${current_year}`, '')
 }
 
-function localize_menu() {
-  const home = document.getElementById('nav-menu-home')
-  const rss = document.getElementById('nav-menu-rss')
-
-  if (lang == 'pt') {
-    home.innerText='Início'
-    rss.setAttribute('href', 'assets/rss/pt.rss')
-  } else {
-    home.innerText='Home'
-    rss.setAttribute('href', 'assets/rss/en.rss')
-  }
-}
-
-function localize_navigation() {
-  const skip = document.getElementById('a11y-skip')
-  const post_list = document.getElementById('nav-posts')
-
-  if (lang == 'pt') {
-    skip.innerText = 'Saltar para o conteúdo principal'
-    post_list.ariaLabel = 'Listagem de todas as postagens'
-  } else {
-    skip.innerText = 'Skip to main content'
-    post_list.ariaLabel = 'Listing of all posts'
-  }
-}
-
-const en_lang_swapper = document.getElementById('lang-swap-en')
-const pt_lang_swapper = document.getElementById('lang-swap-pt')
-
-en_lang_swapper.addEventListener("click", () => {
-  lang = 'en'
-  populate_posts()
-  localize_navigation()
-  localize_menu()
-})
-
-pt_lang_swapper.addEventListener("click", () => {
-  lang = 'pt'
-  populate_posts()
-  localize_navigation()
-  localize_menu()
-})
-
 document.addEventListener('DOMContentLoaded', () => {
   populate_posts()
-  localize_navigation()
-  localize_menu()
 })
