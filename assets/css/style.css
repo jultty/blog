@@ -104,6 +104,17 @@ footer {
 /* widescreen */
 @media (min-width: 1000px) {
   .article {
+    margin: 0 20%;
+  }
+
+  h1 {
+    margin-left: 45px;
+  }
+}
+
+/* fullscreen */
+@media (min-width: 1500px) {
+  .article {
     margin: 0 30%;
   }
 

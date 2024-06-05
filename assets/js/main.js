@@ -4,7 +4,7 @@ const userLang = navigator.language || navigator.userLanguage
 let lang = userLang.includes('pt') ? 'pt' : 'en'
 
 function populate_posts() {
-  data[lang].posts.forEach(post => {
+  data.posts[lang].forEach(post => {
     const posts = document.getElementById('nav-posts')
     posts.innerHTML = ''
     const item = document.createElement('li')

@@ -1,22 +1,26 @@
 function get_data() {
   return {
-    "pt": {
-      "posts": [
+    "posts": {
+      "pt": [
         {
           "title": "Scripts em OCaml",
           "slug": "scripts-em-ocaml",
           "date": "23/03/2024"
         }
-      ]
-    },
-    "en": {
-      "posts": [
+      ],
+      "en": [
         {
           "title": "Meeting the BSD Family",
           "slug": "meeting-the-bsd-family",
           "date": "May 20, 2024"
         }
       ]
-    }
+    },
+    "links": [
+      {
+        "title": "Capital Offense How to Handle Abbreviations in CamelCase - Approxion",
+        "url": "https://www.approxion.com/capital-offenses-how-to-handle-abbreviations-in-camelcase/"
+      }
+    ]
   }
 }
