@@ -13,3 +13,4 @@ A bare-bones personal website relying only on simple scripts.
 - [x] Add an RSS feed
   - [ ] Links RSS feed
 - [ ] Add tags
+- [ ] No JavaScript browsing support
