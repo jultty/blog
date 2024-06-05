@@ -15,6 +15,16 @@ html {
   color: #888
 }
 
+#a11y-skip {
+  position: absolute;
+  left: -1000%;
+}
+
+#a11y-skip:focus {
+  display: inline;
+  left: 5%;
+}
+
 #nav-menu li {
   display: inline-block;
   margin-left: 20px;

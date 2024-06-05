@@ -12,6 +12,7 @@
     <script src="assets/js/main.js" defer></script>
   </head>
   <body>
+    <a id="a11y-skip" href="#main">Skip to main content</a>
     <header>
       <pre class="header-art"
         role="img" aria-label="ASCII art with jutty.dev in a 3D, slanted font">
@@ -37,7 +38,9 @@
         <li><a id="nav-menu-rss" href="https://blog.jutty.dev/assets/rss/en.rss">RSS</a></li>
         <li><a href="https://mastodon.bsd.cafe/@jutty">Mastodon</a></li>
       </ul>
-      <ul id="nav-posts"></ul>
+      <main id="main">
+        <ul id="nav-posts" aria-label="Listing of all posts"></ul>
+      </main>
     </nav>
   </body>
 </html>

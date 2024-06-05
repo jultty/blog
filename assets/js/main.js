@@ -38,22 +38,38 @@ function localize_menu() {
   }
 }
 
+function localize_navigation() {
+  const skip = document.getElementById('a11y-skip')
+  const post_list = document.getElementById('nav-posts')
+
+  if (lang == 'pt') {
+    skip.innerText = 'Saltar para o conteúdo principal'
+    post_list.ariaLabel = 'Listagem de todas as postagens'
+  } else {
+    skip.innerText = 'Skip to main content'
+    post_list.ariaLabel = 'Listing of all posts'
+  }
+}
+
 const en_lang_swapper = document.getElementById('lang-swap-en')
 const pt_lang_swapper = document.getElementById('lang-swap-pt')
 
 en_lang_swapper.addEventListener("click", () => {
   lang = 'en'
   populate_posts()
+  localize_navigation()
   localize_menu()
 })
 
 pt_lang_swapper.addEventListener("click", () => {
   lang = 'pt'
   populate_posts()
+  localize_navigation()
   localize_menu()
 })
 
 document.addEventListener('DOMContentLoaded', () => {
   populate_posts()
+  localize_navigation()
   localize_menu()
 })
