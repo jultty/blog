@@ -21,7 +21,6 @@ html {
 }
 
 #a11y-skip:focus {
-  display: inline;
   left: 5%;
 }
 
