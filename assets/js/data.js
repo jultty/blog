@@ -18,6 +18,11 @@ function get_data() {
     },
     "links": [
       {
+        "title": "Moving Beyond Type Systems | Vhyrro's Digital Garden",
+        "url": "https://vhyrro.github.io/posts/effect-systems/",
+        "date": "06/06/2024"
+      },
+      {
         "title": "hackerb9/lsix Like ls, but for images. Shows thumbnails in terminal using sixel graphics.",
         "url": "https://github.com/hackerb9/lsix",
         "date": "06/06/2024"
