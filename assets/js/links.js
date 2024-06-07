@@ -1,9 +1,10 @@
 const data = get_data()
 
 function populate_links() {
+  const links = document.getElementById('links')
+  links.innerHTML = ''
+
   data.links.forEach(link => {
-    const links = document.getElementById('links')
-    links.innerHTML = ''
     const item = document.createElement('li')
     const anchor = document.createElement('a')
     const date = document.createElement('span')

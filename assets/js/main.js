@@ -1,9 +1,10 @@
 const data = get_data()
 
 function populate_posts() {
+  const posts = document.getElementById('nav-posts')
+  posts.innerHTML = ''
+
   data.posts[lang].forEach(post => {
-    const posts = document.getElementById('nav-posts')
-    posts.innerHTML = ''
     const item = document.createElement('li')
     const anchor = document.createElement('a')
     const date = document.createElement('span')
