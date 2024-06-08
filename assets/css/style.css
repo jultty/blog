@@ -1,13 +1,13 @@
 * { margin: 0px; }
 
 @font-face {
-  font-family: 'ShareTech';
-  src: url('Share Tech Mono.ttf'), format('truetype');
+  font-family: 'Mononoki';
+  src: url('Mononoki.ttf'), format('truetype');
 }
 
 html {
   background-color: #222222;
-  font-family: 'ShareTech', monospace;
+  font-family: 'Mononoki', monospace;
   color: #F1E9E5;
 }
 
