@@ -18,6 +18,11 @@ function get_data() {
     },
     "links": [
       {
+        "title": "Share Paste O2 | F-Droid - Free and Open Source Android App Repository",
+        "url": "https://f-droid.org/en/packages/alt.nainapps.sharepaste.fdroid/",
+        "date": "08/06/2024"
+      },
+      {
         "title": "Moving Beyond Type Systems | Vhyrro's Digital Garden",
         "url": "https://vhyrro.github.io/posts/effect-systems/",
         "date": "06/06/2024"
