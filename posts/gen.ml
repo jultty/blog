@@ -1,7 +1,7 @@
 #!/usr/bin/env utop
 
 let args = "--css ../assets/css/style.css --standalone " ^
-  "--from markdown+yaml_metadata_block " ^ "--to html5 " ^
+  "--from markdown+yaml_metadata_block-implicit_figures " ^ "--to html5 " ^
   "--highlight-style zenburn " ^ "--template=template.html "
 
 

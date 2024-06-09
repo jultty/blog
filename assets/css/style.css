@@ -35,7 +35,11 @@ html {
   color: #F1E9E5;
 }
 
-li { margin-bottom: 10px; }
+li {
+  margin-bottom: 15px;
+  line-height: 2em;
+}
+ul { margin-top: 15px; }
 
 p {
   margin: 30px;
@@ -57,7 +61,6 @@ h1 {
   font-size: 25px;
   font-weight: bold;
   color: #ccc;
-  font-size: 25px;
   margin: 40px 0px 10px 20px;
 }
 
@@ -65,8 +68,21 @@ h2 {
   font-size: 25px;
   font-weight: bold;
   color: #ccc;
-  font-size: 25px;
-  margin: 20px 0px 10px 20px;
+  margin: 20px 0px 10px 0px;
+}
+
+h3 {
+  font-size: 21px;
+  font-weight: bold;
+  color: #ccc;
+  margin: 20px 0px 10px 0px;
+}
+
+h4 {
+  font-size: 21px;
+  font-weight: bold;
+  color: #6a978b;
+  margin: 20px 0px 10px 0px;
 }
 
 .article p {
@@ -76,6 +92,38 @@ h2 {
 .sourceCode pre {
   color: #ccc;
   padding: 20px;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+}
+
+p code {
+  background-color: #444;
+  padding: 5px 6.5px;
+  margin-right: 2px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+li code {
+  background-color: #444;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+blockquote {
+  color: #888;
+  background-color: #1b1b1b;
+  padding: 10px 40px;
+  font-style: italic;
+  border-radius: 12px;
+}
+
+blockquote p code {
+  color: #bbb;
 }
 
 footer {

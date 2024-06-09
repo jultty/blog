@@ -10,6 +10,11 @@ function get_data() {
       ],
       "en": [
         {
+          "title": "Void on ZFS",
+          "slug": "void-on-zfs",
+          "date": "June 9, 2024"
+        },
+        {
           "title": "Meeting the BSD Family",
           "slug": "meeting-the-bsd-family",
           "date": "May 20, 2024"

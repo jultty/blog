@@ -6,13 +6,20 @@
     <atom:link href="https://blog.jutty.dev/feed.rss" rel="self" type="application/rss+xml"/>
     <description>jutty.dev: Blog</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 May 2024 14:35:27 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 9 Jun 2024 17:36:20 -0300</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <item>
       <title>Meeting the BSD Family</title>
       <pubDate>Mon, 20 May 2024 14:35:27 -0300</pubDate>
       <link>https://blog.jutty.dev/posts/meeting-the-bsd-family.html</link>
       <guid>https://blog.jutty.dev/posts/meeting-the-bsd-family.html</guid>
+      <author>juno@jutty.dev (Juno Takano)</author>
+    </item>
+    <item>
+      <title>Void on ZFS</title>
+      <pubDate>Sun, 9 Jun 2024 17:36:20 -0300</pubDate>
+      <link>https://blog.jutty.dev/posts/void-on-zfs.html</link>
+      <guid>https://blog.jutty.dev/posts/void-on-zfs.html</guid>
       <author>juno@jutty.dev (Juno Takano)</author>
     </item>
   </channel>
