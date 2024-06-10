@@ -324,7 +324,7 @@ have:</p>
 <ul>
 <li><code>BOOT_DISK="/dev/nvme0n1"</code></li>
 <li><code>BOOT_PART="1"</code></li>
-<li><code>BOOT_DEVICE="${POOL_DISK}p${POOL_PART}"</code>
+<li><code>BOOT_DEVICE="${BOOT_DISK}p${BOOT_PART}"</code>
 <ul>
 <li>which evaluates to <code>/dev/nvme0n1p1</code></li>
 </ul></li>
@@ -529,7 +529,7 @@ benefits, and is important for ACLs and SELinux usage</li>
 relative to the modify or change time.” Also, “access time is only
 updated if the previous access time was earlier than the current modify
 or change time or if the existing access time hasn’t been updated within
-the past 24hours” (default: on)</li>
+the past 24hours”</li>
 <li><code>-o autotrim=on</code> Automatically reclaims unused blocks
 from time to time. Can put the filesystem under some stress</li>
 </ul>
@@ -584,7 +584,7 @@ imported as long as a sufficient number of devices are present.”</p>
 <p>If <code>zfs import</code> is used without any arguments, it will
 list the exported pools available to be imported.</p>
 <p>The <code>-N root</code> option imports the pool without mounting any
-of its file systems, and the <code>-R</code> option “sets the
+of its file systems, the <code>-R</code> option “sets the
 <code>cachefile</code> property to <code>none</code> and the
 <code>altroot</code> property to <code>root</code>”. In this case, that
 <code>root</code> will be <code>/mnt</code>.</p>
@@ -619,13 +619,14 @@ package manager to fetch the Void base system.</p>
 <p><code>-S</code> takes care of synchronizing the data from the mirror
 so that package data is fetched, <code>-R</code> allows us to manually
 specify the repository for this run, and <code>-r</code> allows choosing
-a different root directory.</p>
+a different root directory to act upon.</p>
 <p>Here, I chose the Fastly mirror over the ServerCentral one. <a
 href="https://xmirror.voidlinux.org/">Any working mirror</a> should
 do.</p>
-<p>Note that not all mirrors have the same directory structure. You can
-access the mirror in a browser or otherwise inspect it to find the path
-to the <code>current</code> directory.</p>
+<p>Note that not all mirrors have the same content at the root of their
+URL. Some point directly to a Void repo, some don’t. You can access the
+mirror in a browser or otherwise inspect it to find the path to the
+<code>current</code> directory.</p>
 <p>With this done, we can copy the host ID file, which will also be
 required in our final system, and we are ready to chroot.</p>
 <div class="sourceCode" id="cb21"><pre
@@ -645,7 +646,7 @@ day before.</p>
 <p><img src="../assets/img/posts/void-on-zfs/notes.jpg"
 alt="A block of paper with some notes scribbled: “check connection first of all”, “reconfigure after chroot”, “see /usr/share/doc/efibootmgr/README.voidlinux for automatic EFI entry management”, “superb docs”, “take the first snapshot ASAP”. An arrow points from the last note to “on chroot?” Visible above the block of paper is a keyboard. To the right, the tip of a notebook and a piece of brown cloth are visible. On top of the block, there is a mechanical pencil and a Tombow MONO One plastic eraser." /></p>
 <h4 id="reconfiguring-packages">Reconfiguring packages</h4>
-<p>After chrooting, it might be a good idea to run
+<p>After chrooting, it may be a good idea to run
 <code>xbps-reconfigure</code> to make sure packages are properly
 configured. This is because in the bootstrap process some packets may
 have tried to configure themselves while relying on directories that
@@ -664,9 +665,9 @@ installing the base system.</p>
 <p>As early as possible is a good time to run <code>passwd</code> and
 set the root password.</p>
 <h4 id="rc.conf"><code>rc.conf</code></h4>
-<p><code>runit</code> reads the <code>/etc/rc.conf</code> during startup
-to configure the system, setting up things like the keymap, hardware
-clock and terminal font.</p>
+<p><code>runit</code> reads the <code>/etc/rc.conf</code> file during
+startup to configure the system, setting up things like the keymap,
+hardware clock and terminal font.</p>
 <p>For your reference, here is what I added to mine during the
 installation:</p>
 <div class="sourceCode" id="cb23"><pre
@@ -682,17 +683,18 @@ class="sourceCode sh"><code class="sourceCode bash"><span id="cb24-1"><a href="#
 <p>Unless you are using <code>musl</code>, you also want to set and
 generate the <code>glibc</code> locales. Edit
 <code>/etc/default/libc-locales</code> and uncomment the desired
-locales, then run <code>xbps-reconfigure -f glibc-locales</code></p>
+locales, then run <code>xbps-reconfigure -f glibc-locales</code>.</p>
 <h4 id="dracut">dracut</h4>
 <p><code>dracut</code> generates file system images used by the kernel
 at the very early stages of boot. We have to make it able to identify
 our ZFS root filesystem by enabling the proper modules. This is
-accomplished by editing <code>/etc/dracut.conf.d/zol.conf</code> to:</p>
+accomplished by creating <code>/etc/dracut.conf.d/zol.conf</code>
+with:</p>
 <div class="sourceCode" id="cb25"><pre
 class="sourceCode sh"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="va">nofsck</span><span class="op">=</span><span class="st">&quot;yes&quot;</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="va">add_dracutmodules</span><span class="op">+=</span><span class="st">&quot; zfs &quot;</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="va">omit_dracutmodules</span><span class="op">+=</span><span class="st">&quot; btrfs &quot;</span></span></code></pre></div>
-<p>Notice the spaces surrounding the module names</p>
+<p>Notice the spaces surrounding the module names.</p>
 <h2 id="installing-and-configuring-zfsbootmenu">Installing and
 configuring ZFSBootMenu</h2>
 <p>We are now ready to install both ZFS and ZFSBootMenu. Let’s start
@@ -713,7 +715,8 @@ class="sourceCode sh"><code class="sourceCode bash"><span id="cb27-1"><a href="#
 <p>We also need a <code>vfat</code> filesystem on our boot device:</p>
 <div class="sourceCode" id="cb28"><pre
 class="sourceCode sh"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mkfs.vfat</span> <span class="at">-F32</span> <span class="st">&quot;</span><span class="va">$BOOT_DEVICE</span><span class="st">&quot;</span></span></code></pre></div>
-<p>And an <code>/etc/fstab</code> entry and mount:</p>
+<p>Now we can add an <code>/etc/fstab</code> entry pointing to it, and
+mount:</p>
 <div class="sourceCode" id="cb29"><pre
 class="sourceCode sh"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">blkid</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;</span><span class="va">$BOOT_DEVICE</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&#39; &#39;</span> <span class="at">-f</span> 2<span class="va">)</span><span class="st"> /boot/efi vfat defaults 0 0&quot;</span> <span class="op">&gt;&gt;</span> /etc/fstab</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -786,7 +789,8 @@ you make important changes that could potentially break the system.</p>
 class="sourceCode sh"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> snapshot <span class="at">-r</span> zroot/ROOT/void@baseline</span></code></pre></div>
 <p>Note that, if you followed the ZFSBootMenu guide in creating a
 separate dataset for your home directory, this snapshot will not include
-the contents inside and under <code>/home</code></p>
+the contents inside and under <code>/home</code> (which at this point
+should be empty anyways).</p>
 <p>You can access the contents of a snapshot at any time in the
 <code>.zfs</code> directory at the root of a given dataset. For the ones
 we previously set up, those would be <code>/.zfs</code> and
@@ -822,8 +826,8 @@ class="sourceCode sh"><code class="sourceCode bash"><span id="cb39-1"><a href="#
 for daily snapshots. Considering how simple the zfs CLI is, scripting
 several snapshot schemes can be quite easy, be them per boot, daily, or
 even every so many minutes using cron. Because ZFS snapshots grow as
-they drift from the present state, rotating them is optimal when
-conserving storage space.</p>
+they drift from the present state, rotating them is optimal when storage
+space is a concern.</p>
 <p>That’s it! I hope this was helpful to you in either learning about
 ZFS or about Void installations with Root on ZFS.</p>
 <hr />
