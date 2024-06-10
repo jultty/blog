@@ -170,7 +170,7 @@ My target device is an NVMe at `nvme0n1`, so I'll have:
 
 - `BOOT_DISK="/dev/nvme0n1"`
 - `BOOT_PART="1"`
-- `BOOT_DEVICE="${POOL_DISK}p${POOL_PART}"`
+- `BOOT_DEVICE="${BOOT_DISK}p${BOOT_PART}"`
   - which evaluates to `/dev/nvme0n1p1`
 
 - `POOL_DISK="/dev/nvme0n1"`
@@ -349,7 +349,7 @@ Among the options above, several pool features and system properties are set:
 - `-O compression=lz4` Sets the compression algorithm used ([LZ4](https://en.wikipedia.org/wiki/LZ4_(compression_algorithm)))
 - `-O acltype=posixacl` Whether [ACLs](https://en.wikipedia.org/wiki/Access-control_list) are enabled and what type to use. The value `posixacl` is equivalent to `posix` (default on Linux: off)
 - `-O xattr=sa` Enables extended attributes. If value is `on`, uses directory-based extended attributes, while `sa` uses system-attribute-based. The latter has performance benefits, and is important for ACLs and SELinux usage
-- `-O relatime=on` "Causes the access time to be updated relative to the modify or change time." Also, "access time is only updated if the previous access time was earlier than the current modify or change time or if the existing access time hasn't been updated within the past 24hours" (default: on)
+- `-O relatime=on` "Causes the access time to be updated relative to the modify or change time." Also, "access time is only updated if the previous access time was earlier than the current modify or change time or if the existing access time hasn't been updated within the past 24hours"
 - `-o autotrim=on` Automatically reclaims unused blocks from time to time. Can put the filesystem under some stress
 
 The last option, the compatibility feature set, specifies in this case a relative filename to `/usr/share/zfs/compatibility.d`:
@@ -400,7 +400,7 @@ From what I gather, exporting means putting the pool in a more portable state. A
 
 If `zfs import` is used without any arguments, it will list the exported pools available to be imported.
 
-The `-N root` option imports the pool without mounting any of its file systems, and the `-R` option "sets the `cachefile` property to `none` and the `altroot` property to `root`". In this case, that `root` will be `/mnt`.
+The `-N root` option imports the pool without mounting any of its file systems, the `-R` option "sets the `cachefile` property to `none` and the `altroot` property to `root`". In this case, that `root` will be `/mnt`.
 
 `altroot` stands for the alternate root directory. In `zpoolprops(7)`, this becomes clearer when it is stated that "this directory is prepended to any mount points within the pool."
 
@@ -439,11 +439,11 @@ XBPS_ARCH=x86_64 xbps-install \
 
 Here, we are passing an environment variable to set the architecture to `x86_64`, then use `xbps-install` from the xbps package manager to fetch the Void base system.
 
-`-S` takes care of synchronizing the data from the mirror so that package data is fetched, `-R` allows us to manually specify the repository for this run, and `-r` allows choosing a different root directory.
+`-S` takes care of synchronizing the data from the mirror so that package data is fetched, `-R` allows us to manually specify the repository for this run, and `-r` allows choosing a different root directory to act upon.
 
 Here, I chose the Fastly mirror over the ServerCentral one. [Any working mirror](https://xmirror.voidlinux.org/) should do.
 
-Note that not all mirrors have the same directory structure. You can access the mirror in a browser or otherwise inspect it to find the path to the  `current` directory.
+Note that not all mirrors have the same content at the root of their URL. Some point directly to a Void repo, some don't. You can access the mirror in a browser or otherwise inspect it to find the path to the  `current` directory.
 
 With this done, we can copy the host ID file, which will also be required in our final system, and we are ready to chroot.
 
@@ -466,7 +466,7 @@ This is a good time to get back to the notes I mentioned taking the day before.
 
 #### Reconfiguring packages
 
-After chrooting, it might be a good idea to run `xbps-reconfigure` to make sure packages are properly configured. This is because in the bootstrap process some packets may have tried to configure themselves while relying on directories that were not mounted anywhere.
+After chrooting, it may be a good idea to run `xbps-reconfigure` to make sure packages are properly configured. This is because in the bootstrap process some packets may have tried to configure themselves while relying on directories that were not mounted anywhere.
 
 This is particularly true for [`dracut`](https://github.com/OSInside/kiwi/issues/1867), which is a tool that generates initramfs and initrd images, therefore being critical to the early boot process. You might see error messages related to it in your first run of xbps outside of the chroot, when installing the base system.
 
@@ -477,7 +477,7 @@ To reconfigure **all** packages, just run `xbps-reconfigure -fa`. If you'd rathe
 As early as possible is a good time to run `passwd` and set the root password. 
 
 #### `rc.conf`
-`runit` reads the `/etc/rc.conf` during startup to configure the system, setting up things like the keymap, hardware clock and terminal font.
+`runit` reads the `/etc/rc.conf` file during startup to configure the system, setting up things like the keymap, hardware clock and terminal font.
 
 For your reference, here is what I added to mine during the installation:
 
@@ -495,11 +495,11 @@ To configure your local time zone, create a symlink at `/etc/localtime` that poi
 ln -sf /usr/share/zoneinfo/<timezone> /etc/localtime
 ```
 
-Unless you are using `musl`, you also want to set and generate the `glibc` locales. Edit `/etc/default/libc-locales` and uncomment the desired locales, then run `xbps-reconfigure -f glibc-locales`
+Unless you are using `musl`, you also want to set and generate the `glibc` locales. Edit `/etc/default/libc-locales` and uncomment the desired locales, then run `xbps-reconfigure -f glibc-locales`.
 
 #### dracut
 
-`dracut` generates file system images used by the kernel at the very early stages of boot. We have to make it able to identify our ZFS root filesystem by enabling the proper modules. This is accomplished by editing `/etc/dracut.conf.d/zol.conf` to:
+`dracut` generates file system images used by the kernel at the very early stages of boot. We have to make it able to identify our ZFS root filesystem by enabling the proper modules. This is accomplished by creating `/etc/dracut.conf.d/zol.conf` with:
 
 ```sh
 nofsck="yes"
@@ -507,7 +507,7 @@ add_dracutmodules+=" zfs "
 omit_dracutmodules+=" btrfs "
 ```
 
-Notice the spaces surrounding the module names
+Notice the spaces surrounding the module names.
 
 ## Installing and configuring ZFSBootMenu
 
@@ -531,7 +531,7 @@ We also need a `vfat` filesystem on our boot device:
 mkfs.vfat -F32 "$BOOT_DEVICE"
 ```
 
-And an `/etc/fstab` entry and mount:
+Now we can add an `/etc/fstab` entry pointing to it, and mount:
 
 ```sh
 echo "$(blkid | grep "$BOOT_DEVICE" | cut -d ' ' -f 2) /boot/efi vfat defaults 0 0" >> /etc/fstab
@@ -606,7 +606,7 @@ Something you might want to do at this point is to take a snapshot of the curren
 zfs snapshot -r zroot/ROOT/void@baseline
 ```
 
-Note that, if you followed the ZFSBootMenu guide in creating a separate dataset for your home directory, this snapshot will not include the contents inside and under `/home`
+Note that, if you followed the ZFSBootMenu guide in creating a separate dataset for your home directory, this snapshot will not include the contents inside and under `/home` (which at this point should be empty anyways).
 
 You can access the contents of a snapshot at any time in the `.zfs` directory at the root of a given dataset. For the ones we previously set up, those would be `/.zfs` and `/home/.zfs`. Note that these directories are not only hidden in the traditional way, but they won't show up even if you use `ls -a`. You need to actually `cd` into the apparently absent directory for it to work.
 
@@ -639,7 +639,7 @@ zfs snapshot -r zroot/ROOT/void@currentBoot
 
 This would give you a per-boot snapshot trail to rely on.
 
-The `zfs-snapshot(8)` man page provides a similar example for daily snapshots. Considering how simple the zfs CLI is, scripting several snapshot schemes can be quite easy, be them per boot, daily, or even every so many minutes using cron. Because ZFS snapshots grow as they drift from the present state, rotating them is optimal when conserving storage space.
+The `zfs-snapshot(8)` man page provides a similar example for daily snapshots. Considering how simple the zfs CLI is, scripting several snapshot schemes can be quite easy, be them per boot, daily, or even every so many minutes using cron. Because ZFS snapshots grow as they drift from the present state, rotating them is optimal when storage space is a concern.
 
 That's it! I hope this was helpful to you in either learning about ZFS or about Void installations with Root on ZFS.
 
