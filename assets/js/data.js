@@ -23,6 +23,11 @@ function get_data() {
     },
     "links": [
       {
+        "title": "Effects Showroom - TerminalTextEffects Docs",
+        "url": "https://chrisbuilds.github.io/terminaltexteffects/showroom/",
+        "date": "10/06/2024"
+      },
+      {
         "title": "Share Paste O2 | F-Droid - Free and Open Source Android App Repository",
         "url": "https://f-droid.org/en/packages/alt.nainapps.sharepaste.fdroid/",
         "date": "08/06/2024"
