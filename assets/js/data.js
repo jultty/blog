@@ -23,6 +23,11 @@ function get_data() {
     },
     "links": [
       {
+        "title": "Piku",
+        "url": "https://piku.github.io/",
+        "date": "10/06/2024"
+      },
+      {
         "title": "Effects Showroom - TerminalTextEffects Docs",
         "url": "https://chrisbuilds.github.io/terminaltexteffects/showroom/",
         "date": "10/06/2024"
