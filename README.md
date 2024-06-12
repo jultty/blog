@@ -1,6 +1,7 @@
 A bare-bones personal website relying only on simple scripts.
 
 ## Next
+- [ ] Light mode
 - [x] Set page titles dynamically
 - [x] Handle header a11y
 - [x] Add post date
