@@ -23,6 +23,16 @@ function get_data() {
     },
     "links": [
       {
+        "title": "UserLAnd | F-Droid - Free and Open Source Android App Repository",
+        "url": "https://f-droid.org/en/packages/tech.ula/",
+        "date": "21/06/2024"
+      },
+      {
+        "title": "phyphox | F-Droid - Free and Open Source Android App Repository",
+        "url": "https://f-droid.org/packages/de.rwth_aachen.phyphox/",
+        "date": "21/06/2024"
+      },
+      {
         "title": "Sounds of the Forest - Soundmap  Timber Festival",
         "url": "https://timberfestival.org.uk/soundsoftheforest-soundmap/",
         "date": "14/06/2024"
