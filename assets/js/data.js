@@ -23,6 +23,11 @@ function get_data() {
     },
     "links": [
       {
+        "title": "GitHub - JFryy/qq: jq multi-configuration format tool with interactive REPL.",
+        "url": "https://github.com/JFryy/qq/",
+        "date": "23/06/2024"
+      },
+      {
         "title": "UserLAnd | F-Droid - Free and Open Source Android App Repository",
         "url": "https://f-droid.org/en/packages/tech.ula/",
         "date": "21/06/2024"
