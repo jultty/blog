@@ -23,6 +23,11 @@ function get_data() {
     },
     "links": [
       {
+        "title": "aryak/mozhi: Mozhi is an alternative-frontend for many translation engines. - Codeberg.org",
+        "url": "https://codeberg.org/aryak/mozhi",
+        "date": "23/06/2024"
+      },
+      {
         "title": "GitHub - JFryy/qq: jq multi-configuration format tool with interactive REPL.",
         "url": "https://github.com/JFryy/qq/",
         "date": "23/06/2024"
