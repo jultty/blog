@@ -23,9 +23,17 @@ function get_data() {
     },
     "links": [
       {
+
+
+
+        "title": "Differential Analysis: A Summary",
+        "url": "https://blog.brownplt.org/2024/06/27/differential-analysis.html",
+        "date": "28/06/2024"
+      },
+      {
         "title": "aryak/mozhi: Mozhi is an alternative-frontend for many translation engines. - Codeberg.org",
         "url": "https://codeberg.org/aryak/mozhi",
-        "date": "23/06/2024"
+        "date": "27/06/2024"
       },
       {
         "title": "GitHub - JFryy/qq: jq multi-configuration format tool with interactive REPL.",
