@@ -23,9 +23,11 @@ function get_data() {
     },
     "links": [
       {
-
-
-
+        "title": "jgs font - Adel Faure",
+        "url": "https://adelfaure.net/tools/jgs/",
+        "date": "02/07/2024"
+      },
+      {
         "title": "Differential Analysis: A Summary",
         "url": "https://blog.brownplt.org/2024/06/27/differential-analysis.html",
         "date": "28/06/2024"
