@@ -47,9 +47,9 @@ What is happening here:
 1. A file named `packages` containing package names is parsed and all packages are queried and installed by the `xbps` package manager, if not already installed
 1. Service `dbus` is enabled if not already enabled
 1. The user is added to groups `audio` and `video`, unless already in them
-1. File `dhcpcd.conf` from the configuration directory's `base` directory is checked against the one in the passed path and overwrites it if the user chooses to do so.
-1. File `kernel-cmd-line.conf` from the configuration directory's `base` directory is copied into the passed path. If the file already exists or differs, tori will present an error.
-1. A symlink is checked to be on `/etc/localtime` pointing to the passed path. If it doesn't, it is created or fixed.
+1. File `dhcpcd.conf` from the configuration directory's `base` directory is checked against the one in the passed path and overwrites it if the user chooses to do so
+1. File `kernel-cmd-line.conf` from the configuration directory's `base` directory is copied into the passed path. If the file already exists or differs, tori will present an error
+1. A symlink is checked to be on `/etc/localtime` pointing to the passed path. If it doesn't, it is created or fixed
 1. If not installed, a few packages are installed using different package managers: `tailspin`, `taplo` and `bash-language-server`
 1. If absent, an executable for `lsix` is downloaded from a URL and placed at `~/.local/bin`
 1. Some `gsettings` values are read and set if they differ: `gtk-theme` and `font-name`
@@ -127,7 +127,7 @@ And finally, I suppose I just really wanted to build this. I really enjoy the pr
 
 So I decided to rewrite it with portability in mind. I am doing this rewrite in FreeBSD, to put the portability to the test. Once some basic functionality is done, the next step will be bringing it to Void Linux, Debian and NetBSD.
 
-tori is a bird that has just hatched, so everything is still very, very crude. At this stage, the docs often show intentions rather than implemented functionality. Still, because it is something I've come to depend on, it has this rewarding a sense of usefulness behind it.
+tori is a bird that has just hatched, so everything is still very, very crude. At this stage, the docs often show intentions rather than implemented functionality. Still, because it is something I've come to depend on, it has this rewarding sense of usefulness behind it.
 
 If it sounds interesting to you, take a look. You can follow development at the main [Git repository](https://brew.bsd.cafe/jutty/tori) in BSD.Cafe's Git forge or through the [GitHub mirror](https://github.com/jultty/tori). Going forward, I will also probably be talking a lot about it on my [Mastodon profile](https://mastodon.bsd.cafe/@jutty).
 

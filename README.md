@@ -15,3 +15,4 @@ A bare-bones personal website relying only on simple scripts.
   - [ ] Links RSS feed
 - [ ] Add tags
 - [ ] No JavaScript browsing support
+- [ ] Add a 404 page
