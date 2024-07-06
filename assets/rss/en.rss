@@ -22,5 +22,12 @@
       <guid>https://blog.jutty.dev/posts/void-on-zfs.html</guid>
       <author>juno@jutty.dev (Juno Takano)</author>
     </item>
+    <item>
+      <title>Introducing tori</title>
+      <pubDate>Sat, 6 Jul 2024 11:16:39 -0300</pubDate>
+      <link>https://blog.jutty.dev/posts/introducing-tori.html</link>
+      <guid>https://blog.jutty.dev/posts/introducing-tori.html</guid>
+      <author>juno@jutty.dev (Juno Takano)</author>
+    </item>
   </channel>
 </rss>

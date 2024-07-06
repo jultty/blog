@@ -10,6 +10,11 @@ function get_data() {
       ],
       "en": [
         {
+          "title": "Introducing tori",
+          "slug": "introducing-tori",
+          "date": "July 6, 2024"
+        },
+        {
           "title": "Void on ZFS",
           "slug": "void-on-zfs",
           "date": "June 9, 2024"
