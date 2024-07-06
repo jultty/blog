@@ -33,9 +33,9 @@ To get a better idea, see the code snippet below. It's from the main file that I
   place kernel-cmd-line.conf /etc/dracut.conf.d
   check_link /etc/localtime /usr/share/zoneinfo/America/Sao_Paulo
 
-  nix_get tailspin tspin
-  cargo_get taplo-cli taplo --locked
-  bun_get bash-language-server
+  get_nix tailspin tspin
+  get_cargo taplo-cli taplo --locked
+  get_bun bash-language-server
   get_bin 'https://raw.githubusercontent.com/hackerb9/lsix/master/lsix' lsix
 
   check_gsettings gtk-theme 'Plata-Noir'
