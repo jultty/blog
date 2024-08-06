@@ -28,6 +28,16 @@ function get_data() {
     },
     "links": [
       {
+        "title": "mrusme/reader: for your command line what the 'readability view' is for browsers",
+        "url": "https://github.com/mrusme/reader",
+        "date": "06/08/2024",
+      },
+      {
+        "title": "A handful of reasons JavaScript won’t be available - Piccalilli",
+        "url": "https://piccalil.li/blog/a-handful-of-reasons-javascript-wont-be-available/",
+        "date": "01/08/2024",
+      },
+      {
         "title": "jgs font - Adel Faure",
         "url": "https://adelfaure.net/tools/jgs/",
         "date": "02/07/2024"
@@ -91,11 +101,6 @@ function get_data() {
         "title": "Capital Offense How to Handle Abbreviations in CamelCase - Approxion",
         "url": "https://www.approxion.com/capital-offenses-how-to-handle-abbreviations-in-camelcase/",
         "date": "05/06/2024"
-      },
-      {
-        "title": "A handful of reasons JavaScript won’t be available - Piccalilli",
-        "url": "https://piccalil.li/blog/a-handful-of-reasons-javascript-wont-be-available/",
-        "date": "01/08/2024",
       },
     ]
   }
