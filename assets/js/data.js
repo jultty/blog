@@ -10,6 +10,11 @@ function get_data() {
       ],
       "en": [
         {
+          "title": "Giving up simplicity",
+          "slug": "unwinding",
+          "date": "August 10, 2024"
+        },
+        {
           "title": "Introducing tori",
           "slug": "introducing-tori",
           "date": "July 6, 2024"
