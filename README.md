@@ -1,7 +1,7 @@
 A bare-bones personal website relying only on simple scripts.
 
 ## Next
-- [ ] Improve responsiveness
+- [ ] Improve mobile responsiveness
 - [x] Light mode
 - [x] Set page titles dynamically
 - [x] Handle header a11y
