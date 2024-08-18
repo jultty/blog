@@ -9,7 +9,11 @@
 <ul id="posts">
   {% for page in english_section.pages %}
   <li>
+    {% if page.content %}
     <a class="post-date" href="{{ page.permalink }}">{{ page.date }}</a>
+    {% else %}
+    <span class="post-date">{{ page.date }}</a>
+    {% endif %}
     <a href="{{ page.extra.url | safe }}">{{ page.title }}</a>
     {% if page.content %}
       {% set portuguese_page = get_page(path="links/" ~ page.slug ~ ".pt.md") %}
