@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set english_section = get_section(path="links/_index.md", lang="en") %}
+
+<h1 class="title">
+  {{ section.title }}
+</h1>
+<ul id="posts">
+  {% for page in english_section.pages %}
+  <li>
+    <a class="post-date" href="{{ page.permalink }}">{{ page.date }}</a>
+    <a href="{{ page.extra.url | safe }}">{{ page.title }}</a>
+    {% if page.content %}
+      {% set portuguese_page = get_page(path="links/" ~ page.slug ~ ".pt.md") %}
+      {% if lang == "pt" %}
+      <span>{{ portuguese_page.content | replace(from="<p>", to="") | safe }}</span>
+      {% else %}
+      <span>{{ page.content | replace(from="<p>", to="") | safe }}</span>
+      {% endif %}
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock content %}

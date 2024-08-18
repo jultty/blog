@@ -1,0 +1,37 @@
+title = "jutty.dev"
+description = "Just computer nerd things"
+author = "Juno Takano"
+base_url = "https://jultty.github.io/blog-zola"
+default_language = "en"
+
+generate_feeds = true
+feed_filenames = ["rss.xml", "atom.xml"]
+
+taxonomies = [
+  { name = "tags", feed = true },
+]
+
+[translations]
+[languages]
+
+[languages.pt]
+generate_feeds = true
+feed_filenames = ["rss.xml", "atom.xml"]
+title = "jutty.dev"
+description = "Nerdices, unix, computarias"
+
+[markdown]
+smart_punctuation = true
+bottom_footnotes = true
+
+highlight_code = true
+highlight_theme = "css"
+# highlight_themes_css = [
+#   # base16-ocean-dark, material-dark, nord
+#   { theme = "material-dark", filename = "assets/css/syntax-dark.css" },
+#   # dimmed-fluid, subway-moscow
+#   { theme = "dimmed-fluid", filename = "assets/css/syntax-light.css" },
+# ]
+
+[extra]
+title_separator = "-"

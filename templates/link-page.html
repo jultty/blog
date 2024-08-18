@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h1 id="post-title">
+    <a href="{{ page.extra.url }}">{{ page.title }}</a>
+  </h1>
+  <p class="post-date"><strong>Linked {{ page.date }}</strong></p>
+  {% if page.extra.comment %}
+    <p>{{ page.extra.comment }}</p>
+  {% endif %}
+  {{ page.content | safe }}
+
+{% endblock content %}
