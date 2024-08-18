@@ -30,28 +30,26 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="assets/img/icon/icon_16.png", trailing_slash=false) }}">
   <link rel="icon" type="image/png" sizes="128x128" href="{{ get_url(path="assets/img/icon/icon_128.png", trailing_slash=false) }}">
 
-  {%- set description = page.content | default(value=config.description) | striptags | truncate(length=120) %}
+  {%- set description = page.content | default(value=config.description) | striptags | regex_replace(pattern="\n", rep=" ") | truncate(length=120) %}
 
   <meta property="og:title" content="{{ title }}" />
   <meta property="og:description" content="{{ description }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ current_url | default(value= get_url(path="/")) | safe }}" />
-  <meta property="og:image" content="{{ get_url(path="assets/img/logo/logo_192.png") }}" />
+  <meta property="og:image" content="{{ get_url(path="assets/img/icon/icon_192.png") }}" />
 
-      {% block rss %}<link rel="alternate" type="application/rss+xml" title="RSS ({{ lang }})" href="{{ get_url(path="rss.xml", lang=lang, trailing_slash=false) }}">
-      <link rel="alternate" type="application/rss+xml" title="Atom ({{ lang }})" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">{% endblock %}
+  {% block rss %}<link rel="alternate" type="application/rss+xml" title="RSS ({{ lang }})" href="{{ get_url(path="rss.xml", lang=lang, trailing_slash=false) }}">
+  <link rel="alternate" type="application/rss+xml" title="Atom ({{ lang }})" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">{% endblock %}
 </head>
 
 <body>
-
-      {% if lang == "pt" %}
-      <a id="skip-to-main" href="#main">Saltar para o conteúdo</a>
-      {% else %}
-      <a id="skip-to-main" href="#main">Skip to content</a>
-      {% endif %}
+  {% if lang == "pt" %}
+  <a id="skip-to-main" href="#main">Saltar para o conteúdo</a>
+  {% else %}
+  <a id="skip-to-main" href="#main">Skip to content</a>
+  {% endif %}
 
   {% block header %}{% endblock %}
-
   <div id="user-controls">
     <nav>
       <ul id="nav-menu">
@@ -67,12 +65,13 @@
       </ul>
     </nav>
     <div id="language-selector">
+      {% if current_path %}
       {% set prepared_path = current_path | replace(from="pt/", to="")  %}
       {% if lang == "pt" %}
           <a href="{{ get_url(path=prepared_path) }}">English</a>
       {% else %}
           <a href="{{ get_url(path="pt" ~ prepared_path) }}">Português</a>
-      {% endif %}
+      {% endif %}{% endif %}
     </div>
   </div>
 
