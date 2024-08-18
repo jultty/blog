@@ -1,7 +1,7 @@
 title = "jutty.dev"
 description = "Just computer nerd things"
 author = "Juno Takano"
-base_url = "https://jultty.github.io/blog-zola"
+base_url = "https://blog.jutty.dev"
 default_language = "en"
 
 generate_feeds = true
