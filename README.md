@@ -1,9 +1,10 @@
-# blog.jutty.dev
+# [blog.jutty.dev](https://blog.jutty.dev)
 
 A responsive, bilingual, RSS-ready and system-themed blog with zero lines of JavaScript powered by the [Zola](https://getzola.org) static site engine.
 
 ## Next
 - [ ] Add source code link on homepage
+- [ ] Columnar widescreen articles
 - [ ] Add tags
 
 ## Done
