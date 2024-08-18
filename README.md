@@ -1,18 +1,22 @@
-A bare-bones personal website relying only on simple scripts.
+# blog.jutty.dev
+
+A responsive, bilingual, RSS-ready and system-themed blog with zero lines of JavaScript powered by the [Zola](https://getzola.org) static site engine.
 
 ## Next
+- [ ] Add source code link on homepage
+- [ ] Add tags
+
+## Done
 - [x] Improve mobile responsiveness
 - [x] Light mode
 - [x] Set page titles dynamically
 - [x] Handle header a11y
 - [x] Add post date
 - [x] Add post author
-- [ ] Add source code link on homepage
 - [x] Style inline `<code>` tags
 - [x] Create a custom syntax highlighting style 
   - See: <https://pandoc.org/chunkedhtml-demo/13-syntax-highlighting.html>
 - [x] Add an RSS feed
   - [x] Links RSS feed
-- [ ] Add tags
 - [x] No JavaScript browsing support
 - [x] Add a 404 page
