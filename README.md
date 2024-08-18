@@ -6,6 +6,7 @@ A responsive, bilingual, RSS-ready and system-themed blog with zero lines of Jav
 - [ ] Add source code link on homepage
 - [ ] Columnar widescreen articles
 - [ ] Add tags
+- [ ] Check if localized page exists before opening it with the language selector
 
 ## Done
 - [x] Improve mobile responsiveness
