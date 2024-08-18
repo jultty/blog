@@ -55,7 +55,11 @@
   <div id="user-controls">
     <nav>
       <ul id="nav-menu">
+        {% if lang == "pt" %}
+        <li><a id="home" href="{{ get_url(path="/") }}">Início</a></li>
+        {% else %}
         <li><a id="home" href="{{ get_url(path="/") }}">Home</a></li>
+        {% endif %}
         <li><a href="{{ get_url(path="posts", lang=lang) }}">Posts</a></li>
         <li><a href="{{ get_url(path="links", lang=lang) }}">Links</a></li>
         <li><a href="{{ get_url(path="feeds", lang=lang) }}">RSS</a></li>

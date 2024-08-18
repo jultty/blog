@@ -15,12 +15,14 @@ html {
 * { margin: 0px; }
 
 .header-art {
-  color: #888
+  color: #666;
+  margin: 60px 0px 20px 85px;
+  font-size: 14px;
 }
 
 #user-controls {
   display: grid;
-  grid-template-columns: 8fr 1fr;
+  grid-template-columns: 1fr 2fr;
   margin-top: 25px;
 }
 
@@ -29,7 +31,7 @@ nav {
 }
 
 #language-selector {
-  justify-self: end;
+  justify-self: start;
   margin-top: 7px;
   margin-right: 20px;
 }
@@ -66,8 +68,13 @@ nav {
   margin-top: 80px;
 }
 
+ul#posts {
+  margin-left: 40px;
+}
+
 ul {
   margin-top: 5px;
+  margin-left: 0px;
   list-style: none;
 }
 
@@ -192,14 +199,60 @@ footer {
   float: right;
 }
 
+/* phone */
+@media (max-width: 650px) {
+  .article {
+    margin: 0 20px;
+  }
+
+  h1 {
+    margin-left: 20px;
+  }
+
+  #user-controls {
+    grid-template-columns: 1fr;
+  }
+
+  #language-selector {
+    justify-self: end;
+    margin-bottom: 15px;
+  }
+
+  .header-art {
+    margin: 25px 0px 15px 20px;
+    font-size: 10px;
+  }
+
+  ul#posts {
+    margin-left: 0px;
+    padding-left: 20px;
+  }
+
+  main pre {
+    margin: 30px 0px;
+  }
+}
+
 /* tablet */
-@media (min-width: 401px) {
+@media (min-width: 651px) {
   .article {
     margin: 0 45px;
   }
 
   h1 {
     margin-left: 30px;
+  }
+
+  #user-controls {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #language-selector {
+    justify-self: end;
+  }
+
+  .header-art {
+    margin: 25px 0px 15px 35px;
   }
 }
 
@@ -210,10 +263,56 @@ footer {
   text-decoration-thickness: 0.1px;
 }
 
+/* widescreen */
+@media (min-width: 1000px) {
+  .article {
+    margin: 0 20%;
+  }
+
+  h1 {
+    margin-left: 30px;
+  }
+
+  #user-controls {
+    grid-template-columns: 600px 2fr;
+  }
+
+  #language-selector {
+    justify-self: start;
+  }
+
+  .header-art {
+    margin: 60px 0px 20px 85px;
+  }
+}
+
+/* fullscreen */
+@media (min-width: 1500px) {
+  .article {
+    margin: 0 30%;
+  }
+
+  h1 {
+    margin-left: 30px;
+  }
+
+  #user-controls {
+    grid-template-columns: 600px 2fr;
+  }
+
+  #language-selector {
+    justify-self: start;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   #theme {
     background-color: #222222;
     color: #F1E9E5;
+  }
+
+  .header-art {
+    color: #888;
   }
 
   a {
@@ -258,31 +357,3 @@ footer {
   }
 }
 
-/* widescreen */
-@media (min-width: 1000px) {
-  .article {
-    margin: 0 20%;
-  }
-
-  h1 {
-    margin-left: 30px;
-  }
-}
-
-/* fullscreen */
-@media (min-width: 1500px) {
-  .article {
-    margin: 0 30%;
-  }
-
-  h1 {
-    margin-left: 30px;
-  }
-}
-
-/* phone */
-@media (max-width: 400px) {
-  .article {
-    margin: 0 20px;
-  }
-}
