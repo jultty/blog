@@ -1,9 +1,14 @@
+{% if page %}
+  {% set translation_count = page.translations | length %}
+{% elif section %}
+  {% set translation_count = section.translations | length %}
+{% endif %}
 <!DOCTYPE html>
 {% if lang == "pt" %}
 <html lang="pt-BR" id="theme">
-{% else %}
+  {% else %}
   <html lang="{{ lang }}" id="theme">
-{% endif %}
+    {% endif %}
 
 <head prefix="og: https://ogp.me/ns/website#">
   <meta charset="UTF-8">
@@ -74,10 +79,14 @@
       {% endif %}{% endif %}
     </div>
   </div>
+        {% if current_path and translation_count > 1 %}
+        {% set english_path = current_path | regex_replace(pattern="^/pt", rep="")  %}
         <div id="language-selector">
           <img id="language-icon" src="{{ get_url(path="assets/img/icons/language.svg") }}" alt="Language icon"/>{% if lang == "pt" %}<a href="{{ get_url(path=english_path) }}">EN</a>{% else %}<a href="{{ get_url(path=current_path, lang="pt") }}">PT</a>
           {% endif %}
         </div>
+        {% endif %}
+      </div>
 
   <main id="main">
       {% block content %} {% endblock %}
