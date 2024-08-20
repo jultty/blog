@@ -26,21 +26,21 @@
   <link rel="stylesheet" type="text/css" href="{{ get_url(path="assets/css/syntax-dark.css", trailing_slash=false) }}" media="(prefers-color-scheme: dark)" />
   <link rel="stylesheet" type="text/css" href="{{ get_url(path="assets/css/syntax-light.css", trailing_slash=false) }}" media="(prefers-color-scheme: light)" />
 
-  <link rel="icon" type="image/png" sizes="36x36" href="{{ get_url(path="assets/img/icon/icon_32.png", trailing_slash=false) }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="assets/img/icon/icon_16.png", trailing_slash=false) }}">
-  <link rel="icon" type="image/png" sizes="128x128" href="{{ get_url(path="assets/img/icon/icon_128.png", trailing_slash=false) }}">
 
   {%- set description = page.content | default(value=config.description) | striptags | regex_replace(pattern="\n", rep=" ") | truncate(length=120) %}
+      <link rel="icon" type="image/png" sizes="36x36" href="{{ get_url(path="assets/img/icons/kitty/kitty_32.png", trailing_slash=false) }}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="assets/img/icons/kitty/kitty_16.png", trailing_slash=false) }}">
+      <link rel="icon" type="image/png" sizes="128x128" href="{{ get_url(path="assets/img/icons/kitty/kitty_circle_128.png", trailing_slash=false) }}">
 
   <meta property="og:title" content="{{ title }}" />
   <meta property="og:description" content="{{ description }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ current_url | default(value= get_url(path="/")) | safe }}" />
-  <meta property="og:image" content="{{ get_url(path="assets/img/icon/icon_192.png") }}" />
 
   {% block rss %}<link rel="alternate" type="application/rss+xml" title="RSS ({{ lang }})" href="{{ get_url(path="rss.xml", lang=lang, trailing_slash=false) }}">
   <link rel="alternate" type="application/rss+xml" title="Atom ({{ lang }})" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">{% endblock %}
 </head>
+      <meta property="og:image" content="{{ get_url(path="assets/img/icons/kitty/kitty_circle_192.png") }}" />
 
 <body>
   {% if lang == "pt" %}
