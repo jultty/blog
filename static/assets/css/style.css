@@ -199,6 +199,13 @@ footer {
   float: right;
 }
 
+#language-icon {
+  width: 22px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 3px;
+}
+
 /* phone */
 @media (max-width: 650px) {
   .article {
@@ -354,6 +361,10 @@ footer {
 
   #nav-menu #home {
     color: #aaa;
+  }
+
+  #language-icon {
+    filter: invert(80%);
   }
 }
 
