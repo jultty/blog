@@ -3,13 +3,14 @@
 A responsive, bilingual, RSS-ready and system-themed blog with zero lines of JavaScript powered by the [Zola](https://getzola.org) static site engine.
 
 ## Next
-- [ ] Add source code link on homepage
-- [ ] Columnar widescreen articles
+- [ ] Add footers to more pages
 - [ ] Add tags
-- [ ] Check if localized page exists before opening it with the language selector
-- [ ] Add links RSS feed to header metadata
 
 ## Done
+- [x] Add links RSS feed to header metadata
+- [x] Columnar widescreen articles
+- [x] Check if localized page exists before opening it with the language selector
+- [x] Add source code link on homepage
 - [x] Improve mobile responsiveness
 - [x] Light mode
 - [x] Set page titles dynamically

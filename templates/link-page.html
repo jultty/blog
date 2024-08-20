@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{%- block extra_head %}
+      <link rel="alternate" type="application/rss+xml" title="Links (RSS)" href="http://127.0.0.1:1111/links/rss.xml">
+      <link rel="alternate" type="application/rss+xml" title="Links (Atom)" href="http://127.0.0.1:1111/links/atom.xml">
+{%- endblock %}
+
 {%- block content %}
         <h1 id="post-title"><a href="{{ page.extra.url }}">{{ page.title }}</a></h1>
         <time class="link-date"><strong>Linked {{ page.date }}</strong></time>

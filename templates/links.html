@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{%- block extra_head %}
+      <link rel="alternate" type="application/rss+xml" title="Links (RSS)" href="http://127.0.0.1:1111/links/rss.xml">
+      <link rel="alternate" type="application/rss+xml" title="Links (Atom)" href="http://127.0.0.1:1111/links/atom.xml">
+{%- endblock %}
+
 {%- block content %}
 {%- set english_section = get_section(path="links/_index.md", lang="en") %}
         <h1 class="title">{{ section.title }}</h1>

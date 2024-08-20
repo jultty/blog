@@ -43,9 +43,19 @@
       <meta property="og:image" content="{{ get_url(path="assets/img/icons/kitty/kitty_circle_192.png") }}" />
 
       {% block rss -%}
-      <link rel="alternate" type="application/rss+xml" title="RSS ({{ lang }})" href="{{ get_url(path="rss.xml", lang=lang, trailing_slash=false) }}">
-      <link rel="alternate" type="application/rss+xml" title="Atom ({{ lang }})" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">
+      {%- if lang == "pt" %}
+      {%- set locale_all_content = "Todo o conteúdo" %}
+      {%- set locale_language_name = "Português" %}
+      {% else %}
+      {%- set locale_all_content = "All content" %}
+      {%- set locale_language_name = "English" %}
+      {%- endif %}
+      <link rel="alternate" type="application/rss+xml" title="{{ locale_all_content }}: {{ locale_language_name }} (RSS)" href="{{ get_url(path="rss.xml", lang=lang, trailing_slash=false) }}">
+      <link rel="alternate" type="application/rss+xml" title="{{ locale_all_content }}: {{ locale_language_name }} (Atom)" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">
+      <link rel="alternate" type="application/rss+xml" title="Posts: {{ locale_language_name }} (RSS)" href="{{ get_url(path="posts/rss.xml", lang=lang, trailing_slash=false) }}">
+      <link rel="alternate" type="application/rss+xml" title="Posts: {{ locale_language_name }} (Atom)" href="{{ get_url(path="posts/atom.xml", lang=lang, trailing_slash=false) }}">
       {%- endblock %}
+      {%- block extra_head %}{% endblock %}
     </head>
 
     <body>
