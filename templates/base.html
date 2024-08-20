@@ -49,7 +49,7 @@
       {% else %}
       {%- set locale_all_content = "All content" %}
       {%- set locale_language_name = "English" %}
-      {%- endif %}
+      {%- endif -%}
       <link rel="alternate" type="application/rss+xml" title="{{ locale_all_content }}: {{ locale_language_name }} (RSS)" href="{{ get_url(path="rss.xml", lang=lang, trailing_slash=false) }}">
       <link rel="alternate" type="application/rss+xml" title="{{ locale_all_content }}: {{ locale_language_name }} (Atom)" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">
       <link rel="alternate" type="application/rss+xml" title="Posts: {{ locale_language_name }} (RSS)" href="{{ get_url(path="posts/rss.xml", lang=lang, trailing_slash=false) }}">
@@ -81,13 +81,14 @@
           </ul>
         </nav>
         {% if current_path and translation_count > 1 %}
-        {%- set english_path = current_path | regex_replace(pattern="^/pt", rep="")  %}
+        {%- set slashless_current_path = current_path | regex_replace(pattern="^\/", rep="")  %}
+        {%- set english_path = current_path | regex_replace(pattern="pt\/", rep="")  %}
         <div id="language-selector">
           <figure id="language-icon">
             <img src="{{ get_url(path="assets/img/icons/language.svg") }}"
               alt="{% if lang == "pt" %}Ícone de idioma{% else %}Language icon{% endif %}"/>
           </figure>
-          {%- if lang == "pt" %}<a href="{{ get_url(path=english_path) }}">EN</a>{% else %}<a href="{{ get_url(path=current_path, lang="pt") }}">PT</a>
+          {%- if lang == "pt" %}<a href="{{ get_url(path=english_path) }}">EN</a>{% else %}<a href="{{ get_url(path=slashless_current_path, lang="pt") }}">PT</a>
           {%- endif %}
         </div>
         {%- endif %}
