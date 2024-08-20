@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {% block header %}
-  <header>
-    <div class="header-art">
-      <pre role="img" aria-label="ASCII art with 'jutty.dev' in a 3D, slanted font">
+      <header>
+        <figure class="header-art">
+          <pre role="img" aria-label="ASCII art with 'jutty.dev' in a 3D, slanted font">
              __    __                    __
  __         /\ \__/\ \__                /\ \
 /\_\  __  __\ \ ,_\ \ ,_\  __  __       \_\ \     __   __  __
@@ -13,28 +13,26 @@
 /\ \_\ \/___/   \/__/ \/__/ `/___/  \/_/\/__,_ /\/____/ \/__/
 \ \____/                       /\___/
  \/___/                        \/__/
-      </pre>
-    </div>
-  </header>
+          </pre>
+        </figure>
+      </header>
 {% endblock header %}
 
 {% block content %}
 
-  {% if lang == "pt" %}
-    {% set posts = get_section(path="posts/_index.pt.md") %}
-  {% else %}
-    {% set posts = get_section(path="posts/_index.md") %}
-  {% endif %}
-
-  <nav class="index-posts">
-    <ul id="posts">
-      {% for post in posts.pages %}
-      <li>
-        <span class="post-date">{{ post.date }}</span>
-        <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-
-{% endblock content %}
+  {%- if lang == "pt" %}
+    {%- set posts = get_section(path="posts/_index.pt.md") %}
+  {%- else %}
+    {%- set posts = get_section(path="posts/_index.md") %}
+  {%- endif %}
+        <nav class="index-posts">
+          <ul id="posts">
+            {% for post in posts.pages %}
+            <li>
+              <span class="post-date">{{ post.date }}</span>
+              <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+{%- endblock content %}

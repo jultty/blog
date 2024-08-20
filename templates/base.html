@@ -1,19 +1,18 @@
-{% if page %}
-  {% set translation_count = page.translations | length %}
-{% elif section %}
-  {% set translation_count = section.translations | length %}
-{% endif %}
+{%- if page %}
+  {%- set translation_count = page.translations | length %}
+{%- elif section %}
+  {%- set translation_count = section.translations | length %}
+{%- endif -%}
 <!DOCTYPE html>
-{% if lang == "pt" %}
+{%- if lang == "pt" %}
 <html lang="pt-BR" id="theme">
-  {% else %}
+  {%- else %}
   <html lang="{{ lang }}" id="theme">
-    {% endif %}
+    {%- endif %}
 
     <head prefix="og: https://ogp.me/ns/website#">
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
 
       {%- set title_tail = " ~ " ~ config.title %}
 
@@ -43,26 +42,28 @@
       <meta property="og:url" content="{{ current_url | default(value= get_url(path="/")) | safe }}" />
       <meta property="og:image" content="{{ get_url(path="assets/img/icons/kitty/kitty_circle_192.png") }}" />
 
-      {% block rss %}<link rel="alternate" type="application/rss+xml" title="RSS ({{ lang }})" href="{{ get_url(path="rss.xml", lang=lang, trailing_slash=false) }}">
-      <link rel="alternate" type="application/rss+xml" title="Atom ({{ lang }})" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">{% endblock %}
+      {% block rss -%}
+      <link rel="alternate" type="application/rss+xml" title="RSS ({{ lang }})" href="{{ get_url(path="rss.xml", lang=lang, trailing_slash=false) }}">
+      <link rel="alternate" type="application/rss+xml" title="Atom ({{ lang }})" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">
+      {%- endblock %}
     </head>
 
     <body>
-      {% if lang == "pt" %}
+      {%- if lang == "pt" %}
       <a id="skip-to-main" href="#main">Saltar para o conteúdo</a>
-      {% else %}
+      {%- else %}
       <a id="skip-to-main" href="#main">Skip to content</a>
-      {% endif %}
+      {% endif -%}
 
       {% block header %}{% endblock %}
       <div id="user-controls" class="{% if current_path and (current_path == "/" or current_path == "pt/"  ) %}index-user-controls{% else %}subpage-user-controls{% endif %}">
         <nav id="nav-menu">
           <ul>
-            {% if lang == "pt" %}
+            {%- if lang == "pt" %}
             <li><a id="home" href="{{ get_url(path="/pt") }}">Início</a></li>
-            {% else %}
+            {%- else %}
             <li><a id="home" href="{{ get_url(path="/") }}">Home</a></li>
-            {% endif %}
+            {%- endif %}
             <li><a href="{{ get_url(path="posts", lang=lang) }}">Posts</a></li>
             <li><a href="{{ get_url(path="links", lang=lang) }}">Links</a></li>
             <li><a href="{{ get_url(path="feeds", lang=lang) }}">RSS</a></li>
@@ -70,18 +71,24 @@
           </ul>
         </nav>
         {% if current_path and translation_count > 1 %}
-        {% set english_path = current_path | regex_replace(pattern="^/pt", rep="")  %}
+        {%- set english_path = current_path | regex_replace(pattern="^/pt", rep="")  %}
         <div id="language-selector">
-          <img id="language-icon" src="{{ get_url(path="assets/img/icons/language.svg") }}" alt="Language icon"/>{% if lang == "pt" %}<a href="{{ get_url(path=english_path) }}">EN</a>{% else %}<a href="{{ get_url(path=current_path, lang="pt") }}">PT</a>
-          {% endif %}
+          <figure id="language-icon">
+            <img src="{{ get_url(path="assets/img/icons/language.svg") }}"
+              alt="{% if lang == "pt" %}Ícone de idioma{% else %}Language icon{% endif %}"/>
+          </figure>
+          {%- if lang == "pt" %}<a href="{{ get_url(path=english_path) }}">EN</a>{% else %}<a href="{{ get_url(path=current_path, lang="pt") }}">PT</a>
+          {%- endif %}
         </div>
-        {% endif %}
+        {%- endif %}
       </div>
 
       <main id="main">
-        {% block content %}{% endblock %}
+        {%- block content %}{% endblock %}
       </main>
 
-    {% block footer %}{% endblock %}
+      <footer>
+        {%- block footer %}{% endblock -%}
+      </footer>
     </body>
   </html>

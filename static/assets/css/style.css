@@ -82,11 +82,19 @@ ul {
   list-style: none;
 }
 
-.post-date {
+.post-date, .link-date {
   color: #777;
   font-size: 14px;
   margin-top: 0px;
   text-decoration-thickness: 0.1px;
+}
+
+article .post-date {
+  margin-left: 30px;
+}
+
+.link-date {
+  margin-left: 30px;
 }
 
 ol {
