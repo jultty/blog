@@ -1,11 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-  <h1 id="post-title">
-    {{ page.title }}
-  </h1>
-  <p class="post-date"><strong>{{ page.date }}</strong></p>
-  {{ page.content | safe }}
-
+  <article class="blog-post">
+    <h1 id="post-title">
+      {{ page.title }}
+    </h1>
+    <p class="post-date"><strong>{{ page.date }}</strong></p>
+    {{ page.content | safe }}
+  </article>
 {% endblock content %}
+
+{% block footer %}
+  <footer>
+    <hr/>
+        <p class="footer-text">
+          made by <a href="https://jutty.dev">jutty</a>
+          with <a href="https://www.getzola.org/">Zola</a>
+          &bullet;
+          BSD-licensed <a href="https://github.com/jultty/blog">source code</a>
+          &bullet;
+          <a href="{{ get_url(path="acknowledgments") }}">acknowledgments</a>
+          <br/>
+          built {{ now(utc=true) | date(format="%Y-%m-%d %H:%M") }} UTC, {{ now(timestamp=true) }} non-leap seconds since the Unix Epoch
+        </p>
+  </footer>
+{% endblock footer %}

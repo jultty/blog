@@ -42,9 +42,13 @@ nav {
   font-weight: bold;
 }
 
+#nav-menu ul {
+  padding-left: 0px;
+}
+
 #nav-menu li {
   display: inline-block;
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #skip-to-main {
@@ -76,6 +80,13 @@ ul {
   margin-top: 5px;
   margin-left: 0px;
   list-style: none;
+}
+
+.post-date {
+  color: #777;
+  font-size: 14px;
+  margin-top: 0px;
+  text-decoration-thickness: 0.1px;
 }
 
 ol {
@@ -119,7 +130,11 @@ h1 {
   font-size: 25px;
   font-weight: bold;
   color: #444;
-  margin: 40px 0px 10px 0px;
+  margin: 40px 0px 30px 30px;
+}
+
+article h1 {
+  margin: 40px 0px 10px 30px;
 }
 
 h2,h3,h4 {
@@ -188,15 +203,46 @@ table th, td {
 }
 
 footer {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .footer-text {
-  padding: 20px 20px;
+  padding: 0px 20px;
+  text-align: center;
 }
 
 .footer-back {
   float: right;
+}
+
+.header-art {
+  display: grid;
+  grid-template-columns: 12% 76% 12%;
+  grid-template-areas: "margin-left art margin-right";
+  margin: 25px 0px 15px 20px;
+}
+
+.header-art pre {
+  grid-area: art;
+  justify-self: center;
+  font-size: 2.5vw;
+}
+
+#user-controls {
+  display: grid;
+  grid-template-columns: 2% 63% 33% 2%;
+  grid-template-areas: "margin-left nav lang margin-right";
+  margin: 20px;
+}
+
+#nav-menu {
+  grid-area: nav;
+  justify-self: start;
+}
+
+#language-selector {
+  justify-self: end;
+  grid-area: lang;
 }
 
 #language-icon {
@@ -212,22 +258,10 @@ footer {
     margin: 0 20px;
   }
 
-  h1 {
-    margin-left: 20px;
-  }
-
   #user-controls {
-    grid-template-columns: 1fr;
-  }
-
-  #language-selector {
-    justify-self: end;
-    margin-bottom: 15px;
-  }
-
-  .header-art {
-    margin: 25px 0px 15px 20px;
-    font-size: 8px;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "nav nav" "lang lang";
   }
 
   ul#posts {
@@ -236,7 +270,8 @@ footer {
   }
 
   main pre {
-    margin: 30px 0px;
+    margin: 30px 0;
+    padding: 20px 10px 30px 30px;
   }
 }
 
@@ -246,70 +281,97 @@ footer {
     margin: 0 45px;
   }
 
-  h1 {
+  .index-user-controls#user-controls {
+    grid-template-columns: 13% 64% 10% 13%;
+  }
+
+  .index-posts ul#posts {
+    margin-left: 14%;
+    padding-left: 20px;
+  }
+
+  ul#posts {
     margin-left: 30px;
+    padding-left: 20px;
+  }
+
+  .header-art pre {
+    margin-top: 100px;
+    font-size: 2vw;
+  }
+}
+
+/* wide screen */
+@media (min-width: 1000px) {
+
+  .header-art {
+    grid-template-columns: 12% 76% 12%;
+  }
+
+  .header-art pre {
+    margin-top: 120px;
+    font-size: 20px;
+  }
+
+  .index-user-controls#user-controls {
+    grid-template-columns: 1fr 680px 140px 1fr;
   }
 
   #user-controls {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 12% 62% 14% 12%;
   }
 
-  #language-selector {
-    justify-self: end;
+  .index-posts {
+    display: grid;
+    grid-template-columns: 1fr 900px 1fr;
+    grid-template-areas: "margin-left posts margin-right";
   }
 
-  .header-art {
-    margin: 25px 0px 15px 35px;
+  .index-posts ul {
+    grid-area: posts;
+    justify-self: start;
+  }
+
+  .index-posts ul#posts {
+    margin-left: 0px;
+  }
+
+  main {
+    margin: 0 10%;
   }
 }
 
-.post-date {
-  color: #777;
-  font-size: 14px;
-  margin-top: 0px;
-  text-decoration-thickness: 0.1px;
-}
-
-/* widescreen */
-@media (min-width: 1000px) {
-  .article {
+/* very wide screen */
+@media (min-width: 1921px) {
+  main {
     margin: 0 20%;
   }
 
-  h1 {
-    margin-left: 30px;
+  .header-art pre {
+    margin-top: 160px;
   }
 
-  #user-controls {
-    grid-template-columns: 600px 2fr;
+  .index-user-controls#user-controls {
+    grid-template-columns: 1fr 575px 200px 1fr;
   }
 
-  #language-selector {
-    justify-self: start;
+  .subpage-user-controls#user-controls {
+    grid-template-columns: 100%;
+    grid-template-areas: "nav nav" "lang lang";
   }
 
-  .header-art {
-    margin: 60px 0px 20px 85px;
-  }
-}
-
-/* fullscreen */
-@media (min-width: 1500px) {
-  .article {
-    margin: 0 30%;
+  .subpage-user-controls #nav-menu {
+    justify-self: center;
   }
 
-  h1 {
-    margin-left: 30px;
+  .subpage-user-controls #language-selector {
+    justify-self: center;
   }
 
-  #user-controls {
-    grid-template-columns: 600px 2fr;
+  .index-posts {
+    grid-template-columns: 1fr 800px 1fr;
   }
 
-  #language-selector {
-    justify-self: start;
-  }
 }
 
 @media (prefers-color-scheme: dark) {

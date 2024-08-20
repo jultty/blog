@@ -10,75 +10,65 @@
   <html lang="{{ lang }}" id="theme">
     {% endif %}
 
-<head prefix="og: https://ogp.me/ns/website#">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head prefix="og: https://ogp.me/ns/website#">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  {%- set title_tail = " ~ " ~ config.title %}
+      {%- set title_tail = " ~ " ~ config.title %}
 
-  {%- if page.title %}
-    {%- set title = page.title ~ title_tail %}
-  {%- elif section.title %}
-    {%- set title = section.title ~ title_tail %}
-  {%- else %}
-    {%- set title = config.title %}
-  {%- endif %}
+      {%- if page.title %}
+      {%- set title = page.title ~ title_tail %}
+      {%- elif section.title %}
+      {%- set title = section.title ~ title_tail %}
+      {%- else %}
+      {%- set title = config.title %}
+      {%- endif %}
 
-  <title>{{ title }}</title>
+      <title>{{ title }}</title>
 
-  <link href="{{ get_url(path="assets/css/style.css", trailing_slash=false) }}" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="{{ get_url(path="assets/css/syntax-dark.css", trailing_slash=false) }}" media="(prefers-color-scheme: dark)" />
-  <link rel="stylesheet" type="text/css" href="{{ get_url(path="assets/css/syntax-light.css", trailing_slash=false) }}" media="(prefers-color-scheme: light)" />
+      <link href="{{ get_url(path="assets/css/style.css", trailing_slash=false) }}" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{{ get_url(path="assets/css/syntax-dark.css", trailing_slash=false) }}" media="(prefers-color-scheme: dark)" />
+      <link rel="stylesheet" type="text/css" href="{{ get_url(path="assets/css/syntax-light.css", trailing_slash=false) }}" media="(prefers-color-scheme: light)" />
 
-
-  {%- set description = page.content | default(value=config.description) | striptags | regex_replace(pattern="\n", rep=" ") | truncate(length=120) %}
       <link rel="icon" type="image/png" sizes="36x36" href="{{ get_url(path="assets/img/icons/kitty/kitty_32.png", trailing_slash=false) }}">
       <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="assets/img/icons/kitty/kitty_16.png", trailing_slash=false) }}">
       <link rel="icon" type="image/png" sizes="128x128" href="{{ get_url(path="assets/img/icons/kitty/kitty_circle_128.png", trailing_slash=false) }}">
 
-  <meta property="og:title" content="{{ title }}" />
-  <meta property="og:description" content="{{ description }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ current_url | default(value= get_url(path="/")) | safe }}" />
+      {%- set description = page.content | default(value=config.description) | striptags | regex_replace(pattern="\n", rep=" ") | truncate(length=120) %}
 
-  {% block rss %}<link rel="alternate" type="application/rss+xml" title="RSS ({{ lang }})" href="{{ get_url(path="rss.xml", lang=lang, trailing_slash=false) }}">
-  <link rel="alternate" type="application/rss+xml" title="Atom ({{ lang }})" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">{% endblock %}
-</head>
+      <meta property="og:title" content="{{ title }}" />
+      <meta property="og:description" content="{{ description }}" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="{{ current_url | default(value= get_url(path="/")) | safe }}" />
       <meta property="og:image" content="{{ get_url(path="assets/img/icons/kitty/kitty_circle_192.png") }}" />
 
-<body>
-  {% if lang == "pt" %}
-  <a id="skip-to-main" href="#main">Saltar para o conteúdo</a>
-  {% else %}
-  <a id="skip-to-main" href="#main">Skip to content</a>
-  {% endif %}
+      {% block rss %}<link rel="alternate" type="application/rss+xml" title="RSS ({{ lang }})" href="{{ get_url(path="rss.xml", lang=lang, trailing_slash=false) }}">
+      <link rel="alternate" type="application/rss+xml" title="Atom ({{ lang }})" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">{% endblock %}
+    </head>
 
-  {% block header %}{% endblock %}
-  <div id="user-controls">
-    <nav>
-      <ul id="nav-menu">
-        {% if lang == "pt" %}
-        <li><a id="home" href="{{ get_url(path="/") }}">Início</a></li>
-        {% else %}
-        <li><a id="home" href="{{ get_url(path="/") }}">Home</a></li>
-        {% endif %}
-        <li><a href="{{ get_url(path="posts", lang=lang) }}">Posts</a></li>
-        <li><a href="{{ get_url(path="links", lang=lang) }}">Links</a></li>
-        <li><a href="{{ get_url(path="feeds", lang=lang) }}">RSS</a></li>
-          <li><a href="https://mastodon.bsd.cafe/@jutty">Mastodon</a></li>
-      </ul>
-    </nav>
-    <div id="language-selector">
-      {% if current_path %}
-      {% set prepared_path = current_path | replace(from="pt/", to="")  %}
+    <body>
       {% if lang == "pt" %}
-          <a href="{{ get_url(path=prepared_path) }}">English</a>
+      <a id="skip-to-main" href="#main">Saltar para o conteúdo</a>
       {% else %}
-          <a href="{{ get_url(path="pt" ~ prepared_path) }}">Português</a>
-      {% endif %}{% endif %}
-    </div>
-  </div>
+      <a id="skip-to-main" href="#main">Skip to content</a>
+      {% endif %}
+
+      {% block header %}{% endblock %}
+      <div id="user-controls" class="{% if current_path and (current_path == "/" or current_path == "pt/"  ) %}index-user-controls{% else %}subpage-user-controls{% endif %}">
+        <nav id="nav-menu">
+          <ul>
+            {% if lang == "pt" %}
+            <li><a id="home" href="{{ get_url(path="/pt") }}">Início</a></li>
+            {% else %}
+            <li><a id="home" href="{{ get_url(path="/") }}">Home</a></li>
+            {% endif %}
+            <li><a href="{{ get_url(path="posts", lang=lang) }}">Posts</a></li>
+            <li><a href="{{ get_url(path="links", lang=lang) }}">Links</a></li>
+            <li><a href="{{ get_url(path="feeds", lang=lang) }}">RSS</a></li>
+            <li><a href="https://mastodon.bsd.cafe/@jutty">Mastodon</a></li>
+          </ul>
+        </nav>
         {% if current_path and translation_count > 1 %}
         {% set english_path = current_path | regex_replace(pattern="^/pt", rep="")  %}
         <div id="language-selector">
@@ -88,9 +78,10 @@
         {% endif %}
       </div>
 
-  <main id="main">
-      {% block content %} {% endblock %}
-  </main>
+      <main id="main">
+        {% block content %}{% endblock %}
+      </main>
 
-</body>
-</html>
+    {% block footer %}{% endblock %}
+    </body>
+  </html>
