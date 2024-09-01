@@ -50,10 +50,8 @@
       {%- set locale_all_content = "All content" %}
       {%- set locale_language_name = "English" %}
       {%- endif -%}
-      <link rel="alternate" type="application/rss+xml" title="{{ locale_all_content }}: {{ locale_language_name }} (RSS)" href="{{ get_url(path="rss.xml", lang=lang, trailing_slash=false) }}">
-      <link rel="alternate" type="application/rss+xml" title="{{ locale_all_content }}: {{ locale_language_name }} (Atom)" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">
-      <link rel="alternate" type="application/rss+xml" title="Posts: {{ locale_language_name }} (RSS)" href="{{ get_url(path="posts/rss.xml", lang=lang, trailing_slash=false) }}">
-      <link rel="alternate" type="application/rss+xml" title="Posts: {{ locale_language_name }} (Atom)" href="{{ get_url(path="posts/atom.xml", lang=lang, trailing_slash=false) }}">
+      <link rel="alternate" type="application/rss+xml" title="{{ locale_all_content }} ({{ locale_language_name }})" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">
+      <link rel="alternate" type="application/rss+xml" title="Posts ({{ locale_language_name }})" href="{{ get_url(path="posts/atom.xml", lang=lang, trailing_slash=false) }}">
       {%- endblock %}
       {%- block extra_head %}{% endblock %}
     </head>
