@@ -6,7 +6,8 @@
 
 {%- block content %}
         <h1 id="post-title"><a href="{{ page.extra.url }}">{{ page.title }}</a></h1>
-        <time class="link-date"><strong>Linked {{ page.date }}</strong></time>
+        <time class="link-date"><strong>{% if lang == "pt" %}Linkado{% else %}Linked{% endif %} {{ page.date }}</strong></time>
+
         {%- if page.extra.comment %}<p>{{ page.extra.comment }}</p>{% endif %}
         {{- page.content | safe }}
 {%- endblock content %}

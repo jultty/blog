@@ -10,19 +10,19 @@
         <ul id="posts">
           {%- for page in english_section.pages %}
           <li>
-            {%- if page.content %}<a class="post-date" href="{{ page.permalink }}">{{ page.date }}</a>
-              {%- else %}
+          {%- if page.content -%}
+          {%- set portuguese_page = get_page(path="links/" ~ page.slug ~ ".pt.md") %}
+            <time class="post-date"><a href="
+            {%- if lang == "pt" -%}
+              {{ portuguese_page.permalink -}}
+            {%- else -%}
+              {{ page.permalink -}}
+            {%- endif -%}
+            ">{{ page.date -}}</a></time>
+          {%- else %}
             <time class="post-date">{{ page.date }}</time>
-            {%- endif %}
+          {%- endif -%}
             <a href="{{ page.extra.url | safe }}">{{ page.title }}</a>
-            {%- if page.content %}
-              {%- set portuguese_page = get_page(path="links/" ~ page.slug ~ ".pt.md") %}
-              {%- if lang == "pt" %}
-              <span>{{ portuguese_page.content | replace(from="<p>", to="") | safe }}</span>
-              {%- else %}
-              <span>{{ page.content | replace(from="<p>", to="") | safe }}</span>
-              {%- endif %}
-            {%- endif %}
           </li>
           {%- endfor %}
         </ul>
