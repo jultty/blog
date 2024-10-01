@@ -52,6 +52,7 @@
       {%- endif -%}
       <link rel="alternate" type="application/rss+xml" title="{{ locale_all_content }} ({{ locale_language_name }})" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">
       <link rel="alternate" type="application/rss+xml" title="Posts ({{ locale_language_name }})" href="{{ get_url(path="posts/atom.xml", lang=lang, trailing_slash=false) }}">
+      <link rel="alternate" type="application/rss+xml" title="Links" href="{{ get_url(path="links/atom.xml", trailing_slash=false) }}">
       {%- endblock %}
       {%- block extra_head %}{% endblock %}
     </head>
