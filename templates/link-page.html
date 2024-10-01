@@ -2,6 +2,8 @@
 
 {%- block extra_head %}
       <link rel="alternate" type="application/rss+xml" title="Links" href="http://127.0.0.1:1111/links/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Links" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+
 {%- endblock %}
 
 {%- block content %}
