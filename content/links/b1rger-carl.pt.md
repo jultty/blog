@@ -6,3 +6,5 @@ url = "https://github.com/b1rger/carl"
 +++
 
 Isso é perfeito em conjunto com o [vdirsyncer](https://vdirsyncer.pimutils.org/en/stable/), que eu já uso há algum tempo exatamente para ter um diretório local de arquivos `.ics`  para cada um dos meus calendários DAV no Nextcloud.
+
+Se achar interessante, talvez também te interesse o [khal](https://github.com/pimutils/khal).
