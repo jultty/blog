@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <article class="blog-post">
+          <h1 id="post-title">{{ page.title }}</h1>
+          <time class="post-date">{{ page.date -}}</time>
+          {{ page.content | safe }}
+        </article>
+{%- endblock content -%}
+
+{%- block footer %}
+  <hr/>
+  <p class="footer-text">
+    {%- if lang == "pt" %}feito por{% else %}made by{% endif %} <a href="https://jutty.dev">jutty</a>
+    {% if lang == "pt" %}com{% else %}with{% endif %} <a href="https://www.getzola.org/">Zola</a>
+    &bullet; {% if lang != "pt" %}BSD-licensed{% endif %}
+    <a href="https://github.com/jultty/blog">{% if lang == "pt" %}código fonte{% else %}source code{% endif %}</a>
+    {% if lang == "pt" %}sob a licença BSD{% endif %}
+    &bullet; <a href="{{ get_url(path="acknowledgments") }}">{% if lang == "pt" %}créditos{% else %}acknowledgments{% endif %}</a>
+    <br/>
+    {% if lang == "pt" %}gerado em{% else %}built{% endif %} <time>{{ now(utc=true) | date(format="%Y-%m-%d %H:%M") }} UTC</time>,
+    {{ now(timestamp=true) }}{% if lang == "pt" %}&#xba; segundo não-bissexto da Era Unix{% else %} non-leap seconds since the Unix Epoch{% endif %}
+  </p>
+{% endblock footer -%}
