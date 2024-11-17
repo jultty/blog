@@ -20,6 +20,7 @@
 
 {% block content %}
 
+  <h2 class="index-h2">Latest posts</h2>
   {%- if lang == "pt" %}
     {%- set posts = get_section(path="posts/_index.pt.md") %}
   {%- else %}
@@ -32,7 +33,54 @@
               <span class="post-date">{{ post.date }}</span>
               <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
             </li>
+            {% if loop.index == 5  %}{% break %}{% endif %}
             {% endfor %}
           </ul>
         </nav>
+        <a class="index-see-all" href="{{ posts.permalink }}">
+          {%- if lang == "pt" %}Ver todos{% else %}See all{% endif %}
+        </a>
+
+  <h2 class="index-h2">Latest notes</h2>
+  {%- if lang == "pt" %}
+    {%- set notes = get_section(path="notes/_index.pt.md") %}
+  {%- else %}
+    {%- set notes = get_section(path="notes/_index.md") %}
+  {%- endif %}
+        <nav class="index-posts">
+          <ul id="posts">
+            {% for note in notes.pages %}
+            <li>
+              <span class="post-date">{{ note.date }}</span>
+              <a href="{{ note.permalink | safe }}">{{ note.title }}</a>
+            </li>
+            {% if loop.index == 5  %}{% break %}{% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+        <a class="index-see-all" href="{{ notes.permalink }}">
+          {%- if lang == "pt" %}Ver todos{% else %}See all{% endif %}
+        </a>
+
+  <h2 class="index-h2">Latest links</h2>
+  {%- if lang == "pt" %}
+    {%- set links = get_section(path="links/_index.pt.md") %}
+  {%- else %}
+    {%- set links = get_section(path="links/_index.md") %}
+  {%- endif %}
+        <nav class="index-posts">
+          <ul id="posts">
+            {% for link in links.pages %}
+            <li>
+              <span class="post-date">{{ link.date }}</span>
+              <a href="{{ link.permalink | safe }}">{{ link.title }}</a>
+            </li>
+            {% if loop.index == 5  %}{% break %}{% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+        <a class="index-see-all" href="{{ links.permalink }}">
+          {%- if lang == "pt" %}Ver todos{% else %}See all{% endif %}
+        </a>
+
 {%- endblock content %}
