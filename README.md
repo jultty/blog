@@ -3,10 +3,10 @@
 A responsive, bilingual, RSS-ready and system-themed blog with zero lines of JavaScript powered by the [Zola](https://getzola.org) static site engine.
 
 ## Next
-- [ ] Add footers to more pages
 - [ ] Add tags
 
 ## Done
+- [x] Add footers to more pages
 - [x] Add links RSS feed to header metadata
 - [x] Columnar widescreen articles
 - [x] Show language toggle only if localized page exists
