@@ -5,6 +5,11 @@
 
 html {
   font-family: 'Mononoki', monospace;
+  height: 100%;
+}
+
+body {
+  height: 100%;
 }
 
 #theme {
@@ -12,7 +17,10 @@ html {
   color: #222;
 }
 
-* { margin: 0px; }
+* {
+  margin: 0px;
+  box-sizing: inherit;
+}
 
 .header-art {
   display: grid;
@@ -88,6 +96,12 @@ ul {
   margin-top: 5px;
   margin-left: 0px;
   list-style: none;
+}
+
+#container {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .post-date, .link-date {

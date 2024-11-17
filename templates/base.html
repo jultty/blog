@@ -59,48 +59,50 @@
     </head>
 
     <body>
-      {%- if lang == "pt" %}
-      <a id="skip-to-main" href="#main">Saltar para o conteúdo</a>
-      {%- else %}
-      <a id="skip-to-main" href="#main">Skip to content</a>
-      {% endif -%}
+      <div id="container">
+        {%- if lang == "pt" %}
+        <a id="skip-to-main" href="#main">Saltar para o conteúdo</a>
+        {%- else %}
+        <a id="skip-to-main" href="#main">Skip to content</a>
+        {% endif -%}
 
-      {% block header %}{% endblock %}
-      <div id="user-controls" class="{% if current_path and (current_path == "/" or current_path == "pt/"  ) %}index-user-controls{% else %}subpage-user-controls{% endif %}">
-        <nav id="nav-menu">
-          <ul>
-            {%- if lang == "pt" %}
-            <li><a id="home" href="{{ get_url(path="/pt") }}">Início</a></li>
-            {%- else %}
-            <li><a id="home" href="{{ get_url(path="/") }}">Home</a></li>
+        {% block header %}{% endblock %}
+        <div id="user-controls" class="{% if current_path and (current_path == "/" or current_path == "pt/"  ) %}index-user-controls{% else %}subpage-user-controls{% endif %}">
+          <nav id="nav-menu">
+            <ul>
+              {%- if lang == "pt" %}
+              <li><a id="home" href="{{ get_url(path="/pt") }}">Início</a></li>
+              {%- else %}
+              <li><a id="home" href="{{ get_url(path="/") }}">Home</a></li>
+              {%- endif %}
+              <li><a href="{{ get_url(path="posts", lang=lang) }}">Posts</a></li>
+              <li><a href="{{ get_url(path="notes", lang=lang) }}">{% if lang == "pt" %}Notas{% else %}Notes{% endif %}</a></li>
+              <li><a href="{{ get_url(path="links", lang=lang) }}">Links</a></li>
+              <li><a href="{{ get_url(path="feeds", lang=lang) }}">RSS</a></li>
+              <li><a href="https://mastodon.bsd.cafe/@jutty">Mastodon</a></li>
+            </ul>
+          </nav>
+          {% if current_path and translation_count > 1 %}
+          {%- set slashless_current_path = current_path | regex_replace(pattern="^\/", rep="")  %}
+          {%- set english_path = current_path | regex_replace(pattern="pt\/", rep="")  %}
+          <div id="language-selector">
+            <figure id="language-icon">
+              <img src="{{ get_url(path="assets/img/icons/language.svg") }}"
+                alt="{% if lang == "pt" %}Ícone de idioma{% else %}Language icon{% endif %}"/>
+            </figure>
+            {%- if lang == "pt" %}<a href="{{ get_url(path=english_path) }}">EN</a>{% else %}<a href="{{ get_url(path=slashless_current_path, lang="pt") }}">PT</a>
             {%- endif %}
-            <li><a href="{{ get_url(path="posts", lang=lang) }}">Posts</a></li>
-            <li><a href="{{ get_url(path="notes", lang=lang) }}">{% if lang == "pt" %}Notas{% else %}Notes{% endif %}</a></li>
-            <li><a href="{{ get_url(path="links", lang=lang) }}">Links</a></li>
-            <li><a href="{{ get_url(path="feeds", lang=lang) }}">RSS</a></li>
-            <li><a href="https://mastodon.bsd.cafe/@jutty">Mastodon</a></li>
-          </ul>
-        </nav>
-        {% if current_path and translation_count > 1 %}
-        {%- set slashless_current_path = current_path | regex_replace(pattern="^\/", rep="")  %}
-        {%- set english_path = current_path | regex_replace(pattern="pt\/", rep="")  %}
-        <div id="language-selector">
-          <figure id="language-icon">
-            <img src="{{ get_url(path="assets/img/icons/language.svg") }}"
-              alt="{% if lang == "pt" %}Ícone de idioma{% else %}Language icon{% endif %}"/>
-          </figure>
-          {%- if lang == "pt" %}<a href="{{ get_url(path=english_path) }}">EN</a>{% else %}<a href="{{ get_url(path=slashless_current_path, lang="pt") }}">PT</a>
+          </div>
           {%- endif %}
         </div>
-        {%- endif %}
+
+        <main id="main">
+          {%- block content %}{% endblock %}
+        </main>
+
+        <footer>
+          {%- block footer %}{% endblock -%}
+        </footer>
       </div>
-
-      <main id="main">
-        {%- block content %}{% endblock %}
-      </main>
-
-      <footer>
-        {%- block footer %}{% endblock -%}
-      </footer>
     </body>
   </html>
