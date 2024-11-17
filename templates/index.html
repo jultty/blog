@@ -20,7 +20,9 @@
 
 {% block content %}
 
-  <h2 class="index-h2">Latest posts</h2>
+        <h2 class="index-h2">
+          {%- if lang == "pt" %}Últimos posts{% else %}Latest posts{% endif -%}
+        </h2>
   {%- if lang == "pt" %}
     {%- set posts = get_section(path="posts/_index.pt.md") %}
   {%- else %}
@@ -41,7 +43,9 @@
           {%- if lang == "pt" %}Ver todos{% else %}See all{% endif %}
         </a>
 
-  <h2 class="index-h2">Latest notes</h2>
+        <h2 class="index-h2">
+          {%- if lang == "pt" %}Últimas notas{% else %}Latest notes{% endif -%}
+        </h2>
   {%- if lang == "pt" %}
     {%- set notes = get_section(path="notes/_index.pt.md") %}
   {%- else %}
@@ -62,7 +66,9 @@
           {%- if lang == "pt" %}Ver todos{% else %}See all{% endif %}
         </a>
 
-  <h2 class="index-h2">Latest links</h2>
+        <h2 class="index-h2">
+          {%- if lang == "pt" %}Últimos links{% else %}Latest links{% endif -%}
+        </h2>
   {%- if lang == "pt" %}
     {%- set links = get_section(path="links/_index.pt.md") %}
   {%- else %}
