@@ -109,7 +109,7 @@ main {
 }
 
 .index-see-all {
-  margin-left: 14%;
+  margin-left: 20px;
   padding-left: 30px;
   font-size: 12pt;
 }
@@ -290,14 +290,10 @@ footer {
 
   .index-h2 {
     font-size: 1em;
-    margin-left: 14%;
-    padding-left: 20px;
     margin-top: 40px;
   }
 
   .index-posts ul#posts {
-    margin-left: 14%;
-    padding-left: 20px;
   }
 
 
@@ -329,17 +325,6 @@ footer {
 
   #user-controls {
     grid-template-columns: 12% 62% 14% 12%;
-  }
-
-  .index-posts {
-    display: grid;
-    grid-template-columns: 1fr 900px 1fr;
-    grid-template-areas: "margin-left posts margin-right";
-  }
-
-  .index-posts ul {
-    grid-area: posts;
-    justify-self: start;
   }
 
   .index-posts ul#posts {
@@ -377,10 +362,6 @@ footer {
 
   .subpage-user-controls #language-selector {
     justify-self: center;
-  }
-
-  .index-posts {
-    grid-template-columns: 1fr 800px 1fr;
   }
 
   main {
