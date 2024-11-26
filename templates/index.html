@@ -79,7 +79,7 @@
             {% for link in links.pages %}
             <li>
               <span class="post-date">{{ link.date }}</span>
-              <a href="{{ link.permalink | safe }}">{{ link.title }}</a>
+              <a href="{{ link.extra.url | safe }}">{{ link.title }}</a>
             </li>
             {% if loop.index == 5  %}{% break %}{% endif %}
             {% endfor %}
