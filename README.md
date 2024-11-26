@@ -3,6 +3,7 @@
 A responsive, bilingual, RSS-ready and system-themed blog with zero lines of JavaScript powered by the [Zola](https://getzola.org) static site engine.
 
 ## Next
+- [ ] Refactor `posts` to `content`
 - [ ] Add tags
 
 ## Done
