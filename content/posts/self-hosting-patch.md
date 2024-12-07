@@ -1,6 +1,6 @@
 +++
 title = "On self-hosting being a patch"
-date = 2024-11-23
+date = 2024-11-23T15:00:00-03:00
 +++
 
 Recently the blog post [Self-Hosting Isn't a Solution; It's A Patch](https://matduggan.com/self-hosting-isnt-a-solution-its-a-patch/) landed in my reading list via [Lobsters](https://lobste.rs/s/eisgx0/self_hosting_isn_t_solution_it_s_patch).

@@ -32,7 +32,7 @@
           <ul id="posts">
             {% for post in posts.pages %}
             <li>
-              <span class="post-date">{{ post.date }}</span>
+              <span class="post-date">{{ post.date | date(format="%Y-%m-%d") }}</span>
               <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
             </li>
             {% if loop.index == 5  %}{% break %}{% endif %}
@@ -55,7 +55,7 @@
           <ul id="posts">
             {% for note in notes.pages %}
             <li>
-              <span class="post-date">{{ note.date }}</span>
+              <span class="post-date">{{ note.date | date(format="%Y-%m-%d") }}</span>
               <a href="{{ note.permalink | safe }}">{{ note.title }}</a>
             </li>
             {% if loop.index == 5  %}{% break %}{% endif %}
@@ -78,7 +78,7 @@
           <ul id="posts">
             {% for link in links.pages %}
             <li>
-              <span class="post-date">{{ link.date }}</span>
+              <span class="post-date">{{ link.date | date(format="%Y-%m-%d") }}</span>
               <a href="{{ link.extra.url | safe }}">{{ link.title }}</a>
             </li>
             {% if loop.index == 5  %}{% break %}{% endif %}

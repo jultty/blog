@@ -14,9 +14,9 @@
             {%- else -%}
               {{ page.permalink -}}
             {%- endif -%}
-            ">{{ page.date -}}</a></time>
+            ">{{ page.date | date(format="%Y-%m-%d") -}}</a></time>
           {%- else %}
-            <time class="post-date">{{ page.date }}</time>
+            <time class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</time>
           {%- endif %}
             <a href="{{ page.extra.url | safe }}">{{ page.title }}</a>
           </li>

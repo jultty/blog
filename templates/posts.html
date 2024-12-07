@@ -5,7 +5,7 @@
         <ul id="posts">
           {%- for page in section.pages %}
           <li>
-            <time class="post-date">{{ page.date }}</time>
+            <time class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</time>
             <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
           </li>
           {%- endfor %}

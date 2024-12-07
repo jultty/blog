@@ -1,6 +1,6 @@
 +++
 title = "New notes section"
-date = 2024-11-17
+date = 2024-11-17T00:00:01-03:00
 +++
 
 This blog now has a Notes section for shorter, less elaborate thoughts, meant to allow more free-form updates as opposed to the longer posts which take much more time to write.
