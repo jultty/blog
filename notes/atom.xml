@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>jutty.dev - Notes</title>
+    <subtitle>Computer nerd memory leaks</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://blog.jutty.dev/notes/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.jutty.dev/notes/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-11-17T00:00:01-03:00</updated>
+    <id>https://blog.jutty.dev/notes/atom.xml</id>
+    <entry xml:lang="en">
+        <title>New notes section</title>
+        <published>2024-11-17T00:00:01-03:00</published>
+        <updated>2024-11-17T00:00:01-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/notes/notes/"/>
+        <id>https://blog.jutty.dev/notes/notes/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/notes/notes/">&lt;p&gt;This blog now has a Notes section for shorter, less elaborate thoughts, meant to allow more free-form updates as opposed to the longer posts which take much more time to write.&lt;&#x2F;p&gt;
+&lt;p&gt;As usual, &lt;a href=&quot;&#x2F;feeds&quot;&gt;dedicated RSS feeds&lt;&#x2F;a&gt; are available for all content or just notes on a per-language basis.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
