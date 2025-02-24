@@ -9,7 +9,7 @@ I was previously on Void and I switched because the stable part in "rolling but 
 
 My favorite model of update is FreeBSD's. Your core system updates in one way, the third-party packages update another way, the core only updates if necessary and packages not too often as to introduce such breakage. But for this machine FreeBSD is just not there (yet).
 
-Alpine updates every six months and it can be made as rolling as setting your Debian repositories to "stable". 
+Alpine updates every six months and it can be made as rolling as setting your Debian repositories to "stable" or "testing" ("edge" in Alpine) if you appreciate chaos enough.
 
 It's my first time daily driving OpenRC and musl, which I feared would introduce painful compatibility issues, but so far I've been able to use everything I need, sometimes leveraging the [alternatives](https://wiki.alpinelinux.org/wiki/Running_glibc_programs), like its glibc compatibility layer or a Flatpak as last resort (e.g. for playing DRM video).
 
