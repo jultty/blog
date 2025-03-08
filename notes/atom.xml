@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>jutty.dev - Notes</title>
+    <subtitle>Computer nerd memory leaks</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://blog.jutty.dev/notes/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.jutty.dev/notes/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-02-24T14:34:25-03:00</updated>
+    <id>https://blog.jutty.dev/notes/atom.xml</id>
+    <entry xml:lang="en">
+        <title>A timeline of Unix shells</title>
+        <published>2025-02-24T14:34:25-03:00</published>
+        <updated>2025-02-24T14:34:25-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/notes/shells-timeline/"/>
+        <id>https://blog.jutty.dev/notes/shells-timeline/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/notes/shells-timeline/">&lt;p&gt;For some reason, I really like timeline visualizations, meaning a graph with events listed along a temporal axis with the dates in which they happened. I remember using tape to glue several pieces of paper on the wall as a kid to make a long timeline of world history events.&lt;&#x2F;p&gt;
+&lt;p&gt;So every time I find a tool to do that, I want to check it out. The latest was &lt;a href=&quot;https:&#x2F;&#x2F;markwhen.com&#x2F;&quot;&gt;Markwhen&lt;&#x2F;a&gt;, which works entirely by defining the timeline as code and then running an executable against it to render image or interactive web outputs.&lt;&#x2F;p&gt;
+&lt;p&gt;To try it out, I made this timeline of Unix shells. You can view &lt;a href=&quot;https:&#x2F;&#x2F;jultty.github.io&#x2F;shells-timeline&#x2F;&quot;&gt;the HTML version here&lt;&#x2F;a&gt; or the images below (dark and light themes):&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;&#x2F;assets&#x2F;img&#x2F;posts&#x2F;shells-timeline&#x2F;shells-timeline_dark.png&quot;&gt;&lt;img src=&quot;&#x2F;assets&#x2F;img&#x2F;posts&#x2F;shells-timeline&#x2F;shells-timeline_dark.png&quot; alt=&quot;A timeline of Unix shells with events starting in 1963 and ending in 2020. Years are represented horizontally and events start from the top left towards the bottom right, forming a diagonal of events and their labels. Each event is represented by a dot, a date and a shell name. Foreground is white and gray, background is black.&quot; &#x2F;&gt;&lt;&#x2F;a&gt;
+&lt;a href=&quot;&#x2F;assets&#x2F;img&#x2F;posts&#x2F;shells-timeline&#x2F;shells-timeline_light.png&quot;&gt;&lt;img src=&quot;&#x2F;assets&#x2F;img&#x2F;posts&#x2F;shells-timeline&#x2F;shells-timeline_light.png&quot; alt=&quot;The same timeline as in the previous picture, but with black and gray foreground and white background.&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;details&gt;
+&lt;summary&gt;Expand for a textual list of the timeline events&lt;&#x2F;summary&gt;
+&lt;ul&gt;
+&lt;li&gt;1963: RUNCOM&lt;&#x2F;li&gt;
+&lt;li&gt;1965: Multics shell&lt;&#x2F;li&gt;
+&lt;li&gt;1971-11: Thompson shell (sh)&lt;&#x2F;li&gt;
+&lt;li&gt;1977-07-01: PWB shell (sh)&lt;&#x2F;li&gt;
+&lt;li&gt;1978: C shell (csh)&lt;&#x2F;li&gt;
+&lt;li&gt;1979: Bourne shell (sh)&lt;&#x2F;li&gt;
+&lt;li&gt;1983-10-04: TENEX C Shell (tcsh)&lt;&#x2F;li&gt;
+&lt;li&gt;1983-06-09: KornShell (ksh)&lt;&#x2F;li&gt;
+&lt;li&gt;1989-05-30: Almquist shell (ash)&lt;&#x2F;li&gt;
+&lt;li&gt;1989-06-08: Bourne-Again Shell (bash)&lt;&#x2F;li&gt;
+&lt;li&gt;1990-12-14: Z shell (zsh)&lt;&#x2F;li&gt;
+&lt;li&gt;1992: Plan 9 Rc (rc)&lt;&#x2F;li&gt;
+&lt;li&gt;1995-06-16: Public Domain KornShell (pdksh)&lt;&#x2F;li&gt;
+&lt;li&gt;1997-06-19: Debian Almquist shell (dash)&lt;&#x2F;li&gt;
+&lt;li&gt;2004-04-07: MirBSD Korn Shell (mksh)&lt;&#x2F;li&gt;
+&lt;li&gt;2005: friendly interactive shell (fish)&lt;&#x2F;li&gt;
+&lt;li&gt;2019-08-23: Nushell (nu)&lt;&#x2F;li&gt;
+&lt;li&gt;2020-10-30: Portable OpenBSD KornShell (oksh)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;details&gt;
+&lt;p&gt;Don’t ask me why every item is followed by …, I’d love to know.&lt;&#x2F;p&gt;
+&lt;p&gt;If you are interested, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jultty&#x2F;shells-timeline&#x2F;blob&#x2F;main&#x2F;shells.mw&quot;&gt;here is the source code&lt;&#x2F;a&gt; that was used to generate the images above. The source code also contains notes that are only displayed in the HTML version. These notes are sources for the dates and sometimes observations on the date precision.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Enjoying Alpine as a daily driver</title>
+        <published>2025-02-23T22:07:09-03:00</published>
+        <updated>2025-02-23T22:07:09-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/notes/enjoying-alpine/"/>
+        <id>https://blog.jutty.dev/notes/enjoying-alpine/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/notes/enjoying-alpine/">&lt;p&gt;I am happy to report that my Alpine root-on-ZFS experiment is – apparently – a success. I’ve been running it as my only OS on my laptop for the past week.&lt;&#x2F;p&gt;
+&lt;p&gt;I was previously on Void and I switched because the stable part in “rolling but stable” wasn’t really fulfilling what I expected, with occasional breakage on updates, or just things changing too often. For instance, every minor Python version you get a bump and every Python program on your system starts yelling deprecation warnings amid their output. I just can’t with this rate of change of fundamental stuff like compilers and interpreters.&lt;&#x2F;p&gt;
+&lt;p&gt;My favorite model of update is FreeBSD’s. Your core system updates in one way, the third-party packages update another way, the core only updates if necessary and packages not too often as to introduce such breakage. But for this machine FreeBSD is just not there (yet).&lt;&#x2F;p&gt;
+&lt;p&gt;Alpine updates every six months and it can be made as rolling as setting your Debian repositories to “stable” or “testing” (“edge” in Alpine) if you appreciate chaos enough.&lt;&#x2F;p&gt;
+&lt;p&gt;It’s my first time daily driving OpenRC and musl, which I feared would introduce painful compatibility issues, but so far I’ve been able to use everything I need, sometimes leveraging the &lt;a href=&quot;https:&#x2F;&#x2F;wiki.alpinelinux.org&#x2F;wiki&#x2F;Running_glibc_programs&quot;&gt;alternatives&lt;&#x2F;a&gt;, like its glibc compatibility layer or a Flatpak as last resort (e.g. for playing DRM video).&lt;&#x2F;p&gt;
+&lt;p&gt;I started drafting a blog post with the journey so far, but I’ll keep using it and hitting some more of my use cases along the way to have a more complete write-up.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>New notes section</title>
+        <published>2024-11-17T00:00:01-03:00</published>
+        <updated>2024-11-17T00:00:01-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/notes/notes/"/>
+        <id>https://blog.jutty.dev/notes/notes/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/notes/notes/">&lt;p&gt;This blog now has a Notes section for shorter, less elaborate thoughts, meant to allow more free-form updates as opposed to the longer posts which take much more time to write.&lt;&#x2F;p&gt;
+&lt;p&gt;As usual, &lt;a href=&quot;&#x2F;feeds&quot;&gt;dedicated RSS feeds&lt;&#x2F;a&gt; are available for all content or just notes on a per-language basis.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
