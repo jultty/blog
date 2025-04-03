@@ -3,6 +3,7 @@
 A responsive, bilingual, RSS-ready and system-themed blog with zero lines of JavaScript powered by the [Zola](https://getzola.org) static site engine.
 
 ## Next
+- [ ] Make visited links purple
 - [ ] Refactor `posts` to `content`
 - [ ] Add tags
 
@@ -19,7 +20,7 @@ A responsive, bilingual, RSS-ready and system-themed blog with zero lines of Jav
 - [x] Add post date
 - [x] Add post author
 - [x] Style inline `<code>` tags
-- [x] Create a custom syntax highlighting style 
+- [x] Create a custom syntax highlighting style
   - See: <https://pandoc.org/chunkedhtml-demo/13-syntax-highlighting.html>
 - [x] Add an RSS feed
   - [x] Links RSS feed
