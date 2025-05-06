@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>jutty.dev</title>
+      <link>https://blog.jutty.dev</link>
+      <description>Vazamentos de memória nerd-computantes</description>
+      <generator>Zola</generator>
+      <language>pt</language>
+      <atom:link href="https://blog.jutty.dev/pt/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 17 Nov 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Nova seção de notas</title>
+          <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/pt/notes/notes/</link>
+          <guid>https://blog.jutty.dev/pt/notes/notes/</guid>
+          <description xml:base="https://blog.jutty.dev/pt/notes/notes/">&lt;p&gt;Este blog agora tem uma seção de Notas para postagens menos elaboradas e atualizações mais livres em contraposição aos posts longos que levam muito mais tempo para escrever.&lt;&#x2F;p&gt;
+&lt;p&gt;Como sempre, &lt;a href=&quot;&#x2F;feeds&quot;&gt;feeds RSS dedicados&lt;&#x2F;a&gt; para cada categoria estão disponíveis, seja para todo o conteúdo ou apenas notas, tudo separado por idioma.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Chris&#x27;s Wiki :: blog&#x2F;unix</title>
+          <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/pt/links/cks-blog-unix/</link>
+          <guid>https://blog.jutty.dev/pt/links/cks-blog-unix/</guid>
+          <description xml:base="https://blog.jutty.dev/pt/links/cks-blog-unix/">&lt;p&gt;Um buraco de coelho de hipermídia em que caí rapidinho.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>wrestling the web from corporate control requires making it boring again</title>
+          <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/pt/links/washbear-wrestling-the-web/</link>
+          <guid>https://blog.jutty.dev/pt/links/washbear-wrestling-the-web/</guid>
+          <description xml:base="https://blog.jutty.dev/pt/links/washbear-wrestling-the-web/">&lt;blockquote&gt;
+&lt;p&gt;Em uma era em que a web é essencial, nós precisamos de um navegador universal para as plataformas minoritárias. Um que foque em manter HTML+JS funcionando ao invés de correr atrás de coisas como “WebVR” e colaborar com a indústria publicitária. Infelizmente, eu acho que o sistema foi viciado para garantir que os pequenos não tenham como sobreviver. Vamos torcer pra que essa previsão esteja errada.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</description>
+      </item>
+      <item>
+          <title>The Reticular Society</title>
+          <pubDate>Fri, 04 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/pt/links/the-reticular-society/</link>
+          <guid>https://blog.jutty.dev/pt/links/the-reticular-society/</guid>
+          <description xml:base="https://blog.jutty.dev/pt/links/the-reticular-society/">&lt;blockquote&gt;
+&lt;p&gt;Em &lt;em&gt;fluxos necrorreticulares&lt;&#x2F;em&gt; que atravessam trabalhos informais algoritimicamente distribuidos e locais de trabalho conectados, o número de vidas integradas corresponde ao potencial interoperável de otimização e dominação da sociedade reticular, &lt;em&gt;incluindo a vida&lt;&#x2F;em&gt; e, assim, &lt;em&gt;circulando morte&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</description>
+      </item>
+      <item>
+          <title>carl: versão moderna do cal que incorpora dados ICal (ics)</title>
+          <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/pt/links/b1rger-carl/</link>
+          <guid>https://blog.jutty.dev/pt/links/b1rger-carl/</guid>
+          <description xml:base="https://blog.jutty.dev/pt/links/b1rger-carl/">&lt;p&gt;Isso é perfeito em conjunto com o &lt;a href=&quot;https:&#x2F;&#x2F;vdirsyncer.pimutils.org&#x2F;en&#x2F;stable&#x2F;&quot;&gt;vdirsyncer&lt;&#x2F;a&gt;, que eu já uso há algum tempo exatamente para ter um diretório local de arquivos &lt;code&gt;.ics&lt;&#x2F;code&gt;  para cada um dos meus calendários DAV no Nextcloud.&lt;&#x2F;p&gt;
+&lt;p&gt;Se achar interessante, talvez também te interesse o &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;pimutils&#x2F;khal&quot;&gt;khal&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Release tmux 3.5 · tmux&#x2F;tmux</title>
+          <pubDate>Fri, 27 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/pt/links/tmux-3-5/</link>
+          <guid>https://blog.jutty.dev/pt/links/tmux-3-5/</guid>
+          <description xml:base="https://blog.jutty.dev/pt/links/tmux-3-5/">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;tmux&#x2F;tmux&#x2F;3.5&#x2F;CHANGES&quot;&gt;Mudanças&lt;&#x2F;a&gt; interessantes incluem:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Mostra hyperlinks no modo de cópia e adiciona o formato
+&lt;code&gt;copy_cursor_hyperlink&lt;&#x2F;code&gt; para obter o hyperlink sob o cursor.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Adiciona uma opção de timeout para o prefixo.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Adiciona versões espelhadas dos layouts &lt;code&gt;main-horizontal&lt;&#x2F;code&gt; e &lt;code&gt;main-vertical&lt;&#x2F;code&gt;
+onde o painel principal fica em baixo ou à direita ao invés de no topo ou esquerda.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Adiciona &lt;code&gt;--enable-jemalloc&lt;&#x2F;code&gt; para build com alocador de memória jemalloc
+(já que o malloc da glibc é tão pobre).”&lt;&#x2F;li&gt;
+&lt;li&gt;“Adiciona &lt;code&gt;N&lt;&#x2F;code&gt; para busca reversa nos modos tree.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Usa &lt;code&gt;default-shell&lt;&#x2F;code&gt; para a prompt de comando, &lt;code&gt;#()&lt;&#x2F;code&gt; e popups.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Adiciona um hook &lt;code&gt;command-error&lt;&#x2F;code&gt; quando um comando falha.”&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>[Meta] Aviso sobre os feeds RSS</title>
+          <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/pt/posts/notice-on-rss-feeds/</link>
+          <guid>https://blog.jutty.dev/pt/posts/notice-on-rss-feeds/</guid>
+          <description xml:base="https://blog.jutty.dev/pt/posts/notice-on-rss-feeds/">&lt;p&gt;Para quem está assinando o feed RSS desse blog:&lt;&#x2F;p&gt;
+&lt;p&gt;Primeiro, se você está recebendo links mas prefere apenas os posts, você provavelmente se inscreveu em um feed de “todo o conteúdo”. Todas as opções de feeds estão na página &lt;a href=&quot;&#x2F;feeds&quot;&gt;feeds&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Segundo, conforme um &lt;a href=&quot;https:&#x2F;&#x2F;mastodon.bsd.cafe&#x2F;@jutty&#x2F;113013450769036273&quot;&gt;fio recente&lt;&#x2F;a&gt; que fiz no Mastodon, estou planejando manter apenas os feeds Atom futuramente.&lt;&#x2F;p&gt;
+&lt;p&gt;Atualmente, todos os feeds são oferecidos em dois formatos. Por exemplo:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.jutty.dev&#x2F;posts&#x2F;rss.xml&quot;&gt;https:&#x2F;&#x2F;blog.jutty.dev&#x2F;posts&#x2F;rss.xml&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.jutty.dev&#x2F;posts&#x2F;atom.xml&quot;&gt;https:&#x2F;&#x2F;blog.jutty.dev&#x2F;posts&#x2F;atom.xml&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Após um bom tempo, irei eventualmente desativar os feeds que acabam em &lt;code&gt;rss.xml&lt;&#x2F;code&gt;, então, se é um desses em que você se inscreveu, considere mudar para o equivalente com &lt;code&gt;atom.xml&lt;&#x2F;code&gt; no final.&lt;&#x2F;p&gt;
+&lt;p&gt;Os dois formatos vão continuar a funcionar por hora. A única mudança imediata será que apenas os feeds &lt;code&gt;atom.xml&lt;&#x2F;code&gt; vão continuar listados na &lt;a href=&quot;&#x2F;feeds&quot;&gt;página de feeds&lt;&#x2F;a&gt; e nas tags de metadados do código HTML.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Scripts em OCaml</title>
+          <pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/pt/posts/scripts-em-ocaml/</link>
+          <guid>https://blog.jutty.dev/pt/posts/scripts-em-ocaml/</guid>
+          <description xml:base="https://blog.jutty.dev/pt/posts/scripts-em-ocaml/">&lt;p&gt;Este blog gera suas postagens com o Pandoc, mas quem faz o trabalho lógico de identificar os arquivos e montar os comandos é um pequeno script em OCaml.&lt;&#x2F;p&gt;
+&lt;p&gt;Descobri essa linguagem quando comecei a investigar como poderia substituir o Bash como uma linguagem para scripts. Eu acho que o Bash é excelente para cumprir essa função, apesar de bastante inseguro e propenso a erros. O que me incomodava mesmo era ver que todo aquele tempo escrevendo scripts com Bash poderia ser tempo aprendendo uma linguagem cujo conhecimento se transferisse para muitas outras aplicações.&lt;&#x2F;p&gt;
+&lt;p&gt;O script se resume a:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ocaml&quot; class=&quot;language-ocaml z-code&quot;&gt;&lt;code class=&quot;language-ocaml&quot; data-lang=&quot;ocaml&quot;&gt;&lt;span class=&quot;z-source z-ocaml&quot;&gt;&lt;span class=&quot;z-keyword z-other z-ocaml&quot;&gt;let&lt;&#x2F;span&gt; &lt;span class=&quot;z-variable z-other z-constant z-ocaml&quot;&gt;pandoc_params&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-assignment z-ocaml&quot;&gt;=&lt;&#x2F;span&gt; 
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ocaml&quot;&gt;  &lt;span class=&quot;z-string z-quoted z-double z-ocaml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;--css ..&#x2F;..&#x2F;assets&#x2F;style.css -s --to html5 --metadata pagetitle=&amp;#39;basename&amp;#39; &lt;span class=&quot;z-punctuation z-definition z-string z-end z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ocaml&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ocaml&quot;&gt;&lt;span class=&quot;z-meta z-function z-ocaml&quot;&gt;&lt;span class=&quot;z-keyword z-other z-function-definition z-ocaml&quot;&gt;let&lt;&#x2F;span&gt; &lt;span class=&quot;z-entity z-name z-function z-ocaml&quot;&gt;vert&lt;&#x2F;span&gt; &lt;span class=&quot;z-variable z-parameter z-ocaml&quot;&gt;md&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-ocaml&quot;&gt;=&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-begin-end-group z-ocaml&quot;&gt;&lt;span class=&quot;z-keyword z-control z-begin-end z-ocaml&quot;&gt;begin&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ocaml&quot;&gt;&lt;span class=&quot;z-meta z-begin-end-group z-ocaml&quot;&gt;  &lt;span class=&quot;z-keyword z-control z-ocaml&quot;&gt;if&lt;&#x2F;span&gt; md &lt;span class=&quot;z-keyword z-operator z-symbol z-ocaml&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-symbol z-ocaml&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-ocaml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;gen.ml&lt;span class=&quot;z-punctuation z-definition z-string z-end z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-infix z-ocaml&quot;&gt;&amp;amp;&amp;amp;&lt;&#x2F;span&gt; md &lt;span class=&quot;z-keyword z-operator z-symbol z-ocaml&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-symbol z-ocaml&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-ocaml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;html&lt;span class=&quot;z-punctuation z-definition z-string z-end z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-control z-ocaml&quot;&gt;then&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ocaml&quot;&gt;&lt;span class=&quot;z-meta z-begin-end-group z-ocaml&quot;&gt;    ignore&lt;span class=&quot;z-meta z-paren-group z-ocaml&quot;&gt;( &lt;span class=&quot;z-meta z-module-reference z-ocaml&quot;&gt;Sys.&lt;&#x2F;span&gt;command &lt;span class=&quot;z-meta z-paren-group z-ocaml&quot;&gt;(
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ocaml&quot;&gt;&lt;span class=&quot;z-meta z-begin-end-group z-ocaml&quot;&gt;&lt;span class=&quot;z-meta z-paren-group z-ocaml&quot;&gt;&lt;span class=&quot;z-meta z-paren-group z-ocaml&quot;&gt;      &lt;span class=&quot;z-string z-quoted z-double z-ocaml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;pandoc &lt;span class=&quot;z-punctuation z-definition z-string z-end z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-infix z-ocaml&quot;&gt;^&lt;&#x2F;span&gt; pandoc_params &lt;span class=&quot;z-keyword z-operator z-infix z-ocaml&quot;&gt;^&lt;&#x2F;span&gt; md &lt;span class=&quot;z-keyword z-operator z-infix z-ocaml&quot;&gt;^&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-ocaml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; -o html&#x2F;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-infix z-ocaml&quot;&gt;^&lt;&#x2F;span&gt; md &lt;span class=&quot;z-keyword z-operator z-infix z-ocaml&quot;&gt;^&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-ocaml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;.html &lt;span class=&quot;z-punctuation z-definition z-string z-end z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ocaml&quot;&gt;&lt;span class=&quot;z-meta z-begin-end-group z-ocaml&quot;&gt;&lt;span class=&quot;z-meta z-paren-group z-ocaml&quot;&gt;&lt;span class=&quot;z-meta z-paren-group z-ocaml&quot;&gt;    )&lt;&#x2F;span&gt; )&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ocaml&quot;&gt;&lt;span class=&quot;z-meta z-begin-end-group z-ocaml&quot;&gt;&lt;span class=&quot;z-keyword z-control z-begin-end z-ocaml&quot;&gt;end&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-punctuation z-terminator z-expression z-ocaml&quot;&gt;;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ocaml&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ocaml&quot;&gt;&lt;span class=&quot;z-keyword z-other z-ocaml&quot;&gt;let&lt;&#x2F;span&gt; &lt;span class=&quot;z-variable z-other z-constant z-ocaml&quot;&gt;contents&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-assignment z-ocaml&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-module-reference z-ocaml&quot;&gt;Array.&lt;&#x2F;span&gt;to_list &lt;span class=&quot;z-meta z-paren-group z-ocaml&quot;&gt;(&lt;span class=&quot;z-meta z-module-reference z-ocaml&quot;&gt;Sys.&lt;&#x2F;span&gt;readdir &lt;span class=&quot;z-string z-quoted z-double z-ocaml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;.&lt;span class=&quot;z-punctuation z-definition z-string z-end z-ocaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;)&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-other z-ocaml&quot;&gt;in&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ocaml&quot;&gt;&lt;span class=&quot;z-meta z-module-reference z-ocaml&quot;&gt;List.&lt;&#x2F;span&gt;map vert contents &lt;span class=&quot;z-punctuation z-terminator z-expression z-ocaml&quot;&gt;;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Primeiro, armazeno em &lt;code&gt;pandoc_params&lt;&#x2F;code&gt; os parâmetros comuns que serão passados ao Pandoc para gerar os arquivos HTML a partir dos arquivos em Markdown.&lt;&#x2F;p&gt;
+&lt;p&gt;Em seguida, defino a função &lt;code&gt;vert&lt;&#x2F;code&gt;, que, caso o arquivo não se chame “gen.ml” (o próprio script) nem “html” (o diretório onde os arquivos gerados ficam), o comando do Pandoc é chamado com os nomes dos arquivos de entrada e saída.&lt;&#x2F;p&gt;
+&lt;p&gt;Essa função então é aplicada com &lt;code&gt;List.map vert contents&lt;&#x2F;code&gt; a cada arquivo do diretório atual.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;referencias&quot;&gt;Referências&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rosettacode.org&#x2F;wiki&#x2F;Walk_a_directory&#x2F;Non-recursively#OCaml&quot;&gt;Walk a directory&#x2F;Non-recursively - Rosetta Code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;jez.io&#x2F;pandoc-markdown-css-theme&#x2F;&quot;&gt;Pandoc Markdown CSS Theme&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+    </channel>
+</rss>
