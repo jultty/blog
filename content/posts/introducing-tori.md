@@ -4,7 +4,7 @@ date = 2024-06-30
 aliases = ["posts/introducing-tori.html"]
 +++
 
-**[tori](https://tori.jutty.dev/)** is a tool to track your personal systems' configurations and replicate them. 
+**[tori](https://tori.jutty.dev/)** is a tool to track your personal systems' configurations and replicate them.
 
 For the past 5 months, I've been simultaneously using and writing it to manage my main machine's configuration. By "manage the configuration" what I mean is keeping track of installed packages, configuration files, symlinks, and other settings that can be queried and set through command line interfaces.
 
@@ -129,5 +129,5 @@ So I decided to rewrite it with portability in mind. I am doing this rewrite in 
 
 tori is a bird that has just hatched, so everything is still very, very crude. At this stage, the docs often show intentions rather than implemented functionality. Still, because it is something I've come to depend on, it has this rewarding sense of usefulness behind it.
 
-If it sounds interesting to you, take a look. You can follow development at the main [Git repository](https://brew.bsd.cafe/jutty/tori) in BSD.Cafe's Git forge or through its mirrors on [GitHub](https://github.com/jultty/tori) and [Codeberg](https://codeberg.org/jutty/tori). Going forward, I will also probably be talking a lot about it on my [Mastodon profile](https://mastodon.bsd.cafe/@jutty).
+If it sounds interesting to you, take a look. You can follow development at the main [Git repository](https://brew.bsd.cafe/tori/tori) in BSD.Cafe's Git forge or through its mirrors on [GitHub](https://github.com/tori-nest/tori) and [Codeberg](https://codeberg.org/tori/tori). Going forward, I will also probably be talking a lot about it on my [Mastodon profile](https://mastodon.bsd.cafe/@jutty).
 
