@@ -45,7 +45,7 @@ Server `/etc/ssh/sshd_config`:
 AcceptEnv XDG_RUNTIME_DIR
 ```
 
-And finaly, from the client's shell:
+Make sure you have Waypipe installed on both server and client. Finally, from the client's shell:
 
 ```shell
 waypipe ssh user@server foot
