@@ -34,6 +34,8 @@
       <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="assets/img/icons/kitty/kitty_16.png", trailing_slash=false) }}">
       <link rel="icon" type="image/png" sizes="128x128" href="{{ get_url(path="assets/img/icons/kitty/kitty_circle_128.png", trailing_slash=false) }}">
 
+      <link rel="me" href="https://mastodon.bsd.cafe/@jutty">
+
       {%- set description = page.content | default(value=config.description) | striptags | regex_replace(pattern="\n", rep=" ") | truncate(length=120) %}
 
       <meta property="og:title" content="{{ title }}" />
@@ -41,6 +43,7 @@
       <meta property="og:type" content="website" />
       <meta property="og:url" content="{{ current_url | default(value= get_url(path="/")) | safe }}" />
       <meta property="og:image" content="{{ get_url(path="assets/img/icons/kitty/kitty_circle_192.png") }}" />
+      <meta name="fediverse:creator" content="@jutty@bsd.cafe">
 
       {% block rss -%}
       {%- if lang == "pt" %}
