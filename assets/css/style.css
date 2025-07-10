@@ -1,0 +1,432 @@
+@font-face {
+  font-family: 'Mononoki';
+  src: url('../fonts/Mononoki.ttf'), format('truetype');
+}
+
+html {
+  font-family: 'Mononoki', monospace;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#theme {
+  background-color: #f1e9e5;
+  color: #222;
+}
+
+* {
+  margin: 0px;
+  box-sizing: inherit;
+}
+
+.header-art {
+  display: grid;
+  grid-template-columns: 12% 76% 12%;
+  grid-template-areas: "margin-left art margin-right";
+  margin: 25px 0px 15px 20px;
+  color: #666;
+}
+
+.header-art pre {
+  grid-area: art;
+  justify-self: center;
+  font-size: 2.5vw;
+}
+
+#user-controls {
+  display: grid;
+  grid-template-columns: 2% 63% 33% 2%;
+  grid-template-areas: "margin-left nav lang margin-right";
+  margin: 20px;
+}
+
+#nav-menu {
+  grid-area: nav;
+  justify-self: start;
+}
+
+#nav-menu #home {
+  color: #353;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#nav-menu ul {
+  padding-left: 0px;
+}
+
+#nav-menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#language-selector {
+  justify-self: end;
+  grid-area: lang;
+  margin-top: 7px;
+}
+
+#language-icon {
+  width: 22px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 3px;
+}
+
+#skip-to-main {
+  position: absolute;
+  left: -1000%;
+}
+
+#skip-to-main:focus {
+  left: 40%;
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul li:before {
+  content: "";
+  padding-right: 0px;
+}
+
+ul {
+  margin-top: 5px;
+  margin-left: 0px;
+  list-style: none;
+}
+
+details {
+  margin: 30px;
+}
+
+details summary { 
+    margin-bottom: 15px;
+    cursor: pointer; 
+}
+
+#container {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main {
+  overflow: auto;
+}
+
+.index-see-all {
+  margin-left: 20px;
+  padding-left: 30px;
+  font-size: 12pt;
+}
+
+.post-date, .link-date {
+  color: #777;
+  font-size: 14px;
+  margin-top: 0px;
+  text-decoration-thickness: 0.1px;
+}
+
+.link-date {
+  margin-left: 30px;
+}
+
+article .post-date {
+  margin-left: 30px;
+}
+
+p {
+  margin: 30px;
+  line-height: 1.7em;
+}
+
+.article p {
+  margin: 25px 0px;
+}
+
+a {
+  text-decoration: underline dotted #999;
+  text-decoration-thickness: 1.5px;
+  color: #276E6B;
+}
+
+a:hover {
+  color: #007F80;
+  text-decoration: underline dotted #39959A;
+  transition: 1500ms;
+}
+
+ol {
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.5em;
+}
+
+ul li:before {
+  content: "▫";
+  padding-right: 10px;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #444;
+  margin: 40px 0px 30px 30px;
+}
+
+article h1 {
+  margin: 40px 0px 10px 30px;
+}
+
+h2, h3, h4 {
+  font-weight: bold;
+  margin: 20px 0px 10px 30px;
+  color: #444;
+}
+
+h2 { font-size: 25px; }
+h3 { font-size: 21px; }
+h4 { font-size: 21px; color: #59978b; }
+
+img {
+  width: 100%;
+}
+
+p code {
+  background-color: #ccc;
+  padding: 5px 6.5px;
+  margin-right: 2px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+li code {
+  background-color: #ccc;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+main pre {
+  margin: 30px;
+  border-color: #fff;
+  padding: 20px;
+  font-size: 16px;
+  overflow: auto;
+}
+
+blockquote {
+  color: #333;
+  background-color: #ddd;
+  padding: 10px 10px;
+  margin: 10px 20px;
+  font-style: italic;
+  border-radius: 12px;
+}
+
+blockquote p code {
+  color: #222;
+}
+
+table {
+  text-align: center;
+  margin: 30px;
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+table th, td {
+  border: 1px dotted;
+  padding: 5px 10px;
+}
+
+footer {
+  margin-top: 60px;
+}
+
+.footer-text {
+  padding: 0px 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* phone */
+@media (max-width: 650px) {
+  .article {
+    margin: 0 20px;
+  }
+
+  #user-controls {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "nav nav" "lang lang";
+  }
+
+  ul#posts {
+    margin-left: 0px;
+    padding-left: 20px;
+  }
+
+  main pre {
+    margin: 30px 0;
+    padding: 20px 10px 30px 30px;
+  }
+
+  .index-see-all {
+    margin-left: 0%;
+    padding-left: 30px;
+  }
+}
+
+/* tablet */
+@media (min-width: 651px) {
+
+  .header-art pre {
+    margin-top: 100px;
+    font-size: 2vw;
+  }
+
+  .index-user-controls#user-controls {
+    grid-template-columns: 13% 64% 10% 13%;
+  }
+
+  .index-h2 {
+    font-size: 1em;
+    margin-top: 40px;
+  }
+
+  ul#posts {
+    margin-left: 30px;
+    padding-left: 20px;
+  }
+
+  .article {
+    margin: 0 45px;
+  }
+}
+
+/* wide screen */
+@media (min-width: 1000px) {
+
+  .header-art {
+    grid-template-columns: 12% 76% 12%;
+  }
+
+  .header-art pre {
+    margin-top: 120px;
+    font-size: 20px;
+  }
+
+  .index-user-controls#user-controls {
+    grid-template-columns: 1fr 680px 140px 1fr;
+  }
+
+  #user-controls {
+    grid-template-columns: 12% 62% 14% 12%;
+  }
+
+  .index-posts ul#posts {
+    margin-left: 40px;
+  }
+
+  main {
+    margin: 0 10%;
+  }
+}
+
+/* very wide screen */
+@media (min-width: 1921px) {
+
+  .header-art {
+    margin-top: 160px;
+  }
+
+  .index-user-controls#user-controls {
+    grid-template-columns: 1fr 575px 200px 1fr;
+  }
+
+  .index-user-controls #language-selector {
+    justify-self: end;
+  }
+
+  .subpage-user-controls#user-controls {
+    grid-template-columns: 100%;
+    grid-template-areas: "nav nav" "lang lang";
+  }
+
+  .subpage-user-controls #nav-menu {
+    justify-self: center;
+  }
+
+  .subpage-user-controls #language-selector {
+    justify-self: center;
+  }
+
+  main {
+    margin: 0 20%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #theme {
+    background-color: #222222;
+    color: #F1E9E5;
+  }
+
+  .header-art {
+    color: #888;
+  }
+
+  a {
+    color: #AEDBCE;
+  }
+
+  a:hover {
+    color: #39AEA9;
+  }
+
+  h1,h2,h3 {
+    color: #ccc;
+  }
+
+  h4 {
+    color: #6a978b;
+  }
+
+  p code {
+    background-color: #444;
+  }
+
+  li code {
+    background-color: #444;
+  }
+
+  blockquote {
+    color: #888;
+    background-color: #1b1b1b;
+  }
+
+  blockquote p code {
+    color: #bbb;
+  }
+
+  .post-date {
+    color: #888;
+  }
+
+  #nav-menu #home {
+    color: #aaa;
+  }
+
+  #language-icon {
+    filter: invert(80%);
+  }
+}
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>jutty.dev</title>
+      <link>http://blog.jutty.dev</link>
+      <description>Just computer nerd things</description>
+      <language>en</language>
+      <atom:link href="http://blog.jutty.dev/assets/rss/en.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 18 Aug 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>The jutty.dev feed has moved</title>
+          <pubDate>Sun, 18 Aug 2024 15:52:11 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>http://blog.jutty.dev/en/rss.xml</link>
+          <guid>http://blog.jutty.dev/en/rss.xml</guid>
+          <description xml:base="http://blog.jutty.dev/en/rss.xml">This RSS feed has moved to: blog.jutty.dev/rss.xml. More feed options are available at blog.jutty.dev/feeds. Update your RSS reader to continue receiving new entries.</description>
+      </item>
+    </channel>
+</rss>
