@@ -100,7 +100,7 @@ ul {
 
 details {
   margin: 30px;
-  background: #333333;
+  background: #cccccc;
   padding: 20px;
   padding-top: 40px;
   border-radius: 10px;
@@ -109,7 +109,7 @@ details {
 details summary {
     margin-bottom: 15px;
     cursor: pointer;
-    color: #276E6B;
+    color: #276e6b;
 }
 
 #container {
@@ -432,5 +432,13 @@ footer {
 
   #language-icon {
     filter: invert(80%);
+  }
+
+  details {
+    background: #333333;
+  }
+
+  details summary {
+      color: #39959A;
   }
 }
