@@ -100,11 +100,16 @@ ul {
 
 details {
   margin: 30px;
+  background: #333333;
+  padding: 20px;
+  padding-top: 40px;
+  border-radius: 10px;
 }
 
-details summary { 
+details summary {
     margin-bottom: 15px;
-    cursor: pointer; 
+    cursor: pointer;
+    color: #276E6B;
 }
 
 #container {
@@ -429,4 +434,3 @@ footer {
     filter: invert(80%);
   }
 }
-
