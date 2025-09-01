@@ -20,9 +20,9 @@ I wanted to go back to  a more stable distribution, but I also wanted a simpler,
 
 ## How many options, really?
 
-Preferably not rolling. Preferably without systemd. Turns out these two requirements are enough to nearly wipe out your options.
+Preferably not rolling. Preferably without systemd. At first glance it may seem like the choices of operating systems and distributions are endless, but turns out these two requirements are enough to nearly wipe them out.
 
-My main reason to not like systemd is not that I believe Red Hat is involved in a deep state conspiracy to turn frogs gay. In fact, I'd take systemd over SysV-style init on a heartbeat. What I prefer are the sweet spots between them, not the opportunity to regress into the previous mess.
+My main reason to not like systemd is not that I believe Red Hat is involved in a deep state conspiracy to turn frogs gay. In fact, I'd take systemd over SysV-style init on a heartbeat. What I prefer are the sweet spots between them, not the regression into the previous mess.
 
 My reasoning is actually mostly around speed. Call me impatient, and I know it can be tweaked to improve this, but I don't like it when a machine is coming up or going down and you get a timer from some random process saying it will wait X _minutes_ to exit. I'd rather have a simpler tool tackling initialization and shutdown, and have learned to compose the operating system with various programs that fill in for systemd's vast feature set.
 
@@ -32,7 +32,7 @@ I also did not want a distribution that is too new or too niche, as I don't appr
 
 ### The systemd realm
 
-There's a plethora of Linux distributions. But the vast majority are based on some other one. I don't mean that this isn't meaningful for whatever use case they are suited for --- some derivatives do go the extra mile and increment their bases in more advanced ways --- but when you are looking for a distribution that _you_ want to set up your way, it makes less sense to go for something whose selling point is how it's already set up for something.
+There's a plethora of Linux distributions. But the vast majority are based on some other one. I don't mean that this isn't meaningful for whatever use case they are suited for --- some derivatives do go the extra mile and increment their bases in more advanced ways --- but when you are looking for a distribution that _you_ want to set up your way, it makes less sense to go for one whose selling point is how it's already set up for something.
 
 If we drop the derivatives and focus on some arbitrary measure of adoption, we end up with Debian, Fedora, Arch, OpenSUSE and Nix.
 
@@ -64,13 +64,13 @@ What remained in the end were Devuan, antiX and Alpine. And I briefly tried all 
 
 Devuan and antiX do offer options besides SysV-style init, but they  don't really integrate them very well in their systems. While with Void you will really use runit to manage any services installed through the distribution's package manager, because when a package has a relevant service to ship it will ship a runit service, Devuan and antiX have other init systems as _options_ rather than _the_ distribution's init system.
 
-What you really get then is a mixture of runit/OpenRC and SysV-style init, leaning a lot more towards SysV-style and leveraging the runit/OpenRC ability to also run SysV-style init scripts.[^2] If you like managing SysV-style init, that should not be a problem, although in that case you might as well not get the alternative version at all! Alpine, on the other hand, just like Void, has OpenRC as _the_ way to run services in it.
+What you really get then is a mixture of runit/OpenRC and SysV-style init, leaning a lot more towards SysV-style and leveraging the runit/OpenRC ability to also run SysV-style init scripts.[^2] If you like managing SysV-style init, that should not be a problem, although in that case you might as well get the SysV-style version then! Alpine, on the other hand, just like Void, has OpenRC as _the_ way to run services.
 
 ## Alpine it is
 
 For starters, I wanted to learn a little bit more about this unknown-to-me init system, OpenRC, since I'd be spending some time setting up services with it.
 
-OpenRC can be used alongside or in place of SysV-style init. I will not get into the different roles played by what one would call init systems and process supervisors, but OpenRC provides `openrc-init`, which can replace `/sbin/init` for a fully OpenRC-powered system.
+OpenRC can be used alongside or in place of SysV-style init. I will not get into the different roles played by so-called init systems and process supervisors, but OpenRC provides `openrc-init`, which can replace `/sbin/init` for a fully OpenRC-powered system.
 
 I could not find explicit information on whether this is the case with Alpine, but an actual inspection of the running system shows it is not. Mind you, even Alpine's `/sbin/init` is actually BusyBox:
 
@@ -116,7 +116,7 @@ Some stuff works just by installing `gcompat`, a compatibility layer that will m
 
 Sometimes I'd just compile something myself, meaning I made my own musl-linked executable of something that was available only for glibc. That works, but compilation for musl is often less documented and may not be possible at all depending on whether or not musl provides all the needed features. The latter case was however quite rare in my experience.
 
-Some other options are running things through Flatpak, or nix, or Distrobox. But sometimes, if all failed, I just had to accept it wasn't possible. Or it would work and then crash when using a specific feature at runtime.
+Some other options are running things through Flatpak, or Nix, or Distrobox. But sometimes, if all failed, I just had to accept it wasn't possible. Or it would work and then crash when using a specific feature at runtime.
 
 And that's great, having ways to circumvent musl. But you could also just... run stuff directly? It's nice to have options, but it's also a lot of friction. And sadly that is what ended up exhausting me from using Alpine as a daily driver.
 
@@ -134,7 +134,7 @@ Alpine has an excellent, fast package manager that never broke my setup. When th
 
 And in the spirit of being so lightweight, Alpine shines on virtualized and embedded systems. This focus on being small is why musl is a great fit, since it's a lot lighter than glibc, [among other advantages](https://musl.libc.org/about.html#:~:text=Key%20Principles). For me though, while I appreciate the smaller size, it's not that critical that I'd sacrifice compatibility and versatility over it.
 
-So I have zero complaints about Alpine, musl aside. It is perfect in everything I signed up for when I decided to try it. It delivered on every feature and never lied to me. It never said to me it was going to be smooth and easy to run glibc programs . So it's not so much that I didn't like Alpine, it's that I wish there were a glibc Alpine just like there is a glibc Void. But I'm well aware that's not happening.
+So I have zero complaints about Alpine, musl aside. It is perfect in everything I signed up for when I decided to try it. It delivered on every feature and never lied to me. It never said to me it was going to be smooth and easy to run glibc programs. So it's not so much that I didn't like Alpine, it's that I wish there were a glibc Alpine just like there is a glibc Void. But I'm well aware that's not happening.
 
 ## Choosing a path beyond
 
@@ -146,7 +146,7 @@ For now though, I decided to backtrack a little bit and then fully reverse cours
 
 You see, I am not looking for the _next_ distribution to try as if it were a hobby and I wanted to try novelty out of FOMO. This is actually a lot of work! I'd rather do other things _with_ the operating system rather than install and configure it, [as I mentioned before](https://blog.jutty.dev/posts/void-on-zfs/#:~:text=I%20don%E2%80%99t%20really%20enjoy%20distro%2Dhopping%2E). And if at the other end of the bell curve it's Debian, whatever. Perfect is the enemy of good and being picky is exhausting.
 
-I mentioned curiosity is a big factor in wanting to try things too. And frankly, after a while holding this preference for non-systemd operating systems, I might as well seize the opportunity to learn more about systemd as well. At my current internship, systemd is what all the distros we have in production are using. In future work, that is very likely to be the case too. So there is nothing to lose.
+I mentioned curiosity is a big factor in wanting to try things too. And frankly, after a while holding this preference for non-systemd operating systems and using systems without it, I might as well seize the opportunity to learn more about systemd as well. At my current internship, systemd is what all the distros we have in production are using. In future work, that is very likely to be the case too. So there is nothing to lose.
 
 I really wish, though, that package managers were more capable of differentiating between security and feature upgrades. If they were, we could run a rolling distro in "Debian mode" at will. This thought may not sit well with some rolling distributions, say, in Arch Linux you have the notion that ["Partial upgrades are unsupported"](https://wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported). There may be the expectation that the whole repository at any given time is the end state for all machines subscribed to it, but if dependencies could also be at the version and not only package level, that could also be solved, though I won't undersell the consequences and added complexity in such a change.
 
