@@ -86,7 +86,7 @@ Init is the first process started during boot. It never exits.  It
 (re)spawns children according to /etc/inittab.  Signals:
 
 HUP: reload /etc/inittab TSTP: stop respawning until CONT QUIT: re-
-exec another init USR1/TER, since I'd be spending some time setting up services with it./USR2/INT: run
+exec another init USR1/TER, /USR2/INT: run
 halt/reboot/poweroff/Ctrl-Alt-Del script
 ```
 
