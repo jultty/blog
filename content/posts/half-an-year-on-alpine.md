@@ -81,13 +81,15 @@ I could not find explicit information on whether this is the case with Alpine, b
 
 I then checked out BusyBox's manual page to try and understand more:
 
-```
-Init is the first process started during boot. It never exits.  It
-(re)spawns children according to /etc/inittab.  Signals:
-
-HUP: reload /etc/inittab TSTP: stop respawning until CONT QUIT: re-
-exec another init USR1/TER, /USR2/INT: run
-halt/reboot/poweroff/Ctrl-Alt-Del script
+> Init is the first process started during boot. It never exits.
+> It (re)spawns children according to /etc/inittab.
+>
+> Signals:
+>
+> - HUP: reload /etc/inittab
+> - TSTP: stop respawning until CONT
+> - QUIT: re-exec another init
+> - USR1/TER, /USR2/INT: run halt/reboot/poweroff/Ctrl-Alt-Del script
 ```
 
 I knew Alpine heavily leaned on BusyBox, but didn't realize it was to this extent. So, following this trail, there was Alpine's `/etc/inittab`, where I found this:
