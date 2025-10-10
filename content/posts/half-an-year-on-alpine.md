@@ -90,15 +90,14 @@ I then checked out BusyBox's manual page to try and understand more:
 > - TSTP: stop respawning until CONT
 > - QUIT: re-exec another init
 > - USR1/TER, /USR2/INT: run halt/reboot/poweroff/Ctrl-Alt-Del script
-```
 
 I knew Alpine heavily leaned on BusyBox, but didn't realize it was to this extent. So, following this trail, there was Alpine's `/etc/inittab`, where I found this:
 
-```inittab
-::sysinit:/sbin/openrc sysinit
-::sysinit:/sbin/openrc boot
-::wait:/sbin/openrc default
-```
+
+    ::sysinit:/sbin/openrc sysinit
+    ::sysinit:/sbin/openrc boot
+    ::wait:/sbin/openrc default
+
 
 Meaning, Alpine's init is BusyBox's init, which in turn calls on OpenRC to bring services up.
 
