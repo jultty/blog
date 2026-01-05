@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt">
+    <title>jutty.dev - Notas</title>
+    <subtitle>Vazamentos de memória nerd-computantes</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://blog.jutty.dev/pt/notes/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.jutty.dev/pt/notes/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-11-17T00:00:00+00:00</updated>
+    <id>https://blog.jutty.dev/pt/notes/atom.xml</id>
+    <entry xml:lang="pt">
+        <title>Nova seção de notas</title>
+        <published>2024-11-17T00:00:00+00:00</published>
+        <updated>2024-11-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/pt/notes/notes/"/>
+        <id>https://blog.jutty.dev/pt/notes/notes/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/pt/notes/notes/">&lt;p&gt;Este blog agora tem uma seção de Notas para postagens menos elaboradas e atualizações mais livres em contraposição aos posts longos que levam muito mais tempo para escrever.&lt;&#x2F;p&gt;
+&lt;p&gt;Como sempre, &lt;a href=&quot;&#x2F;feeds&quot;&gt;feeds RSS dedicados&lt;&#x2F;a&gt; para cada categoria estão disponíveis, seja para todo o conteúdo ou apenas notas, tudo separado por idioma.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
