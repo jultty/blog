@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+  <html lang="en" id="theme">
+
+    <head prefix="og: https://ogp.me/ns/website#">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Void on ZFS ~ jutty.dev</title>
+
+      <link href="https://blog.jutty.dev/assets/css/style.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://blog.jutty.dev/assets/css/syntax-dark.css" media="(prefers-color-scheme: dark)" />
+      <link rel="stylesheet" type="text/css" href="https://blog.jutty.dev/assets/css/syntax-light.css" media="(prefers-color-scheme: light)" />
+
+      <link rel="icon" type="image/png" sizes="36x36" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_16.png">
+      <link rel="icon" type="image/png" sizes="128x128" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_circle_128.png">
+
+      <link rel="me" href="https://mastodon.bsd.cafe/@jutty">
+
+      <meta property="og:title" content="Void on ZFS ~ jutty.dev" />
+      <meta property="og:description" content=" June is here. It brings the usual cold weather and some extra rhinitis complications. With that I find myself in a reco…" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://blog.jutty.dev/posts/void-on-zfs/" />
+      <meta property="og:image" content="https://blog.jutty.dev/assets/img/icons/kitty/kitty_circle_192.png" />
+      <meta name="fediverse:creator" content="@jutty@bsd.cafe">
+
+      <link rel="alternate" type="application/rss+xml" title="All content (English)" href="https://blog.jutty.dev/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Posts (English)" href="https://blog.jutty.dev/posts/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Notes (English)" href="https://blog.jutty.dev/notes/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Links" href="https://blog.jutty.dev/links/atom.xml">
+    </head>
+
+    <body>
+      <div id="container">
+        <div>
+        <a id="skip-to-main" href="#main">Skip to content</a>
+        
+        <div id="user-controls" class="subpage-user-controls">
+          <nav id="nav-menu">
+            <ul>
+              <li><a id="home" href="https://blog.jutty.dev">Home</a></li>
+              <li><a href="https://blog.jutty.dev/posts">Posts</a></li>
+              <li><a href="https://blog.jutty.dev/notes">Notes</a></li>
+              <li><a href="https://blog.jutty.dev/links">Links</a></li>
+              <li><a href="https://blog.jutty.dev/feeds">RSS</a></li>
+              <li><a href="https://mastodon.bsd.cafe/@jutty">Mastodon</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+        </div>
+
+        <main id="main">
+        <article class="blog-post">
+          <h1 id="post-title">Void on ZFS</h1>
+          <time class="post-date">2024-06-09 00:00:00</time>
+          <p><img src="/assets/img/posts/void-on-zfs/desk.jpg" alt="An L-shaped desk with two laptops, an external monitor, a router and a third headless computer in a tower case with several power cables connected to a power strip on top of it. Next to the power strip are two cellphones, a long red box, and a charging case for Bluetooth headphones with a red LED on. The tower case has three stickers on it: one with the machine specifications, one the FreeBSD logo, and one reading “platform feodalism (sic) is so 1492”. Scattered around the machines are some office supplies, medicine containers, a screwdriver, a notepad, a small notebook, an NVMe SSD card on top of its packaging, a mug, a water bottle and a scarf. Hanging on the wall are a small painting of a dead tree before the twilight, prayer beads, a sunflower-pattern keychain and a calendar. Between the desk and the camera, a green plastic chair has a pillow and blanket on top of it. A few wires and cardboard boxes are visible under the desk." /></p>
+<p>June is here. It brings the usual cold weather and some extra rhinitis complications. With that I find myself in a recovery mood Sunday, wrapped in a blanket with a mug of tea, a screwdriver, some notes on paper, a flash drive, a couple of NVMe cards and the trio of Unix-powered machines that will help me get this done.</p>
+<p>The mission is to get a root-on-ZFS EFI installation of Void Linux with ZFSBootMenu on a Dell Latitude 7480.</p>
+<p>To my left, a ceiling-collapse-survivor Sony VAIO is running NetBSD with spectrwm. It’s split with sakura and tmux on a terminal to one side, where Neovim is storing these words, and Firefox on the other, ready to fetch all the docs. In the middle, the object of today’s operation. And to my right, a headless PC board runs FreeBSD with ZFS, holding all the backups needed for the post-install tasks.</p>
+<p><img src="/assets/img/posts/void-on-zfs/duo.jpg" alt="Two laptops side-by-side on a desk, each with a USB keyboard plugged in. Writing utensils inside a holder and post-its are between the two. A sunflower-patterned keychain and prayer beads hang from the wall. The computer on the left has a brown cloth for a wrist rest in front of its USB keyboard, to the left of which lies a small blue Campus notebook." /></p>
+<p>This lengthy post, written not after the fact but during it, is my way of documenting and also sharing how it all went. Additionally, it’s a way to delve deeper into many of the things the ZFSBootMenu docs leave unexplained, an urge I already had yesterday as I just tried it out without much modification.</p>
+<p>Last night, I ran through the <a href="https://docs.zfsbootmenu.org/en/latest/guides/void-linux/uefi.html">ZFSBootMenu documentation guide for Void</a> and followed it both on a VM and then on an external SATA HDD plugged through a USB case, taking some notes and getting a general idea of the process.</p>
+<p>The Void installer does not support ZFS out of the box, so the <a href="https://docs.voidlinux.org/">Void Handbook</a> itself recommends the ZFSBootMenu documentation before <a href="https://docs.voidlinux.org/installation/guides/zfs.html">its own</a> (a manual chroot installation) when it comes to doing a ZFS-on-root install. This guide from ZFSBootMenu is what we’ll be following throughout this post.</p>
+<p>Do note that, while comprehensive, my account is no replacement for <a href="https://docs.zfsbootmenu.org/en/latest/guides/void-linux/uefi.html">the original guide</a>. Although more concise, it contains certain notes not included in this post and covers a larger set of possibilities than I did here. Some of the code blocks you’ll see here are identical to the ones from the guide, but many others are specific to how I did things, so keep that in mind and try things before going with your final installation.</p>
+<h2 id="why-void">Why Void?</h2>
+<p>I don’t really enjoy distro-hopping. I usually will spend a few years on the same OS and only switch for good reason and after some thorough testing. And after some Debian time, I felt interested in trying Void for a few reasons:</p>
+<ul>
+<li>rolling, but stable</li>
+<li>runit init system</li>
+<li>BSD-like rc files</li>
+<li>BSD-like handbook documentation</li>
+<li>numerous, up to date, but stable packages</li>
+</ul>
+<p>After trying it, some other features made me settle:</p>
+<ul>
+<li>fast and feature-packed package manager</li>
+<li>very fast startup time (kudos to runit)</li>
+<li>first-class support in ZFSBootMenu</li>
+</ul>
+<p>The Void package manager, <a href="https://docs.voidlinux.org/xbps/index.html">xbps</a>, has several interesting features. One of my favorites, for a taste, is <code>xbps-query --cat</code>, which shows the original contents of a given file in a package.</p>
+<p>For example, <code>xpbps-query --cat /etc/zfsbootmenu/config.yaml zfsbootmenu</code> will show you the original content of the <code>config.yaml</code> file in the <code>zfsbootmenu</code> package. You can use it for very core packages like <code>base-system</code> or <code>runit-void</code> to determine the original version of files shipped by them.</p>
+<h2 id="and-why-zfs">And why ZFS?</h2>
+<p>My first contact with ZFS was when using FreeBSD, which provides it as an option in its installer, making it a bit too easy not to try. Having a server on ZFS means all the data it holds can be safeguarded and transferred in robust ways, and mistakes are also easier to recover from.</p>
+<p>Aside from all the data integrity features and flexibility it brings, the features that interest me the most are the ones for managing snapshots.</p>
+<p>ZFS snapshots allow you to store the filesystem state at a given point in time, and to compare against, access the content of, and fully revert to this state. After the guide has been followed throughout, an extra section at the end of this post has some snapshot basics.</p>
+<h2 id="getting-in">Getting in</h2>
+<p>So, first things first, open the machine up and swap the NVMe cards. For me, that means getting my 128 GB NVMe stick, which I use basically for tests, and replace it with the 256 GB one which currently has Debian on it. Yes, I get by just fine with that much.</p>
+<p>While a bit dusty, the machine was overall in good state. The release date for the model is 2017, which for my computing standards is very recent.</p>
+<p>It has a single NVMe slot, one 16 GB RAM stick and one unused RAM slot. If you look closely, you can notice a dent on the vent tube connecting the cooler to the CPU. Despite this, it very rarely heats up.</p>
+<p><img src="/assets/img/posts/void-on-zfs/karu-inside.jpg" alt="The Dell laptop seen from above, lid closed, with the screen against the desk and the bottom cover removed, exposing the motherboard." /></p>
+<p>Next up is to boot up <a href="https://github.com/leahneukirchen/hrmpf">hrmpf</a> in EFI mode.</p>
+<p>hrmpf is a Void-based rescue system maintained by a Void team member and distributed as a bootable image that can accomplish many things, some of them being a full Void installation, entering a proper chroot, and being ZFS-ready with the needed drivers and tools.</p>
+<p>Once booted into it, EFI support can be confirmed by filtering the output of <code>dmesg</code>:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">dmesg</span></span> <span class="z-keyword z-operator z-logical z-pipe z-shell">|</span> <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">grep</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>i</span> efivars</span>
+</span></code></pre>
+<p>The output should contain “Registered efivars operations”.</p>
+<p>Make sure you have an Internet connection at this point. Most of the following steps will run fine without one, but closer to the end, when installing the Void base system, it will all go to waste if we can’t reach a package mirror.</p>
+<h2 id="setting-up-the-installation-environment">Setting up the installation environment</h2>
+<p>The ZFSBootMenu guide uses some variables in order to avoid mistakes and make the instructions more portable across the different storage types and supported operating systems.</p>
+<h3 id="etc-os-release"><code>/etc/os-release</code></h3>
+<p>The <code>/etc/os-release</code> file typically contains information on the operating system you are running.</p>
+<p>In the hrmpf live system, these are its contents:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">NAME</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>Void<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">ID</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>void<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">PRETTY_NAME</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>Void Linux<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">HOME_URL</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>https://voidlinux.org/<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">DOCUMENTATION</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>https://docs.voidlinux.org/<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">LOGO</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>void-logo<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">ANSI_COLOR</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>0;38;2;71;128;97<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">DISTRIB_ID</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>void
+</span></span></span></code></pre>
+<p>For comparison, here is FreeBSD’s <code>os-release</code> file:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">NAME</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell">FreeBSD</span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">VERSION</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>14.0-RELEASE<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">VERSION_ID</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>14.0<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">ID</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell">freebsd</span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">ANSI_COLOR</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>0;31<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">PRETTY_NAME</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>FreeBSD 14.0-RELEASE<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">CPE_NAME</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>cpe:/o:freebsd:freebsd:14.0<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">HOME_URL</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>https://FreeBSD.org/<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">BUG_REPORT_URL</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>https://bugs.FreeBSD.org/<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span></code></pre>
+<p>In contrast, NetBSD has no such file.</p>
+<p>For the purposes of the ZFSBootMenu guide, only the <code>$ID</code> value appears to be used. And because the file already is structured as shell-compatible variable assignments, we just source it:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-support z-function z-source z-shell">source</span></span><span class="z-meta z-function-call z-arguments z-shell"> /etc/os-release</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-storage z-modifier z-shell">export</span> <span class="z-variable z-other z-readwrite z-assignment z-shell">ID</span></span>
+</span></code></pre>
+<h3 id="hostid"><code>hostid</code></h3>
+<p>Required by ZFS intallations, a host ID is a 32-bit hexadecimal value that, supposedly, will uniquely identify a machine. Considering the number of existing machines and the 32-bit range, you might guess why I say <em>supposedly</em>.</p>
+<p>If your machine has the <code>hostid</code> utilities, you can see the host ID by simply running <code>hostid</code>. Prior to generation, my hrmpf live system reports <code>00000000</code>.</p>
+<p>It can’t provide a real guarantee that it will be unique, so it’s up to you to take care that it is unique among <em>your</em> machines. Read on for why that’s hardly an issue.</p>
+<p>From the <code>gethostid(3)</code> man page:</p>
+<blockquote>
+<p>[…] a unique 32-bit identifier for the current machine. The 32-bit identifier was intended to be unique among all UNIX systems in existence. This normally resembles the Internet address for the local machine, as returned by <code>gethostbyname(3)</code>, and thus usually never needs to be set.</p>
+</blockquote>
+<p>This seems to be more or less a legacy feature. In Void’s man page for <code>gethostid(3)</code>, you see this in the history section:</p>
+<blockquote>
+<p>4.2BSD; dropped in 4.4BSD. SVr4 and POSIX.1-2001 include gethostid() but not sethostid().</p>
+</blockquote>
+<p>Still, it is something that OpenZFS requires to be set:</p>
+<blockquote>
+<p>At time of import or creation, the pool stores the system’s unique host ID and for the purposes of supporting multipath, import into other systems will fail unless forced. <br/><br/>
+— <a href="https://openzfs.readthedocs.io/en/latest/introduction.html">OpenZFS docs, Introduction to ZFS: Storage pools</a></p>
+</blockquote>
+<p><code>zgenhostid</code>, which is shipped by OpenZFS, according to its man page “emulates the <code>genhostid(1)</code> utility and is provided for use on systems which do not include the utility or do not provide the <code>sethostid(3)</code> function.”</p>
+<p>When used without arguments, these commands will generate a random host ID. But they can also be passed a hexadecimal value, which gets stored by default in <code>/etc/hostid</code> unless another path is given with <code>-o</code>.</p>
+<p>Considering this information, it threw me off a bit that the ZFSBootMenu guide tells you to specify an arbitrary host ID rather than generate a random one:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zgenhostid</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>f</span> 0x00bab10c</span>
+</span></code></pre>
+<p>If they must be unique, that seems odd.</p>
+<p>The value <code>0x00bab10c</code> actually has significance in the context of OpenZFS as an identifier (and leetspeak) for its uberblock. However, it apparently is totally unrelated to host IDs.</p>
+<p>Should you be curious still, you can refer to <a href="https://github.com/zbm-dev/zfsbootmenu/discussions/465">this GitHub discussion</a> where a ZFSBootMenu user brought this exact question to the developers.</p>
+<p>According to the answer given above, the uniqueness of host IDs is useful for “multipathed SAS enclosures with two discrete head unis attached”, which is an enterprise-grade storage solution.</p>
+<p>The value <code>0x00bab10c</code> is indeed unrelated and chosen for easy identification. Any value may be used, but when using the pre-built ZFSBootMenu images it may make the process slightly slower (around 250ms) as ZFSBootMenu will have to “discover the hostid every boot”.</p>
+<h3 id="disk-variables">Disk variables</h3>
+<p>Here too, the ZFSBootMenu guide <a href="https://docs.zfsbootmenu.org/en/latest/guides/void-linux/uefi.html#define-disk-variables">works with a set of variables</a> to make it easier covering different possible storage types:</p>
+<ul>
+<li><code>BOOT_DISK</code>, <code>BOOT_PART</code> and <code>BOOT_DEVICE</code></li>
+<li><code>POOL_DISK</code>, <code>POOL_PART</code> and <code>POOL_DEVICE</code></li>
+</ul>
+<p>My target device is an NVMe at <code>nvme0n1</code>, so I’ll have:</p>
+<ul>
+<li><code>BOOT_DISK="/dev/nvme0n1"</code></li>
+<li><code>BOOT_PART="1"</code></li>
+<li><code>BOOT_DEVICE="${BOOT_DISK}p${BOOT_PART}"</code>
+<ul>
+<li>which evaluates to <code>/dev/nvme0n1p1</code>
+<br/><br/></li>
+</ul>
+</li>
+<li><code>POOL_DISK="/dev/nvme0n1"</code></li>
+<li><code>POOL_PART="2"</code></li>
+<li><code>POOL_DEVICE="${POOL_DISK}p${POOL_PART}"</code>
+<ul>
+<li>which evaluates to <code>/dev/nvme0n1p2</code></li>
+</ul>
+</li>
+</ul>
+<p>While this may seem silly at first, it allows using the values separately in the next steps. It also makes the docs a lot more concise while covering several possible disk setups.</p>
+<h3 id="confirming-the-environment-setup">Confirming the environment setup</h3>
+<p>At this point, we should be able to print something like this in our environment:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> env | grep ID</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">ID</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell">void</span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> hostid</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">00bab10c</span></span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> echo $BOOT_DEVICE</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">/dev/nvme0n1p1</span></span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> echo $POOL_DEVICE</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">/dev/nvme0n1p2</span></span>
+</span></code></pre>
+<p>Take care to keep this same environment for all the next steps as they depend on it. For instance, the hrmpf live system ships tmux. While that is great  and I have used it throughout, you must be careful to use a single pane for all the actual steps, and the other panes just for secondary things like looking up man pages or checking file contents.</p>
+<h2 id="filesystem-setup">Filesystem setup</h2>
+<h3 id="wiping">Wiping</h3>
+<p>The first step is to clear the current ZFS label information from the device:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zpool</span></span><span class="z-meta z-function-call z-arguments z-shell"> labelclear<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>f</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">POOL_DISK</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span></code></pre>
+<p>The <code>-f</code> option will “treat exported or foreign devices as inactive”, per the man page.</p>
+<p>This step fails consistenly for me, which I assume is because the previous filesystem was not ZFS to begin with.</p>
+<p>Next, we will use <code>wipefs</code> to erase the current filesystem signature.</p>
+<p>This command is not ZFS-specific, but part of the kernel utilities. It does not erase the filesystems themselves, nor their content, but the signatures that aid in their detection.</p>
+<p>Without any options, it will list all the filesystems that are still visible:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> wipefs &quot;$BOOT_DISK&quot;</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">DEVICE</span></span><span class="z-meta z-function-call z-arguments z-shell">  OFFSET          TYPE    UUID    LABEL</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">nvme0n1</span></span><span class="z-meta z-function-call z-arguments z-shell"> 0x200           gpt</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">nvme0n1</span></span><span class="z-meta z-function-call z-arguments z-shell"> 0x3d9e655e00    gpt</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">nvme0n1</span></span><span class="z-meta z-function-call z-arguments z-shell"> 0x1fe           PMBR</span>
+</span></code></pre>
+<p>The <code>-a</code> option is for erasing all signatures. This means it will “scan the device again after each modification until no magic string [signature] is found”, as per its man page.</p>
+<p>In my case:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">wipefs</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>a</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">POOL_DISK</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">wipefs</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>a</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">BOOT_DISK</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span></code></pre>
+<p>Along the guide, commands are sometimes repeated for both <code>$POOL_DISK</code> and <code>$BOOT_DISK</code>. If you are using the same disk for both, this may be redundant, although also harmless.</p>
+<p>This is my case, so I am not typically running it twice. I’ll still leave it as is however, so as not to mislead the reader.</p>
+<p>Now, when listing the signatures again with <code>wipefs "$BOOT_DISK"</code>, there should be no output.</p>
+<p>Finally, the current MBR and GPT tables must be destroyed. For this, the ZFSBootMenu guide uses <code>sgdisk</code>. This is also not ZFS-specific.</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">sgdisk</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>zap-all</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">POOL_DISK</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">sgdisk</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>zap-all</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">BOOT_DISK</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span></code></pre>
+<p>The <code>--zap-all</code> option contrasts with <code>--zap</code> in that it will destroy both MBR and GPT partition tables.</p>
+<h3 id="partitioning">Partitioning</h3>
+<p>In the ZFSBootMenu guide, <code>sgdisk</code> is used again for creating the partitions:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">sgdisk</span></span><span class="z-meta z-function-call z-arguments z-shell"> <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell">    -</span>n</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-punctuation z-section z-expansion z-parameter z-begin z-shell">{</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-variable z-other z-readwrite z-shell">BOOT_PART</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-section z-expansion z-parameter z-end z-shell">}</span></span>:1m:+512m<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span> <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell">    -</span>t</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-punctuation z-section z-expansion z-parameter z-begin z-shell">{</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-variable z-other z-readwrite z-shell">BOOT_PART</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-section z-expansion z-parameter z-end z-shell">}</span></span>:ef00<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">BOOT_DISK</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">sgdisk</span></span><span class="z-meta z-function-call z-arguments z-shell"> <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell">    -</span>n</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-punctuation z-section z-expansion z-parameter z-begin z-shell">{</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-variable z-other z-readwrite z-shell">POOL_PART</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-section z-expansion z-parameter z-end z-shell">}</span></span>:0:-10m<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span> <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell">    -</span>t</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-punctuation z-section z-expansion z-parameter z-begin z-shell">{</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-variable z-other z-readwrite z-shell">POOL_PART</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-section z-expansion z-parameter z-end z-shell">}</span></span>:bf00<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">POOL_DISK</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span></code></pre>
+<p>In the commands above, option <code>-n</code> is short for <code>--new</code>, and is specifying the start and end sectors by using relative kibibyte measures. The format is <code>--new partnum:start:end</code>.</p>
+<p>Breaking it down:</p>
+<ul>
+<li><code>1m</code> 1 mebibyte from the start of the disk</li>
+<li><code>+512m</code> 512 mebibytes after the default start sector</li>
+<li><code>-10m</code> 10 mebibytes before the last available sector</li>
+<li><code>0</code> the default value</li>
+</ul>
+<p>In the list above, “default” is “the start of the largest available block for the start sector and the end of the same block for the end sector”, as per the <code>sgdisk</code> man page.</p>
+<p><code>1:1m:+512m</code>, therefore, means that partition 1 will start 1 mebibyte from the start of the disk and end 512 mebibytes after the start of the largest available block.</p>
+<p><code>2:0:-10m</code>, in turn, means partition 2 will begin at the start of the largest available block and end 10 mebibytes before the last available sector.</p>
+<p>Option <code>-t</code> is for setting the typecode for each partition. Typecode <code>ef00</code> is for the EFI system partition, and typecode <code>bf00</code> is for “Solaris root”, the Unix system upon whose ZFS implementation OpenZFS was based.</p>
+<p>For a list of typecodes, see <code>sgdisk -L</code>.</p>
+<p>While just running these commands as-is is your safest option, you might have a different layout in mind or prefer an interactive UI.</p>
+<p>For one thing, I’ve had issues in the past with the boot partition being too small, so I’ll be using <code>2g</code> instead of <code>512m</code> for it.</p>
+<p><code>sgdisk</code> has a friendlier counterpart named <code>gdisk</code>, which you can use just by passing it the disk path, as in <code>gdisk /dev/sda</code>.</p>
+<p>At this point, you should be safe to try partitioning and going back to wiping as needed until you are satisfied.</p>
+<p>When you are done, you can use <code>lsblk</code> to confirm the results. The following will show you the options just configured:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">lsblk</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>o</span> NAME,SIZE,TYPE,PARTTYPENAME</span>
+</span></code></pre>
+<h3 id="creating-the-pool">Creating the pool</h3>
+<p>This part of the guide was the one that actually made me want to delve deeper and understand what each option meant.</p>
+<p>With little knowledge about ZFS still, I wanted to understand precisely what was happening here, but also what a pool even is and what its creation meant.</p>
+<p>Here’s the <code>zpool(8)</code> man page:</p>
+<blockquote>
+<p>A storage pool is a collection of devices that provides physical storage and data replication for ZFS datasets. All datasets within a storage pool share the same space.</p>
+</blockquote>
+<p>The definition of a dataset is then indicated to be at <code>zfs(8)</code>:</p>
+<blockquote>
+<p>A dataset is identified by a unique path within the ZFS namespace: <br/>
+<code>pool[/component]/component</code> for example: <code>rpool/var/log</code></p>
+</blockquote>
+<p>Here, it’s also explained that a dataset can be a file system, logical volume, snapshot or bookmark.</p>
+<p>Further information is also hinted to be found at <code>zpoolconcepts(7)</code>.</p>
+<p>At this point you start to notice the breadth of knowledge available in the documentation. The man pages are not only comprehensible, but sometimes contain several examples on how to apply their concepts. Each command has their own man page  named with a hyphen for separation, as in <code>zpool-create</code>.</p>
+<p>We’ll be exploring only the <code>zpool-create(8)</code> command in depth, in particular the options used in the ZFSBootMenu guide:</p>
+<ul>
+<li><code>-f</code> force the use of virtual devices, even if they appear in use</li>
+<li><code>-o feature=value</code> set a pool feature</li>
+<li><code>-O property=value</code> set a file system property in the root file system of the pool</li>
+<li><code>-o compatibility=off|legacy|file[,file]</code> specify a compatibility feature set</li>
+<li><code>-m mountpoint</code> the mountpoint (default: <code>/pool</code>)</li>
+<li><code>pool</code> the pool</li>
+<li><code>vdev</code> the virtual device</li>
+</ul>
+<p>The listing with pool features (including compatibility feature sets) is at <code>zpool-features(7)</code>. Pool properties are at <code>zpoolprops(7)</code> and file system properties at <code>zfsprops(7)</code>.</p>
+<p>In the guide, these are the options given:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zpool</span></span><span class="z-meta z-function-call z-arguments z-shell"> create<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>f</span> <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>o</span> ashift=12 <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>O</span> compression=lz4 <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>O</span> acltype=posixacl <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>O</span> xattr=sa <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>O</span> relatime=on <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>o</span> autotrim=on <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>o</span> compatibility=openzfs-2.1-linux <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>m</span> none zroot <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">POOL_DEVICE</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span></code></pre>
+<p>Among the options above, several pool features and system properties are set:</p>
+<ul>
+<li><code>-o ashift=12</code> “Alignment shift”, used to calculate physical sector sizes.This is discussed at greater length in the <a href="https://openzfs.github.io/openzfs-docs/Performance%20and%20Tuning/Workload%20Tuning.html#alignment-shift-ashift">online documentation on Workload Tuning</a></li>
+<li><code>-O compression=lz4</code> Sets the compression algorithm used (<a href="https://en.wikipedia.org/wiki/LZ4_(compression_algorithm)">LZ4</a>)</li>
+<li><code>-O acltype=posixacl</code> Whether <a href="https://en.wikipedia.org/wiki/Access-control_list">ACLs</a> are enabled and what type to use. The value <code>posixacl</code> is equivalent to <code>posix</code> (default on Linux: off)</li>
+<li><code>-O xattr=sa</code> Enables extended attributes. If value is <code>on</code>, uses directory-based extended attributes, while <code>sa</code> uses system-attribute-based. The latter has performance benefits, and is important for ACLs and SELinux usage</li>
+<li><code>-O relatime=on</code> “Causes the access time to be updated relative to the modify or change time.” Also, “access time is only updated if the previous access time was earlier than the current modify or change time or if the existing access time hasn’t been updated within the past 24hours”</li>
+<li><code>-o autotrim=on</code> Automatically reclaims unused blocks from time to time. Can put the filesystem under some stress</li>
+</ul>
+<p>The last option, the compatibility feature set, specifies in this case a relative filename to <code>/usr/share/zfs/compatibility.d</code>:</p>
+<ul>
+<li><code>-o compatibility=openzfs-2.1-linux</code></li>
+</ul>
+<p><code>zpool-create(8)</code> also states:</p>
+<blockquote>
+<p>By default, all supported features are enabled on the new pool. The <code>-d</code> option and the <code>-o</code> compatibility property […] can be used to restrict the features that are enabled, so that the pool can be imported on other releases of ZFS.</p>
+</blockquote>
+<p>The compatibility option <code>openzfs-2.1-linux</code> is described as a “conservative” choice in the ZFSBootMenu guide and in my tests had little impact, so I decided to not use it for this installation.</p>
+<h3 id="creating-the-filesystems">Creating the filesystems</h3>
+<p>Once the pool is ready, the filesystems can be created.</p>
+<p>For this task, the <code>zfs</code> command is used with <code>create</code>:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> create<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>o</span> mountpoint=none zroot/ROOT</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> create<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>o</span> mountpoint=/<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>o</span> canmount=noauto zroot/ROOT/<span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-punctuation z-section z-expansion z-parameter z-begin z-shell">{</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-variable z-other z-readwrite z-shell">ID</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-section z-expansion z-parameter z-end z-shell">}</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> create<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>o</span> mountpoint=/home zroot/home</span>
+</span></code></pre>
+<p>The ZFSBootMenu guide explains at this point that if <code>canmount=noauto</code> is not set on file systems with the <code>/</code> mountpoint, the OS will try to mount them all and fail. It goes on to say:</p>
+<blockquote>
+<p>Automatic mounting of / is not required because the root file system is explicitly mounted in the boot process.</p>
+</blockquote>
+<p>After the filesystems have been created, the boot file system must be set.</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zpool</span></span><span class="z-meta z-function-call z-arguments z-shell"> set bootfs=zroot/ROOT/<span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-punctuation z-section z-expansion z-parameter z-begin z-shell">{</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-variable z-other z-readwrite z-shell">ID</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-section z-expansion z-parameter z-end z-shell">}</span></span> zroot</span>
+</span></code></pre>
+<p>Essentially, this is saying “set <code>zroot</code>’s <code>bootfs</code> property to <code>zroot/ROOT/void</code>”</p>
+<h3 id="export-reimport-and-mount">Export, reimport and mount</h3>
+<p>The next steps consist in exporting and then importing the pool with a given mountpoint.</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zpool</span></span><span class="z-meta z-function-call z-arguments z-shell"> export zroot</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zpool</span></span><span class="z-meta z-function-call z-arguments z-shell"> import<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>N</span><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>R</span> /mnt zroot</span>
+</span></code></pre>
+<p>From what I gather, exporting means putting the pool in a more portable state. According to the <code>zpool-export(8)</code> man page, “the devices [marked as exported] can be moved between systems […] and imported as long as a sufficient number of devices are present.”</p>
+<p>If <code>zfs import</code> is used without any arguments, it will list the exported pools available to be imported.</p>
+<p>The <code>-N root</code> option imports the pool without mounting any of its file systems, the <code>-R</code> option “sets the <code>cachefile</code> property to <code>none</code> and the <code>altroot</code> property to <code>root</code>”. In this case, that <code>root</code> will be <code>/mnt</code>.</p>
+<p><code>altroot</code> stands for the alternate root directory. In <code>zpoolprops(7)</code>, this becomes clearer when it is stated that “this directory is prepended to any mount points within the pool.”</p>
+<p>Once re-imported, we can mount:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> mount zroot/ROOT/<span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-punctuation z-section z-expansion z-parameter z-begin z-shell">{</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-variable z-other z-readwrite z-shell">ID</span></span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-section z-expansion z-parameter z-end z-shell">}</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> mount zroot/home</span>
+</span></code></pre>
+<p>And verify that all is mounted correctly with <code>mount | grep mnt</code>:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> mount | grep mnt</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zroot/ROOT/void</span></span><span class="z-meta z-function-call z-arguments z-shell"> on /mnt type zfs (rw,relatime,xattr,posixacl,casesensitive</span><span class="z-meta z-function-call z-shell"></span>)
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zroot/home</span></span><span class="z-meta z-function-call z-arguments z-shell"> on /mnt/home type zfs (rw,relatime,xattr,posixacl,casesensitive</span><span class="z-meta z-function-call z-shell"></span>)
+</span></code></pre>
+<p>Lastly, we request the device events from the kernel to update the device symlinks:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">udevadm</span></span><span class="z-meta z-function-call z-arguments z-shell"> trigger</span>
+</span></code></pre>
+<h2 id="setting-up-void">Setting up Void</h2>
+<h3 id="installation">Installation</h3>
+<p>So far, not much here was Void-specific. This is when we start bootstrapping the void system into the filesystem we laid out.</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">XBPS_ARCH</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell">x86_64</span> <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">xbps-install</span></span><span class="z-meta z-function-call z-arguments z-shell"> <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell">  -</span>S</span><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>R</span> https://repo-fastly.voidlinux.org/current <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell">  -</span>r</span> /mnt base-system</span>
+</span></code></pre>
+<p>Here, we are passing an environment variable to set the architecture to <code>x86_64</code>, then use <code>xbps-install</code> from the xbps package manager to fetch the Void base system.</p>
+<p><code>-S</code> takes care of synchronizing the data from the mirror so that package data is fetched, <code>-R</code> allows us to manually specify the repository for this run, and <code>-r</code> allows choosing a different root directory to act upon.</p>
+<p>Here, I chose the Fastly mirror over the ServerCentral one. <a href="https://xmirror.voidlinux.org/">Any working mirror</a> should do.</p>
+<p>Note that not all mirrors have the same content at the root of their URL. Some point directly to a Void repo, some don’t. You can access the mirror in a browser or otherwise inspect it to find the path to the  <code>current</code> directory.</p>
+<p>With this done, we can copy the host ID file, which will also be required in our final system, and we are ready to chroot.</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">cp</span></span><span class="z-meta z-function-call z-arguments z-shell"> /etc/hostid /mnt/etc</span>
+</span></code></pre>
+<h3 id="chrooting">chrooting</h3>
+<p>We will chroot into the system mounted at the <code>/mnt</code> directory using <code>xchroot</code>, which is part of the xbps <code>xtools</code> package and should already be available on hrmpf. It provides a <a href="https://docs.voidlinux.org/config/containers-and-vms/chroot.html#chroot-usage">more sane</a> chroot than the plain one, in particular regarding the required mountpoints:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">xchroot</span></span><span class="z-meta z-function-call z-arguments z-shell"> /mnt</span>
+</span></code></pre>
+<p>This is a good time to get back to the notes I mentioned taking the day before.</p>
+<p><img src="/assets/img/posts/void-on-zfs/notes.jpg" alt="A block of paper with some notes scribbled: “check connection first of all”, “reconfigure after chroot”, “see /usr/share/doc/efibootmgr/README.voidlinux for automatic EFI entry management”, “superb docs”, “take the first snapshot ASAP”. An arrow points from the last note to “on chroot?” Visible above the block of paper is a keyboard. To the right, the tip of a notebook and a piece of brown cloth are visible. On top of the block, there is a mechanical pencil and a Tombow MONO One plastic eraser." /></p>
+<h4 id="reconfiguring-packages">Reconfiguring packages</h4>
+<p>After chrooting, it may be a good idea to run <code>xbps-reconfigure</code> to make sure packages are properly configured. This is because in the bootstrap process some packets may have tried to configure themselves while relying on directories that were not mounted anywhere.</p>
+<p>This is particularly true for <a href="https://github.com/OSInside/kiwi/issues/1867"><code>dracut</code></a>, which is a tool that generates initramfs and initrd images, therefore being critical to the early boot process. You might see error messages related to it in your first run of xbps outside of the chroot, when installing the base system.</p>
+<p>To reconfigure <strong>all</strong> packages, just run <code>xbps-reconfigure -fa</code>. If you’d rather only reconfigure <code>dracut</code>, go with <code>xpbs-reconfigure -f dracut</code>.</p>
+<h4 id="root-password">root password</h4>
+<p>As early as possible is a good time to run <code>passwd</code> and set the root password.</p>
+<h4 id="rc-conf"><code>rc.conf</code></h4>
+<p><code>runit</code> reads the <code>/etc/rc.conf</code> file during startup to configure the system, setting up things like the keymap, hardware clock and terminal font.</p>
+<p>For your reference, here is what I added to mine during the installation:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">HARDWARECLOCK</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>UTC<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">KEYMAP</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>br-abnt2<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">FONT</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>ter-120n<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span></code></pre>
+<h4 id="time-zone-and-locale">Time zone and locale</h4>
+<p>To configure your local time zone, create a symlink at <code>/etc/localtime</code> that points to the corresponding time zone in the <code>/usr/share/zoneinfo</code> directory.</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">ln</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>sf</span> /usr/share/zoneinfo/<span class="z-keyword z-operator z-assignment z-redirection z-shell">&lt;</span>timezone<span class="z-keyword z-operator z-assignment z-redirection z-shell">&gt;</span> /etc/localtime</span>
+</span></code></pre>
+<p>Unless you are using <code>musl</code>, you also want to set and generate the <code>glibc</code> locales. Edit <code>/etc/default/libc-locales</code> and uncomment the desired locales, then run <code>xbps-reconfigure -f glibc-locales</code>.</p>
+<h4 id="dracut">dracut</h4>
+<p><code>dracut</code> generates file system images used by the kernel at the very early stages of boot. We have to make it able to identify our ZFS root filesystem by enabling the proper modules. This is accomplished by creating <code>/etc/dracut.conf.d/zol.conf</code> with:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">nofsck</span><span class="z-keyword z-operator z-assignment z-shell">=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>yes<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">add_dracutmodules</span><span class="z-keyword z-operator z-assignment z-shell">+=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span> zfs <span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-variable z-other z-readwrite z-assignment z-shell">omit_dracutmodules</span><span class="z-keyword z-operator z-assignment z-shell">+=</span><span class="z-string z-unquoted z-shell"><span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span> btrfs <span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span></code></pre>
+<p>Notice the spaces surrounding the module names.</p>
+<h2 id="installing-and-configuring-zfsbootmenu">Installing and configuring ZFSBootMenu</h2>
+<p>We are now ready to install both ZFS and ZFSBootMenu. Let’s start with ZFS:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">xbps-install</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>R</span> https://repo-fastly.voidlinux.org/current zfs</span>
+</span></code></pre>
+<p>Now, before installing ZFSBootMenu, we set the kernel commandline. This is the command line that will be used by the Linux kernel, so any options you are used to go here.</p>
+<p>The ZFSBootMenu guide has only the <code>quiet</code> option. In my case, I added <code>net.ifnames=0</code> to have the classic <code>eth0</code>, <code>wlan0</code> network interface names, and <code>fbcon=nodefer video=efifb:nobgrt</code>, which prevents the manufacturer’s logo from showing after boot and sometimes obscuring the boot process output.</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> set org.zfsbootmenu:commandline=<span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>quiet net.ifnames=0 fbcon=nodefer video=efifb:nobgrt<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span> zroot/ROOT</span>
+</span></code></pre>
+<p>We also need a <code>vfat</code> filesystem on our boot device:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">mkfs.vfat</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>F32</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">BOOT_DEVICE</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span>
+</span></code></pre>
+<p>Now we can add an <code>/etc/fstab</code> entry pointing to it, and mount:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-support z-function z-echo z-shell">echo</span></span><span class="z-meta z-function-call z-arguments z-shell"> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-command z-parens z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-punctuation z-section z-parens z-begin z-shell">(</span><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">blkid</span></span> <span class="z-keyword z-operator z-logical z-pipe z-shell">|</span> <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">grep</span></span><span class="z-meta z-function-call z-arguments z-shell"> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">BOOT_DEVICE</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span></span> <span class="z-keyword z-operator z-logical z-pipe z-shell">|</span> <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">cut</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>d</span> <span class="z-string z-quoted z-single z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&#39;</span> <span class="z-punctuation z-definition z-string z-end z-shell">&#39;</span></span><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>f</span> 2</span><span class="z-punctuation z-section z-parens z-end z-shell">)</span></span> /boot/efi vfat defaults 0 0<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span> <span class="z-keyword z-operator z-assignment z-redirection z-shell">&gt;&gt;</span> /etc/fstab</span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">mkdir</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>p</span> /boot/efi</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">mount</span></span><span class="z-meta z-function-call z-arguments z-shell"> /boot/efi</span>
+</span></code></pre>
+<p>Into this directory we just mounted, we can now install ZFSBootMenu.</p>
+<p>The guide provides two different paths here: a prebuilt image or the Void package, which you can get through xbps.</p>
+<p>While there are advantages to both, I decided to go with the prebuilt image since I’d rather the package manager not touch the boot manager on updating. This has the downside of you having to take care of being aware of any relevant versions and when to upgrade to them.</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">xbps-install</span></span><span class="z-meta z-function-call z-arguments z-shell"> curl</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">mkdir</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>p</span> /boot/efi/EFI/ZBM</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">curl</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>o</span> /boot/efi/EFI/ZBM/VMLINUZ.EFI<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>L</span> https://get.zfsbootmenu.org/efi</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">cp</span></span><span class="z-meta z-function-call z-arguments z-shell"> /boot/efi/EFI/ZBM/VMLINUZ.EFI /boot/efi/EFI/ZBM/VMLINUZ-BACKUP.EFI</span>
+</span></code></pre>
+<p>If you’d rather use the repository package, see the <a href="https://docs.zfsbootmenu.org/en/latest/guides/void-linux/uefi.html#install-zfsbootmenu">corresponding instructions in the guide</a>.</p>
+<p>Finally, a second choice has to be made between <code>rEFind</code> or plain <code>efibootmgr</code> for managing the boot entries. I prefer to go with the simpler one, but you may find <code>rEFind</code> more feature-packed.</p>
+<p>First, install <code>efibootmgr</code> using <code>xbps-install efibootmgr</code>, then run the following commands:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">efibootmgr</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>c</span><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>d</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">BOOT_DISK</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>p</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">BOOT_PART</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span> <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell">  -</span>L</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>ZFSBootMenu (Backup)<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span> <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell">  -</span>l</span> <span class="z-string z-quoted z-single z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&#39;</span>\EFI\ZBM\VMLINUZ-BACKUP.EFI<span class="z-punctuation z-definition z-string z-end z-shell">&#39;</span></span></span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">efibootmgr</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>c</span><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>d</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">BOOT_DISK</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>p</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span><span class="z-meta z-group z-expansion z-parameter z-shell"><span class="z-punctuation z-definition z-variable z-shell">$</span><span class="z-variable z-other z-readwrite z-shell">BOOT_PART</span></span><span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span> <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell">  -</span>L</span> <span class="z-string z-quoted z-double z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&quot;</span>ZFSBootMenu<span class="z-punctuation z-definition z-string z-end z-shell">&quot;</span></span> <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell">  -</span>l</span> <span class="z-string z-quoted z-single z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&#39;</span>\EFI\ZBM\VMLINUZ.EFI<span class="z-punctuation z-definition z-string z-end z-shell">&#39;</span></span></span>
+</span></code></pre>
+<p>If you’d prefer to use rEFInd, see the <a href="https://docs.zfsbootmenu.org/en/latest/guides/void-linux/uefi.html#configure-efi-boot-entries">guide’s relevant section</a>.</p>
+<p><code>zbm-kcl</code> is mentioned here in passing. This utility allows you, among other things, to set ZFSBootMenu options, such as the delay before automatically booting. I am not sure if it comes included with the ZFSBootMenu package, as I went for the pre-built image, but you can nonetheless get it from GitHub:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">curl</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>O</span> https://raw.githubusercontent.com/zbm-dev/zfsbootmenu/master/bin/zbm-kcl</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">chmod</span></span><span class="z-meta z-function-call z-arguments z-shell"> +x zbm-kcl</span>
+</span></code></pre>
+<p>Now, if you want to change an option, you can use its <code>-a</code> option to append an argument to the target image’s command line:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zbm-kcl</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>a</span> <span class="z-string z-quoted z-single z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&#39;</span>zbm.timeout=2<span class="z-punctuation z-definition z-string z-end z-shell">&#39;</span></span> /boot/efi/EFI/ZBM/VMLINUZ.EFI</span>
+</span></code></pre>
+<p>In the example above, the timeout before automatically booting is set from its 10 seconds default to 2 seconds.</p>
+<h2 id="getting-out">Getting out</h2>
+<p>We are all done. It’s time to exit the chroot, unmount and export the pool.</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-support z-function z-exit z-shell">exit</span></span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">umount</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>n</span><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>R</span> /mnt</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zpool</span></span><span class="z-meta z-function-call z-arguments z-shell"> export zroot</span>
+</span></code></pre>
+<p>If all above went well, we can now run <code>reboot</code>, remove the flash drive used for installation, and log in for the first time into our new system.</p>
+<h2 id="zfs-snapshot-basics">ZFS snapshot basics</h2>
+<p>Something you might want to do at this point is to take a snapshot of the current state, since it can serve as a baseline before any further tweaking, allowing you to go back or access the files in this state as you make important changes that could potentially break the system.</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> snapshot<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>r</span> zroot/ROOT/void@baseline</span>
+</span></code></pre>
+<p>Note that, if you followed the ZFSBootMenu guide in creating a separate dataset for your home directory, this snapshot will not include the contents inside and under <code>/home</code> (which at this point should be empty anyways).</p>
+<p>You can access the contents of a snapshot at any time in the <code>.zfs</code> directory at the root of a given dataset. For the ones we previously set up, those would be <code>/.zfs</code> and <code>/home/.zfs</code>. Note that these directories are not only hidden in the traditional way, but they won’t show up even if you use <code>ls -a</code>. You need to actually <code>cd</code> into the apparently absent directory for it to work.</p>
+<p>ZFS snapshots start taking virtually no space at all, but grow with time as the snapshot drifts from the present system state. For that reason, keeping a snapshot of the very first moment of your system can take up significant space. Depending on your storage resources, you might eventually decide to destroy this snapshot:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> destroy<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>r</span> zroot/ROOT/void@baseline</span>
+</span></code></pre>
+<p>You may also want to list your current snapshots. While typically you can use <code>zfs list -t snap</code>, I tend to use the following command in order to get more relevant output:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> list<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>t</span> snap<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>o</span> creation,name,used,written,referenced,refcompressratio<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>S</span> creation</span>
+</span></code></pre>
+<p>Finally, you might want to rename a snapshot:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> rename<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>r</span> zroot/ROOT/void@baseline @day0</span>
+</span></code></pre>
+<p>Combined, these commands can get you as far as an automatic, rolling snapshot system. Say, for instance you add the following to <code>rc.local</code>:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> destroy<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>r</span> zroot/ROOT/void@fallbackBoot</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> rename<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>r</span> zroot/ROOT/void@previousBoot @fallbackBoot</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> rename<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>r</span> zroot/ROOT/void@currentBoot @previousBoot</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zfs</span></span><span class="z-meta z-function-call z-arguments z-shell"> snapshot<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>r</span> zroot/ROOT/void@currentBoot</span>
+</span></code></pre>
+<p>This would give you a per-boot snapshot trail to rely on.</p>
+<p>The <code>zfs-snapshot(8)</code> man page provides a similar example for daily snapshots. Considering how simple the zfs CLI is, scripting several snapshot schemes can be quite easy, be them per boot, daily, or even every so many minutes using cron. Because ZFS snapshots grow as they drift from the present state, rotating them is optimal when storage space is a concern.</p>
+<p>That’s it! I hope this was helpful to you in either learning about ZFS or about Void installations with Root on ZFS.</p>
+<hr />
+<p><em>Originally written June 2nd, 2024</em></p>
+
+        </article>
+        </main>
+
+        <footer>
+  <hr/>
+  <p class="footer-text">made by <a href="https://jutty.dev">jutty</a>
+    with <a href="https://www.getzola.org/">Zola</a>
+    &bullet; BSD-licensed
+    <a href="https://github.com/jultty/blog">source code</a>
+    
+    &bullet; <a href="https://blog.jutty.dev/acknowledgments">acknowledgments</a>
+    <br/>
+    built <time>2026-02-28 05:55 UTC</time>,
+    1772258153 non-leap seconds since the Unix Epoch
+  </p>
+</footer>
+      </div>
+    </body>
+  </html>

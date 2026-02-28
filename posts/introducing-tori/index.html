@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+  <html lang="en" id="theme">
+
+    <head prefix="og: https://ogp.me/ns/website#">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Introducing tori ~ jutty.dev</title>
+
+      <link href="https://blog.jutty.dev/assets/css/style.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://blog.jutty.dev/assets/css/syntax-dark.css" media="(prefers-color-scheme: dark)" />
+      <link rel="stylesheet" type="text/css" href="https://blog.jutty.dev/assets/css/syntax-light.css" media="(prefers-color-scheme: light)" />
+
+      <link rel="icon" type="image/png" sizes="36x36" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_16.png">
+      <link rel="icon" type="image/png" sizes="128x128" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_circle_128.png">
+
+      <link rel="me" href="https://mastodon.bsd.cafe/@jutty">
+
+      <meta property="og:title" content="Introducing tori ~ jutty.dev" />
+      <meta property="og:description" content="tori is a tool to track your personal systems’ configurations and replicate them. For the past 5 months, I’ve been simul…" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://blog.jutty.dev/posts/introducing-tori/" />
+      <meta property="og:image" content="https://blog.jutty.dev/assets/img/icons/kitty/kitty_circle_192.png" />
+      <meta name="fediverse:creator" content="@jutty@bsd.cafe">
+
+      <link rel="alternate" type="application/rss+xml" title="All content (English)" href="https://blog.jutty.dev/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Posts (English)" href="https://blog.jutty.dev/posts/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Notes (English)" href="https://blog.jutty.dev/notes/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Links" href="https://blog.jutty.dev/links/atom.xml">
+    </head>
+
+    <body>
+      <div id="container">
+        <div>
+        <a id="skip-to-main" href="#main">Skip to content</a>
+        
+        <div id="user-controls" class="subpage-user-controls">
+          <nav id="nav-menu">
+            <ul>
+              <li><a id="home" href="https://blog.jutty.dev">Home</a></li>
+              <li><a href="https://blog.jutty.dev/posts">Posts</a></li>
+              <li><a href="https://blog.jutty.dev/notes">Notes</a></li>
+              <li><a href="https://blog.jutty.dev/links">Links</a></li>
+              <li><a href="https://blog.jutty.dev/feeds">RSS</a></li>
+              <li><a href="https://mastodon.bsd.cafe/@jutty">Mastodon</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+        </div>
+
+        <main id="main">
+        <article class="blog-post">
+          <h1 id="post-title">Introducing tori</h1>
+          <time class="post-date">2024-06-30 00:00:00</time>
+          <p><strong><a href="https://tori.jutty.dev/">tori</a></strong> is a tool to track your personal systems’ configurations and replicate them.</p>
+<p>For the past 5 months, I’ve been simultaneously using and writing it to manage my main machine’s configuration. By “manage the configuration” what I mean is keeping track of installed packages, configuration files, symlinks, and other settings that can be queried and set through command line interfaces.</p>
+<p>After installing a given system, I wanted to get it to the same configuration state I was used to, or to a certain configuration specific to its purpose. Just copying backups would certainly be a very manual task, namely because:</p>
+<ul>
+<li>Not all settings live in <code>/etc</code></li>
+<li>Some settings must be set using a specific CLI utility</li>
+<li>Backups usually carry an overwhelming amount of redundant default configuration you never even touched</li>
+<li>It does not track what is changing as you are still using the system</li>
+<li>I actually wanted to <em>know</em> what I was tracking</li>
+</ul>
+<p>Configuring a system can become a very vague process as you start to lose track of where the changes are being made and what is the specific configuration needed for something to work.</p>
+<p>Every time you change some configuration file, every time you create a symlink somewhere, that’s all having effects on the system that you may expect to be there in the future, but you may not remember how to accomplish that. This drift between what you have and what you are able to replicate only grows as you keep using your system.</p>
+<p>To get a better idea, see the code snippet below. It’s from the main file that I use to manage all function calls:</p>
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">xbps_get_many</span></span><span class="z-meta z-function-call z-arguments z-shell"> packages</span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">check_service</span></span><span class="z-meta z-function-call z-arguments z-shell"> dbus</span>
+</span><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">check_group</span></span><span class="z-meta z-function-call z-arguments z-shell"> audio</span>
+</span><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">check_group</span></span><span class="z-meta z-function-call z-arguments z-shell"> video</span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">copy</span></span><span class="z-meta z-function-call z-arguments z-shell"> dhcpcd.conf /etc/dhcpcd.conf</span>
+</span><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">place</span></span><span class="z-meta z-function-call z-arguments z-shell"> kernel-cmd-line.conf /etc/dracut.conf.d</span>
+</span><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">check_link</span></span><span class="z-meta z-function-call z-arguments z-shell"> /etc/localtime /usr/share/zoneinfo/America/Sao_Paulo</span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">get_nix</span></span><span class="z-meta z-function-call z-arguments z-shell"> tailspin tspin</span>
+</span><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">get_cargo</span></span><span class="z-meta z-function-call z-arguments z-shell"> taplo-cli taplo<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>locked</span></span>
+</span><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">get_bun</span></span><span class="z-meta z-function-call z-arguments z-shell"> bash-language-server</span>
+</span><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">get_bin</span></span><span class="z-meta z-function-call z-arguments z-shell"> <span class="z-string z-quoted z-single z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&#39;</span>https://raw.githubusercontent.com/hackerb9/lsix/master/lsix<span class="z-punctuation z-definition z-string z-end z-shell">&#39;</span></span> lsix</span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">check_gsettings</span></span><span class="z-meta z-function-call z-arguments z-shell"> gtk-theme <span class="z-string z-quoted z-single z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&#39;</span>Plata-Noir<span class="z-punctuation z-definition z-string z-end z-shell">&#39;</span></span></span>
+</span><span class="z-source z-shell z-bash">  <span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">check_gsettings</span></span><span class="z-meta z-function-call z-arguments z-shell"> font-name <span class="z-string z-quoted z-single z-shell"><span class="z-punctuation z-definition z-string z-begin z-shell">&#39;</span>Mononoki Nerd Font Regular<span class="z-punctuation z-definition z-string z-end z-shell">&#39;</span></span></span>
+</span></code></pre>
+<p>What is happening here:</p>
+<ol>
+<li>A file named <code>packages</code> containing package names is parsed and all packages are queried and installed by the <code>xbps</code> package manager, if not already installed</li>
+<li>Service <code>dbus</code> is enabled if not already enabled</li>
+<li>The user is added to groups <code>audio</code> and <code>video</code>, unless already in them</li>
+<li>File <code>dhcpcd.conf</code> from the configuration directory’s <code>base</code> directory is checked against the one in the passed path and overwrites it if the user chooses to do so</li>
+<li>File <code>kernel-cmd-line.conf</code> from the configuration directory’s <code>base</code> directory is copied into the passed path. If the file already exists or differs, tori will present an error</li>
+<li>A symlink is checked to be on <code>/etc/localtime</code> pointing to the passed path. If it doesn’t, it is created or fixed</li>
+<li>If not installed, a few packages are installed using different package managers: <code>tailspin</code>, <code>taplo</code> and <code>bash-language-server</code></li>
+<li>If absent, an executable for <code>lsix</code> is downloaded from a URL and placed at <code>~/.local/bin</code></li>
+<li>Some <code>gsettings</code> values are read and set if they differ: <code>gtk-theme</code> and <code>font-name</code></li>
+</ol>
+<p>Notice how everything is conditioned to the system not already presenting that state? tori aims to be idempotent. Running it twice should do nothing the second time it runs so you can run it multiple times while making changes without any doubled effects.</p>
+<p>I mentioned a <code>base</code> directory. This is what a sample tori directory would look like in its present state:</p>
+<pre class="z-code"><code><span class="z-text z-plain">.
+</span><span class="z-text z-plain">├── base
+</span><span class="z-text z-plain">│   ├── dhcpcd.conf
+</span><span class="z-text z-plain">│   ├── kernel-cmd-line.conf
+</span><span class="z-text z-plain">│   ├── packages
+</span><span class="z-text z-plain">│   └── vars.sh
+</span><span class="z-text z-plain">├── .bkp
+</span><span class="z-text z-plain">│   ├── canonical
+</span><span class="z-text z-plain">│   │   ├── etc
+</span><span class="z-text z-plain">│   │   └── opt
+</span><span class="z-text z-plain">│   └── ephemeral
+</span><span class="z-text z-plain">│       └── etc
+</span><span class="z-text z-plain">├── src
+</span><span class="z-text z-plain">│   ├── checks.sh
+</span><span class="z-text z-plain">│   ├── copy.sh
+</span><span class="z-text z-plain">│   └── get.sh
+</span><span class="z-text z-plain">└── strap
+</span></code></pre>
+<p>What you are seeing in this sample of the directory are the following files and directories:</p>
+<ul>
+<li><code>base</code>: Where you place the configuration files that functions like <code>copy</code> and <code>place</code> will look for and copy into the desired locations</li>
+<li><code>.bkp/canonical</code>: Where tori will look for initial backups and create them if none exists</li>
+<li><code>.bkp/ephemeral</code>: Where tori will place timestamped backups every time a file is modified or overwritten</li>
+<li><code>src</code>: Where the source files live, mostly containing function definitions</li>
+<li><code>strap</code>: The main file used to call the functions</li>
+</ul>
+<p>Because I developed tori for my own purposes initially, I didn’t really care to separate the actual source files from the context-sensitive data. While a mistake from a higher level, it allowed me to just keep developing the whole system configuration and the code that tracked it from a single, version-controlled location, amounting to very little complexity. I can’t deny to have enjoyed it so far, but going forward that is going to change.</p>
+<p>Currently, tori is able to install several package managers and their packages, including xbps, apt, nix, opam, stack, cargo, go, sdkmanager, npm, flatpak and pipx.</p>
+<p>It can also perform several other tasks:</p>
+<ul>
+<li>setup programming runtimes for OCaml, Scala (via Coursier), Go, JavaScript (node and bun), Rust (via rustup)</li>
+<li>generate GPG certificates</li>
+<li>query and set options with <code>update-alternatives</code> and <code>gsettings</code></li>
+<li>change the user shell</li>
+<li>check and enable services (systemd and runit)</li>
+<li>download pre-built binaries from tarballs and (g)zip files, unpacking and making them executable</li>
+<li>get files through the network using rsync</li>
+<li>several other things likely not worth mentioning</li>
+</ul>
+<p>The application slowly grew to accommodate many of my needs, but I also made it very hard to share with the world in the process, since I never really meant to go public with it.</p>
+<h2 id="portability-issues">Portability issues</h2>
+<p>Despite it being very useful to me in its current state and still being something I actively use every day, a lot of it is hard-coded for my very personal use. It was not written with portability in mind and therefore requires a lot of source-code editing to use in a different system.</p>
+<p>For instance, when I switched from Debian to Void Linux, most of it broke. I certainly would not expect the package list to be compatible between them, but I realized at that point how tightly it was coupled to Debian.</p>
+<p>When I started delving deeper into FreeBSD and setting up the system, I kept reaching out to something like tori. But it wasn’t there, and it wouldn’t work even if it were.</p>
+<p>Something that certainly influenced my desire to write tori was my experience using NixOS, which was full of mixed feelings, but undeniably had good feelings that stuck.</p>
+<p>I really liked being able to manage the system configuration and packages from a single file. But, at the same time, I felt it was overkill. It was limiting because most of the time you were <strong>forced</strong> to configure things through its interfaces. It was basically incompatible with what every other Unix system expects, and therefore what people who write software for these systems also expect.</p>
+<p>I appreciated bringing the system configuration to a centralized file, but I certainly did not want to manage all my <code>~/.config</code> configuration files from that same place. After writing tori, I can choose what to place under its tracking and what not to. Third-party software still works as both me and its creators expect it to, instead of my system breaking things and needing them to work the way <em>it</em> expects.</p>
+<h2 id="glad-to-reinvent-the-wheel">Glad to reinvent the wheel</h2>
+<p>While I understand there are very mature and powerful tools to manage a system’s state and reproduce it, I am aiming here for a much simpler use case. I have no intention to see it used in enterprise or distributed systems. It is all about managing how your personal computing is set up and having a backup of how you did it.</p>
+<p>What I need is not a tool that can orchestrate a fleet of containers running a given configuration. What I need is a tool that can run in a bare system that just got installed and get it to a state that feels useful to me. I do not want it to run instructions over a range of IPs, I just want to be able to check at any time if the system state has diverged from the configuration I am using to track it. I wanted a tool that would help me develop a different habit when I need to make system-level changes.</p>
+<p>And finally, I suppose I just really wanted to build this. I really enjoy the process of configuring operating systems and learning how they work and differ. And I really wanted to learn more about portable, POSIX-compatible shell scripting.</p>
+<p>So I decided to rewrite it with portability in mind. I am doing this rewrite in FreeBSD, to put the portability to the test. Once some basic functionality is done, the next step will be bringing it to Void Linux, Debian and NetBSD.</p>
+<p>tori is a bird that has just hatched, so everything is still very, very crude. At this stage, the docs often show intentions rather than implemented functionality. Still, because it is something I’ve come to depend on, it has this rewarding sense of usefulness behind it.</p>
+<p>If it sounds interesting to you, take a look. You can follow development at the main <a href="https://brew.bsd.cafe/tori/tori">Git repository</a> in BSD.Cafe’s Git forge or through its mirrors on <a href="https://github.com/tori-nest/tori">GitHub</a> and <a href="https://codeberg.org/tori/tori">Codeberg</a>. Going forward, I will also probably be talking a lot about it on my <a href="https://mastodon.bsd.cafe/@jutty">Mastodon profile</a>.</p>
+
+        </article>
+        </main>
+
+        <footer>
+  <hr/>
+  <p class="footer-text">made by <a href="https://jutty.dev">jutty</a>
+    with <a href="https://www.getzola.org/">Zola</a>
+    &bullet; BSD-licensed
+    <a href="https://github.com/jultty/blog">source code</a>
+    
+    &bullet; <a href="https://blog.jutty.dev/acknowledgments">acknowledgments</a>
+    <br/>
+    built <time>2026-02-28 05:55 UTC</time>,
+    1772258153 non-leap seconds since the Unix Epoch
+  </p>
+</footer>
+      </div>
+    </body>
+  </html>

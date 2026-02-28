@@ -1,0 +1,3756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>jutty.dev - Links</title>
+    <subtitle>Computer nerd memory leaks</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://blog.jutty.dev/links/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-02-28T02:54:47-03:00</updated>
+    <id>https://blog.jutty.dev/links/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Making WebAssembly a first-class language on the Web</title>
+        <published>2026-02-28T02:54:47-03:00</published>
+        <updated>2026-02-28T02:54:47-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/first-class-webassembly/"/>
+        <id>https://blog.jutty.dev/links/first-class-webassembly/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/first-class-webassembly/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>trolley: Run terminal apps anywhere</title>
+        <published>2026-02-24T21:13:07-03:00</published>
+        <updated>2026-02-24T21:13:07-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/tweedonandscott-trolley/"/>
+        <id>https://blog.jutty.dev/links/tweedonandscott-trolley/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/tweedonandscott-trolley/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Git Rebase for the Terrified</title>
+        <published>2026-02-15T00:59:23-03:00</published>
+        <updated>2026-02-15T00:59:23-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/brethorsting-git-rebase-for-the-terrified/"/>
+        <id>https://blog.jutty.dev/links/brethorsting-git-rebase-for-the-terrified/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/brethorsting-git-rebase-for-the-terrified/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>How Terminals Work</title>
+        <published>2026-01-22T11:46:28-03:00</published>
+        <updated>2026-01-22T11:46:28-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/how-terminals-work/"/>
+        <id>https://blog.jutty.dev/links/how-terminals-work/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/how-terminals-work/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Handling secrets (somewhat) securely in shells</title>
+        <published>2026-01-21T15:43:41-03:00</published>
+        <updated>2026-01-21T15:43:41-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/handling-secrets-in-shells/"/>
+        <id>https://blog.jutty.dev/links/handling-secrets-in-shells/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/handling-secrets-in-shells/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Three Inverse Laws of Robotics</title>
+        <published>2026-01-20T01:33:11-03:00</published>
+        <updated>2026-01-20T01:33:11-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/susam-inverse-laws-of-robotics/"/>
+        <id>https://blog.jutty.dev/links/susam-inverse-laws-of-robotics/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/susam-inverse-laws-of-robotics/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>CheriBSD: capability-aware OS for Morello, RISC-V and QEMU</title>
+        <published>2026-01-05T01:16:09-03:00</published>
+        <updated>2026-01-05T01:16:09-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/cheribsd/"/>
+        <id>https://blog.jutty.dev/links/cheribsd/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/cheribsd/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Stop Forwarding Errors, Start Designing Them</title>
+        <published>2026-01-05T01:12:28-03:00</published>
+        <updated>2026-01-05T01:12:28-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/fastlabs-stop-forwarding-errors/"/>
+        <id>https://blog.jutty.dev/links/fastlabs-stop-forwarding-errors/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/fastlabs-stop-forwarding-errors/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Assorted less(1) tips</title>
+        <published>2026-01-03T12:19:53-03:00</published>
+        <updated>2026-01-03T12:19:53-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/thechases-assorted-less-tips/"/>
+        <id>https://blog.jutty.dev/links/thechases-assorted-less-tips/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/thechases-assorted-less-tips/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>You can make up HTML tags</title>
+        <published>2025-12-31T00:35:22-03:00</published>
+        <updated>2025-12-31T00:35:22-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/maurycyz-make-up-html-tags/"/>
+        <id>https://blog.jutty.dev/links/maurycyz-make-up-html-tags/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/maurycyz-make-up-html-tags/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>treemd: Terminal markdown tree-based navigation</title>
+        <published>2025-12-22T15:15:09-03:00</published>
+        <updated>2025-12-22T15:15:09-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/epistates-treemd/"/>
+        <id>https://blog.jutty.dev/links/epistates-treemd/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/epistates-treemd/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Rethinking sudo with object capabilities</title>
+        <published>2025-12-22T01:43:00-03:00</published>
+        <updated>2025-12-22T01:43:00-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/ariadne-rethinking-sudo-capsudo/"/>
+        <id>https://blog.jutty.dev/links/ariadne-rethinking-sudo-capsudo/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/ariadne-rethinking-sudo-capsudo/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>layoutz: Haskell TUI library</title>
+        <published>2025-12-12T11:32:55-03:00</published>
+        <updated>2025-12-12T11:32:55-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/layoutz-haskell-tuis/"/>
+        <id>https://blog.jutty.dev/links/layoutz-haskell-tuis/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/layoutz-haskell-tuis/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>mosaic: OCaml TUI library</title>
+        <published>2025-12-12T11:32:17-03:00</published>
+        <updated>2025-12-12T11:32:17-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/mosaic-ocaml-tuis/"/>
+        <id>https://blog.jutty.dev/links/mosaic-ocaml-tuis/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/mosaic-ocaml-tuis/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Cloudflare Outage May Be a Security Roadmap</title>
+        <published>2025-11-20T01:42:59-03:00</published>
+        <updated>2025-11-20T01:42:59-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/krebsonsecurity-cloudflare-security-roadmap/"/>
+        <id>https://blog.jutty.dev/links/krebsonsecurity-cloudflare-security-roadmap/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/krebsonsecurity-cloudflare-security-roadmap/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Just enough Makefile to be dangerous</title>
+        <published>2025-11-16T19:10:56-03:00</published>
+        <updated>2025-11-16T19:10:56-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/brouberol-just-enough-makefile/"/>
+        <id>https://blog.jutty.dev/links/brouberol-just-enough-makefile/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/brouberol-just-enough-makefile/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Man Pages (Part 1)</title>
+        <published>2025-11-15T18:09:50-03:00</published>
+        <updated>2025-11-15T18:09:50-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/abochannek-man-pages/"/>
+        <id>https://blog.jutty.dev/links/abochannek-man-pages/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/abochannek-man-pages/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Website and blog building tools</title>
+        <published>2025-11-15T17:03:38-03:00</published>
+        <updated>2025-11-15T17:03:38-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/zkbro-website-building-tools/"/>
+        <id>https://blog.jutty.dev/links/zkbro-website-building-tools/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/zkbro-website-building-tools/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Directory of Open Access Books</title>
+        <published>2025-11-09T12:14:05-03:00</published>
+        <updated>2025-11-09T12:14:05-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/doabooks/"/>
+        <id>https://blog.jutty.dev/links/doabooks/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/doabooks/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Automated PDF Generation with Typst</title>
+        <published>2025-11-09T11:59:22-03:00</published>
+        <updated>2025-11-09T11:59:22-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/typst-automated-pdfs/"/>
+        <id>https://blog.jutty.dev/links/typst-automated-pdfs/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/typst-automated-pdfs/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>FreeBSD OCI Containers introduction</title>
+        <published>2025-11-04T11:51:27-03:00</published>
+        <updated>2025-11-04T11:51:27-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/freebsd-oci-containers/"/>
+        <id>https://blog.jutty.dev/links/freebsd-oci-containers/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/freebsd-oci-containers/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Underappreciated top</title>
+        <published>2025-10-31T00:48:57-03:00</published>
+        <updated>2025-10-31T00:48:57-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/friendo-underappreciated-top/"/>
+        <id>https://blog.jutty.dev/links/friendo-underappreciated-top/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/friendo-underappreciated-top/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Postgres for Everything</title>
+        <published>2025-10-30T16:42:23-03:00</published>
+        <updated>2025-10-30T16:42:23-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/postgres-for-everything/"/>
+        <id>https://blog.jutty.dev/links/postgres-for-everything/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/postgres-for-everything/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>rsync_cmd: edit locally, build remotely</title>
+        <published>2025-10-30T16:34:23-03:00</published>
+        <updated>2025-10-30T16:34:23-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/ltratt-rsync-cmd/"/>
+        <id>https://blog.jutty.dev/links/ltratt-rsync-cmd/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/ltratt-rsync-cmd/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Keep Android Open</title>
+        <published>2025-10-28T21:53:23-03:00</published>
+        <updated>2025-10-28T21:53:23-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/keep-android-open/"/>
+        <id>https://blog.jutty.dev/links/keep-android-open/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/keep-android-open/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>defuddle-cli: Extract clean html, markdown and metadata from web pages</title>
+        <published>2025-10-26T21:40:21-03:00</published>
+        <updated>2025-10-26T21:40:21-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/kepano-defuddle-cli/"/>
+        <id>https://blog.jutty.dev/links/kepano-defuddle-cli/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/kepano-defuddle-cli/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>feedlynx: Collect links to read later into an RSS feed</title>
+        <published>2025-10-26T12:26:47-03:00</published>
+        <updated>2025-10-26T12:26:47-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/wezm-feedlynx/"/>
+        <id>https://blog.jutty.dev/links/wezm-feedlynx/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/wezm-feedlynx/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Scripts I wrote that I use all the time</title>
+        <published>2025-10-23T02:46:15-03:00</published>
+        <updated>2025-10-23T02:46:15-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/evanhahn-scripts-i-use-all-the-time/"/>
+        <id>https://blog.jutty.dev/links/evanhahn-scripts-i-use-all-the-time/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/evanhahn-scripts-i-use-all-the-time/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>pdfly: CLI tool to manipulate PDF files</title>
+        <published>2025-10-15T02:54:42-03:00</published>
+        <updated>2025-10-15T02:54:42-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/py-pdf-pdfly/"/>
+        <id>https://blog.jutty.dev/links/py-pdf-pdfly/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/py-pdf-pdfly/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Octothorpes Protocol: site-independent hashtags</title>
+        <published>2025-10-15T02:09:52-03:00</published>
+        <updated>2025-10-15T02:09:52-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/octothorpes-protocol/"/>
+        <id>https://blog.jutty.dev/links/octothorpes-protocol/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/octothorpes-protocol/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Introducing oui: standalone installers for OCaml</title>
+        <published>2025-10-09T20:43:05-03:00</published>
+        <updated>2025-10-09T20:43:05-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/ocaml-universal-installer/"/>
+        <id>https://blog.jutty.dev/links/ocaml-universal-installer/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/ocaml-universal-installer/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>We Move As One</title>
+        <published>2025-10-09T04:16:19-03:00</published>
+        <updated>2025-10-09T04:16:19-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/we-move-as-one/"/>
+        <id>https://blog.jutty.dev/links/we-move-as-one/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/we-move-as-one/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>How to actually test your readme</title>
+        <published>2025-10-09T04:00:54-03:00</published>
+        <updated>2025-10-09T04:00:54-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/shkspr-test-your-readme/"/>
+        <id>https://blog.jutty.dev/links/shkspr-test-your-readme/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/shkspr-test-your-readme/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>CHERI with a Linux on top</title>
+        <published>2025-10-06T03:00:51-03:00</published>
+        <updated>2025-10-06T03:00:51-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/lwn-cheri-with-a-linux-on-top/"/>
+        <id>https://blog.jutty.dev/links/lwn-cheri-with-a-linux-on-top/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/lwn-cheri-with-a-linux-on-top/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Accessible by Design: Improving CLIs for All</title>
+        <published>2025-09-23T18:34:33-03:00</published>
+        <updated>2025-09-23T18:34:33-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/afixt-accessible-clis/"/>
+        <id>https://blog.jutty.dev/links/afixt-accessible-clis/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/afixt-accessible-clis/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Baby Steps Accessibility - Color Contrast of Text</title>
+        <published>2025-09-23T18:16:56-03:00</published>
+        <updated>2025-09-23T18:16:56-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/dennisdeacon-baby-steps-color-contrast/"/>
+        <id>https://blog.jutty.dev/links/dennisdeacon-baby-steps-color-contrast/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/dennisdeacon-baby-steps-color-contrast/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Reverse centaurs are the answer to the AI paradox</title>
+        <published>2025-09-18T10:59:58-03:00</published>
+        <updated>2025-09-18T10:59:58-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/pluralistic-reverse-centaurs/"/>
+        <id>https://blog.jutty.dev/links/pluralistic-reverse-centaurs/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/pluralistic-reverse-centaurs/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Dot-slash revisited</title>
+        <published>2025-09-17T00:38:57-03:00</published>
+        <updated>2025-09-17T00:38:57-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/anagogistis-dot-slash/"/>
+        <id>https://blog.jutty.dev/links/anagogistis-dot-slash/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/anagogistis-dot-slash/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>asciinema 3.0</title>
+        <published>2025-09-16T21:37:49-03:00</published>
+        <updated>2025-09-16T21:37:49-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/asciinema-3-0/"/>
+        <id>https://blog.jutty.dev/links/asciinema-3-0/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/asciinema-3-0/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Gemini Protocol Quickstart</title>
+        <published>2025-09-16T13:07:29-03:00</published>
+        <updated>2025-09-16T13:07:29-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/gemini-protocol-quickstart/"/>
+        <id>https://blog.jutty.dev/links/gemini-protocol-quickstart/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/gemini-protocol-quickstart/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>term.everything: Run any GUI app in the terminal</title>
+        <published>2025-09-09T11:42:19-03:00</published>
+        <updated>2025-09-09T11:42:19-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/mmulet-term-everything/"/>
+        <id>https://blog.jutty.dev/links/mmulet-term-everything/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/mmulet-term-everything/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Capitalization of Initialisms</title>
+        <published>2025-09-06T00:32:40-03:00</published>
+        <updated>2025-09-06T00:32:40-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/teamten-capitalization-of-initialisms/"/>
+        <id>https://blog.jutty.dev/links/teamten-capitalization-of-initialisms/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/teamten-capitalization-of-initialisms/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>incplot: great looking plots in the terminal</title>
+        <published>2025-09-03T01:10:51-03:00</published>
+        <updated>2025-09-03T01:10:51-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/incom-0-incplot/"/>
+        <id>https://blog.jutty.dev/links/incom-0-incplot/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/incom-0-incplot/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Setting up a CI server for Forgejo</title>
+        <published>2025-08-27T01:18:36-03:00</published>
+        <updated>2025-08-27T01:18:36-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/robey-forgejo-ci-server-setup/"/>
+        <id>https://blog.jutty.dev/links/robey-forgejo-ci-server-setup/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/robey-forgejo-ci-server-setup/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Insecurity of Debian</title>
+        <published>2025-08-27T00:58:03-03:00</published>
+        <updated>2025-08-27T00:58:03-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/the-insecurity-of-debian/"/>
+        <id>https://blog.jutty.dev/links/the-insecurity-of-debian/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/the-insecurity-of-debian/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>sptlrx: Synchronized lyrics in your terminal</title>
+        <published>2025-08-26T23:41:41-03:00</published>
+        <updated>2025-08-26T23:41:41-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/raitonoberu-sptlrx/"/>
+        <id>https://blog.jutty.dev/links/raitonoberu-sptlrx/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/raitonoberu-sptlrx/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>doxx: terminal docx viewer</title>
+        <published>2025-08-26T21:49:50-03:00</published>
+        <updated>2025-08-26T21:49:50-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/bgreenwell-doxx/"/>
+        <id>https://blog.jutty.dev/links/bgreenwell-doxx/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/bgreenwell-doxx/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Developing an alt text button for my website</title>
+        <published>2025-08-26T17:08:38-03:00</published>
+        <updated>2025-08-26T17:08:38-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/jamesg-developing-an-alt-text-button/"/>
+        <id>https://blog.jutty.dev/links/jamesg-developing-an-alt-text-button/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/jamesg-developing-an-alt-text-button/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Why Lean 4 replaced OCaml as my Primary Language</title>
+        <published>2025-08-26T17:04:25-03:00</published>
+        <updated>2025-08-26T17:04:25-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/kirancodes-lean-replaced-ocaml/"/>
+        <id>https://blog.jutty.dev/links/kirancodes-lean-replaced-ocaml/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/kirancodes-lean-replaced-ocaml/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>A visual explanation of Big O notation</title>
+        <published>2025-08-26T00:38:39-03:00</published>
+        <updated>2025-08-26T00:38:39-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/samwho-big-o/"/>
+        <id>https://blog.jutty.dev/links/samwho-big-o/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/samwho-big-o/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>grepcidr: filter IP addresses against CIDR specs and networks</title>
+        <published>2025-08-20T01:26:16-03:00</published>
+        <updated>2025-08-20T01:26:16-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/ryantig-grepcidr/"/>
+        <id>https://blog.jutty.dev/links/ryantig-grepcidr/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/ryantig-grepcidr/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>gcli: Git(hub|lab|tea)&#x2F;Forgejo&#x2F;Bugzilla CLI tool</title>
+        <published>2025-08-16T21:59:10-03:00</published>
+        <updated>2025-08-16T21:59:10-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/herrhotzenplotz-gcli/"/>
+        <id>https://blog.jutty.dev/links/herrhotzenplotz-gcli/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/herrhotzenplotz-gcli/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>pspg: Unix pager for PostgreSQL, MySQL CSV, TSV and more</title>
+        <published>2025-08-16T21:55:26-03:00</published>
+        <updated>2025-08-16T21:55:26-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/okbob-pspg/"/>
+        <id>https://blog.jutty.dev/links/okbob-pspg/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/okbob-pspg/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Implementing a basic equivalent of pflog in nftables</title>
+        <published>2025-08-16T00:42:08-03:00</published>
+        <updated>2025-08-16T00:42:08-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/basic-equivalent-of-pflog-in-nftables/"/>
+        <id>https://blog.jutty.dev/links/basic-equivalent-of-pflog-in-nftables/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/basic-equivalent-of-pflog-in-nftables/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>A Friendly Introduction to SVG</title>
+        <published>2025-08-15T10:32:33-03:00</published>
+        <updated>2025-08-15T10:32:33-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/joshwcomeau-a-friendly-introduction-to-svg/"/>
+        <id>https://blog.jutty.dev/links/joshwcomeau-a-friendly-introduction-to-svg/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/joshwcomeau-a-friendly-introduction-to-svg/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>How to help someone use a computer</title>
+        <published>2025-08-15T10:24:11-03:00</published>
+        <updated>2025-08-15T10:24:11-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/how-to-help-someone-use-a-computer/"/>
+        <id>https://blog.jutty.dev/links/how-to-help-someone-use-a-computer/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/how-to-help-someone-use-a-computer/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>ethersync: Editor-agnostic, real-time collaborative text editing</title>
+        <published>2025-07-29T11:32:02-03:00</published>
+        <updated>2025-07-29T11:32:02-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/ethersync/"/>
+        <id>https://blog.jutty.dev/links/ethersync/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/ethersync/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>ANSI Escape Codes Inspector</title>
+        <published>2025-07-26T02:28:00-03:00</published>
+        <updated>2025-07-26T02:28:00-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/ansi-escape-codes-inspector/"/>
+        <id>https://blog.jutty.dev/links/ansi-escape-codes-inspector/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/ansi-escape-codes-inspector/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Bread on Penguins</title>
+        <published>2025-07-14T18:34:23-03:00</published>
+        <updated>2025-07-14T18:34:23-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/bread-on-penguins/"/>
+        <id>https://blog.jutty.dev/links/bread-on-penguins/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/bread-on-penguins/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>outside: multi-purpose terminal weather client</title>
+        <published>2025-07-13T20:35:57-03:00</published>
+        <updated>2025-07-13T20:35:57-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/baconisaveg-outside/"/>
+        <id>https://blog.jutty.dev/links/baconisaveg-outside/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/baconisaveg-outside/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>BastilleBSD 1.0 Release</title>
+        <published>2025-07-10T01:29:31-03:00</published>
+        <updated>2025-07-10T01:29:31-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/bastillebsd-1-0/"/>
+        <id>https://blog.jutty.dev/links/bastillebsd-1-0/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/bastillebsd-1-0/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OCaml, modules, and import schemes</title>
+        <published>2025-07-02T20:49:34-03:00</published>
+        <updated>2025-07-02T20:49:34-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/xvw-ocaml-modules-and-import-schemes/"/>
+        <id>https://blog.jutty.dev/links/xvw-ocaml-modules-and-import-schemes/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/xvw-ocaml-modules-and-import-schemes/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Tectonic Typesetting System</title>
+        <published>2025-07-02T20:45:43-03:00</published>
+        <updated>2025-07-02T20:45:43-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/tectonic-typesetting/"/>
+        <id>https://blog.jutty.dev/links/tectonic-typesetting/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/tectonic-typesetting/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>In Praise of Links</title>
+        <published>2025-06-20T14:05:14-03:00</published>
+        <updated>2025-06-20T14:05:14-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/osteophage-in-praise-of-links/"/>
+        <id>https://blog.jutty.dev/links/osteophage-in-praise-of-links/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/osteophage-in-praise-of-links/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>jarun&#x2F;pdd: Tiny date, time diff calculator with piggybacked timers</title>
+        <published>2025-06-18T22:40:49-03:00</published>
+        <updated>2025-06-18T22:40:49-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/jarun-pdd/"/>
+        <id>https://blog.jutty.dev/links/jarun-pdd/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/jarun-pdd/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Poline: esoteric color palette generation</title>
+        <published>2025-06-14T20:07:25-03:00</published>
+        <updated>2025-06-14T20:07:25-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/meodai-poline/"/>
+        <id>https://blog.jutty.dev/links/meodai-poline/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/meodai-poline/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>gbprod&#x2F;substitute: Neovim plugin with replace and exchange operators</title>
+        <published>2025-06-14T19:53:14-03:00</published>
+        <updated>2025-06-14T19:53:14-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/gbprod-substitute/"/>
+        <id>https://blog.jutty.dev/links/gbprod-substitute/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/gbprod-substitute/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Why apk-tools is different than other package managers</title>
+        <published>2025-06-10T21:17:25-03:00</published>
+        <updated>2025-06-10T21:17:25-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/ariadne-space-why-apk-tools-is-different/"/>
+        <id>https://blog.jutty.dev/links/ariadne-space-why-apk-tools-is-different/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/ariadne-space-why-apk-tools-is-different/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>ifd3f&#x2F;caligula: user-friendly, lightweight TUI for disk imaging</title>
+        <published>2025-06-10T17:11:55-03:00</published>
+        <updated>2025-06-10T17:11:55-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/ifd3f-caligula/"/>
+        <id>https://blog.jutty.dev/links/ifd3f-caligula/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/ifd3f-caligula/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>pastel: A CLI tool to generate, analyze, convert and manipulate colors</title>
+        <published>2025-06-10T17:03:27-03:00</published>
+        <updated>2025-06-10T17:03:27-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/sharkdp-pastel/"/>
+        <id>https://blog.jutty.dev/links/sharkdp-pastel/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/sharkdp-pastel/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>the algebra of dependent types</title>
+        <published>2025-05-29T00:32:09-03:00</published>
+        <updated>2025-05-29T00:32:09-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/the-algebra-of-dependent-types/"/>
+        <id>https://blog.jutty.dev/links/the-algebra-of-dependent-types/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/the-algebra-of-dependent-types/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Why Algebraic Effects?</title>
+        <published>2025-05-27T22:22:25-03:00</published>
+        <updated>2025-05-27T22:22:25-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/antelang-why-algebraic-effects/"/>
+        <id>https://blog.jutty.dev/links/antelang-why-algebraic-effects/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/antelang-why-algebraic-effects/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Having your compile-time cake and eating it too</title>
+        <published>2025-05-24T18:58:45-03:00</published>
+        <updated>2025-05-24T18:58:45-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/0x44-having-compile-time-cake-and-eating-it-too/"/>
+        <id>https://blog.jutty.dev/links/0x44-having-compile-time-cake-and-eating-it-too/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/0x44-having-compile-time-cake-and-eating-it-too/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Parsing expressions by precedence climbing</title>
+        <published>2025-05-13T23:26:52-03:00</published>
+        <updated>2025-05-13T23:26:52-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/eli-thegreenplace-precedence-climbing-parsing/"/>
+        <id>https://blog.jutty.dev/links/eli-thegreenplace-precedence-climbing-parsing/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/eli-thegreenplace-precedence-climbing-parsing/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>FreeBSD VM under Incus on Debian</title>
+        <published>2025-05-06T03:18:31-03:00</published>
+        <updated>2025-05-06T03:18:31-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/agren-incus-freebsd-vm/"/>
+        <id>https://blog.jutty.dev/links/agren-incus-freebsd-vm/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/agren-incus-freebsd-vm/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Linux on a 70&#x27;s Typewriter</title>
+        <published>2025-04-29T19:51:06-03:00</published>
+        <updated>2025-04-29T19:51:06-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/linux-on-a-70s-typewriter/"/>
+        <id>https://blog.jutty.dev/links/linux-on-a-70s-typewriter/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/linux-on-a-70s-typewriter/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Revisiting an early critique of formal verification</title>
+        <published>2025-04-19T00:53:46-03:00</published>
+        <updated>2025-04-19T00:53:46-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/lawrencecpaulson-revisiting-a-critique-of-verification/"/>
+        <id>https://blog.jutty.dev/links/lawrencecpaulson-revisiting-a-critique-of-verification/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/lawrencecpaulson-revisiting-a-critique-of-verification/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Allowed commands in SSH authorized_keys</title>
+        <published>2025-04-17T20:56:14-03:00</published>
+        <updated>2025-04-17T20:56:14-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/langille-allowed-commands-in-ssh-authorized-keys/"/>
+        <id>https://blog.jutty.dev/links/langille-allowed-commands-in-ssh-authorized-keys/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/langille-allowed-commands-in-ssh-authorized-keys/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Introduction to Linear Types</title>
+        <published>2025-04-15T17:19:58-03:00</published>
+        <updated>2025-04-15T17:19:58-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/austral-introduction-to-linear-types/"/>
+        <id>https://blog.jutty.dev/links/austral-introduction-to-linear-types/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/austral-introduction-to-linear-types/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Two Years of Rust</title>
+        <published>2025-04-15T15:21:27-03:00</published>
+        <updated>2025-04-15T15:21:27-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/borretti-two-years-of-rust/"/>
+        <id>https://blog.jutty.dev/links/borretti-two-years-of-rust/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/borretti-two-years-of-rust/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OEM Support in Linux Mint Debian Edition</title>
+        <published>2025-04-09T19:52:51-03:00</published>
+        <updated>2025-04-09T19:52:51-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/lmde-oem-support/"/>
+        <id>https://blog.jutty.dev/links/lmde-oem-support/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/lmde-oem-support/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>End-user Programming</title>
+        <published>2025-04-05T22:18:40-03:00</published>
+        <updated>2025-04-05T22:18:40-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/inkandswitch-end-user-programming/"/>
+        <id>https://blog.jutty.dev/links/inkandswitch-end-user-programming/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/inkandswitch-end-user-programming/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Pitfalls of Safe Rust</title>
+        <published>2025-04-04T19:37:22-03:00</published>
+        <updated>2025-04-04T19:37:22-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/pitfalls-of-safe-rust/"/>
+        <id>https://blog.jutty.dev/links/pitfalls-of-safe-rust/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/pitfalls-of-safe-rust/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>clawtype: wearable chorded keyboard and mouse</title>
+        <published>2025-04-04T19:21:17-03:00</published>
+        <updated>2025-04-04T19:21:17-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/akavel-clawtype/"/>
+        <id>https://blog.jutty.dev/links/akavel-clawtype/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/akavel-clawtype/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>landrun: unprivileged Linux sandboxes using Landlock</title>
+        <published>2025-03-28T20:34:29-03:00</published>
+        <updated>2025-03-28T20:34:29-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/zouuup-landrun/"/>
+        <id>https://blog.jutty.dev/links/zouuup-landrun/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/zouuup-landrun/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Using elinks to browse the web</title>
+        <published>2025-03-27T17:37:24-03:00</published>
+        <updated>2025-03-27T17:37:24-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/thinkmoult-using-elinks/"/>
+        <id>https://blog.jutty.dev/links/thinkmoult-using-elinks/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/thinkmoult-using-elinks/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Don&#x27;t Be Afraid Of Types</title>
+        <published>2025-03-22T13:33:16-03:00</published>
+        <updated>2025-03-22T13:33:16-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/lmika-dont-be-afraid-of-types/"/>
+        <id>https://blog.jutty.dev/links/lmika-dont-be-afraid-of-types/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/lmika-dont-be-afraid-of-types/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>slipshow: the next-gen version of slides</title>
+        <published>2025-03-20T21:53:40-03:00</published>
+        <updated>2025-03-20T21:53:40-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/slipshow-next-gen-version-of-slides/"/>
+        <id>https://blog.jutty.dev/links/slipshow-next-gen-version-of-slides/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/slipshow-next-gen-version-of-slides/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The road to mainstream Matrix</title>
+        <published>2025-03-18T23:36:24-03:00</published>
+        <updated>2025-03-18T23:36:24-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/lwn-road-to-mainstream-matrix/"/>
+        <id>https://blog.jutty.dev/links/lwn-road-to-mainstream-matrix/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/lwn-road-to-mainstream-matrix/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Verification-First Development</title>
+        <published>2025-03-18T21:26:19-03:00</published>
+        <updated>2025-03-18T21:26:19-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/hillelwayne-verification-first-development/"/>
+        <id>https://blog.jutty.dev/links/hillelwayne-verification-first-development/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/hillelwayne-verification-first-development/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>An interview with Mike Amundsen, Author of &#x27;RESTful Web APIs&#x27;</title>
+        <published>2025-03-17T17:52:16-03:00</published>
+        <updated>2025-03-17T17:52:16-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/an-interview-with-mike-amundsen/"/>
+        <id>https://blog.jutty.dev/links/an-interview-with-mike-amundsen/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/an-interview-with-mike-amundsen/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Almquist Shell Variants</title>
+        <published>2025-03-13T22:32:48-03:00</published>
+        <updated>2025-03-13T22:32:48-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/mascheck-ash-variants/"/>
+        <id>https://blog.jutty.dev/links/mascheck-ash-variants/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/mascheck-ash-variants/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Beyond Bad Output</title>
+        <published>2025-03-13T22:31:53-03:00</published>
+        <updated>2025-03-13T22:31:53-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/heyparis-beyond-bad-output/"/>
+        <id>https://blog.jutty.dev/links/heyparis-beyond-bad-output/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/heyparis-beyond-bad-output/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>termpicker: A color picker for the terminal</title>
+        <published>2025-03-11T22:02:09-03:00</published>
+        <updated>2025-03-11T22:02:09-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/chaussebenjamin-termpicker/"/>
+        <id>https://blog.jutty.dev/links/chaussebenjamin-termpicker/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/chaussebenjamin-termpicker/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Understanding Unix filesystem timestamps</title>
+        <published>2025-03-09T14:52:25-03:00</published>
+        <updated>2025-03-09T14:52:25-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/unixdigest-filesystem-timestamps/"/>
+        <id>https://blog.jutty.dev/links/unixdigest-filesystem-timestamps/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/unixdigest-filesystem-timestamps/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Build your own Command Line with ANSI escape codes</title>
+        <published>2025-03-07T21:55:40-03:00</published>
+        <updated>2025-03-07T21:55:40-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/lihaoyi-build-your-own-command-line/"/>
+        <id>https://blog.jutty.dev/links/lihaoyi-build-your-own-command-line/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/lihaoyi-build-your-own-command-line/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Standards for ANSI escape codes</title>
+        <published>2025-03-07T21:26:21-03:00</published>
+        <updated>2025-03-07T21:26:21-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/jvns-ansi-escape-codes/"/>
+        <id>https://blog.jutty.dev/links/jvns-ansi-escape-codes/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/jvns-ansi-escape-codes/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Dependent Haskell Roadmap</title>
+        <published>2025-03-07T17:11:14-03:00</published>
+        <updated>2025-03-07T17:11:14-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/dependent-haskell-roadmap/"/>
+        <id>https://blog.jutty.dev/links/dependent-haskell-roadmap/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/dependent-haskell-roadmap/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Why ZFS Reports Less Space: Space Accounting Explained</title>
+        <published>2025-03-04T17:09:59-03:00</published>
+        <updated>2025-03-04T17:09:59-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/klarasystems-zfs-space-accounting/"/>
+        <id>https://blog.jutty.dev/links/klarasystems-zfs-space-accounting/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/klarasystems-zfs-space-accounting/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>hue.tools</title>
+        <published>2025-03-04T14:54:54-03:00</published>
+        <updated>2025-03-04T14:54:54-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/hue-tools/"/>
+        <id>https://blog.jutty.dev/links/hue-tools/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/hue-tools/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Falsehoods programmers believe about languages</title>
+        <published>2025-03-02T12:07:14-03:00</published>
+        <updated>2025-03-02T12:07:14-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/lexiconista-language-falsehoods/"/>
+        <id>https://blog.jutty.dev/links/lexiconista-language-falsehoods/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/lexiconista-language-falsehoods/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>mdo: FreeBSD su alternative without setuid binaries</title>
+        <published>2025-02-27T01:25:49-03:00</published>
+        <updated>2025-02-27T01:25:49-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/freebsd-mdo/"/>
+        <id>https://blog.jutty.dev/links/freebsd-mdo/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/freebsd-mdo/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Post-Quantum Cryptography in February 2025</title>
+        <published>2025-02-19T22:16:13-03:00</published>
+        <updated>2025-02-19T22:16:13-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/netmeister-post-quantum-crypto-february-2025/"/>
+        <id>https://blog.jutty.dev/links/netmeister-post-quantum-crypto-february-2025/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/netmeister-post-quantum-crypto-february-2025/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Five Kinds of Nondeterminism</title>
+        <published>2025-02-19T19:18:12-03:00</published>
+        <updated>2025-02-19T19:18:12-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/hillelwayne-five-kinds-of-nondeterminism/"/>
+        <id>https://blog.jutty.dev/links/hillelwayne-five-kinds-of-nondeterminism/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/hillelwayne-five-kinds-of-nondeterminism/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>LabPlot – Scientific plotting and data analysis</title>
+        <published>2025-02-15T18:42:03-03:00</published>
+        <updated>2025-02-15T18:42:03-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/labplot/"/>
+        <id>https://blog.jutty.dev/links/labplot/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/labplot/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>laktak&#x2F;tome: script playbooks with vim</title>
+        <published>2025-01-23T23:20:35-03:00</published>
+        <updated>2025-01-23T23:20:35-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/laktak-tome/"/>
+        <id>https://blog.jutty.dev/links/laktak-tome/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/laktak-tome/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>nixbsd: An unofficial NixOS fork with a FreeBSD kernel</title>
+        <published>2025-01-21T17:32:00-03:00</published>
+        <updated>2025-01-21T17:32:00-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/nixbsd-nixos-fork-with-a-freebsd-kernel/"/>
+        <id>https://blog.jutty.dev/links/nixbsd-nixos-fork-with-a-freebsd-kernel/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/nixbsd-nixos-fork-with-a-freebsd-kernel/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Koto Programming Language</title>
+        <published>2025-01-08T21:31:31-03:00</published>
+        <updated>2025-01-08T21:31:31-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/koto-programming-language/"/>
+        <id>https://blog.jutty.dev/links/koto-programming-language/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/koto-programming-language/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>aaronik&#x2F;treewalker.nvim: Move around your code in a syntax tree aware manner</title>
+        <published>2025-01-08T03:31:48-03:00</published>
+        <updated>2025-01-08T03:31:48-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/github-aaronik-treewalker-nvim/"/>
+        <id>https://blog.jutty.dev/links/github-aaronik-treewalker-nvim/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/github-aaronik-treewalker-nvim/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>yassinebenaid&#x2F;bunster: Compile shell scripts to machine code</title>
+        <published>2025-01-07T00:07:58-03:00</published>
+        <updated>2025-01-07T00:07:58-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/yassinebenaid-bunster/"/>
+        <id>https://blog.jutty.dev/links/yassinebenaid-bunster/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/yassinebenaid-bunster/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>One-stop performance analysis using atop</title>
+        <published>2025-01-06T00:39:14-03:00</published>
+        <updated>2025-01-06T00:39:14-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/lwn-one-stop-performance-analysis-using-atop/"/>
+        <id>https://blog.jutty.dev/links/lwn-one-stop-performance-analysis-using-atop/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/lwn-one-stop-performance-analysis-using-atop/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Category Theory Illustrated</title>
+        <published>2024-12-29T19:08:10-03:00</published>
+        <updated>2024-12-29T19:08:10-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/abuseofnotation-category-theory-illustrated/"/>
+        <id>https://blog.jutty.dev/links/abuseofnotation-category-theory-illustrated/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/abuseofnotation-category-theory-illustrated/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Revisiting the NetBSD build system</title>
+        <published>2024-12-28T22:26:03-03:00</published>
+        <updated>2024-12-28T22:26:03-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/blogsystem5-revisiting-the-netbsd-build-system/"/>
+        <id>https://blog.jutty.dev/links/blogsystem5-revisiting-the-netbsd-build-system/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/blogsystem5-revisiting-the-netbsd-build-system/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Canop&#x2F;rhit: A nginx log explorer</title>
+        <published>2024-12-27T00:37:00-03:00</published>
+        <updated>2024-12-27T00:37:00-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/canop-rhit-nginx-log-explorer/"/>
+        <id>https://blog.jutty.dev/links/canop-rhit-nginx-log-explorer/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/canop-rhit-nginx-log-explorer/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Schemio, a platform for dynamic diagramming</title>
+        <published>2024-12-24T00:28:30-03:00</published>
+        <updated>2024-12-24T00:28:30-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/schemio-dynamic-diagramming/"/>
+        <id>https://blog.jutty.dev/links/schemio-dynamic-diagramming/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/schemio-dynamic-diagramming/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Ideas from &quot;A Philosophy of Software Design&quot;</title>
+        <published>2024-12-22T17:33:54-03:00</published>
+        <updated>2024-12-22T17:33:54-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/16elt-ideas-from-a-philosophy-of-software-design/"/>
+        <id>https://blog.jutty.dev/links/16elt-ideas-from-a-philosophy-of-software-design/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/16elt-ideas-from-a-philosophy-of-software-design/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Cognitive load is what matters</title>
+        <published>2024-12-22T16:46:15-03:00</published>
+        <updated>2024-12-22T16:46:15-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/zakirullin-cognitive-load-is-what-matters/"/>
+        <id>https://blog.jutty.dev/links/zakirullin-cognitive-load-is-what-matters/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/zakirullin-cognitive-load-is-what-matters/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>How to properly shut down a Linux system</title>
+        <published>2024-12-21T18:14:32-03:00</published>
+        <updated>2024-12-21T18:14:32-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/leahneukirchen-how-to-properly-shut-down-a-linux-system/"/>
+        <id>https://blog.jutty.dev/links/leahneukirchen-how-to-properly-shut-down-a-linux-system/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/leahneukirchen-how-to-properly-shut-down-a-linux-system/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Web Origami</title>
+        <published>2024-12-21T12:22:49-03:00</published>
+        <updated>2024-12-21T12:22:49-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/web-origami/"/>
+        <id>https://blog.jutty.dev/links/web-origami/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/web-origami/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Artemis - a calm web reader</title>
+        <published>2024-12-21T00:40:57-03:00</published>
+        <updated>2024-12-21T00:40:57-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/jamesg-artemis/"/>
+        <id>https://blog.jutty.dev/links/jamesg-artemis/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/jamesg-artemis/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Conjuring a Linux distribution out of thin air</title>
+        <published>2024-12-13T16:59:18-03:00</published>
+        <updated>2024-12-13T16:59:18-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/brixit-conjuring-a-linux-distribution/"/>
+        <id>https://blog.jutty.dev/links/brixit-conjuring-a-linux-distribution/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/brixit-conjuring-a-linux-distribution/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Telescopic Text</title>
+        <published>2024-12-11T18:48:21-03:00</published>
+        <updated>2024-12-11T18:48:21-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/telescopic-text/"/>
+        <id>https://blog.jutty.dev/links/telescopic-text/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/telescopic-text/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>An Undefeated Pull Request Template</title>
+        <published>2024-12-10T22:39:33-03:00</published>
+        <updated>2024-12-10T22:39:33-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/ashleemboyer-undefeated-pull-request-template/"/>
+        <id>https://blog.jutty.dev/links/ashleemboyer-undefeated-pull-request-template/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/ashleemboyer-undefeated-pull-request-template/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>How to Pronounce Chinese Names a Little Better</title>
+        <published>2024-12-07T11:14:25-03:00</published>
+        <updated>2024-12-07T11:14:25-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/jacko-pronounce-chinese-names/"/>
+        <id>https://blog.jutty.dev/links/jacko-pronounce-chinese-names/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/jacko-pronounce-chinese-names/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>8 months of OCaml after 8 years of Haskell</title>
+        <published>2024-12-04T00:00:00+00:00</published>
+        <updated>2024-12-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/chshersh-haskell-ocaml-comparison/"/>
+        <id>https://blog.jutty.dev/links/chshersh-haskell-ocaml-comparison/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/chshersh-haskell-ocaml-comparison/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Demystifying git submodules</title>
+        <published>2024-12-04T00:00:00+00:00</published>
+        <updated>2024-12-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/cyberdemon-demystifying-git-submodules/"/>
+        <id>https://blog.jutty.dev/links/cyberdemon-demystifying-git-submodules/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/cyberdemon-demystifying-git-submodules/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>December Adventure</title>
+        <published>2024-12-04T00:00:00+00:00</published>
+        <updated>2024-12-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/eli-december-adventure/"/>
+        <id>https://blog.jutty.dev/links/eli-december-adventure/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/eli-december-adventure/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Announcing Hurl 6.0.0</title>
+        <published>2024-12-04T00:00:00+00:00</published>
+        <updated>2024-12-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/hurl-6-0-0/"/>
+        <id>https://blog.jutty.dev/links/hurl-6-0-0/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/hurl-6-0-0/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Typst as a Language</title>
+        <published>2024-12-03T00:00:00+00:00</published>
+        <updated>2024-12-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/justinpombrio-typst-as-a-language/"/>
+        <id>https://blog.jutty.dev/links/justinpombrio-typst-as-a-language/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/justinpombrio-typst-as-a-language/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The &quot;Property Based Testing&quot; series</title>
+        <published>2024-12-03T00:00:00+00:00</published>
+        <updated>2024-12-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/scott-wlaschin-property-based-testing/"/>
+        <id>https://blog.jutty.dev/links/scott-wlaschin-property-based-testing/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/scott-wlaschin-property-based-testing/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Linear Types and Exceptions</title>
+        <published>2024-12-02T00:00:00+00:00</published>
+        <updated>2024-12-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/borretti-linear-types-exceptions/"/>
+        <id>https://blog.jutty.dev/links/borretti-linear-types-exceptions/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/borretti-linear-types-exceptions/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Dependent Types and the Art of HTTP Headers</title>
+        <published>2024-11-28T00:00:00+00:00</published>
+        <updated>2024-11-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/unwoundstack-dependent-types-http-headers/"/>
+        <id>https://blog.jutty.dev/links/unwoundstack-dependent-types-http-headers/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/unwoundstack-dependent-types-http-headers/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Frederik Braun: Modern solutions against cross-site attacks</title>
+        <published>2024-11-27T00:00:00+00:00</published>
+        <updated>2024-11-27T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/frederikbraun-cross-site-solutions/"/>
+        <id>https://blog.jutty.dev/links/frederikbraun-cross-site-solutions/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/frederikbraun-cross-site-solutions/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>I ❤ [tmux] shortcuts #2</title>
+        <published>2024-11-26T00:00:00+00:00</published>
+        <updated>2024-11-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/lazybear-tmux-shortcuts/"/>
+        <id>https://blog.jutty.dev/links/lazybear-tmux-shortcuts/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/lazybear-tmux-shortcuts/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Functional programming self-affirmations - NorikiTech</title>
+        <published>2024-11-26T00:00:00+00:00</published>
+        <updated>2024-11-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/norikitech-fp-affirmations/"/>
+        <id>https://blog.jutty.dev/links/norikitech-fp-affirmations/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/norikitech-fp-affirmations/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>How I configure my Git identities | benji</title>
+        <published>2024-11-25T00:00:00+00:00</published>
+        <updated>2024-11-25T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/benji-git-identities/"/>
+        <id>https://blog.jutty.dev/links/benji-git-identities/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/benji-git-identities/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>re2c — Regular Expressions to Code</title>
+        <published>2024-11-25T00:00:00+00:00</published>
+        <updated>2024-11-25T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/re2c/"/>
+        <id>https://blog.jutty.dev/links/re2c/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/re2c/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Styling Graphviz with CSS</title>
+        <published>2024-11-18T00:00:00+00:00</published>
+        <updated>2024-11-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/noncombatant-graphviz-css/"/>
+        <id>https://blog.jutty.dev/links/noncombatant-graphviz-css/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/noncombatant-graphviz-css/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>MomBoard: E-ink display for a parent with amnesia</title>
+        <published>2024-11-13T00:00:00+00:00</published>
+        <updated>2024-11-13T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/jan-miksovsky-momboard/"/>
+        <id>https://blog.jutty.dev/links/jan-miksovsky-momboard/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/jan-miksovsky-momboard/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>A mental model for Linux file, hard and soft links | Jayesh Bhoot</title>
+        <published>2024-11-09T00:00:00+00:00</published>
+        <updated>2024-11-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/bhoot-dev-linux-links/"/>
+        <id>https://blog.jutty.dev/links/bhoot-dev-linux-links/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/bhoot-dev-linux-links/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Configuring SSH Keys for Multiple Accounts</title>
+        <published>2024-11-05T00:00:00+00:00</published>
+        <updated>2024-11-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/stevenharman-multi-account-ssh/"/>
+        <id>https://blog.jutty.dev/links/stevenharman-multi-account-ssh/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/stevenharman-multi-account-ssh/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Searching for and navigating Git commits</title>
+        <published>2024-11-03T00:00:00+00:00</published>
+        <updated>2024-11-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/alexharri-searching-navigating-commits/"/>
+        <id>https://blog.jutty.dev/links/alexharri-searching-navigating-commits/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/alexharri-searching-navigating-commits/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Debugging Haskell Type Errors | jelv.is</title>
+        <published>2024-11-03T00:00:00+00:00</published>
+        <updated>2024-11-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/jelvis-debugging-haskell-type-errors/"/>
+        <id>https://blog.jutty.dev/links/jelvis-debugging-haskell-type-errors/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/jelvis-debugging-haskell-type-errors/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Nobody cares about decentralization until they do</title>
+        <published>2024-10-31T00:00:00+00:00</published>
+        <updated>2024-10-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/kyefox-nobody-cares-about-decentralization/"/>
+        <id>https://blog.jutty.dev/links/kyefox-nobody-cares-about-decentralization/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/kyefox-nobody-cares-about-decentralization/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>nickgerace&#x2F;gfold: CLI tool to keep track of Git repositories</title>
+        <published>2024-10-29T00:00:00+00:00</published>
+        <updated>2024-10-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/nickgerace-gfold/"/>
+        <id>https://blog.jutty.dev/links/nickgerace-gfold/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/nickgerace-gfold/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Improving SSH&#x27;s security with SSHFP DNS records | APNIC Blog</title>
+        <published>2024-10-26T00:00:00+00:00</published>
+        <updated>2024-10-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/apnic-sshfp/"/>
+        <id>https://blog.jutty.dev/links/apnic-sshfp/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/apnic-sshfp/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Smarter than &#x27;Ctrl+F&#x27;: Linking Directly to Web Page Content</title>
+        <published>2024-10-24T00:00:00+00:00</published>
+        <updated>2024-10-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/alfy-text-fragments/"/>
+        <id>https://blog.jutty.dev/links/alfy-text-fragments/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/alfy-text-fragments/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Solene&#x27;% : A dedicated administration workstation</title>
+        <published>2024-10-23T00:00:00+00:00</published>
+        <updated>2024-10-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/solene-admin-workstation/"/>
+        <id>https://blog.jutty.dev/links/solene-admin-workstation/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/solene-admin-workstation/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>against &#x2F;tmp - Tony Finch</title>
+        <published>2024-10-22T00:00:00+00:00</published>
+        <updated>2024-10-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/dotat-against-tmp/"/>
+        <id>https://blog.jutty.dev/links/dotat-against-tmp/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/dotat-against-tmp/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Typst 0.12 is just ... better</title>
+        <published>2024-10-18T00:00:00+00:00</published>
+        <updated>2024-10-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/typst-0-12/"/>
+        <id>https://blog.jutty.dev/links/typst-0-12/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/typst-0-12/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>That&#x27;s Not an Abstraction, That&#x27;s Just a Layer of Indirection</title>
+        <published>2024-10-14T00:00:00+00:00</published>
+        <updated>2024-10-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/fhur-me-abstraction/"/>
+        <id>https://blog.jutty.dev/links/fhur-me-abstraction/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/fhur-me-abstraction/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>FFmpeg Explorer</title>
+        <published>2024-10-14T00:00:00+00:00</published>
+        <updated>2024-10-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/lav-io-ffmpeg-explorer/"/>
+        <id>https://blog.jutty.dev/links/lav-io-ffmpeg-explorer/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/lav-io-ffmpeg-explorer/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The ultimate guide to Haskell Strings · Hasufell&#x27;s blog</title>
+        <published>2024-10-11T00:00:00+00:00</published>
+        <updated>2024-10-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/hasufell-haskell-strings/"/>
+        <id>https://blog.jutty.dev/links/hasufell-haskell-strings/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/hasufell-haskell-strings/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>HTML for People</title>
+        <published>2024-10-10T00:00:00+00:00</published>
+        <updated>2024-10-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/html-for-people/"/>
+        <id>https://blog.jutty.dev/links/html-for-people/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/html-for-people/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Statically Typed Functional Programming with Python 3.12</title>
+        <published>2024-10-07T00:00:00+00:00</published>
+        <updated>2024-10-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/wickstrom-functional-python-3-12/"/>
+        <id>https://blog.jutty.dev/links/wickstrom-functional-python-3-12/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/wickstrom-functional-python-3-12/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Chris&#x27;s Wiki :: blog&#x2F;unix</title>
+        <published>2024-10-05T00:00:00+00:00</published>
+        <updated>2024-10-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/cks-blog-unix/"/>
+        <id>https://blog.jutty.dev/links/cks-blog-unix/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/cks-blog-unix/">&lt;p&gt;A hypermedia rabbit hole in which I quickly fell.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>wrestling the web from corporate control requires making it boring again</title>
+        <published>2024-10-05T00:00:00+00:00</published>
+        <updated>2024-10-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/washbear-wrestling-the-web/"/>
+        <id>https://blog.jutty.dev/links/washbear-wrestling-the-web/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/washbear-wrestling-the-web/">&lt;blockquote&gt;
+&lt;p&gt;In an age where web is essential, we need a universal web browser for minority platforms. One that focuses on keeping HTML+JS working rather than chasing things like “WebVR” and collaborating with the ads industry. Unfortunately, I think the system has been set up to ensure that small players are no longer possible. Let’s hope I’m proven wrong.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Sandboxing Adoption in Open Source Ecosystems</title>
+        <published>2024-10-04T00:00:00+00:00</published>
+        <updated>2024-10-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/alhindi-sandboxing/"/>
+        <id>https://blog.jutty.dev/links/alhindi-sandboxing/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/alhindi-sandboxing/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Reticular Society</title>
+        <published>2024-10-04T00:00:00+00:00</published>
+        <updated>2024-10-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/the-reticular-society/"/>
+        <id>https://blog.jutty.dev/links/the-reticular-society/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/the-reticular-society/">&lt;blockquote&gt;
+&lt;p&gt;In &lt;em&gt;necroreticular flows&lt;&#x2F;em&gt; which cut across algorithmically distributed gigs and connected places of work, the number of lives integrated together corresponds to the interoperable potential of the reticular society’s optimization and domination, &lt;em&gt;subsuming life&lt;&#x2F;em&gt; and in so doing &lt;em&gt;circulating death&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>carl: modern version of cal that can incorporate ICal (ics) data</title>
+        <published>2024-10-01T00:00:00+00:00</published>
+        <updated>2024-10-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/b1rger-carl/"/>
+        <id>https://blog.jutty.dev/links/b1rger-carl/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/b1rger-carl/">&lt;p&gt;This is superb in conjunction with &lt;a href=&quot;https:&#x2F;&#x2F;vdirsyncer.pimutils.org&#x2F;en&#x2F;stable&#x2F;&quot;&gt;vdirsyncer&lt;&#x2F;a&gt;, which I’ve been using for a long time for exactly the purpose of having a local directory of &lt;code&gt;.ics&lt;&#x2F;code&gt; files for each of my Nextcloud DAV calendars.&lt;&#x2F;p&gt;
+&lt;p&gt;If you like this, you may also like &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;pimutils&#x2F;khal&quot;&gt;khal&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>diffnav: git diff pager based on delta but with a file tree</title>
+        <published>2024-10-01T00:00:00+00:00</published>
+        <updated>2024-10-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/dlvhdr-diffnav/"/>
+        <id>https://blog.jutty.dev/links/dlvhdr-diffnav/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/dlvhdr-diffnav/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>I Want Process-Aware Types</title>
+        <published>2024-09-30T00:00:00+00:00</published>
+        <updated>2024-09-30T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/barag-process-aware-types/"/>
+        <id>https://blog.jutty.dev/links/barag-process-aware-types/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/barag-process-aware-types/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Alopex Networks Wiki - CrystalNotes</title>
+        <published>2024-09-29T00:00:00+00:00</published>
+        <updated>2024-09-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/alopex-crystal-notes/"/>
+        <id>https://blog.jutty.dev/links/alopex-crystal-notes/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/alopex-crystal-notes/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Small Internet protocol roundup</title>
+        <published>2024-09-29T00:00:00+00:00</published>
+        <updated>2024-09-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/dbohdan-smallweb-txt/"/>
+        <id>https://blog.jutty.dev/links/dbohdan-smallweb-txt/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/dbohdan-smallweb-txt/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Release tmux 3.5 · tmux&#x2F;tmux</title>
+        <published>2024-09-27T00:00:00+00:00</published>
+        <updated>2024-09-27T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/tmux-3-5/"/>
+        <id>https://blog.jutty.dev/links/tmux-3-5/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/tmux-3-5/">&lt;p&gt;Interesting &lt;a href=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;tmux&#x2F;tmux&#x2F;3.5&#x2F;CHANGES&quot;&gt;changes&lt;&#x2F;a&gt; include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Display hyperlinks in copy mode and add &lt;code&gt;copy_cursor_hyperlink&lt;&#x2F;code&gt; format to get
+the hyperlink under the cursor.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Add a prefix timeout option.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Add mirrored versions of the &lt;code&gt;main-horizontal&lt;&#x2F;code&gt; and &lt;code&gt;main-vertical&lt;&#x2F;code&gt; layouts where
+the main pane is bottom or right instead of top or left.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Add &lt;code&gt;--enable-jemalloc&lt;&#x2F;code&gt; to build with jemalloc memory allocator (since glibc
+malloc is so poor).”&lt;&#x2F;li&gt;
+&lt;li&gt;“Add &lt;code&gt;N&lt;&#x2F;code&gt; to search backwards in tree modes.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Use &lt;code&gt;default-shell&lt;&#x2F;code&gt; for command prompt, &lt;code&gt;#()&lt;&#x2F;code&gt; and popups.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Add a &lt;code&gt;command-error&lt;&#x2F;code&gt; hook when a command fails.”&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Debating ifupdown replacements for Debian trixie [LWN.net]</title>
+        <published>2024-09-26T00:00:00+00:00</published>
+        <updated>2024-09-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/lwn-trixie-ifupdown/"/>
+        <id>https://blog.jutty.dev/links/lwn-trixie-ifupdown/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/lwn-trixie-ifupdown/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Project Cybersyn - 99% Invisible</title>
+        <published>2024-09-22T00:00:00+00:00</published>
+        <updated>2024-09-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/99percentinvisble-cybersyn/"/>
+        <id>https://blog.jutty.dev/links/99percentinvisble-cybersyn/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/99percentinvisble-cybersyn/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Lagrange v1.18: TUI and Misfin</title>
+        <published>2024-09-22T00:00:00+00:00</published>
+        <updated>2024-09-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/lagrange-1-18/"/>
+        <id>https://blog.jutty.dev/links/lagrange-1-18/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/lagrange-1-18/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>jacek-kurlit&#x2F;pik: Process Interactive Kill</title>
+        <published>2024-09-17T00:00:00+00:00</published>
+        <updated>2024-09-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/jacek-kurlit-pik/"/>
+        <id>https://blog.jutty.dev/links/jacek-kurlit-pik/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/jacek-kurlit-pik/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The First HTML LSP That Reports Syntax Errors | Loris Cro&#x27;s Blog</title>
+        <published>2024-09-11T00:00:00+00:00</published>
+        <updated>2024-09-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/kristoff-html-lsp/"/>
+        <id>https://blog.jutty.dev/links/kristoff-html-lsp/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/kristoff-html-lsp/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Make Your Own Read-Only Device With NetBSD - IT Notes</title>
+        <published>2024-09-10T00:00:00+00:00</published>
+        <updated>2024-09-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/dragas-read-only-netbsd/"/>
+        <id>https://blog.jutty.dev/links/dragas-read-only-netbsd/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/dragas-read-only-netbsd/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Critical analysis of Fediverse decentralization promises</title>
+        <published>2024-09-08T00:00:00+00:00</published>
+        <updated>2024-09-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/xavier-fediverse-decentralization-promises/"/>
+        <id>https://blog.jutty.dev/links/xavier-fediverse-decentralization-promises/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/xavier-fediverse-decentralization-promises/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Unix command line conventions over time</title>
+        <published>2024-09-06T00:00:00+00:00</published>
+        <updated>2024-09-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/wirzenius-unix-cli-conventions/"/>
+        <id>https://blog.jutty.dev/links/wirzenius-unix-cli-conventions/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/wirzenius-unix-cli-conventions/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>FenTiger&#x2F;FedIAM: Login and access control based on open identities</title>
+        <published>2024-09-01T00:00:00+00:00</published>
+        <updated>2024-09-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/fentiger-fediam/"/>
+        <id>https://blog.jutty.dev/links/fentiger-fediam/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/fentiger-fediam/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>jatcwang&#x2F;instant-scala: instant Scala script startup</title>
+        <published>2024-08-30T00:00:00+00:00</published>
+        <updated>2024-08-30T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/jatcwang-instant-scala/"/>
+        <id>https://blog.jutty.dev/links/jatcwang-instant-scala/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/jatcwang-instant-scala/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Deterministic Replay of QEMU Emulation</title>
+        <published>2024-08-29T00:00:00+00:00</published>
+        <updated>2024-08-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/qemu-replay/"/>
+        <id>https://blog.jutty.dev/links/qemu-replay/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/qemu-replay/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Hurl 5.0.0, the Parallel Edition</title>
+        <published>2024-08-28T00:00:00+00:00</published>
+        <updated>2024-08-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/hurl-5-0-0/"/>
+        <id>https://blog.jutty.dev/links/hurl-5-0-0/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/hurl-5-0-0/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Good programmers worry about data structures and their relationships</title>
+        <published>2024-08-27T00:00:00+00:00</published>
+        <updated>2024-08-27T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/engineerscodex-data-structures/"/>
+        <id>https://blog.jutty.dev/links/engineerscodex-data-structures/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/engineerscodex-data-structures/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Misconceptions about the UNIX Philosophy</title>
+        <published>2024-08-26T00:00:00+00:00</published>
+        <updated>2024-08-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/posixcafe-unix-misconceptions/"/>
+        <id>https://blog.jutty.dev/links/posixcafe-unix-misconceptions/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/posixcafe-unix-misconceptions/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Impressionist Blogging Movement - Jim Nielsen’s Blog</title>
+        <published>2024-08-20T00:00:00+00:00</published>
+        <updated>2024-08-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/nielsen-impressionist-blogging/"/>
+        <id>https://blog.jutty.dev/links/nielsen-impressionist-blogging/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/nielsen-impressionist-blogging/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Support PUT, PATCH, and DELETE in HTML Forms</title>
+        <published>2024-08-19T00:00:00+00:00</published>
+        <updated>2024-08-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/triptych-form-http-methods/"/>
+        <id>https://blog.jutty.dev/links/triptych-form-http-methods/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/triptych-form-http-methods/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>mrusme&#x2F;reader: for your command line what the &#x27;readability view&#x27; is for browsers</title>
+        <published>2024-08-06T00:00:00+00:00</published>
+        <updated>2024-08-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/mrusme-reader/"/>
+        <id>https://blog.jutty.dev/links/mrusme-reader/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/mrusme-reader/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>A handful of reasons JavaScript won’t be available - Piccalilli</title>
+        <published>2024-08-01T00:00:00+00:00</published>
+        <updated>2024-08-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/piccalil-no-javascript-reasons/"/>
+        <id>https://blog.jutty.dev/links/piccalil-no-javascript-reasons/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/piccalil-no-javascript-reasons/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>jgs font - Adel Faure</title>
+        <published>2024-07-02T00:00:00+00:00</published>
+        <updated>2024-07-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/adelfaure-jgs-font/"/>
+        <id>https://blog.jutty.dev/links/adelfaure-jgs-font/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/adelfaure-jgs-font/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Differential Analysis: A Summary</title>
+        <published>2024-06-28T00:00:00+00:00</published>
+        <updated>2024-06-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/brownplt-differential-analysis/"/>
+        <id>https://blog.jutty.dev/links/brownplt-differential-analysis/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/brownplt-differential-analysis/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>aryak&#x2F;mozhi: Mozhi is an alternative-frontend for many translation engines. - Codeberg.org</title>
+        <published>2024-06-27T00:00:00+00:00</published>
+        <updated>2024-06-27T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/aryak-mozhi/"/>
+        <id>https://blog.jutty.dev/links/aryak-mozhi/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/aryak-mozhi/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>JFryy&#x2F;qq: jq multi-configuration format tool with interactive REPL.</title>
+        <published>2024-06-23T00:00:00+00:00</published>
+        <updated>2024-06-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/jfryy-qq/"/>
+        <id>https://blog.jutty.dev/links/jfryy-qq/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/jfryy-qq/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>phyphox | F-Droid - Free and Open Source Android App Repository</title>
+        <published>2024-06-21T00:00:00+00:00</published>
+        <updated>2024-06-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/fdroid-phyphox/"/>
+        <id>https://blog.jutty.dev/links/fdroid-phyphox/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/fdroid-phyphox/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>UserLAnd | F-Droid - Free and Open Source Android App Repository</title>
+        <published>2024-06-21T00:00:00+00:00</published>
+        <updated>2024-06-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/fdroid-userland/"/>
+        <id>https://blog.jutty.dev/links/fdroid-userland/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/fdroid-userland/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Sounds of the Forest - Soundmap  Timber Festival</title>
+        <published>2024-06-14T00:00:00+00:00</published>
+        <updated>2024-06-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/sounds-of-the-forest/"/>
+        <id>https://blog.jutty.dev/links/sounds-of-the-forest/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/sounds-of-the-forest/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Effects Showroom - TerminalTextEffects Docs</title>
+        <published>2024-06-10T00:00:00+00:00</published>
+        <updated>2024-06-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/chrisbuilds-effects-showroom/"/>
+        <id>https://blog.jutty.dev/links/chrisbuilds-effects-showroom/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/chrisbuilds-effects-showroom/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Piku</title>
+        <published>2024-06-10T00:00:00+00:00</published>
+        <updated>2024-06-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/piku/"/>
+        <id>https://blog.jutty.dev/links/piku/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/piku/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Share Paste O2 | F-Droid - Free and Open Source Android App Repository</title>
+        <published>2024-06-08T00:00:00+00:00</published>
+        <updated>2024-06-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/fdroid-share-paste/"/>
+        <id>https://blog.jutty.dev/links/fdroid-share-paste/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/fdroid-share-paste/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>hackerb9&#x2F;lsix Like ls, but for images. Shows thumbnails in terminal using sixel graphics.</title>
+        <published>2024-06-06T00:00:00+00:00</published>
+        <updated>2024-06-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/hackerb9-lsix/"/>
+        <id>https://blog.jutty.dev/links/hackerb9-lsix/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/hackerb9-lsix/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Moving Beyond Type Systems | Vhyrro&#x27;s Digital Garden</title>
+        <published>2024-06-06T00:00:00+00:00</published>
+        <updated>2024-06-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/vhyrro-beyond-type-systems/"/>
+        <id>https://blog.jutty.dev/links/vhyrro-beyond-type-systems/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/vhyrro-beyond-type-systems/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Capital Offense How to Handle Abbreviations in CamelCase - Approxion</title>
+        <published>2024-06-05T00:00:00+00:00</published>
+        <updated>2024-06-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/links/approxion-camelcase-abbreviations/"/>
+        <id>https://blog.jutty.dev/links/approxion-camelcase-abbreviations/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/links/approxion-camelcase-abbreviations/"></content>
+        
+    </entry>
+</feed>

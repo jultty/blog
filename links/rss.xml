@@ -1,0 +1,1602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>jutty.dev - Links</title>
+      <link>https://blog.jutty.dev/links/</link>
+      <description>Computer nerd memory leaks</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://blog.jutty.dev/links/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sat, 28 Feb 2026 02:54:47 -0300</lastBuildDate>
+      <item>
+          <title>Making WebAssembly a first-class language on the Web</title>
+          <pubDate>Sat, 28 Feb 2026 02:54:47 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/first-class-webassembly/</link>
+          <guid>https://blog.jutty.dev/links/first-class-webassembly/</guid>
+          <description xml:base="https://blog.jutty.dev/links/first-class-webassembly/"></description>
+      </item>
+      <item>
+          <title>trolley: Run terminal apps anywhere</title>
+          <pubDate>Tue, 24 Feb 2026 21:13:07 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/tweedonandscott-trolley/</link>
+          <guid>https://blog.jutty.dev/links/tweedonandscott-trolley/</guid>
+          <description xml:base="https://blog.jutty.dev/links/tweedonandscott-trolley/"></description>
+      </item>
+      <item>
+          <title>Git Rebase for the Terrified</title>
+          <pubDate>Sun, 15 Feb 2026 00:59:23 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/brethorsting-git-rebase-for-the-terrified/</link>
+          <guid>https://blog.jutty.dev/links/brethorsting-git-rebase-for-the-terrified/</guid>
+          <description xml:base="https://blog.jutty.dev/links/brethorsting-git-rebase-for-the-terrified/"></description>
+      </item>
+      <item>
+          <title>How Terminals Work</title>
+          <pubDate>Thu, 22 Jan 2026 11:46:28 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/how-terminals-work/</link>
+          <guid>https://blog.jutty.dev/links/how-terminals-work/</guid>
+          <description xml:base="https://blog.jutty.dev/links/how-terminals-work/"></description>
+      </item>
+      <item>
+          <title>Handling secrets (somewhat) securely in shells</title>
+          <pubDate>Wed, 21 Jan 2026 15:43:41 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/handling-secrets-in-shells/</link>
+          <guid>https://blog.jutty.dev/links/handling-secrets-in-shells/</guid>
+          <description xml:base="https://blog.jutty.dev/links/handling-secrets-in-shells/"></description>
+      </item>
+      <item>
+          <title>Three Inverse Laws of Robotics</title>
+          <pubDate>Tue, 20 Jan 2026 01:33:11 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/susam-inverse-laws-of-robotics/</link>
+          <guid>https://blog.jutty.dev/links/susam-inverse-laws-of-robotics/</guid>
+          <description xml:base="https://blog.jutty.dev/links/susam-inverse-laws-of-robotics/"></description>
+      </item>
+      <item>
+          <title>CheriBSD: capability-aware OS for Morello, RISC-V and QEMU</title>
+          <pubDate>Mon, 05 Jan 2026 01:16:09 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/cheribsd/</link>
+          <guid>https://blog.jutty.dev/links/cheribsd/</guid>
+          <description xml:base="https://blog.jutty.dev/links/cheribsd/"></description>
+      </item>
+      <item>
+          <title>Stop Forwarding Errors, Start Designing Them</title>
+          <pubDate>Mon, 05 Jan 2026 01:12:28 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/fastlabs-stop-forwarding-errors/</link>
+          <guid>https://blog.jutty.dev/links/fastlabs-stop-forwarding-errors/</guid>
+          <description xml:base="https://blog.jutty.dev/links/fastlabs-stop-forwarding-errors/"></description>
+      </item>
+      <item>
+          <title>Assorted less(1) tips</title>
+          <pubDate>Sat, 03 Jan 2026 12:19:53 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/thechases-assorted-less-tips/</link>
+          <guid>https://blog.jutty.dev/links/thechases-assorted-less-tips/</guid>
+          <description xml:base="https://blog.jutty.dev/links/thechases-assorted-less-tips/"></description>
+      </item>
+      <item>
+          <title>You can make up HTML tags</title>
+          <pubDate>Wed, 31 Dec 2025 00:35:22 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/maurycyz-make-up-html-tags/</link>
+          <guid>https://blog.jutty.dev/links/maurycyz-make-up-html-tags/</guid>
+          <description xml:base="https://blog.jutty.dev/links/maurycyz-make-up-html-tags/"></description>
+      </item>
+      <item>
+          <title>treemd: Terminal markdown tree-based navigation</title>
+          <pubDate>Mon, 22 Dec 2025 15:15:09 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/epistates-treemd/</link>
+          <guid>https://blog.jutty.dev/links/epistates-treemd/</guid>
+          <description xml:base="https://blog.jutty.dev/links/epistates-treemd/"></description>
+      </item>
+      <item>
+          <title>Rethinking sudo with object capabilities</title>
+          <pubDate>Mon, 22 Dec 2025 01:43:00 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/ariadne-rethinking-sudo-capsudo/</link>
+          <guid>https://blog.jutty.dev/links/ariadne-rethinking-sudo-capsudo/</guid>
+          <description xml:base="https://blog.jutty.dev/links/ariadne-rethinking-sudo-capsudo/"></description>
+      </item>
+      <item>
+          <title>layoutz: Haskell TUI library</title>
+          <pubDate>Fri, 12 Dec 2025 11:32:55 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/layoutz-haskell-tuis/</link>
+          <guid>https://blog.jutty.dev/links/layoutz-haskell-tuis/</guid>
+          <description xml:base="https://blog.jutty.dev/links/layoutz-haskell-tuis/"></description>
+      </item>
+      <item>
+          <title>mosaic: OCaml TUI library</title>
+          <pubDate>Fri, 12 Dec 2025 11:32:17 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/mosaic-ocaml-tuis/</link>
+          <guid>https://blog.jutty.dev/links/mosaic-ocaml-tuis/</guid>
+          <description xml:base="https://blog.jutty.dev/links/mosaic-ocaml-tuis/"></description>
+      </item>
+      <item>
+          <title>The Cloudflare Outage May Be a Security Roadmap</title>
+          <pubDate>Thu, 20 Nov 2025 01:42:59 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/krebsonsecurity-cloudflare-security-roadmap/</link>
+          <guid>https://blog.jutty.dev/links/krebsonsecurity-cloudflare-security-roadmap/</guid>
+          <description xml:base="https://blog.jutty.dev/links/krebsonsecurity-cloudflare-security-roadmap/"></description>
+      </item>
+      <item>
+          <title>Just enough Makefile to be dangerous</title>
+          <pubDate>Sun, 16 Nov 2025 19:10:56 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/brouberol-just-enough-makefile/</link>
+          <guid>https://blog.jutty.dev/links/brouberol-just-enough-makefile/</guid>
+          <description xml:base="https://blog.jutty.dev/links/brouberol-just-enough-makefile/"></description>
+      </item>
+      <item>
+          <title>Man Pages (Part 1)</title>
+          <pubDate>Sat, 15 Nov 2025 18:09:50 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/abochannek-man-pages/</link>
+          <guid>https://blog.jutty.dev/links/abochannek-man-pages/</guid>
+          <description xml:base="https://blog.jutty.dev/links/abochannek-man-pages/"></description>
+      </item>
+      <item>
+          <title>Website and blog building tools</title>
+          <pubDate>Sat, 15 Nov 2025 17:03:38 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/zkbro-website-building-tools/</link>
+          <guid>https://blog.jutty.dev/links/zkbro-website-building-tools/</guid>
+          <description xml:base="https://blog.jutty.dev/links/zkbro-website-building-tools/"></description>
+      </item>
+      <item>
+          <title>Directory of Open Access Books</title>
+          <pubDate>Sun, 09 Nov 2025 12:14:05 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/doabooks/</link>
+          <guid>https://blog.jutty.dev/links/doabooks/</guid>
+          <description xml:base="https://blog.jutty.dev/links/doabooks/"></description>
+      </item>
+      <item>
+          <title>Automated PDF Generation with Typst</title>
+          <pubDate>Sun, 09 Nov 2025 11:59:22 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/typst-automated-pdfs/</link>
+          <guid>https://blog.jutty.dev/links/typst-automated-pdfs/</guid>
+          <description xml:base="https://blog.jutty.dev/links/typst-automated-pdfs/"></description>
+      </item>
+      <item>
+          <title>FreeBSD OCI Containers introduction</title>
+          <pubDate>Tue, 04 Nov 2025 11:51:27 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/freebsd-oci-containers/</link>
+          <guid>https://blog.jutty.dev/links/freebsd-oci-containers/</guid>
+          <description xml:base="https://blog.jutty.dev/links/freebsd-oci-containers/"></description>
+      </item>
+      <item>
+          <title>Underappreciated top</title>
+          <pubDate>Fri, 31 Oct 2025 00:48:57 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/friendo-underappreciated-top/</link>
+          <guid>https://blog.jutty.dev/links/friendo-underappreciated-top/</guid>
+          <description xml:base="https://blog.jutty.dev/links/friendo-underappreciated-top/"></description>
+      </item>
+      <item>
+          <title>Postgres for Everything</title>
+          <pubDate>Thu, 30 Oct 2025 16:42:23 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/postgres-for-everything/</link>
+          <guid>https://blog.jutty.dev/links/postgres-for-everything/</guid>
+          <description xml:base="https://blog.jutty.dev/links/postgres-for-everything/"></description>
+      </item>
+      <item>
+          <title>rsync_cmd: edit locally, build remotely</title>
+          <pubDate>Thu, 30 Oct 2025 16:34:23 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/ltratt-rsync-cmd/</link>
+          <guid>https://blog.jutty.dev/links/ltratt-rsync-cmd/</guid>
+          <description xml:base="https://blog.jutty.dev/links/ltratt-rsync-cmd/"></description>
+      </item>
+      <item>
+          <title>Keep Android Open</title>
+          <pubDate>Tue, 28 Oct 2025 21:53:23 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/keep-android-open/</link>
+          <guid>https://blog.jutty.dev/links/keep-android-open/</guid>
+          <description xml:base="https://blog.jutty.dev/links/keep-android-open/"></description>
+      </item>
+      <item>
+          <title>defuddle-cli: Extract clean html, markdown and metadata from web pages</title>
+          <pubDate>Sun, 26 Oct 2025 21:40:21 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/kepano-defuddle-cli/</link>
+          <guid>https://blog.jutty.dev/links/kepano-defuddle-cli/</guid>
+          <description xml:base="https://blog.jutty.dev/links/kepano-defuddle-cli/"></description>
+      </item>
+      <item>
+          <title>feedlynx: Collect links to read later into an RSS feed</title>
+          <pubDate>Sun, 26 Oct 2025 12:26:47 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/wezm-feedlynx/</link>
+          <guid>https://blog.jutty.dev/links/wezm-feedlynx/</guid>
+          <description xml:base="https://blog.jutty.dev/links/wezm-feedlynx/"></description>
+      </item>
+      <item>
+          <title>Scripts I wrote that I use all the time</title>
+          <pubDate>Thu, 23 Oct 2025 02:46:15 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/evanhahn-scripts-i-use-all-the-time/</link>
+          <guid>https://blog.jutty.dev/links/evanhahn-scripts-i-use-all-the-time/</guid>
+          <description xml:base="https://blog.jutty.dev/links/evanhahn-scripts-i-use-all-the-time/"></description>
+      </item>
+      <item>
+          <title>pdfly: CLI tool to manipulate PDF files</title>
+          <pubDate>Wed, 15 Oct 2025 02:54:42 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/py-pdf-pdfly/</link>
+          <guid>https://blog.jutty.dev/links/py-pdf-pdfly/</guid>
+          <description xml:base="https://blog.jutty.dev/links/py-pdf-pdfly/"></description>
+      </item>
+      <item>
+          <title>Octothorpes Protocol: site-independent hashtags</title>
+          <pubDate>Wed, 15 Oct 2025 02:09:52 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/octothorpes-protocol/</link>
+          <guid>https://blog.jutty.dev/links/octothorpes-protocol/</guid>
+          <description xml:base="https://blog.jutty.dev/links/octothorpes-protocol/"></description>
+      </item>
+      <item>
+          <title>Introducing oui: standalone installers for OCaml</title>
+          <pubDate>Thu, 09 Oct 2025 20:43:05 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/ocaml-universal-installer/</link>
+          <guid>https://blog.jutty.dev/links/ocaml-universal-installer/</guid>
+          <description xml:base="https://blog.jutty.dev/links/ocaml-universal-installer/"></description>
+      </item>
+      <item>
+          <title>We Move As One</title>
+          <pubDate>Thu, 09 Oct 2025 04:16:19 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/we-move-as-one/</link>
+          <guid>https://blog.jutty.dev/links/we-move-as-one/</guid>
+          <description xml:base="https://blog.jutty.dev/links/we-move-as-one/"></description>
+      </item>
+      <item>
+          <title>How to actually test your readme</title>
+          <pubDate>Thu, 09 Oct 2025 04:00:54 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/shkspr-test-your-readme/</link>
+          <guid>https://blog.jutty.dev/links/shkspr-test-your-readme/</guid>
+          <description xml:base="https://blog.jutty.dev/links/shkspr-test-your-readme/"></description>
+      </item>
+      <item>
+          <title>CHERI with a Linux on top</title>
+          <pubDate>Mon, 06 Oct 2025 03:00:51 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/lwn-cheri-with-a-linux-on-top/</link>
+          <guid>https://blog.jutty.dev/links/lwn-cheri-with-a-linux-on-top/</guid>
+          <description xml:base="https://blog.jutty.dev/links/lwn-cheri-with-a-linux-on-top/"></description>
+      </item>
+      <item>
+          <title>Accessible by Design: Improving CLIs for All</title>
+          <pubDate>Tue, 23 Sep 2025 18:34:33 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/afixt-accessible-clis/</link>
+          <guid>https://blog.jutty.dev/links/afixt-accessible-clis/</guid>
+          <description xml:base="https://blog.jutty.dev/links/afixt-accessible-clis/"></description>
+      </item>
+      <item>
+          <title>Baby Steps Accessibility - Color Contrast of Text</title>
+          <pubDate>Tue, 23 Sep 2025 18:16:56 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/dennisdeacon-baby-steps-color-contrast/</link>
+          <guid>https://blog.jutty.dev/links/dennisdeacon-baby-steps-color-contrast/</guid>
+          <description xml:base="https://blog.jutty.dev/links/dennisdeacon-baby-steps-color-contrast/"></description>
+      </item>
+      <item>
+          <title>Reverse centaurs are the answer to the AI paradox</title>
+          <pubDate>Thu, 18 Sep 2025 10:59:58 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/pluralistic-reverse-centaurs/</link>
+          <guid>https://blog.jutty.dev/links/pluralistic-reverse-centaurs/</guid>
+          <description xml:base="https://blog.jutty.dev/links/pluralistic-reverse-centaurs/"></description>
+      </item>
+      <item>
+          <title>Dot-slash revisited</title>
+          <pubDate>Wed, 17 Sep 2025 00:38:57 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/anagogistis-dot-slash/</link>
+          <guid>https://blog.jutty.dev/links/anagogistis-dot-slash/</guid>
+          <description xml:base="https://blog.jutty.dev/links/anagogistis-dot-slash/"></description>
+      </item>
+      <item>
+          <title>asciinema 3.0</title>
+          <pubDate>Tue, 16 Sep 2025 21:37:49 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/asciinema-3-0/</link>
+          <guid>https://blog.jutty.dev/links/asciinema-3-0/</guid>
+          <description xml:base="https://blog.jutty.dev/links/asciinema-3-0/"></description>
+      </item>
+      <item>
+          <title>Gemini Protocol Quickstart</title>
+          <pubDate>Tue, 16 Sep 2025 13:07:29 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/gemini-protocol-quickstart/</link>
+          <guid>https://blog.jutty.dev/links/gemini-protocol-quickstart/</guid>
+          <description xml:base="https://blog.jutty.dev/links/gemini-protocol-quickstart/"></description>
+      </item>
+      <item>
+          <title>term.everything: Run any GUI app in the terminal</title>
+          <pubDate>Tue, 09 Sep 2025 11:42:19 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/mmulet-term-everything/</link>
+          <guid>https://blog.jutty.dev/links/mmulet-term-everything/</guid>
+          <description xml:base="https://blog.jutty.dev/links/mmulet-term-everything/"></description>
+      </item>
+      <item>
+          <title>Capitalization of Initialisms</title>
+          <pubDate>Sat, 06 Sep 2025 00:32:40 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/teamten-capitalization-of-initialisms/</link>
+          <guid>https://blog.jutty.dev/links/teamten-capitalization-of-initialisms/</guid>
+          <description xml:base="https://blog.jutty.dev/links/teamten-capitalization-of-initialisms/"></description>
+      </item>
+      <item>
+          <title>incplot: great looking plots in the terminal</title>
+          <pubDate>Wed, 03 Sep 2025 01:10:51 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/incom-0-incplot/</link>
+          <guid>https://blog.jutty.dev/links/incom-0-incplot/</guid>
+          <description xml:base="https://blog.jutty.dev/links/incom-0-incplot/"></description>
+      </item>
+      <item>
+          <title>Setting up a CI server for Forgejo</title>
+          <pubDate>Wed, 27 Aug 2025 01:18:36 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/robey-forgejo-ci-server-setup/</link>
+          <guid>https://blog.jutty.dev/links/robey-forgejo-ci-server-setup/</guid>
+          <description xml:base="https://blog.jutty.dev/links/robey-forgejo-ci-server-setup/"></description>
+      </item>
+      <item>
+          <title>The Insecurity of Debian</title>
+          <pubDate>Wed, 27 Aug 2025 00:58:03 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/the-insecurity-of-debian/</link>
+          <guid>https://blog.jutty.dev/links/the-insecurity-of-debian/</guid>
+          <description xml:base="https://blog.jutty.dev/links/the-insecurity-of-debian/"></description>
+      </item>
+      <item>
+          <title>sptlrx: Synchronized lyrics in your terminal</title>
+          <pubDate>Tue, 26 Aug 2025 23:41:41 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/raitonoberu-sptlrx/</link>
+          <guid>https://blog.jutty.dev/links/raitonoberu-sptlrx/</guid>
+          <description xml:base="https://blog.jutty.dev/links/raitonoberu-sptlrx/"></description>
+      </item>
+      <item>
+          <title>doxx: terminal docx viewer</title>
+          <pubDate>Tue, 26 Aug 2025 21:49:50 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/bgreenwell-doxx/</link>
+          <guid>https://blog.jutty.dev/links/bgreenwell-doxx/</guid>
+          <description xml:base="https://blog.jutty.dev/links/bgreenwell-doxx/"></description>
+      </item>
+      <item>
+          <title>Developing an alt text button for my website</title>
+          <pubDate>Tue, 26 Aug 2025 17:08:38 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/jamesg-developing-an-alt-text-button/</link>
+          <guid>https://blog.jutty.dev/links/jamesg-developing-an-alt-text-button/</guid>
+          <description xml:base="https://blog.jutty.dev/links/jamesg-developing-an-alt-text-button/"></description>
+      </item>
+      <item>
+          <title>Why Lean 4 replaced OCaml as my Primary Language</title>
+          <pubDate>Tue, 26 Aug 2025 17:04:25 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/kirancodes-lean-replaced-ocaml/</link>
+          <guid>https://blog.jutty.dev/links/kirancodes-lean-replaced-ocaml/</guid>
+          <description xml:base="https://blog.jutty.dev/links/kirancodes-lean-replaced-ocaml/"></description>
+      </item>
+      <item>
+          <title>A visual explanation of Big O notation</title>
+          <pubDate>Tue, 26 Aug 2025 00:38:39 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/samwho-big-o/</link>
+          <guid>https://blog.jutty.dev/links/samwho-big-o/</guid>
+          <description xml:base="https://blog.jutty.dev/links/samwho-big-o/"></description>
+      </item>
+      <item>
+          <title>grepcidr: filter IP addresses against CIDR specs and networks</title>
+          <pubDate>Wed, 20 Aug 2025 01:26:16 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/ryantig-grepcidr/</link>
+          <guid>https://blog.jutty.dev/links/ryantig-grepcidr/</guid>
+          <description xml:base="https://blog.jutty.dev/links/ryantig-grepcidr/"></description>
+      </item>
+      <item>
+          <title>gcli: Git(hub|lab|tea)&#x2F;Forgejo&#x2F;Bugzilla CLI tool</title>
+          <pubDate>Sat, 16 Aug 2025 21:59:10 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/herrhotzenplotz-gcli/</link>
+          <guid>https://blog.jutty.dev/links/herrhotzenplotz-gcli/</guid>
+          <description xml:base="https://blog.jutty.dev/links/herrhotzenplotz-gcli/"></description>
+      </item>
+      <item>
+          <title>pspg: Unix pager for PostgreSQL, MySQL CSV, TSV and more</title>
+          <pubDate>Sat, 16 Aug 2025 21:55:26 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/okbob-pspg/</link>
+          <guid>https://blog.jutty.dev/links/okbob-pspg/</guid>
+          <description xml:base="https://blog.jutty.dev/links/okbob-pspg/"></description>
+      </item>
+      <item>
+          <title>Implementing a basic equivalent of pflog in nftables</title>
+          <pubDate>Sat, 16 Aug 2025 00:42:08 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/basic-equivalent-of-pflog-in-nftables/</link>
+          <guid>https://blog.jutty.dev/links/basic-equivalent-of-pflog-in-nftables/</guid>
+          <description xml:base="https://blog.jutty.dev/links/basic-equivalent-of-pflog-in-nftables/"></description>
+      </item>
+      <item>
+          <title>A Friendly Introduction to SVG</title>
+          <pubDate>Fri, 15 Aug 2025 10:32:33 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/joshwcomeau-a-friendly-introduction-to-svg/</link>
+          <guid>https://blog.jutty.dev/links/joshwcomeau-a-friendly-introduction-to-svg/</guid>
+          <description xml:base="https://blog.jutty.dev/links/joshwcomeau-a-friendly-introduction-to-svg/"></description>
+      </item>
+      <item>
+          <title>How to help someone use a computer</title>
+          <pubDate>Fri, 15 Aug 2025 10:24:11 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/how-to-help-someone-use-a-computer/</link>
+          <guid>https://blog.jutty.dev/links/how-to-help-someone-use-a-computer/</guid>
+          <description xml:base="https://blog.jutty.dev/links/how-to-help-someone-use-a-computer/"></description>
+      </item>
+      <item>
+          <title>ethersync: Editor-agnostic, real-time collaborative text editing</title>
+          <pubDate>Tue, 29 Jul 2025 11:32:02 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/ethersync/</link>
+          <guid>https://blog.jutty.dev/links/ethersync/</guid>
+          <description xml:base="https://blog.jutty.dev/links/ethersync/"></description>
+      </item>
+      <item>
+          <title>ANSI Escape Codes Inspector</title>
+          <pubDate>Sat, 26 Jul 2025 02:28:00 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/ansi-escape-codes-inspector/</link>
+          <guid>https://blog.jutty.dev/links/ansi-escape-codes-inspector/</guid>
+          <description xml:base="https://blog.jutty.dev/links/ansi-escape-codes-inspector/"></description>
+      </item>
+      <item>
+          <title>Bread on Penguins</title>
+          <pubDate>Mon, 14 Jul 2025 18:34:23 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/bread-on-penguins/</link>
+          <guid>https://blog.jutty.dev/links/bread-on-penguins/</guid>
+          <description xml:base="https://blog.jutty.dev/links/bread-on-penguins/"></description>
+      </item>
+      <item>
+          <title>outside: multi-purpose terminal weather client</title>
+          <pubDate>Sun, 13 Jul 2025 20:35:57 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/baconisaveg-outside/</link>
+          <guid>https://blog.jutty.dev/links/baconisaveg-outside/</guid>
+          <description xml:base="https://blog.jutty.dev/links/baconisaveg-outside/"></description>
+      </item>
+      <item>
+          <title>BastilleBSD 1.0 Release</title>
+          <pubDate>Thu, 10 Jul 2025 01:29:31 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/bastillebsd-1-0/</link>
+          <guid>https://blog.jutty.dev/links/bastillebsd-1-0/</guid>
+          <description xml:base="https://blog.jutty.dev/links/bastillebsd-1-0/"></description>
+      </item>
+      <item>
+          <title>OCaml, modules, and import schemes</title>
+          <pubDate>Wed, 02 Jul 2025 20:49:34 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/xvw-ocaml-modules-and-import-schemes/</link>
+          <guid>https://blog.jutty.dev/links/xvw-ocaml-modules-and-import-schemes/</guid>
+          <description xml:base="https://blog.jutty.dev/links/xvw-ocaml-modules-and-import-schemes/"></description>
+      </item>
+      <item>
+          <title>The Tectonic Typesetting System</title>
+          <pubDate>Wed, 02 Jul 2025 20:45:43 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/tectonic-typesetting/</link>
+          <guid>https://blog.jutty.dev/links/tectonic-typesetting/</guid>
+          <description xml:base="https://blog.jutty.dev/links/tectonic-typesetting/"></description>
+      </item>
+      <item>
+          <title>In Praise of Links</title>
+          <pubDate>Fri, 20 Jun 2025 14:05:14 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/osteophage-in-praise-of-links/</link>
+          <guid>https://blog.jutty.dev/links/osteophage-in-praise-of-links/</guid>
+          <description xml:base="https://blog.jutty.dev/links/osteophage-in-praise-of-links/"></description>
+      </item>
+      <item>
+          <title>jarun&#x2F;pdd: Tiny date, time diff calculator with piggybacked timers</title>
+          <pubDate>Wed, 18 Jun 2025 22:40:49 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/jarun-pdd/</link>
+          <guid>https://blog.jutty.dev/links/jarun-pdd/</guid>
+          <description xml:base="https://blog.jutty.dev/links/jarun-pdd/"></description>
+      </item>
+      <item>
+          <title>Poline: esoteric color palette generation</title>
+          <pubDate>Sat, 14 Jun 2025 20:07:25 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/meodai-poline/</link>
+          <guid>https://blog.jutty.dev/links/meodai-poline/</guid>
+          <description xml:base="https://blog.jutty.dev/links/meodai-poline/"></description>
+      </item>
+      <item>
+          <title>gbprod&#x2F;substitute: Neovim plugin with replace and exchange operators</title>
+          <pubDate>Sat, 14 Jun 2025 19:53:14 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/gbprod-substitute/</link>
+          <guid>https://blog.jutty.dev/links/gbprod-substitute/</guid>
+          <description xml:base="https://blog.jutty.dev/links/gbprod-substitute/"></description>
+      </item>
+      <item>
+          <title>Why apk-tools is different than other package managers</title>
+          <pubDate>Tue, 10 Jun 2025 21:17:25 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/ariadne-space-why-apk-tools-is-different/</link>
+          <guid>https://blog.jutty.dev/links/ariadne-space-why-apk-tools-is-different/</guid>
+          <description xml:base="https://blog.jutty.dev/links/ariadne-space-why-apk-tools-is-different/"></description>
+      </item>
+      <item>
+          <title>ifd3f&#x2F;caligula: user-friendly, lightweight TUI for disk imaging</title>
+          <pubDate>Tue, 10 Jun 2025 17:11:55 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/ifd3f-caligula/</link>
+          <guid>https://blog.jutty.dev/links/ifd3f-caligula/</guid>
+          <description xml:base="https://blog.jutty.dev/links/ifd3f-caligula/"></description>
+      </item>
+      <item>
+          <title>pastel: A CLI tool to generate, analyze, convert and manipulate colors</title>
+          <pubDate>Tue, 10 Jun 2025 17:03:27 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/sharkdp-pastel/</link>
+          <guid>https://blog.jutty.dev/links/sharkdp-pastel/</guid>
+          <description xml:base="https://blog.jutty.dev/links/sharkdp-pastel/"></description>
+      </item>
+      <item>
+          <title>the algebra of dependent types</title>
+          <pubDate>Thu, 29 May 2025 00:32:09 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/the-algebra-of-dependent-types/</link>
+          <guid>https://blog.jutty.dev/links/the-algebra-of-dependent-types/</guid>
+          <description xml:base="https://blog.jutty.dev/links/the-algebra-of-dependent-types/"></description>
+      </item>
+      <item>
+          <title>Why Algebraic Effects?</title>
+          <pubDate>Tue, 27 May 2025 22:22:25 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/antelang-why-algebraic-effects/</link>
+          <guid>https://blog.jutty.dev/links/antelang-why-algebraic-effects/</guid>
+          <description xml:base="https://blog.jutty.dev/links/antelang-why-algebraic-effects/"></description>
+      </item>
+      <item>
+          <title>Having your compile-time cake and eating it too</title>
+          <pubDate>Sat, 24 May 2025 18:58:45 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/0x44-having-compile-time-cake-and-eating-it-too/</link>
+          <guid>https://blog.jutty.dev/links/0x44-having-compile-time-cake-and-eating-it-too/</guid>
+          <description xml:base="https://blog.jutty.dev/links/0x44-having-compile-time-cake-and-eating-it-too/"></description>
+      </item>
+      <item>
+          <title>Parsing expressions by precedence climbing</title>
+          <pubDate>Tue, 13 May 2025 23:26:52 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/eli-thegreenplace-precedence-climbing-parsing/</link>
+          <guid>https://blog.jutty.dev/links/eli-thegreenplace-precedence-climbing-parsing/</guid>
+          <description xml:base="https://blog.jutty.dev/links/eli-thegreenplace-precedence-climbing-parsing/"></description>
+      </item>
+      <item>
+          <title>FreeBSD VM under Incus on Debian</title>
+          <pubDate>Tue, 06 May 2025 03:18:31 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/agren-incus-freebsd-vm/</link>
+          <guid>https://blog.jutty.dev/links/agren-incus-freebsd-vm/</guid>
+          <description xml:base="https://blog.jutty.dev/links/agren-incus-freebsd-vm/"></description>
+      </item>
+      <item>
+          <title>Linux on a 70&#x27;s Typewriter</title>
+          <pubDate>Tue, 29 Apr 2025 19:51:06 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/linux-on-a-70s-typewriter/</link>
+          <guid>https://blog.jutty.dev/links/linux-on-a-70s-typewriter/</guid>
+          <description xml:base="https://blog.jutty.dev/links/linux-on-a-70s-typewriter/"></description>
+      </item>
+      <item>
+          <title>Revisiting an early critique of formal verification</title>
+          <pubDate>Sat, 19 Apr 2025 00:53:46 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/lawrencecpaulson-revisiting-a-critique-of-verification/</link>
+          <guid>https://blog.jutty.dev/links/lawrencecpaulson-revisiting-a-critique-of-verification/</guid>
+          <description xml:base="https://blog.jutty.dev/links/lawrencecpaulson-revisiting-a-critique-of-verification/"></description>
+      </item>
+      <item>
+          <title>Allowed commands in SSH authorized_keys</title>
+          <pubDate>Thu, 17 Apr 2025 20:56:14 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/langille-allowed-commands-in-ssh-authorized-keys/</link>
+          <guid>https://blog.jutty.dev/links/langille-allowed-commands-in-ssh-authorized-keys/</guid>
+          <description xml:base="https://blog.jutty.dev/links/langille-allowed-commands-in-ssh-authorized-keys/"></description>
+      </item>
+      <item>
+          <title>Introduction to Linear Types</title>
+          <pubDate>Tue, 15 Apr 2025 17:19:58 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/austral-introduction-to-linear-types/</link>
+          <guid>https://blog.jutty.dev/links/austral-introduction-to-linear-types/</guid>
+          <description xml:base="https://blog.jutty.dev/links/austral-introduction-to-linear-types/"></description>
+      </item>
+      <item>
+          <title>Two Years of Rust</title>
+          <pubDate>Tue, 15 Apr 2025 15:21:27 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/borretti-two-years-of-rust/</link>
+          <guid>https://blog.jutty.dev/links/borretti-two-years-of-rust/</guid>
+          <description xml:base="https://blog.jutty.dev/links/borretti-two-years-of-rust/"></description>
+      </item>
+      <item>
+          <title>OEM Support in Linux Mint Debian Edition</title>
+          <pubDate>Wed, 09 Apr 2025 19:52:51 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/lmde-oem-support/</link>
+          <guid>https://blog.jutty.dev/links/lmde-oem-support/</guid>
+          <description xml:base="https://blog.jutty.dev/links/lmde-oem-support/"></description>
+      </item>
+      <item>
+          <title>End-user Programming</title>
+          <pubDate>Sat, 05 Apr 2025 22:18:40 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/inkandswitch-end-user-programming/</link>
+          <guid>https://blog.jutty.dev/links/inkandswitch-end-user-programming/</guid>
+          <description xml:base="https://blog.jutty.dev/links/inkandswitch-end-user-programming/"></description>
+      </item>
+      <item>
+          <title>Pitfalls of Safe Rust</title>
+          <pubDate>Fri, 04 Apr 2025 19:37:22 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/pitfalls-of-safe-rust/</link>
+          <guid>https://blog.jutty.dev/links/pitfalls-of-safe-rust/</guid>
+          <description xml:base="https://blog.jutty.dev/links/pitfalls-of-safe-rust/"></description>
+      </item>
+      <item>
+          <title>clawtype: wearable chorded keyboard and mouse</title>
+          <pubDate>Fri, 04 Apr 2025 19:21:17 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/akavel-clawtype/</link>
+          <guid>https://blog.jutty.dev/links/akavel-clawtype/</guid>
+          <description xml:base="https://blog.jutty.dev/links/akavel-clawtype/"></description>
+      </item>
+      <item>
+          <title>landrun: unprivileged Linux sandboxes using Landlock</title>
+          <pubDate>Fri, 28 Mar 2025 20:34:29 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/zouuup-landrun/</link>
+          <guid>https://blog.jutty.dev/links/zouuup-landrun/</guid>
+          <description xml:base="https://blog.jutty.dev/links/zouuup-landrun/"></description>
+      </item>
+      <item>
+          <title>Using elinks to browse the web</title>
+          <pubDate>Thu, 27 Mar 2025 17:37:24 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/thinkmoult-using-elinks/</link>
+          <guid>https://blog.jutty.dev/links/thinkmoult-using-elinks/</guid>
+          <description xml:base="https://blog.jutty.dev/links/thinkmoult-using-elinks/"></description>
+      </item>
+      <item>
+          <title>Don&#x27;t Be Afraid Of Types</title>
+          <pubDate>Sat, 22 Mar 2025 13:33:16 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/lmika-dont-be-afraid-of-types/</link>
+          <guid>https://blog.jutty.dev/links/lmika-dont-be-afraid-of-types/</guid>
+          <description xml:base="https://blog.jutty.dev/links/lmika-dont-be-afraid-of-types/"></description>
+      </item>
+      <item>
+          <title>slipshow: the next-gen version of slides</title>
+          <pubDate>Thu, 20 Mar 2025 21:53:40 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/slipshow-next-gen-version-of-slides/</link>
+          <guid>https://blog.jutty.dev/links/slipshow-next-gen-version-of-slides/</guid>
+          <description xml:base="https://blog.jutty.dev/links/slipshow-next-gen-version-of-slides/"></description>
+      </item>
+      <item>
+          <title>The road to mainstream Matrix</title>
+          <pubDate>Tue, 18 Mar 2025 23:36:24 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/lwn-road-to-mainstream-matrix/</link>
+          <guid>https://blog.jutty.dev/links/lwn-road-to-mainstream-matrix/</guid>
+          <description xml:base="https://blog.jutty.dev/links/lwn-road-to-mainstream-matrix/"></description>
+      </item>
+      <item>
+          <title>Verification-First Development</title>
+          <pubDate>Tue, 18 Mar 2025 21:26:19 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/hillelwayne-verification-first-development/</link>
+          <guid>https://blog.jutty.dev/links/hillelwayne-verification-first-development/</guid>
+          <description xml:base="https://blog.jutty.dev/links/hillelwayne-verification-first-development/"></description>
+      </item>
+      <item>
+          <title>An interview with Mike Amundsen, Author of &#x27;RESTful Web APIs&#x27;</title>
+          <pubDate>Mon, 17 Mar 2025 17:52:16 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/an-interview-with-mike-amundsen/</link>
+          <guid>https://blog.jutty.dev/links/an-interview-with-mike-amundsen/</guid>
+          <description xml:base="https://blog.jutty.dev/links/an-interview-with-mike-amundsen/"></description>
+      </item>
+      <item>
+          <title>Almquist Shell Variants</title>
+          <pubDate>Thu, 13 Mar 2025 22:32:48 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/mascheck-ash-variants/</link>
+          <guid>https://blog.jutty.dev/links/mascheck-ash-variants/</guid>
+          <description xml:base="https://blog.jutty.dev/links/mascheck-ash-variants/"></description>
+      </item>
+      <item>
+          <title>Beyond Bad Output</title>
+          <pubDate>Thu, 13 Mar 2025 22:31:53 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/heyparis-beyond-bad-output/</link>
+          <guid>https://blog.jutty.dev/links/heyparis-beyond-bad-output/</guid>
+          <description xml:base="https://blog.jutty.dev/links/heyparis-beyond-bad-output/"></description>
+      </item>
+      <item>
+          <title>termpicker: A color picker for the terminal</title>
+          <pubDate>Tue, 11 Mar 2025 22:02:09 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/chaussebenjamin-termpicker/</link>
+          <guid>https://blog.jutty.dev/links/chaussebenjamin-termpicker/</guid>
+          <description xml:base="https://blog.jutty.dev/links/chaussebenjamin-termpicker/"></description>
+      </item>
+      <item>
+          <title>Understanding Unix filesystem timestamps</title>
+          <pubDate>Sun, 09 Mar 2025 14:52:25 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/unixdigest-filesystem-timestamps/</link>
+          <guid>https://blog.jutty.dev/links/unixdigest-filesystem-timestamps/</guid>
+          <description xml:base="https://blog.jutty.dev/links/unixdigest-filesystem-timestamps/"></description>
+      </item>
+      <item>
+          <title>Build your own Command Line with ANSI escape codes</title>
+          <pubDate>Fri, 07 Mar 2025 21:55:40 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/lihaoyi-build-your-own-command-line/</link>
+          <guid>https://blog.jutty.dev/links/lihaoyi-build-your-own-command-line/</guid>
+          <description xml:base="https://blog.jutty.dev/links/lihaoyi-build-your-own-command-line/"></description>
+      </item>
+      <item>
+          <title>Standards for ANSI escape codes</title>
+          <pubDate>Fri, 07 Mar 2025 21:26:21 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/jvns-ansi-escape-codes/</link>
+          <guid>https://blog.jutty.dev/links/jvns-ansi-escape-codes/</guid>
+          <description xml:base="https://blog.jutty.dev/links/jvns-ansi-escape-codes/"></description>
+      </item>
+      <item>
+          <title>Dependent Haskell Roadmap</title>
+          <pubDate>Fri, 07 Mar 2025 17:11:14 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/dependent-haskell-roadmap/</link>
+          <guid>https://blog.jutty.dev/links/dependent-haskell-roadmap/</guid>
+          <description xml:base="https://blog.jutty.dev/links/dependent-haskell-roadmap/"></description>
+      </item>
+      <item>
+          <title>Why ZFS Reports Less Space: Space Accounting Explained</title>
+          <pubDate>Tue, 04 Mar 2025 17:09:59 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/klarasystems-zfs-space-accounting/</link>
+          <guid>https://blog.jutty.dev/links/klarasystems-zfs-space-accounting/</guid>
+          <description xml:base="https://blog.jutty.dev/links/klarasystems-zfs-space-accounting/"></description>
+      </item>
+      <item>
+          <title>hue.tools</title>
+          <pubDate>Tue, 04 Mar 2025 14:54:54 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/hue-tools/</link>
+          <guid>https://blog.jutty.dev/links/hue-tools/</guid>
+          <description xml:base="https://blog.jutty.dev/links/hue-tools/"></description>
+      </item>
+      <item>
+          <title>Falsehoods programmers believe about languages</title>
+          <pubDate>Sun, 02 Mar 2025 12:07:14 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/lexiconista-language-falsehoods/</link>
+          <guid>https://blog.jutty.dev/links/lexiconista-language-falsehoods/</guid>
+          <description xml:base="https://blog.jutty.dev/links/lexiconista-language-falsehoods/"></description>
+      </item>
+      <item>
+          <title>mdo: FreeBSD su alternative without setuid binaries</title>
+          <pubDate>Thu, 27 Feb 2025 01:25:49 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/freebsd-mdo/</link>
+          <guid>https://blog.jutty.dev/links/freebsd-mdo/</guid>
+          <description xml:base="https://blog.jutty.dev/links/freebsd-mdo/"></description>
+      </item>
+      <item>
+          <title>Post-Quantum Cryptography in February 2025</title>
+          <pubDate>Wed, 19 Feb 2025 22:16:13 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/netmeister-post-quantum-crypto-february-2025/</link>
+          <guid>https://blog.jutty.dev/links/netmeister-post-quantum-crypto-february-2025/</guid>
+          <description xml:base="https://blog.jutty.dev/links/netmeister-post-quantum-crypto-february-2025/"></description>
+      </item>
+      <item>
+          <title>Five Kinds of Nondeterminism</title>
+          <pubDate>Wed, 19 Feb 2025 19:18:12 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/hillelwayne-five-kinds-of-nondeterminism/</link>
+          <guid>https://blog.jutty.dev/links/hillelwayne-five-kinds-of-nondeterminism/</guid>
+          <description xml:base="https://blog.jutty.dev/links/hillelwayne-five-kinds-of-nondeterminism/"></description>
+      </item>
+      <item>
+          <title>LabPlot – Scientific plotting and data analysis</title>
+          <pubDate>Sat, 15 Feb 2025 18:42:03 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/labplot/</link>
+          <guid>https://blog.jutty.dev/links/labplot/</guid>
+          <description xml:base="https://blog.jutty.dev/links/labplot/"></description>
+      </item>
+      <item>
+          <title>laktak&#x2F;tome: script playbooks with vim</title>
+          <pubDate>Thu, 23 Jan 2025 23:20:35 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/laktak-tome/</link>
+          <guid>https://blog.jutty.dev/links/laktak-tome/</guid>
+          <description xml:base="https://blog.jutty.dev/links/laktak-tome/"></description>
+      </item>
+      <item>
+          <title>nixbsd: An unofficial NixOS fork with a FreeBSD kernel</title>
+          <pubDate>Tue, 21 Jan 2025 17:32:00 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/nixbsd-nixos-fork-with-a-freebsd-kernel/</link>
+          <guid>https://blog.jutty.dev/links/nixbsd-nixos-fork-with-a-freebsd-kernel/</guid>
+          <description xml:base="https://blog.jutty.dev/links/nixbsd-nixos-fork-with-a-freebsd-kernel/"></description>
+      </item>
+      <item>
+          <title>Koto Programming Language</title>
+          <pubDate>Wed, 08 Jan 2025 21:31:31 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/koto-programming-language/</link>
+          <guid>https://blog.jutty.dev/links/koto-programming-language/</guid>
+          <description xml:base="https://blog.jutty.dev/links/koto-programming-language/"></description>
+      </item>
+      <item>
+          <title>aaronik&#x2F;treewalker.nvim: Move around your code in a syntax tree aware manner</title>
+          <pubDate>Wed, 08 Jan 2025 03:31:48 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/github-aaronik-treewalker-nvim/</link>
+          <guid>https://blog.jutty.dev/links/github-aaronik-treewalker-nvim/</guid>
+          <description xml:base="https://blog.jutty.dev/links/github-aaronik-treewalker-nvim/"></description>
+      </item>
+      <item>
+          <title>yassinebenaid&#x2F;bunster: Compile shell scripts to machine code</title>
+          <pubDate>Tue, 07 Jan 2025 00:07:58 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/yassinebenaid-bunster/</link>
+          <guid>https://blog.jutty.dev/links/yassinebenaid-bunster/</guid>
+          <description xml:base="https://blog.jutty.dev/links/yassinebenaid-bunster/"></description>
+      </item>
+      <item>
+          <title>One-stop performance analysis using atop</title>
+          <pubDate>Mon, 06 Jan 2025 00:39:14 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/lwn-one-stop-performance-analysis-using-atop/</link>
+          <guid>https://blog.jutty.dev/links/lwn-one-stop-performance-analysis-using-atop/</guid>
+          <description xml:base="https://blog.jutty.dev/links/lwn-one-stop-performance-analysis-using-atop/"></description>
+      </item>
+      <item>
+          <title>Category Theory Illustrated</title>
+          <pubDate>Sun, 29 Dec 2024 19:08:10 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/abuseofnotation-category-theory-illustrated/</link>
+          <guid>https://blog.jutty.dev/links/abuseofnotation-category-theory-illustrated/</guid>
+          <description xml:base="https://blog.jutty.dev/links/abuseofnotation-category-theory-illustrated/"></description>
+      </item>
+      <item>
+          <title>Revisiting the NetBSD build system</title>
+          <pubDate>Sat, 28 Dec 2024 22:26:03 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/blogsystem5-revisiting-the-netbsd-build-system/</link>
+          <guid>https://blog.jutty.dev/links/blogsystem5-revisiting-the-netbsd-build-system/</guid>
+          <description xml:base="https://blog.jutty.dev/links/blogsystem5-revisiting-the-netbsd-build-system/"></description>
+      </item>
+      <item>
+          <title>Canop&#x2F;rhit: A nginx log explorer</title>
+          <pubDate>Fri, 27 Dec 2024 00:37:00 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/canop-rhit-nginx-log-explorer/</link>
+          <guid>https://blog.jutty.dev/links/canop-rhit-nginx-log-explorer/</guid>
+          <description xml:base="https://blog.jutty.dev/links/canop-rhit-nginx-log-explorer/"></description>
+      </item>
+      <item>
+          <title>Schemio, a platform for dynamic diagramming</title>
+          <pubDate>Tue, 24 Dec 2024 00:28:30 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/schemio-dynamic-diagramming/</link>
+          <guid>https://blog.jutty.dev/links/schemio-dynamic-diagramming/</guid>
+          <description xml:base="https://blog.jutty.dev/links/schemio-dynamic-diagramming/"></description>
+      </item>
+      <item>
+          <title>Ideas from &quot;A Philosophy of Software Design&quot;</title>
+          <pubDate>Sun, 22 Dec 2024 17:33:54 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/16elt-ideas-from-a-philosophy-of-software-design/</link>
+          <guid>https://blog.jutty.dev/links/16elt-ideas-from-a-philosophy-of-software-design/</guid>
+          <description xml:base="https://blog.jutty.dev/links/16elt-ideas-from-a-philosophy-of-software-design/"></description>
+      </item>
+      <item>
+          <title>Cognitive load is what matters</title>
+          <pubDate>Sun, 22 Dec 2024 16:46:15 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/zakirullin-cognitive-load-is-what-matters/</link>
+          <guid>https://blog.jutty.dev/links/zakirullin-cognitive-load-is-what-matters/</guid>
+          <description xml:base="https://blog.jutty.dev/links/zakirullin-cognitive-load-is-what-matters/"></description>
+      </item>
+      <item>
+          <title>How to properly shut down a Linux system</title>
+          <pubDate>Sat, 21 Dec 2024 18:14:32 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/leahneukirchen-how-to-properly-shut-down-a-linux-system/</link>
+          <guid>https://blog.jutty.dev/links/leahneukirchen-how-to-properly-shut-down-a-linux-system/</guid>
+          <description xml:base="https://blog.jutty.dev/links/leahneukirchen-how-to-properly-shut-down-a-linux-system/"></description>
+      </item>
+      <item>
+          <title>Web Origami</title>
+          <pubDate>Sat, 21 Dec 2024 12:22:49 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/web-origami/</link>
+          <guid>https://blog.jutty.dev/links/web-origami/</guid>
+          <description xml:base="https://blog.jutty.dev/links/web-origami/"></description>
+      </item>
+      <item>
+          <title>Artemis - a calm web reader</title>
+          <pubDate>Sat, 21 Dec 2024 00:40:57 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/jamesg-artemis/</link>
+          <guid>https://blog.jutty.dev/links/jamesg-artemis/</guid>
+          <description xml:base="https://blog.jutty.dev/links/jamesg-artemis/"></description>
+      </item>
+      <item>
+          <title>Conjuring a Linux distribution out of thin air</title>
+          <pubDate>Fri, 13 Dec 2024 16:59:18 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/brixit-conjuring-a-linux-distribution/</link>
+          <guid>https://blog.jutty.dev/links/brixit-conjuring-a-linux-distribution/</guid>
+          <description xml:base="https://blog.jutty.dev/links/brixit-conjuring-a-linux-distribution/"></description>
+      </item>
+      <item>
+          <title>Telescopic Text</title>
+          <pubDate>Wed, 11 Dec 2024 18:48:21 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/telescopic-text/</link>
+          <guid>https://blog.jutty.dev/links/telescopic-text/</guid>
+          <description xml:base="https://blog.jutty.dev/links/telescopic-text/"></description>
+      </item>
+      <item>
+          <title>An Undefeated Pull Request Template</title>
+          <pubDate>Tue, 10 Dec 2024 22:39:33 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/ashleemboyer-undefeated-pull-request-template/</link>
+          <guid>https://blog.jutty.dev/links/ashleemboyer-undefeated-pull-request-template/</guid>
+          <description xml:base="https://blog.jutty.dev/links/ashleemboyer-undefeated-pull-request-template/"></description>
+      </item>
+      <item>
+          <title>How to Pronounce Chinese Names a Little Better</title>
+          <pubDate>Sat, 07 Dec 2024 11:14:25 -0300</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/jacko-pronounce-chinese-names/</link>
+          <guid>https://blog.jutty.dev/links/jacko-pronounce-chinese-names/</guid>
+          <description xml:base="https://blog.jutty.dev/links/jacko-pronounce-chinese-names/"></description>
+      </item>
+      <item>
+          <title>8 months of OCaml after 8 years of Haskell</title>
+          <pubDate>Wed, 04 Dec 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/chshersh-haskell-ocaml-comparison/</link>
+          <guid>https://blog.jutty.dev/links/chshersh-haskell-ocaml-comparison/</guid>
+          <description xml:base="https://blog.jutty.dev/links/chshersh-haskell-ocaml-comparison/"></description>
+      </item>
+      <item>
+          <title>Demystifying git submodules</title>
+          <pubDate>Wed, 04 Dec 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/cyberdemon-demystifying-git-submodules/</link>
+          <guid>https://blog.jutty.dev/links/cyberdemon-demystifying-git-submodules/</guid>
+          <description xml:base="https://blog.jutty.dev/links/cyberdemon-demystifying-git-submodules/"></description>
+      </item>
+      <item>
+          <title>December Adventure</title>
+          <pubDate>Wed, 04 Dec 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/eli-december-adventure/</link>
+          <guid>https://blog.jutty.dev/links/eli-december-adventure/</guid>
+          <description xml:base="https://blog.jutty.dev/links/eli-december-adventure/"></description>
+      </item>
+      <item>
+          <title>Announcing Hurl 6.0.0</title>
+          <pubDate>Wed, 04 Dec 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/hurl-6-0-0/</link>
+          <guid>https://blog.jutty.dev/links/hurl-6-0-0/</guid>
+          <description xml:base="https://blog.jutty.dev/links/hurl-6-0-0/"></description>
+      </item>
+      <item>
+          <title>Typst as a Language</title>
+          <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/justinpombrio-typst-as-a-language/</link>
+          <guid>https://blog.jutty.dev/links/justinpombrio-typst-as-a-language/</guid>
+          <description xml:base="https://blog.jutty.dev/links/justinpombrio-typst-as-a-language/"></description>
+      </item>
+      <item>
+          <title>The &quot;Property Based Testing&quot; series</title>
+          <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/scott-wlaschin-property-based-testing/</link>
+          <guid>https://blog.jutty.dev/links/scott-wlaschin-property-based-testing/</guid>
+          <description xml:base="https://blog.jutty.dev/links/scott-wlaschin-property-based-testing/"></description>
+      </item>
+      <item>
+          <title>Linear Types and Exceptions</title>
+          <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/borretti-linear-types-exceptions/</link>
+          <guid>https://blog.jutty.dev/links/borretti-linear-types-exceptions/</guid>
+          <description xml:base="https://blog.jutty.dev/links/borretti-linear-types-exceptions/"></description>
+      </item>
+      <item>
+          <title>Dependent Types and the Art of HTTP Headers</title>
+          <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/unwoundstack-dependent-types-http-headers/</link>
+          <guid>https://blog.jutty.dev/links/unwoundstack-dependent-types-http-headers/</guid>
+          <description xml:base="https://blog.jutty.dev/links/unwoundstack-dependent-types-http-headers/"></description>
+      </item>
+      <item>
+          <title>Frederik Braun: Modern solutions against cross-site attacks</title>
+          <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/frederikbraun-cross-site-solutions/</link>
+          <guid>https://blog.jutty.dev/links/frederikbraun-cross-site-solutions/</guid>
+          <description xml:base="https://blog.jutty.dev/links/frederikbraun-cross-site-solutions/"></description>
+      </item>
+      <item>
+          <title>I ❤ [tmux] shortcuts #2</title>
+          <pubDate>Tue, 26 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/lazybear-tmux-shortcuts/</link>
+          <guid>https://blog.jutty.dev/links/lazybear-tmux-shortcuts/</guid>
+          <description xml:base="https://blog.jutty.dev/links/lazybear-tmux-shortcuts/"></description>
+      </item>
+      <item>
+          <title>Functional programming self-affirmations - NorikiTech</title>
+          <pubDate>Tue, 26 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/norikitech-fp-affirmations/</link>
+          <guid>https://blog.jutty.dev/links/norikitech-fp-affirmations/</guid>
+          <description xml:base="https://blog.jutty.dev/links/norikitech-fp-affirmations/"></description>
+      </item>
+      <item>
+          <title>How I configure my Git identities | benji</title>
+          <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/benji-git-identities/</link>
+          <guid>https://blog.jutty.dev/links/benji-git-identities/</guid>
+          <description xml:base="https://blog.jutty.dev/links/benji-git-identities/"></description>
+      </item>
+      <item>
+          <title>re2c — Regular Expressions to Code</title>
+          <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/re2c/</link>
+          <guid>https://blog.jutty.dev/links/re2c/</guid>
+          <description xml:base="https://blog.jutty.dev/links/re2c/"></description>
+      </item>
+      <item>
+          <title>Styling Graphviz with CSS</title>
+          <pubDate>Mon, 18 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/noncombatant-graphviz-css/</link>
+          <guid>https://blog.jutty.dev/links/noncombatant-graphviz-css/</guid>
+          <description xml:base="https://blog.jutty.dev/links/noncombatant-graphviz-css/"></description>
+      </item>
+      <item>
+          <title>MomBoard: E-ink display for a parent with amnesia</title>
+          <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/jan-miksovsky-momboard/</link>
+          <guid>https://blog.jutty.dev/links/jan-miksovsky-momboard/</guid>
+          <description xml:base="https://blog.jutty.dev/links/jan-miksovsky-momboard/"></description>
+      </item>
+      <item>
+          <title>A mental model for Linux file, hard and soft links | Jayesh Bhoot</title>
+          <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/bhoot-dev-linux-links/</link>
+          <guid>https://blog.jutty.dev/links/bhoot-dev-linux-links/</guid>
+          <description xml:base="https://blog.jutty.dev/links/bhoot-dev-linux-links/"></description>
+      </item>
+      <item>
+          <title>Configuring SSH Keys for Multiple Accounts</title>
+          <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/stevenharman-multi-account-ssh/</link>
+          <guid>https://blog.jutty.dev/links/stevenharman-multi-account-ssh/</guid>
+          <description xml:base="https://blog.jutty.dev/links/stevenharman-multi-account-ssh/"></description>
+      </item>
+      <item>
+          <title>Searching for and navigating Git commits</title>
+          <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/alexharri-searching-navigating-commits/</link>
+          <guid>https://blog.jutty.dev/links/alexharri-searching-navigating-commits/</guid>
+          <description xml:base="https://blog.jutty.dev/links/alexharri-searching-navigating-commits/"></description>
+      </item>
+      <item>
+          <title>Debugging Haskell Type Errors | jelv.is</title>
+          <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/jelvis-debugging-haskell-type-errors/</link>
+          <guid>https://blog.jutty.dev/links/jelvis-debugging-haskell-type-errors/</guid>
+          <description xml:base="https://blog.jutty.dev/links/jelvis-debugging-haskell-type-errors/"></description>
+      </item>
+      <item>
+          <title>Nobody cares about decentralization until they do</title>
+          <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/kyefox-nobody-cares-about-decentralization/</link>
+          <guid>https://blog.jutty.dev/links/kyefox-nobody-cares-about-decentralization/</guid>
+          <description xml:base="https://blog.jutty.dev/links/kyefox-nobody-cares-about-decentralization/"></description>
+      </item>
+      <item>
+          <title>nickgerace&#x2F;gfold: CLI tool to keep track of Git repositories</title>
+          <pubDate>Tue, 29 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/nickgerace-gfold/</link>
+          <guid>https://blog.jutty.dev/links/nickgerace-gfold/</guid>
+          <description xml:base="https://blog.jutty.dev/links/nickgerace-gfold/"></description>
+      </item>
+      <item>
+          <title>Improving SSH&#x27;s security with SSHFP DNS records | APNIC Blog</title>
+          <pubDate>Sat, 26 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/apnic-sshfp/</link>
+          <guid>https://blog.jutty.dev/links/apnic-sshfp/</guid>
+          <description xml:base="https://blog.jutty.dev/links/apnic-sshfp/"></description>
+      </item>
+      <item>
+          <title>Smarter than &#x27;Ctrl+F&#x27;: Linking Directly to Web Page Content</title>
+          <pubDate>Thu, 24 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/alfy-text-fragments/</link>
+          <guid>https://blog.jutty.dev/links/alfy-text-fragments/</guid>
+          <description xml:base="https://blog.jutty.dev/links/alfy-text-fragments/"></description>
+      </item>
+      <item>
+          <title>Solene&#x27;% : A dedicated administration workstation</title>
+          <pubDate>Wed, 23 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/solene-admin-workstation/</link>
+          <guid>https://blog.jutty.dev/links/solene-admin-workstation/</guid>
+          <description xml:base="https://blog.jutty.dev/links/solene-admin-workstation/"></description>
+      </item>
+      <item>
+          <title>against &#x2F;tmp - Tony Finch</title>
+          <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/dotat-against-tmp/</link>
+          <guid>https://blog.jutty.dev/links/dotat-against-tmp/</guid>
+          <description xml:base="https://blog.jutty.dev/links/dotat-against-tmp/"></description>
+      </item>
+      <item>
+          <title>Typst 0.12 is just ... better</title>
+          <pubDate>Fri, 18 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/typst-0-12/</link>
+          <guid>https://blog.jutty.dev/links/typst-0-12/</guid>
+          <description xml:base="https://blog.jutty.dev/links/typst-0-12/"></description>
+      </item>
+      <item>
+          <title>That&#x27;s Not an Abstraction, That&#x27;s Just a Layer of Indirection</title>
+          <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/fhur-me-abstraction/</link>
+          <guid>https://blog.jutty.dev/links/fhur-me-abstraction/</guid>
+          <description xml:base="https://blog.jutty.dev/links/fhur-me-abstraction/"></description>
+      </item>
+      <item>
+          <title>FFmpeg Explorer</title>
+          <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/lav-io-ffmpeg-explorer/</link>
+          <guid>https://blog.jutty.dev/links/lav-io-ffmpeg-explorer/</guid>
+          <description xml:base="https://blog.jutty.dev/links/lav-io-ffmpeg-explorer/"></description>
+      </item>
+      <item>
+          <title>The ultimate guide to Haskell Strings · Hasufell&#x27;s blog</title>
+          <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/hasufell-haskell-strings/</link>
+          <guid>https://blog.jutty.dev/links/hasufell-haskell-strings/</guid>
+          <description xml:base="https://blog.jutty.dev/links/hasufell-haskell-strings/"></description>
+      </item>
+      <item>
+          <title>HTML for People</title>
+          <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/html-for-people/</link>
+          <guid>https://blog.jutty.dev/links/html-for-people/</guid>
+          <description xml:base="https://blog.jutty.dev/links/html-for-people/"></description>
+      </item>
+      <item>
+          <title>Statically Typed Functional Programming with Python 3.12</title>
+          <pubDate>Mon, 07 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/wickstrom-functional-python-3-12/</link>
+          <guid>https://blog.jutty.dev/links/wickstrom-functional-python-3-12/</guid>
+          <description xml:base="https://blog.jutty.dev/links/wickstrom-functional-python-3-12/"></description>
+      </item>
+      <item>
+          <title>Chris&#x27;s Wiki :: blog&#x2F;unix</title>
+          <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/cks-blog-unix/</link>
+          <guid>https://blog.jutty.dev/links/cks-blog-unix/</guid>
+          <description xml:base="https://blog.jutty.dev/links/cks-blog-unix/">&lt;p&gt;A hypermedia rabbit hole in which I quickly fell.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>wrestling the web from corporate control requires making it boring again</title>
+          <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/washbear-wrestling-the-web/</link>
+          <guid>https://blog.jutty.dev/links/washbear-wrestling-the-web/</guid>
+          <description xml:base="https://blog.jutty.dev/links/washbear-wrestling-the-web/">&lt;blockquote&gt;
+&lt;p&gt;In an age where web is essential, we need a universal web browser for minority platforms. One that focuses on keeping HTML+JS working rather than chasing things like “WebVR” and collaborating with the ads industry. Unfortunately, I think the system has been set up to ensure that small players are no longer possible. Let’s hope I’m proven wrong.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</description>
+      </item>
+      <item>
+          <title>Sandboxing Adoption in Open Source Ecosystems</title>
+          <pubDate>Fri, 04 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/alhindi-sandboxing/</link>
+          <guid>https://blog.jutty.dev/links/alhindi-sandboxing/</guid>
+          <description xml:base="https://blog.jutty.dev/links/alhindi-sandboxing/"></description>
+      </item>
+      <item>
+          <title>The Reticular Society</title>
+          <pubDate>Fri, 04 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/the-reticular-society/</link>
+          <guid>https://blog.jutty.dev/links/the-reticular-society/</guid>
+          <description xml:base="https://blog.jutty.dev/links/the-reticular-society/">&lt;blockquote&gt;
+&lt;p&gt;In &lt;em&gt;necroreticular flows&lt;&#x2F;em&gt; which cut across algorithmically distributed gigs and connected places of work, the number of lives integrated together corresponds to the interoperable potential of the reticular society’s optimization and domination, &lt;em&gt;subsuming life&lt;&#x2F;em&gt; and in so doing &lt;em&gt;circulating death&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</description>
+      </item>
+      <item>
+          <title>carl: modern version of cal that can incorporate ICal (ics) data</title>
+          <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/b1rger-carl/</link>
+          <guid>https://blog.jutty.dev/links/b1rger-carl/</guid>
+          <description xml:base="https://blog.jutty.dev/links/b1rger-carl/">&lt;p&gt;This is superb in conjunction with &lt;a href=&quot;https:&#x2F;&#x2F;vdirsyncer.pimutils.org&#x2F;en&#x2F;stable&#x2F;&quot;&gt;vdirsyncer&lt;&#x2F;a&gt;, which I’ve been using for a long time for exactly the purpose of having a local directory of &lt;code&gt;.ics&lt;&#x2F;code&gt; files for each of my Nextcloud DAV calendars.&lt;&#x2F;p&gt;
+&lt;p&gt;If you like this, you may also like &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;pimutils&#x2F;khal&quot;&gt;khal&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>diffnav: git diff pager based on delta but with a file tree</title>
+          <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/dlvhdr-diffnav/</link>
+          <guid>https://blog.jutty.dev/links/dlvhdr-diffnav/</guid>
+          <description xml:base="https://blog.jutty.dev/links/dlvhdr-diffnav/"></description>
+      </item>
+      <item>
+          <title>I Want Process-Aware Types</title>
+          <pubDate>Mon, 30 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/barag-process-aware-types/</link>
+          <guid>https://blog.jutty.dev/links/barag-process-aware-types/</guid>
+          <description xml:base="https://blog.jutty.dev/links/barag-process-aware-types/"></description>
+      </item>
+      <item>
+          <title>Alopex Networks Wiki - CrystalNotes</title>
+          <pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/alopex-crystal-notes/</link>
+          <guid>https://blog.jutty.dev/links/alopex-crystal-notes/</guid>
+          <description xml:base="https://blog.jutty.dev/links/alopex-crystal-notes/"></description>
+      </item>
+      <item>
+          <title>Small Internet protocol roundup</title>
+          <pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/dbohdan-smallweb-txt/</link>
+          <guid>https://blog.jutty.dev/links/dbohdan-smallweb-txt/</guid>
+          <description xml:base="https://blog.jutty.dev/links/dbohdan-smallweb-txt/"></description>
+      </item>
+      <item>
+          <title>Release tmux 3.5 · tmux&#x2F;tmux</title>
+          <pubDate>Fri, 27 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/tmux-3-5/</link>
+          <guid>https://blog.jutty.dev/links/tmux-3-5/</guid>
+          <description xml:base="https://blog.jutty.dev/links/tmux-3-5/">&lt;p&gt;Interesting &lt;a href=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;tmux&#x2F;tmux&#x2F;3.5&#x2F;CHANGES&quot;&gt;changes&lt;&#x2F;a&gt; include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Display hyperlinks in copy mode and add &lt;code&gt;copy_cursor_hyperlink&lt;&#x2F;code&gt; format to get
+the hyperlink under the cursor.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Add a prefix timeout option.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Add mirrored versions of the &lt;code&gt;main-horizontal&lt;&#x2F;code&gt; and &lt;code&gt;main-vertical&lt;&#x2F;code&gt; layouts where
+the main pane is bottom or right instead of top or left.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Add &lt;code&gt;--enable-jemalloc&lt;&#x2F;code&gt; to build with jemalloc memory allocator (since glibc
+malloc is so poor).”&lt;&#x2F;li&gt;
+&lt;li&gt;“Add &lt;code&gt;N&lt;&#x2F;code&gt; to search backwards in tree modes.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Use &lt;code&gt;default-shell&lt;&#x2F;code&gt; for command prompt, &lt;code&gt;#()&lt;&#x2F;code&gt; and popups.”&lt;&#x2F;li&gt;
+&lt;li&gt;“Add a &lt;code&gt;command-error&lt;&#x2F;code&gt; hook when a command fails.”&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>Debating ifupdown replacements for Debian trixie [LWN.net]</title>
+          <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/lwn-trixie-ifupdown/</link>
+          <guid>https://blog.jutty.dev/links/lwn-trixie-ifupdown/</guid>
+          <description xml:base="https://blog.jutty.dev/links/lwn-trixie-ifupdown/"></description>
+      </item>
+      <item>
+          <title>Project Cybersyn - 99% Invisible</title>
+          <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/99percentinvisble-cybersyn/</link>
+          <guid>https://blog.jutty.dev/links/99percentinvisble-cybersyn/</guid>
+          <description xml:base="https://blog.jutty.dev/links/99percentinvisble-cybersyn/"></description>
+      </item>
+      <item>
+          <title>Lagrange v1.18: TUI and Misfin</title>
+          <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/lagrange-1-18/</link>
+          <guid>https://blog.jutty.dev/links/lagrange-1-18/</guid>
+          <description xml:base="https://blog.jutty.dev/links/lagrange-1-18/"></description>
+      </item>
+      <item>
+          <title>jacek-kurlit&#x2F;pik: Process Interactive Kill</title>
+          <pubDate>Tue, 17 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/jacek-kurlit-pik/</link>
+          <guid>https://blog.jutty.dev/links/jacek-kurlit-pik/</guid>
+          <description xml:base="https://blog.jutty.dev/links/jacek-kurlit-pik/"></description>
+      </item>
+      <item>
+          <title>The First HTML LSP That Reports Syntax Errors | Loris Cro&#x27;s Blog</title>
+          <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/kristoff-html-lsp/</link>
+          <guid>https://blog.jutty.dev/links/kristoff-html-lsp/</guid>
+          <description xml:base="https://blog.jutty.dev/links/kristoff-html-lsp/"></description>
+      </item>
+      <item>
+          <title>Make Your Own Read-Only Device With NetBSD - IT Notes</title>
+          <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/dragas-read-only-netbsd/</link>
+          <guid>https://blog.jutty.dev/links/dragas-read-only-netbsd/</guid>
+          <description xml:base="https://blog.jutty.dev/links/dragas-read-only-netbsd/"></description>
+      </item>
+      <item>
+          <title>Critical analysis of Fediverse decentralization promises</title>
+          <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/xavier-fediverse-decentralization-promises/</link>
+          <guid>https://blog.jutty.dev/links/xavier-fediverse-decentralization-promises/</guid>
+          <description xml:base="https://blog.jutty.dev/links/xavier-fediverse-decentralization-promises/"></description>
+      </item>
+      <item>
+          <title>Unix command line conventions over time</title>
+          <pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/wirzenius-unix-cli-conventions/</link>
+          <guid>https://blog.jutty.dev/links/wirzenius-unix-cli-conventions/</guid>
+          <description xml:base="https://blog.jutty.dev/links/wirzenius-unix-cli-conventions/"></description>
+      </item>
+      <item>
+          <title>FenTiger&#x2F;FedIAM: Login and access control based on open identities</title>
+          <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/fentiger-fediam/</link>
+          <guid>https://blog.jutty.dev/links/fentiger-fediam/</guid>
+          <description xml:base="https://blog.jutty.dev/links/fentiger-fediam/"></description>
+      </item>
+      <item>
+          <title>jatcwang&#x2F;instant-scala: instant Scala script startup</title>
+          <pubDate>Fri, 30 Aug 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/jatcwang-instant-scala/</link>
+          <guid>https://blog.jutty.dev/links/jatcwang-instant-scala/</guid>
+          <description xml:base="https://blog.jutty.dev/links/jatcwang-instant-scala/"></description>
+      </item>
+      <item>
+          <title>Deterministic Replay of QEMU Emulation</title>
+          <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/qemu-replay/</link>
+          <guid>https://blog.jutty.dev/links/qemu-replay/</guid>
+          <description xml:base="https://blog.jutty.dev/links/qemu-replay/"></description>
+      </item>
+      <item>
+          <title>Hurl 5.0.0, the Parallel Edition</title>
+          <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/hurl-5-0-0/</link>
+          <guid>https://blog.jutty.dev/links/hurl-5-0-0/</guid>
+          <description xml:base="https://blog.jutty.dev/links/hurl-5-0-0/"></description>
+      </item>
+      <item>
+          <title>Good programmers worry about data structures and their relationships</title>
+          <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/engineerscodex-data-structures/</link>
+          <guid>https://blog.jutty.dev/links/engineerscodex-data-structures/</guid>
+          <description xml:base="https://blog.jutty.dev/links/engineerscodex-data-structures/"></description>
+      </item>
+      <item>
+          <title>Misconceptions about the UNIX Philosophy</title>
+          <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/posixcafe-unix-misconceptions/</link>
+          <guid>https://blog.jutty.dev/links/posixcafe-unix-misconceptions/</guid>
+          <description xml:base="https://blog.jutty.dev/links/posixcafe-unix-misconceptions/"></description>
+      </item>
+      <item>
+          <title>The Impressionist Blogging Movement - Jim Nielsen’s Blog</title>
+          <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/nielsen-impressionist-blogging/</link>
+          <guid>https://blog.jutty.dev/links/nielsen-impressionist-blogging/</guid>
+          <description xml:base="https://blog.jutty.dev/links/nielsen-impressionist-blogging/"></description>
+      </item>
+      <item>
+          <title>Support PUT, PATCH, and DELETE in HTML Forms</title>
+          <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/triptych-form-http-methods/</link>
+          <guid>https://blog.jutty.dev/links/triptych-form-http-methods/</guid>
+          <description xml:base="https://blog.jutty.dev/links/triptych-form-http-methods/"></description>
+      </item>
+      <item>
+          <title>mrusme&#x2F;reader: for your command line what the &#x27;readability view&#x27; is for browsers</title>
+          <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/mrusme-reader/</link>
+          <guid>https://blog.jutty.dev/links/mrusme-reader/</guid>
+          <description xml:base="https://blog.jutty.dev/links/mrusme-reader/"></description>
+      </item>
+      <item>
+          <title>A handful of reasons JavaScript won’t be available - Piccalilli</title>
+          <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/piccalil-no-javascript-reasons/</link>
+          <guid>https://blog.jutty.dev/links/piccalil-no-javascript-reasons/</guid>
+          <description xml:base="https://blog.jutty.dev/links/piccalil-no-javascript-reasons/"></description>
+      </item>
+      <item>
+          <title>jgs font - Adel Faure</title>
+          <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/adelfaure-jgs-font/</link>
+          <guid>https://blog.jutty.dev/links/adelfaure-jgs-font/</guid>
+          <description xml:base="https://blog.jutty.dev/links/adelfaure-jgs-font/"></description>
+      </item>
+      <item>
+          <title>Differential Analysis: A Summary</title>
+          <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/brownplt-differential-analysis/</link>
+          <guid>https://blog.jutty.dev/links/brownplt-differential-analysis/</guid>
+          <description xml:base="https://blog.jutty.dev/links/brownplt-differential-analysis/"></description>
+      </item>
+      <item>
+          <title>aryak&#x2F;mozhi: Mozhi is an alternative-frontend for many translation engines. - Codeberg.org</title>
+          <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/aryak-mozhi/</link>
+          <guid>https://blog.jutty.dev/links/aryak-mozhi/</guid>
+          <description xml:base="https://blog.jutty.dev/links/aryak-mozhi/"></description>
+      </item>
+      <item>
+          <title>JFryy&#x2F;qq: jq multi-configuration format tool with interactive REPL.</title>
+          <pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/jfryy-qq/</link>
+          <guid>https://blog.jutty.dev/links/jfryy-qq/</guid>
+          <description xml:base="https://blog.jutty.dev/links/jfryy-qq/"></description>
+      </item>
+      <item>
+          <title>phyphox | F-Droid - Free and Open Source Android App Repository</title>
+          <pubDate>Fri, 21 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/fdroid-phyphox/</link>
+          <guid>https://blog.jutty.dev/links/fdroid-phyphox/</guid>
+          <description xml:base="https://blog.jutty.dev/links/fdroid-phyphox/"></description>
+      </item>
+      <item>
+          <title>UserLAnd | F-Droid - Free and Open Source Android App Repository</title>
+          <pubDate>Fri, 21 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/fdroid-userland/</link>
+          <guid>https://blog.jutty.dev/links/fdroid-userland/</guid>
+          <description xml:base="https://blog.jutty.dev/links/fdroid-userland/"></description>
+      </item>
+      <item>
+          <title>Sounds of the Forest - Soundmap  Timber Festival</title>
+          <pubDate>Fri, 14 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/sounds-of-the-forest/</link>
+          <guid>https://blog.jutty.dev/links/sounds-of-the-forest/</guid>
+          <description xml:base="https://blog.jutty.dev/links/sounds-of-the-forest/"></description>
+      </item>
+      <item>
+          <title>Effects Showroom - TerminalTextEffects Docs</title>
+          <pubDate>Mon, 10 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/chrisbuilds-effects-showroom/</link>
+          <guid>https://blog.jutty.dev/links/chrisbuilds-effects-showroom/</guid>
+          <description xml:base="https://blog.jutty.dev/links/chrisbuilds-effects-showroom/"></description>
+      </item>
+      <item>
+          <title>Piku</title>
+          <pubDate>Mon, 10 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/piku/</link>
+          <guid>https://blog.jutty.dev/links/piku/</guid>
+          <description xml:base="https://blog.jutty.dev/links/piku/"></description>
+      </item>
+      <item>
+          <title>Share Paste O2 | F-Droid - Free and Open Source Android App Repository</title>
+          <pubDate>Sat, 08 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/fdroid-share-paste/</link>
+          <guid>https://blog.jutty.dev/links/fdroid-share-paste/</guid>
+          <description xml:base="https://blog.jutty.dev/links/fdroid-share-paste/"></description>
+      </item>
+      <item>
+          <title>hackerb9&#x2F;lsix Like ls, but for images. Shows thumbnails in terminal using sixel graphics.</title>
+          <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/hackerb9-lsix/</link>
+          <guid>https://blog.jutty.dev/links/hackerb9-lsix/</guid>
+          <description xml:base="https://blog.jutty.dev/links/hackerb9-lsix/"></description>
+      </item>
+      <item>
+          <title>Moving Beyond Type Systems | Vhyrro&#x27;s Digital Garden</title>
+          <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/vhyrro-beyond-type-systems/</link>
+          <guid>https://blog.jutty.dev/links/vhyrro-beyond-type-systems/</guid>
+          <description xml:base="https://blog.jutty.dev/links/vhyrro-beyond-type-systems/"></description>
+      </item>
+      <item>
+          <title>Capital Offense How to Handle Abbreviations in CamelCase - Approxion</title>
+          <pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/links/approxion-camelcase-abbreviations/</link>
+          <guid>https://blog.jutty.dev/links/approxion-camelcase-abbreviations/</guid>
+          <description xml:base="https://blog.jutty.dev/links/approxion-camelcase-abbreviations/"></description>
+      </item>
+    </channel>
+</rss>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+  <html lang="en" id="theme">
+
+    <head prefix="og: https://ogp.me/ns/website#">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Waypipe: graphical remote access for Wayland applications ~ jutty.dev</title>
+
+      <link href="https://blog.jutty.dev/assets/css/style.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://blog.jutty.dev/assets/css/syntax-dark.css" media="(prefers-color-scheme: dark)" />
+      <link rel="stylesheet" type="text/css" href="https://blog.jutty.dev/assets/css/syntax-light.css" media="(prefers-color-scheme: light)" />
+
+      <link rel="icon" type="image/png" sizes="36x36" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_16.png">
+      <link rel="icon" type="image/png" sizes="128x128" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_circle_128.png">
+
+      <link rel="me" href="https://mastodon.bsd.cafe/@jutty">
+
+      <meta property="og:title" content="Waypipe: graphical remote access for Wayland applications ~ jutty.dev" />
+      <meta property="og:description" content="Tried out Waypipe today as a way to remotely control graphical Wayland applications between Alpine Linux and FreeBSD hos…" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://blog.jutty.dev/notes/waypipe/" />
+      <meta property="og:image" content="https://blog.jutty.dev/assets/img/icons/kitty/kitty_circle_192.png" />
+      <meta name="fediverse:creator" content="@jutty@bsd.cafe">
+
+      <link rel="alternate" type="application/rss+xml" title="All content (English)" href="https://blog.jutty.dev/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Posts (English)" href="https://blog.jutty.dev/posts/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Notes (English)" href="https://blog.jutty.dev/notes/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Links" href="https://blog.jutty.dev/links/atom.xml">
+    </head>
+
+    <body>
+      <div id="container">
+        <div>
+        <a id="skip-to-main" href="#main">Skip to content</a>
+        
+        <div id="user-controls" class="subpage-user-controls">
+          <nav id="nav-menu">
+            <ul>
+              <li><a id="home" href="https://blog.jutty.dev">Home</a></li>
+              <li><a href="https://blog.jutty.dev/posts">Posts</a></li>
+              <li><a href="https://blog.jutty.dev/notes">Notes</a></li>
+              <li><a href="https://blog.jutty.dev/links">Links</a></li>
+              <li><a href="https://blog.jutty.dev/feeds">RSS</a></li>
+              <li><a href="https://mastodon.bsd.cafe/@jutty">Mastodon</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+        </div>
+
+        <main id="main">
+        <article class="blog-post">
+          <h1 id="post-title">Waypipe: graphical remote access for Wayland applications</h1>
+          <time class="post-date">2025-05-28 19:29:14</time>
+          <p>Tried out <a href="https://gitlab.freedesktop.org/mstoeckl/waypipe">Waypipe</a> today as a way to remotely control graphical Wayland applications between Alpine Linux and FreeBSD hosts and it’s snappy on my wireless network + decade-old hardware combo!</p>
+<p>At first, the minimal example given by Waypipe in its README and man page did not work:</p>
+<pre data-lang="shell" class="language-shell z-code"><code class="language-shell" data-lang="shell"><span class="z-text z-plain">waypipe ssh user@server foot
+</span></code></pre>
+<p><small><em>(I’m using <a href="https://codeberg.org/dnkl/foot">foot</a> as the example here because that’s the terminal I use on both systems, but it could be anything — a simplistic application, a web browser or even a full-blown compositor).</em></small></p>
+<p>This failed with the following message:</p>
+<pre class="z-code"><code><span class="z-text z-plain">S2874:  0.603209 [src/server.c:649] Env. var XDG_RUNTIME_DIR not available, cannot place display socket for WAYLAND_DISPLAY=&quot;wayland-HBTrV7VT&quot;
+</span></code></pre>
+<p>The issue here is that most (all?) Wayland applications expect at least <code>XDG_RUNTIME_DIR</code> to be set, and a bare ssh connection will not set that on its own.</p>
+<p>The man page does mention this and how to fix it. It gives you several options, one of which is using <code>~/.ssh/environment</code> and setting it up properly at the <a href="https://man.openbsd.org/ssh#USER">client</a> and <a href="https://man.openbsd.org/sshd_config.5#PermitUserEnvironment">server</a>.</p>
+<p>Instead, I prefer to use the following approach because it’s isolated to each host instead:</p>
+<p>Client <code>~/.ssh/config</code>:</p>
+<pre data-lang="ssh_config" class="language-ssh_config z-code"><code class="language-ssh_config" data-lang="ssh_config"><span class="z-text z-plain">Host &lt;server&gt;
+</span><span class="z-text z-plain">    User &lt;user&gt;
+</span><span class="z-text z-plain">    SetEnv XDG_RUNTIME_DIR=&lt;user-writable-directory&gt;
+</span></code></pre>
+<p>The directory above must exist prior to the connection and must be writable by the user as whom we will ssh into the server. Otherwise, it will throw the following error:</p>
+<pre class="z-code"><code><span class="z-text z-plain">S2889: 60.436704 [src/util.c:237] Error opening folder in which to connect to socket: Permission denied
+</span></code></pre>
+<p>If you’d rather reuse the <code>XDG_RUNTIME_DIR</code> value you already have set on the client, you can also use <code>SendEnv</code> instead of <code>SetEnv</code>, but their values may not be interchangeable. In my case, Alpine and FreeBSD use different directories with different permissions. This is one other advantage of this method over <code>~/.ssh/environment</code>.</p>
+<p>Next, you need to make sure the server will allow the client to send this environment variable.</p>
+<p>Server <code>/etc/ssh/sshd_config</code>:</p>
+<pre data-lang="sshd_config" class="language-sshd_config z-code"><code class="language-sshd_config" data-lang="sshd_config"><span class="z-text z-plain">AcceptEnv XDG_RUNTIME_DIR
+</span></code></pre>
+<p>Make sure you have Waypipe installed on both server and client. Finally, from the client’s shell:</p>
+<pre data-lang="shell" class="language-shell z-code"><code class="language-shell" data-lang="shell"><span class="z-text z-plain">waypipe ssh user@server foot
+</span></code></pre>
+<p>That’s it! If all went well, a window should pop up with <code>foot</code> — or whatever command you chose — running directly from the server.</p>
+
+        </article>
+        </main>
+
+        <footer>
+  <hr/>
+  <p class="footer-text">made by <a href="https://jutty.dev">jutty</a>
+    with <a href="https://www.getzola.org/">Zola</a>
+    &bullet; BSD-licensed
+    <a href="https://github.com/jultty/blog">source code</a>
+    
+    &bullet; <a href="https://blog.jutty.dev/acknowledgments">acknowledgments</a>
+    <br/>
+    built <time>2026-02-28 05:55 UTC</time>,
+    1772258153 non-leap seconds since the Unix Epoch
+  </p>
+</footer>
+      </div>
+    </body>
+  </html>

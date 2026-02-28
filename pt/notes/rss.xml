@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>jutty.dev - Notas</title>
+      <link>https://blog.jutty.dev/pt/notes/</link>
+      <description>Vazamentos de memória nerd-computantes</description>
+      <generator>Zola</generator>
+      <language>pt</language>
+      <atom:link href="https://blog.jutty.dev/pt/notes/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 17 Nov 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Nova seção de notas</title>
+          <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/pt/notes/notes/</link>
+          <guid>https://blog.jutty.dev/pt/notes/notes/</guid>
+          <description xml:base="https://blog.jutty.dev/pt/notes/notes/">&lt;p&gt;Este blog agora tem uma seção de Notas para postagens menos elaboradas e atualizações mais livres em contraposição aos posts longos que levam muito mais tempo para escrever.&lt;&#x2F;p&gt;
+&lt;p&gt;Como sempre, &lt;a href=&quot;&#x2F;feeds&quot;&gt;feeds RSS dedicados&lt;&#x2F;a&gt; para cada categoria estão disponíveis, seja para todo o conteúdo ou apenas notas, tudo separado por idioma.&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>jutty.dev</title>
+      <link>http://blog.jutty.dev</link>
+      <description>Nerdices, unix, computarias</description>
+      <language>pt</language>
+      <atom:link href="http://blog.jutty.dev/pt/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 18 Aug 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>O feed para jutty.dev mudou</title>
+          <pubDate>Sun, 18 Aug 2024 15:52:11 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>http://blog.jutty.dev/pt/rss.xml</link>
+          <guid>http://blog.jutty.dev/pt/rss.xml</guid>
+          <description xml:base="http://blog.jutty.dev/pt/rss.xml">O endereço deste feed RSS mudou para: blog.jutty.dev/pt/rss.xml. Mais opções de feeds estão disponíveis em blog.jutty.dev/pt/feeds (Português) e blog.jutty.dev/feeds (Inglês). Atualize seu leitor de RSS para continuar recebendo atualizações.</description>
+      </item>
+    </channel>
+</rss>

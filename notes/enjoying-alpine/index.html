@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+  <html lang="en" id="theme">
+
+    <head prefix="og: https://ogp.me/ns/website#">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Enjoying Alpine as a daily driver ~ jutty.dev</title>
+
+      <link href="https://blog.jutty.dev/assets/css/style.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://blog.jutty.dev/assets/css/syntax-dark.css" media="(prefers-color-scheme: dark)" />
+      <link rel="stylesheet" type="text/css" href="https://blog.jutty.dev/assets/css/syntax-light.css" media="(prefers-color-scheme: light)" />
+
+      <link rel="icon" type="image/png" sizes="36x36" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_16.png">
+      <link rel="icon" type="image/png" sizes="128x128" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_circle_128.png">
+
+      <link rel="me" href="https://mastodon.bsd.cafe/@jutty">
+
+      <meta property="og:title" content="Enjoying Alpine as a daily driver ~ jutty.dev" />
+      <meta property="og:description" content="I am happy to report that my Alpine root-on-ZFS experiment is – apparently – a success. I’ve been running it as my only …" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://blog.jutty.dev/notes/enjoying-alpine/" />
+      <meta property="og:image" content="https://blog.jutty.dev/assets/img/icons/kitty/kitty_circle_192.png" />
+      <meta name="fediverse:creator" content="@jutty@bsd.cafe">
+
+      <link rel="alternate" type="application/rss+xml" title="All content (English)" href="https://blog.jutty.dev/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Posts (English)" href="https://blog.jutty.dev/posts/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Notes (English)" href="https://blog.jutty.dev/notes/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Links" href="https://blog.jutty.dev/links/atom.xml">
+    </head>
+
+    <body>
+      <div id="container">
+        <div>
+        <a id="skip-to-main" href="#main">Skip to content</a>
+        
+        <div id="user-controls" class="subpage-user-controls">
+          <nav id="nav-menu">
+            <ul>
+              <li><a id="home" href="https://blog.jutty.dev">Home</a></li>
+              <li><a href="https://blog.jutty.dev/posts">Posts</a></li>
+              <li><a href="https://blog.jutty.dev/notes">Notes</a></li>
+              <li><a href="https://blog.jutty.dev/links">Links</a></li>
+              <li><a href="https://blog.jutty.dev/feeds">RSS</a></li>
+              <li><a href="https://mastodon.bsd.cafe/@jutty">Mastodon</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+        </div>
+
+        <main id="main">
+        <article class="blog-post">
+          <h1 id="post-title">Enjoying Alpine as a daily driver</h1>
+          <time class="post-date">2025-02-23 22:07:09</time>
+          <p>I am happy to report that my Alpine root-on-ZFS experiment is – apparently – a success. I’ve been running it as my only OS on my laptop for the past week.</p>
+<p>I was previously on Void and I switched because the stable part in “rolling but stable” wasn’t really fulfilling what I expected, with occasional breakage on updates, or just things changing too often. For instance, every minor Python version you get a bump and every Python program on your system starts yelling deprecation warnings amid their output. I just can’t with this rate of change of fundamental stuff like compilers and interpreters.</p>
+<p>My favorite model of update is FreeBSD’s. Your core system updates in one way, the third-party packages update another way, the core only updates if necessary and packages not too often as to introduce such breakage. But for this machine FreeBSD is just not there (yet).</p>
+<p>Alpine updates every six months and it can be made as rolling as setting your Debian repositories to “stable” or “testing” (“edge” in Alpine) if you appreciate chaos enough.</p>
+<p>It’s my first time daily driving OpenRC and musl, which I feared would introduce painful compatibility issues, but so far I’ve been able to use everything I need, sometimes leveraging the <a href="https://wiki.alpinelinux.org/wiki/Running_glibc_programs">alternatives</a>, like its glibc compatibility layer or a Flatpak as last resort (e.g. for playing DRM video).</p>
+<p>I started drafting a blog post with the journey so far, but I’ll keep using it and hitting some more of my use cases along the way to have a more complete write-up.</p>
+
+        </article>
+        </main>
+
+        <footer>
+  <hr/>
+  <p class="footer-text">made by <a href="https://jutty.dev">jutty</a>
+    with <a href="https://www.getzola.org/">Zola</a>
+    &bullet; BSD-licensed
+    <a href="https://github.com/jultty/blog">source code</a>
+    
+    &bullet; <a href="https://blog.jutty.dev/acknowledgments">acknowledgments</a>
+    <br/>
+    built <time>2026-02-28 05:55 UTC</time>,
+    1772258153 non-leap seconds since the Unix Epoch
+  </p>
+</footer>
+      </div>
+    </body>
+  </html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+  <html lang="en" id="theme">
+
+    <head prefix="og: https://ogp.me/ns/website#">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>A timeline of Unix shells ~ jutty.dev</title>
+
+      <link href="https://blog.jutty.dev/assets/css/style.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://blog.jutty.dev/assets/css/syntax-dark.css" media="(prefers-color-scheme: dark)" />
+      <link rel="stylesheet" type="text/css" href="https://blog.jutty.dev/assets/css/syntax-light.css" media="(prefers-color-scheme: light)" />
+
+      <link rel="icon" type="image/png" sizes="36x36" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_16.png">
+      <link rel="icon" type="image/png" sizes="128x128" href="https://blog.jutty.dev/assets/img/icons/kitty/kitty_circle_128.png">
+
+      <link rel="me" href="https://mastodon.bsd.cafe/@jutty">
+
+      <meta property="og:title" content="A timeline of Unix shells ~ jutty.dev" />
+      <meta property="og:description" content="For some reason, I really like timeline visualizations, meaning a graph with events listed along a temporal axis with th…" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://blog.jutty.dev/notes/shells-timeline/" />
+      <meta property="og:image" content="https://blog.jutty.dev/assets/img/icons/kitty/kitty_circle_192.png" />
+      <meta name="fediverse:creator" content="@jutty@bsd.cafe">
+
+      <link rel="alternate" type="application/rss+xml" title="All content (English)" href="https://blog.jutty.dev/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Posts (English)" href="https://blog.jutty.dev/posts/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Notes (English)" href="https://blog.jutty.dev/notes/atom.xml">
+      <link rel="alternate" type="application/rss+xml" title="Links" href="https://blog.jutty.dev/links/atom.xml">
+    </head>
+
+    <body>
+      <div id="container">
+        <div>
+        <a id="skip-to-main" href="#main">Skip to content</a>
+        
+        <div id="user-controls" class="subpage-user-controls">
+          <nav id="nav-menu">
+            <ul>
+              <li><a id="home" href="https://blog.jutty.dev">Home</a></li>
+              <li><a href="https://blog.jutty.dev/posts">Posts</a></li>
+              <li><a href="https://blog.jutty.dev/notes">Notes</a></li>
+              <li><a href="https://blog.jutty.dev/links">Links</a></li>
+              <li><a href="https://blog.jutty.dev/feeds">RSS</a></li>
+              <li><a href="https://mastodon.bsd.cafe/@jutty">Mastodon</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+        </div>
+
+        <main id="main">
+        <article class="blog-post">
+          <h1 id="post-title">A timeline of Unix shells</h1>
+          <time class="post-date">2025-02-24 14:34:25</time>
+          <p>For some reason, I really like timeline visualizations, meaning a graph with events listed along a temporal axis with the dates in which they happened. I remember using tape to glue several pieces of paper on the wall as a kid to make a long timeline of world history events.</p>
+<p>So every time I find a tool to do that, I want to check it out. The latest was <a href="https://markwhen.com/">Markwhen</a>, which works entirely by defining the timeline as code and then running an executable against it to render image or interactive web outputs.</p>
+<p>To try it out, I made this timeline of Unix shells. You can view <a href="https://jultty.github.io/shells-timeline/">the HTML version here</a> or the images below (dark and light themes):</p>
+<p><a href="/assets/img/posts/shells-timeline/shells-timeline_dark.png"><img src="/assets/img/posts/shells-timeline/shells-timeline_dark.png" alt="A timeline of Unix shells with events starting in 1963 and ending in 2020. Years are represented horizontally and events start from the top left towards the bottom right, forming a diagonal of events and their labels. Each event is represented by a dot, a date and a shell name. Foreground is white and gray, background is black." /></a>
+<a href="/assets/img/posts/shells-timeline/shells-timeline_light.png"><img src="/assets/img/posts/shells-timeline/shells-timeline_light.png" alt="The same timeline as in the previous picture, but with black and gray foreground and white background." /></a></p>
+<details>
+<summary>Expand for a textual list of the timeline events</summary>
+<ul>
+<li>1963: RUNCOM</li>
+<li>1965: Multics shell</li>
+<li>1971-11: Thompson shell (sh)</li>
+<li>1977-07-01: PWB shell (sh)</li>
+<li>1978: C shell (csh)</li>
+<li>1979: Bourne shell (sh)</li>
+<li>1983-10-04: TENEX C Shell (tcsh)</li>
+<li>1983-06-09: KornShell (ksh)</li>
+<li>1989-05-30: Almquist shell (ash)</li>
+<li>1989-06-08: Bourne-Again Shell (bash)</li>
+<li>1990-12-14: Z shell (zsh)</li>
+<li>1992: Plan 9 Rc (rc)</li>
+<li>1995-06-16: Public Domain KornShell (pdksh)</li>
+<li>1997-06-19: Debian Almquist shell (dash)</li>
+<li>2004-04-07: MirBSD Korn Shell (mksh)</li>
+<li>2005: friendly interactive shell (fish)</li>
+<li>2019-08-23: Nushell (nu)</li>
+<li>2020-10-30: Portable OpenBSD KornShell (oksh)</li>
+</ul>
+</details>
+<p>Don’t ask me why every item is followed by …, I’d love to know.</p>
+<p>If you are interested, <a href="https://github.com/jultty/shells-timeline/blob/main/shells.mw">here is the source code</a> that was used to generate the images above. The source code also contains notes that are only displayed in the HTML version. These notes are sources for the dates and sometimes observations on the date precision.</p>
+
+        </article>
+        </main>
+
+        <footer>
+  <hr/>
+  <p class="footer-text">made by <a href="https://jutty.dev">jutty</a>
+    with <a href="https://www.getzola.org/">Zola</a>
+    &bullet; BSD-licensed
+    <a href="https://github.com/jultty/blog">source code</a>
+    
+    &bullet; <a href="https://blog.jutty.dev/acknowledgments">acknowledgments</a>
+    <br/>
+    built <time>2026-02-28 05:55 UTC</time>,
+    1772258153 non-leap seconds since the Unix Epoch
+  </p>
+</footer>
+      </div>
+    </body>
+  </html>
