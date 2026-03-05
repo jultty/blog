@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>jutty.dev - Notes</title>
+    <subtitle>Computer nerd memory leaks</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://blog.jutty.dev/notes/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.jutty.dev/notes/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-05-28T19:29:14-03:00</updated>
+    <id>https://blog.jutty.dev/notes/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Waypipe: graphical remote access for Wayland applications</title>
+        <published>2025-05-28T19:29:14-03:00</published>
+        <updated>2025-05-28T19:29:14-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/notes/waypipe/"/>
+        <id>https://blog.jutty.dev/notes/waypipe/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/notes/waypipe/">&lt;p&gt;Tried out &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.freedesktop.org&#x2F;mstoeckl&#x2F;waypipe&quot;&gt;Waypipe&lt;&#x2F;a&gt; today as a way to remotely control graphical Wayland applications between Alpine Linux and FreeBSD hosts and it’s snappy on my wireless network + decade-old hardware combo!&lt;&#x2F;p&gt;
+&lt;p&gt;At first, the minimal example given by Waypipe in its README and man page did not work:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;shell&quot; class=&quot;language-shell z-code&quot;&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;waypipe ssh user@server foot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;small&gt;&lt;em&gt;(I’m using &lt;a href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;dnkl&#x2F;foot&quot;&gt;foot&lt;&#x2F;a&gt; as the example here because that’s the terminal I use on both systems, but it could be anything — a simplistic application, a web browser or even a full-blown compositor).&lt;&#x2F;em&gt;&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This failed with the following message:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;S2874:  0.603209 [src&#x2F;server.c:649] Env. var XDG_RUNTIME_DIR not available, cannot place display socket for WAYLAND_DISPLAY=&amp;quot;wayland-HBTrV7VT&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The issue here is that most (all?) Wayland applications expect at least &lt;code&gt;XDG_RUNTIME_DIR&lt;&#x2F;code&gt; to be set, and a bare ssh connection will not set that on its own.&lt;&#x2F;p&gt;
+&lt;p&gt;The man page does mention this and how to fix it. It gives you several options, one of which is using &lt;code&gt;~&#x2F;.ssh&#x2F;environment&lt;&#x2F;code&gt; and setting it up properly at the &lt;a href=&quot;https:&#x2F;&#x2F;man.openbsd.org&#x2F;ssh#USER&quot;&gt;client&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;man.openbsd.org&#x2F;sshd_config.5#PermitUserEnvironment&quot;&gt;server&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Instead, I prefer to use the following approach because it’s isolated to each host instead:&lt;&#x2F;p&gt;
+&lt;p&gt;Client &lt;code&gt;~&#x2F;.ssh&#x2F;config&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ssh_config&quot; class=&quot;language-ssh_config z-code&quot;&gt;&lt;code class=&quot;language-ssh_config&quot; data-lang=&quot;ssh_config&quot;&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Host &amp;lt;server&amp;gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;    User &amp;lt;user&amp;gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;    SetEnv XDG_RUNTIME_DIR=&amp;lt;user-writable-directory&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The directory above must exist prior to the connection and must be writable by the user as whom we will ssh into the server. Otherwise, it will throw the following error:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;S2889: 60.436704 [src&#x2F;util.c:237] Error opening folder in which to connect to socket: Permission denied
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;If you’d rather reuse the &lt;code&gt;XDG_RUNTIME_DIR&lt;&#x2F;code&gt; value you already have set on the client, you can also use &lt;code&gt;SendEnv&lt;&#x2F;code&gt; instead of &lt;code&gt;SetEnv&lt;&#x2F;code&gt;, but their values may not be interchangeable. In my case, Alpine and FreeBSD use different directories with different permissions. This is one other advantage of this method over &lt;code&gt;~&#x2F;.ssh&#x2F;environment&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Next, you need to make sure the server will allow the client to send this environment variable.&lt;&#x2F;p&gt;
+&lt;p&gt;Server &lt;code&gt;&#x2F;etc&#x2F;ssh&#x2F;sshd_config&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sshd_config&quot; class=&quot;language-sshd_config z-code&quot;&gt;&lt;code class=&quot;language-sshd_config&quot; data-lang=&quot;sshd_config&quot;&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;AcceptEnv XDG_RUNTIME_DIR
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Make sure you have Waypipe installed on both server and client. Finally, from the client’s shell:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;shell&quot; class=&quot;language-shell z-code&quot;&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;waypipe ssh user@server foot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That’s it! If all went well, a window should pop up with &lt;code&gt;foot&lt;&#x2F;code&gt; — or whatever command you chose — running directly from the server.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>A timeline of Unix shells</title>
+        <published>2025-02-24T14:34:25-03:00</published>
+        <updated>2025-02-24T14:34:25-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/notes/shells-timeline/"/>
+        <id>https://blog.jutty.dev/notes/shells-timeline/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/notes/shells-timeline/">&lt;p&gt;For some reason, I really like timeline visualizations, meaning a graph with events listed along a temporal axis with the dates in which they happened. I remember using tape to glue several pieces of paper on the wall as a kid to make a long timeline of world history events.&lt;&#x2F;p&gt;
+&lt;p&gt;So every time I find a tool to do that, I want to check it out. The latest was &lt;a href=&quot;https:&#x2F;&#x2F;markwhen.com&#x2F;&quot;&gt;Markwhen&lt;&#x2F;a&gt;, which works entirely by defining the timeline as code and then running an executable against it to render image or interactive web outputs.&lt;&#x2F;p&gt;
+&lt;p&gt;To try it out, I made this timeline of Unix shells. You can view &lt;a href=&quot;https:&#x2F;&#x2F;jultty.github.io&#x2F;shells-timeline&#x2F;&quot;&gt;the HTML version here&lt;&#x2F;a&gt; or the images below (dark and light themes):&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;&#x2F;assets&#x2F;img&#x2F;posts&#x2F;shells-timeline&#x2F;shells-timeline_dark.png&quot;&gt;&lt;img src=&quot;&#x2F;assets&#x2F;img&#x2F;posts&#x2F;shells-timeline&#x2F;shells-timeline_dark.png&quot; alt=&quot;A timeline of Unix shells with events starting in 1963 and ending in 2020. Years are represented horizontally and events start from the top left towards the bottom right, forming a diagonal of events and their labels. Each event is represented by a dot, a date and a shell name. Foreground is white and gray, background is black.&quot; &#x2F;&gt;&lt;&#x2F;a&gt;
+&lt;a href=&quot;&#x2F;assets&#x2F;img&#x2F;posts&#x2F;shells-timeline&#x2F;shells-timeline_light.png&quot;&gt;&lt;img src=&quot;&#x2F;assets&#x2F;img&#x2F;posts&#x2F;shells-timeline&#x2F;shells-timeline_light.png&quot; alt=&quot;The same timeline as in the previous picture, but with black and gray foreground and white background.&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;details&gt;
+&lt;summary&gt;Expand for a textual list of the timeline events&lt;&#x2F;summary&gt;
+&lt;ul&gt;
+&lt;li&gt;1963: RUNCOM&lt;&#x2F;li&gt;
+&lt;li&gt;1965: Multics shell&lt;&#x2F;li&gt;
+&lt;li&gt;1971-11: Thompson shell (sh)&lt;&#x2F;li&gt;
+&lt;li&gt;1977-07-01: PWB shell (sh)&lt;&#x2F;li&gt;
+&lt;li&gt;1978: C shell (csh)&lt;&#x2F;li&gt;
+&lt;li&gt;1979: Bourne shell (sh)&lt;&#x2F;li&gt;
+&lt;li&gt;1983-10-04: TENEX C Shell (tcsh)&lt;&#x2F;li&gt;
+&lt;li&gt;1983-06-09: KornShell (ksh)&lt;&#x2F;li&gt;
+&lt;li&gt;1989-05-30: Almquist shell (ash)&lt;&#x2F;li&gt;
+&lt;li&gt;1989-06-08: Bourne-Again Shell (bash)&lt;&#x2F;li&gt;
+&lt;li&gt;1990-12-14: Z shell (zsh)&lt;&#x2F;li&gt;
+&lt;li&gt;1992: Plan 9 Rc (rc)&lt;&#x2F;li&gt;
+&lt;li&gt;1995-06-16: Public Domain KornShell (pdksh)&lt;&#x2F;li&gt;
+&lt;li&gt;1997-06-19: Debian Almquist shell (dash)&lt;&#x2F;li&gt;
+&lt;li&gt;2004-04-07: MirBSD Korn Shell (mksh)&lt;&#x2F;li&gt;
+&lt;li&gt;2005: friendly interactive shell (fish)&lt;&#x2F;li&gt;
+&lt;li&gt;2019-08-23: Nushell (nu)&lt;&#x2F;li&gt;
+&lt;li&gt;2020-10-30: Portable OpenBSD KornShell (oksh)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;details&gt;
+&lt;p&gt;Don’t ask me why every item is followed by …, I’d love to know.&lt;&#x2F;p&gt;
+&lt;p&gt;If you are interested, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jultty&#x2F;shells-timeline&#x2F;blob&#x2F;main&#x2F;shells.mw&quot;&gt;here is the source code&lt;&#x2F;a&gt; that was used to generate the images above. The source code also contains notes that are only displayed in the HTML version. These notes are sources for the dates and sometimes observations on the date precision.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Enjoying Alpine as a daily driver</title>
+        <published>2025-02-23T22:07:09-03:00</published>
+        <updated>2025-02-23T22:07:09-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/notes/enjoying-alpine/"/>
+        <id>https://blog.jutty.dev/notes/enjoying-alpine/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/notes/enjoying-alpine/">&lt;p&gt;I am happy to report that my Alpine root-on-ZFS experiment is – apparently – a success. I’ve been running it as my only OS on my laptop for the past week.&lt;&#x2F;p&gt;
+&lt;p&gt;I was previously on Void and I switched because the stable part in “rolling but stable” wasn’t really fulfilling what I expected, with occasional breakage on updates, or just things changing too often. For instance, every minor Python version you get a bump and every Python program on your system starts yelling deprecation warnings amid their output. I just can’t with this rate of change of fundamental stuff like compilers and interpreters.&lt;&#x2F;p&gt;
+&lt;p&gt;My favorite model of update is FreeBSD’s. Your core system updates in one way, the third-party packages update another way, the core only updates if necessary and packages not too often as to introduce such breakage. But for this machine FreeBSD is just not there (yet).&lt;&#x2F;p&gt;
+&lt;p&gt;Alpine updates every six months and it can be made as rolling as setting your Debian repositories to “stable” or “testing” (“edge” in Alpine) if you appreciate chaos enough.&lt;&#x2F;p&gt;
+&lt;p&gt;It’s my first time daily driving OpenRC and musl, which I feared would introduce painful compatibility issues, but so far I’ve been able to use everything I need, sometimes leveraging the &lt;a href=&quot;https:&#x2F;&#x2F;wiki.alpinelinux.org&#x2F;wiki&#x2F;Running_glibc_programs&quot;&gt;alternatives&lt;&#x2F;a&gt;, like its glibc compatibility layer or a Flatpak as last resort (e.g. for playing DRM video).&lt;&#x2F;p&gt;
+&lt;p&gt;I started drafting a blog post with the journey so far, but I’ll keep using it and hitting some more of my use cases along the way to have a more complete write-up.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>New notes section</title>
+        <published>2024-11-17T00:00:01-03:00</published>
+        <updated>2024-11-17T00:00:01-03:00</updated>
+        
+        <author>
+          <name>
+            
+              Juno Takano
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.jutty.dev/notes/notes/"/>
+        <id>https://blog.jutty.dev/notes/notes/</id>
+        
+        <content type="html" xml:base="https://blog.jutty.dev/notes/notes/">&lt;p&gt;This blog now has a Notes section for shorter, less elaborate thoughts, meant to allow more free-form updates as opposed to the longer posts which take much more time to write.&lt;&#x2F;p&gt;
+&lt;p&gt;As usual, &lt;a href=&quot;&#x2F;feeds&quot;&gt;dedicated RSS feeds&lt;&#x2F;a&gt; are available for all content or just notes on a per-language basis.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
