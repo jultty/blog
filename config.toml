@@ -24,14 +24,9 @@ description = "Vazamentos de memória nerd-computantes"
 smart_punctuation = true
 bottom_footnotes = true
 
-highlight_code = true
-highlight_theme = "css"
-# highlight_themes_css = [
-#   # base16-ocean-dark, material-dark, nord
-#   { theme = "material-dark", filename = "assets/css/syntax-dark.css" },
-#   # dimmed-fluid, subway-moscow
-#   { theme = "dimmed-fluid", filename = "assets/css/syntax-light.css" },
-# ]
+[markdown.highlighting]
+theme = "night-owl"
+style = "class"
 
 [extra]
 title_separator = "-"
