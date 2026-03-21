@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>jutty.dev - Posts</title>
+      <link>https://blog.jutty.dev/pt/posts/</link>
+      <description>Vazamentos de memória nerd-computantes</description>
+      <generator>Zola</generator>
+      <language>pt</language>
+      <atom:link href="https://blog.jutty.dev/pt/posts/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>[Meta] Aviso sobre os feeds RSS</title>
+          <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/pt/posts/notice-on-rss-feeds/</link>
+          <guid>https://blog.jutty.dev/pt/posts/notice-on-rss-feeds/</guid>
+          <description xml:base="https://blog.jutty.dev/pt/posts/notice-on-rss-feeds/">&lt;p&gt;Para quem está assinando o feed RSS desse blog:&lt;&#x2F;p&gt;
+&lt;p&gt;Primeiro, se você está recebendo links mas prefere apenas os posts, você provavelmente se inscreveu em um feed de “todo o conteúdo”. Todas as opções de feeds estão na página &lt;a href=&quot;&#x2F;feeds&quot;&gt;feeds&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Segundo, conforme um &lt;a href=&quot;https:&#x2F;&#x2F;mastodon.bsd.cafe&#x2F;@jutty&#x2F;113013450769036273&quot;&gt;fio recente&lt;&#x2F;a&gt; que fiz no Mastodon, estou planejando manter apenas os feeds Atom futuramente.&lt;&#x2F;p&gt;
+&lt;p&gt;Atualmente, todos os feeds são oferecidos em dois formatos. Por exemplo:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.jutty.dev&#x2F;posts&#x2F;rss.xml&quot;&gt;https:&#x2F;&#x2F;blog.jutty.dev&#x2F;posts&#x2F;rss.xml&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.jutty.dev&#x2F;posts&#x2F;atom.xml&quot;&gt;https:&#x2F;&#x2F;blog.jutty.dev&#x2F;posts&#x2F;atom.xml&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Após um bom tempo, irei eventualmente desativar os feeds que acabam em &lt;code&gt;rss.xml&lt;&#x2F;code&gt;, então, se é um desses em que você se inscreveu, considere mudar para o equivalente com &lt;code&gt;atom.xml&lt;&#x2F;code&gt; no final.&lt;&#x2F;p&gt;
+&lt;p&gt;Os dois formatos vão continuar a funcionar por hora. A única mudança imediata será que apenas os feeds &lt;code&gt;atom.xml&lt;&#x2F;code&gt; vão continuar listados na &lt;a href=&quot;&#x2F;feeds&quot;&gt;página de feeds&lt;&#x2F;a&gt; e nas tags de metadados do código HTML.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Scripts em OCaml</title>
+          <pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate>
+          <author>Juno Takano</author>
+          <link>https://blog.jutty.dev/pt/posts/scripts-em-ocaml/</link>
+          <guid>https://blog.jutty.dev/pt/posts/scripts-em-ocaml/</guid>
+          <description xml:base="https://blog.jutty.dev/pt/posts/scripts-em-ocaml/">&lt;p&gt;Este blog gera suas postagens com o Pandoc, mas quem faz o trabalho lógico de identificar os arquivos e montar os comandos é um pequeno script em OCaml.&lt;&#x2F;p&gt;
+&lt;p&gt;Descobri essa linguagem quando comecei a investigar como poderia substituir o Bash como uma linguagem para scripts. Eu acho que o Bash é excelente para cumprir essa função, apesar de bastante inseguro e propenso a erros. O que me incomodava mesmo era ver que todo aquele tempo escrevendo scripts com Bash poderia ser tempo aprendendo uma linguagem cujo conhecimento se transferisse para muitas outras aplicações.&lt;&#x2F;p&gt;
+&lt;p&gt;O script se resume a:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ocaml&quot; class=&quot;language-ocaml &quot;&gt;&lt;code class=&quot;language-ocaml&quot; data-lang=&quot;ocaml&quot;&gt;let pandoc_params = 
+  &amp;quot;--css ..&amp;#x2F;..&amp;#x2F;assets&amp;#x2F;style.css -s --to html5 --metadata pagetitle=&amp;#x27;basename&amp;#x27; &amp;quot;
+
+let vert md = begin
+  if md &amp;lt;&amp;gt; &amp;quot;gen.ml&amp;quot; &amp;amp;&amp;amp; md &amp;lt;&amp;gt; &amp;quot;html&amp;quot; then
+    ignore( Sys.command (
+      &amp;quot;pandoc &amp;quot; ^ pandoc_params ^ md ^ &amp;quot; -o html&amp;#x2F;&amp;quot; ^ md ^ &amp;quot;.html &amp;quot;
+    ) )
+end ;;
+
+let contents = Array.to_list (Sys.readdir &amp;quot;.&amp;quot;) in
+List.map vert contents ;;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Primeiro, armazeno em &lt;code&gt;pandoc_params&lt;&#x2F;code&gt; os parâmetros comuns que serão passados ao Pandoc para gerar os arquivos HTML a partir dos arquivos em Markdown.&lt;&#x2F;p&gt;
+&lt;p&gt;Em seguida, defino a função &lt;code&gt;vert&lt;&#x2F;code&gt;, que, caso o arquivo não se chame “gen.ml” (o próprio script) nem “html” (o diretório onde os arquivos gerados ficam), o comando do Pandoc é chamado com os nomes dos arquivos de entrada e saída.&lt;&#x2F;p&gt;
+&lt;p&gt;Essa função então é aplicada com &lt;code&gt;List.map vert contents&lt;&#x2F;code&gt; a cada arquivo do diretório atual.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;referencias&quot;&gt;Referências&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rosettacode.org&#x2F;wiki&#x2F;Walk_a_directory&#x2F;Non-recursively#OCaml&quot;&gt;Walk a directory&#x2F;Non-recursively - Rosetta Code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;jez.io&#x2F;pandoc-markdown-css-theme&#x2F;&quot;&gt;Pandoc Markdown CSS Theme&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+    </channel>
+</rss>
