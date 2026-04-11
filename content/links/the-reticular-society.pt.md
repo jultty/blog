@@ -1,5 +1,6 @@
 +++
 title = "The Reticular Society"
+authors = [ "Ian Alan Paul" ]
 date = 2024-10-04
 [extra]
 url = "https://www.thereticularsociety.net/"

@@ -1,5 +1,6 @@
 +++
 title = "Bread on Penguins"
+authors = [ "Bread" ]
 date = 2025-07-14T18:34:23-03:00
 [extra]
 url = "https://www.youtube.com/channel/UCwHwDuNd9lCdA7chyyquDXw"

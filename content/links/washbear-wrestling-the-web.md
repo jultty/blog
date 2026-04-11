@@ -1,5 +1,6 @@
 +++
 title = "wrestling the web from corporate control requires making it boring again"
+authors = [ "washbear" ]
 date = 2024-10-05
 [extra]
 url = "https://washbear.neocities.org/browsers"

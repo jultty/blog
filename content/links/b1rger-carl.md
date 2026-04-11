@@ -1,5 +1,6 @@
 +++
 title = "carl: modern version of cal that can incorporate ICal (ics) data"
+authors = [ "Birger Schacht" ]
 date = 2024-10-01
 [extra]
 url = "https://github.com/b1rger/carl"

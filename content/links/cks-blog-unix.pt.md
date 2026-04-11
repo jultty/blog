@@ -1,5 +1,6 @@
 +++
 title = "Chris's Wiki :: blog/unix"
+authors = [ "Chris Siebenmann" ]
 date = 2024-10-05
 [extra]
 url = "https://utcc.utoronto.ca/~cks/space/blog/unix"

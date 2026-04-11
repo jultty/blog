@@ -1,5 +1,6 @@
 +++
 title = "Release tmux 3.5 · tmux/tmux"
+authors = [ "Nicholas Marriott (nicm)" ]
 date = 2024-09-27
 [extra]
 url = "https://github.com/tmux/tmux/releases/tag/3.5"

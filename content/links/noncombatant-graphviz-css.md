@@ -1,5 +1,6 @@
 +++
 title = "Styling Graphviz with CSS"
+authors = [ "Chris Palmer" ]
 date = 2024-11-18
 [extra]
 url = "https://noncombatant.org/2024/11/16/styling-graphviz-with-css/"
