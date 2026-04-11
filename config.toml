@@ -16,9 +16,9 @@ taxonomies = [
 
 [languages.pt]
 generate_feeds = true
-feed_filenames = ["rss.xml", "atom.xml"]
+feed_filenames = ["atom.xml"]
 title = "jutty.dev"
-description = "Vazamentos de memória nerd-computantes"
+description = "Vazamentos de uma memória nerd-computante"
 
 [markdown]
 smart_punctuation = true

@@ -3,12 +3,12 @@
 {%- block content %}
 {%- set english_section = get_section(path="links/_index.md", lang="en") %}
         <h1 class="title">{{ section.title }}</h1>
-        <ul id="posts">
+        <ul id="links">
           {%- for page in english_section.pages %}
           <li>
           {%- if page.content -%}
           {%- set portuguese_page = get_page(path="links/" ~ page.slug ~ ".pt.md") %}
-            <time class="post-date"><a href="
+            <time class="link-date"><a href="
             {%- if lang == "pt" -%}
               {{ portuguese_page.permalink -}}
             {%- else -%}
@@ -16,9 +16,10 @@
             {%- endif -%}
             ">{{ page.date | date(format="%Y-%m-%d") -}}</a></time>
           {%- else %}
-            <time class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</time>
+            <time class="link-date">{{ page.date | date(format="%Y-%m-%d") }}</time>
           {%- endif %}
             <a href="{{ page.extra.url | safe }}">{{ page.title }}</a>
+            <small class="link-author">by {{ page.authors | join(sep=", ") }}</small>
           </li>
           {%- endfor %}
         </ul>

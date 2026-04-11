@@ -123,9 +123,20 @@ main {
 }
 
 .index-see-all {
-  margin-left: 20px;
-  padding-left: 30px;
+  margin-top: 0px;
   font-size: 12pt;
+  font-style: italic;
+  filter: brightness(60%);
+}
+
+.link-box {
+    border: 2px dotted #888;
+    border-radius: 12px;
+    margin: 0 20px;
+}
+
+.link-title {
+    margin-bottom: 5px;
 }
 
 .post-date, .link-date {
@@ -135,8 +146,12 @@ main {
   text-decoration-thickness: 0.1px;
 }
 
-.link-date {
-  margin-left: 30px;
+.link-data {
+    margin-top: 0
+}
+
+.link-data .link-author {
+    margin-right: 20px;
 }
 
 article .post-date {
@@ -262,7 +277,7 @@ footer {
   font-size: 13px;
 }
 
-/* phone */
+/* narrow */
 @media (max-width: 650px) {
   .article {
     margin: 0 20px;
@@ -274,7 +289,7 @@ footer {
     grid-template-areas: "nav nav" "lang lang";
   }
 
-  ul#posts {
+  ul#posts, ul#links {
     margin-left: 0px;
     padding-left: 20px;
   }
@@ -285,9 +300,31 @@ footer {
   }
 
   .index-see-all {
-    margin-left: 0%;
-    padding-left: 30px;
+    margin-left: 20px;
   }
+
+  .post-date { display: block; }
+  .link-date { display: block; }
+  .link-author { display: block; }
+
+  ul#posts li:before, ul#links li:before {
+      display: none;
+  }
+
+  ul#posts li, ul#links li {
+      padding-bottom: 20px;
+  }
+
+  .index-h2 {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .index-posts ul#posts {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
 }
 
 /* tablet */
@@ -307,9 +344,13 @@ footer {
     margin-top: 40px;
   }
 
-  ul#posts {
+  ul#posts, ul#links {
     margin-left: 30px;
     padding-left: 20px;
+  }
+
+  .index-see-all {
+  margin-left: 50px;
   }
 
   .article {
@@ -337,7 +378,7 @@ footer {
     grid-template-columns: 12% 62% 14% 12%;
   }
 
-  .index-posts ul#posts {
+  .index-posts ul#posts, .index-posts ul#links  {
     margin-left: 40px;
   }
 
@@ -440,5 +481,9 @@ footer {
 
   details summary {
       color: #39959A;
+  }
+
+  .link-box {
+      border-color: #aaa;
   }
 }

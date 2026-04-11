@@ -39,9 +39,9 @@
             {% endfor %}
           </ul>
         </nav>
-        <a class="index-see-all" href="{{ posts.permalink }}">
+        <p class="index-see-all"><a href="{{ posts.permalink }}">
           {%- if lang == "pt" %}Ver todos{% else %}See all{% endif %}
-        </a>
+        </a></p>
 
         <h2 class="index-h2">
           {%- if lang == "pt" %}Últimas notas{% else %}Latest notes{% endif -%}
@@ -62,9 +62,10 @@
             {% endfor %}
           </ul>
         </nav>
-        <a class="index-see-all" href="{{ notes.permalink }}">
+
+        <p class="index-see-all"><a href="{{ notes.permalink }}">
           {%- if lang == "pt" %}Ver todos{% else %}See all{% endif %}
-        </a>
+        </a></p>
 
         <h2 class="index-h2">
           {%- if lang == "pt" %}Últimos links{% else %}Latest links{% endif -%}
@@ -86,13 +87,14 @@
                   {{ link.extra.url | safe }}
                   {%- endif -%}
               ">{{ link.title }}</a>
+                <small class="link-author">by {{ link.authors | join(sep=", ") }}</small>
             </li>
             {% if loop.index == 5  %}{% break %}{% endif %}
             {% endfor %}
           </ul>
         </nav>
-        <a class="index-see-all" href="{{ links.permalink }}">
+        <p class="index-see-all"><a href="{{ links.permalink }}">
           {%- if lang == "pt" %}Ver todos{% else %}See all{% endif %}
-        </a>
+        </a></p>
 
 {%- endblock content %}
