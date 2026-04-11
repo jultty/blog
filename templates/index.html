@@ -21,29 +21,6 @@
 {% block content %}
 
         <h2 class="index-h2">
-          {%- if lang == "pt" %}Últimos posts{% else %}Latest posts{% endif -%}
-        </h2>
-  {%- if lang == "pt" %}
-    {%- set posts = get_section(path="posts/_index.pt.md") %}
-  {%- else %}
-    {%- set posts = get_section(path="posts/_index.md") %}
-  {%- endif %}
-        <nav class="index-posts">
-          <ul id="posts">
-            {% for post in posts.pages %}
-            <li>
-              <span class="post-date">{{ post.date | date(format="%Y-%m-%d") }}</span>
-              <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
-            </li>
-            {% if loop.index == 5  %}{% break %}{% endif %}
-            {% endfor %}
-          </ul>
-        </nav>
-        <p class="index-see-all"><a href="{{ posts.permalink }}">
-          {%- if lang == "pt" %}Ver todos{% else %}See all{% endif %}
-        </a></p>
-
-        <h2 class="index-h2">
           {%- if lang == "pt" %}Últimas notas{% else %}Latest notes{% endif -%}
         </h2>
   {%- if lang == "pt" %}
@@ -96,5 +73,29 @@
         <p class="index-see-all"><a href="{{ links.permalink }}">
           {%- if lang == "pt" %}Ver todos{% else %}See all{% endif %}
         </a></p>
+
+        <h2 class="index-h2">
+          {%- if lang == "pt" %}Últimos posts{% else %}Latest posts{% endif -%}
+        </h2>
+  {%- if lang == "pt" %}
+    {%- set posts = get_section(path="posts/_index.pt.md") %}
+  {%- else %}
+    {%- set posts = get_section(path="posts/_index.md") %}
+  {%- endif %}
+        <nav class="index-posts">
+          <ul id="posts">
+            {% for post in posts.pages %}
+            <li>
+              <span class="post-date">{{ post.date | date(format="%Y-%m-%d") }}</span>
+              <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
+            </li>
+            {% if loop.index == 5  %}{% break %}{% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+        <p class="index-see-all"><a href="{{ posts.permalink }}">
+          {%- if lang == "pt" %}Ver todos{% else %}See all{% endif %}
+        </a></p>
+
 
 {%- endblock content %}
