@@ -35,6 +35,7 @@
       <link rel="icon" type="image/png" sizes="128x128" href="{{ get_url(path="assets/img/icons/kitty/kitty_circle_128.png", trailing_slash=false) }}">
 
       <link rel="me" href="https://mastodon.bsd.cafe/@jutty">
+      <link rel="webmention" href="https://webmention.io/jutty.dev/webmention"/>
 
       {%- set description = page.content | default(value=config.description) | striptags | regex_replace(pattern="\n", rep=" ") | truncate(length=120) %}
 
