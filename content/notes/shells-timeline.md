@@ -1,6 +1,9 @@
 +++
 title = "A timeline of Unix shells"
 date = 2025-02-24T14:34:25-03:00
+
+[taxonomies]
+tags = [ "unix", "shell" ]
 +++
 
 For some reason, I really like timeline visualizations, meaning a graph with events listed along a temporal axis with the dates in which they happened. I remember using tape to glue several pieces of paper on the wall as a kid to make a long timeline of world history events.
