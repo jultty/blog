@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{%- block extra_head %}
+{%- block octo_head %}
+        <link rel="preload" as="fetch" href="https://octothorp.es/?uri={{ page.permalink }}">
 {%- endblock -%}
 
 {% block content %}

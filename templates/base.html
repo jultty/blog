@@ -13,70 +13,69 @@
     {%- endif %}
 
     <head prefix="og: https://ogp.me/ns/website#">
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      {%- set title_tail = " ~ " ~ config.title %}
+        {%- set title_tail = " ~ " ~ config.title %}
 
-      {%- if page.title %}
-      {%- set title = page.title ~ title_tail %}
-      {%- elif section.title %}
-      {%- set title = section.title ~ title_tail %}
-      {%- else %}
-      {%- set title = config.title %}
-      {%- endif %}
+        {%- if page.title %}
+        {%- set title = page.title ~ title_tail %}
+        {%- elif section.title %}
+        {%- set title = section.title ~ title_tail %}
+        {%- else %}
+        {%- set title = config.title %}
+        {%- endif %}
 
-      <title>{{ title }}</title>
+        <title>{{ title }}</title>
 
-      <link href="{{ get_url(path="assets/css/style.css", trailing_slash=false) }}" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="{{ get_url(path="assets/css/syntax-dark.css", trailing_slash=false) }}" media="(prefers-color-scheme: dark)" />
-      <link rel="stylesheet" type="text/css" href="{{ get_url(path="assets/css/syntax-light.css", trailing_slash=false) }}" media="(prefers-color-scheme: light)" />
+        <link href="{{ get_url(path="assets/css/style.css", trailing_slash=false) }}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="assets/css/syntax-dark.css", trailing_slash=false) }}" media="(prefers-color-scheme: dark)" />
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="assets/css/syntax-light.css", trailing_slash=false) }}" media="(prefers-color-scheme: light)" />
 
-      <link rel="icon" type="image/png" sizes="36x36" href="{{ get_url(path="assets/img/icons/kitty/kitty_32.png", trailing_slash=false) }}">
-      <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="assets/img/icons/kitty/kitty_16.png", trailing_slash=false) }}">
-      <link rel="icon" type="image/png" sizes="128x128" href="{{ get_url(path="assets/img/icons/kitty/kitty_circle_128.png", trailing_slash=false) }}">
+        <link rel="icon" type="image/png" sizes="36x36" href="{{ get_url(path="assets/img/icons/kitty/kitty_32.png", trailing_slash=false) }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="assets/img/icons/kitty/kitty_16.png", trailing_slash=false) }}">
+        <link rel="icon" type="image/png" sizes="128x128" href="{{ get_url(path="assets/img/icons/kitty/kitty_circle_128.png", trailing_slash=false) }}">
 
-      <link rel="me" href="https://tilde.zone/@jutty">
-      <link rel="webmention" href="https://webmention.io/jutty.dev/webmention"/>
+        <link rel="me" href="https://tilde.zone/@jutty">
+        <link rel="webmention" href="https://webmention.io/jutty.dev/webmention"/>
 
-      {%- set description = page.content | default(value=config.description) | striptags | regex_replace(pattern="\n", rep=" ") | truncate(length=120) %}
+        {%- set description = page.content | default(value=config.description) | striptags | regex_replace(pattern="\n", rep=" ") | truncate(length=120) %}
 
-      <meta property="og:title" content="{{ title }}" />
-      <meta property="og:description" content="{{ description }}" />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="{{ current_url | default(value= get_url(path="/")) | safe }}" />
-      <meta property="og:image" content="{{ get_url(path="assets/img/icons/kitty/kitty_circle_192.png") }}" />
-      <meta name="fediverse:creator" content="@jutty@tilde.zone">
+        <meta property="og:title" content="{{ title }}" />
+        <meta property="og:description" content="{{ description }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ current_url | default(value= get_url(path="/")) | safe }}" />
+        <meta property="og:image" content="{{ get_url(path="assets/img/icons/kitty/kitty_circle_192.png") }}" />
+        <meta name="fediverse:creator" content="@jutty@tilde.zone">
 
-      <meta name="octo-policy" content="index">
-      {% if page.taxonomies -%}
-      {%- for taxonomy, terms in page.taxonomies -%}
-      {%- if taxonomy == "tags" -%}
-      {%- for tag in terms -%}
-      <link rel="octo:octothorpes" href="{{ tag }}">
-      {% endfor -%}
-      {%- endif -%}
-      {% endfor -%}
-      {%- endif -%}
+        <meta name="octo-policy" content="index">
+        {%- block octo_head -%}{%- endblock %}
+        {% if page.taxonomies -%}
+        {%- for taxonomy, terms in page.taxonomies -%}
+        {%- if taxonomy == "tags" -%}
+        {%- for tag in terms -%}
+        <link rel="octo:octothorpes" href="{{ tag }}">
+        {% endfor -%}
+        {%- endif -%}
+        {% endfor -%}
+        {%- endif %}
 
-      {%- block extra_head %}{% endblock %}
+        {%- block rss -%}
+        {%- if lang == "pt" %}
+        {%- set locale_all_content = "Todo o conteúdo" %}
+        {%- set locale_language_name = "Português" %}
+        {% else %}
+        {%- set locale_all_content = "All content" %}
+        {%- set locale_language_name = "English" %}
+        {%- endif %}
+        <link rel="alternate" type="application/rss+xml" title="{{ locale_all_content }} ({{ locale_language_name }})" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">
+        <link rel="alternate" type="application/rss+xml" title="Posts ({{ locale_language_name }})" href="{{ get_url(path="posts/atom.xml", lang=lang, trailing_slash=false) }}">
+        <link rel="alternate" type="application/rss+xml" title="{% if lang == "pt" %}Notas{% else %}Notes{% endif %} ({{ locale_language_name }})" href="{{ get_url(path="notes/atom.xml", lang=lang, trailing_slash=false) }}">
+        <link rel="alternate" type="application/rss+xml" title="Links" href="{{ get_url(path="links/atom.xml", trailing_slash=false) }}">
+        {%- endblock %}
 
-      {%- block rss -%}
-      {%- if lang == "pt" %}
-      {%- set locale_all_content = "Todo o conteúdo" %}
-      {%- set locale_language_name = "Português" %}
-      {% else %}
-      {%- set locale_all_content = "All content" %}
-      {%- set locale_language_name = "English" %}
-      {%- endif -%}
-      <link rel="alternate" type="application/rss+xml" title="{{ locale_all_content }} ({{ locale_language_name }})" href="{{ get_url(path="atom.xml", lang=lang, trailing_slash=false) }}">
-      <link rel="alternate" type="application/rss+xml" title="Posts ({{ locale_language_name }})" href="{{ get_url(path="posts/atom.xml", lang=lang, trailing_slash=false) }}">
-      <link rel="alternate" type="application/rss+xml" title="{% if lang == "pt" %}Notas{% else %}Notes{% endif %} ({{ locale_language_name }})" href="{{ get_url(path="notes/atom.xml", lang=lang, trailing_slash=false) }}">
-      <link rel="alternate" type="application/rss+xml" title="Links" href="{{ get_url(path="links/atom.xml", trailing_slash=false) }}">
-      {%- endblock %}
-
-      <script defer src="https://stats.jutty.dev/script.js" data-website-id="f402fd3a-d5db-4121-ac20-3ca2eaea338a"></script>
-      <noscript><img src="https://stats.jutty.dev/p/rYMIdIgEV"></noscript>
+        <script defer src="https://stats.jutty.dev/script.js" data-website-id="f402fd3a-d5db-4121-ac20-3ca2eaea338a"></script>
+        <noscript><img src="https://stats.jutty.dev/p/rYMIdIgEV"></noscript>
     </head>
 
     <body>
