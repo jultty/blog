@@ -244,7 +244,11 @@ main {
   text-decoration-thickness: 0.1px;
 }
 
-.post-date {
+div.post-date, div.content-date {
+    display: inline;
+}
+
+div.post-date {
     display: inline;
 }
 
@@ -438,6 +442,16 @@ footer {
 
   .link-box .link-date, .link-box div.content-tags {
       margin-left: 30px;
+  }
+
+  div.content-tags {
+      display: inline-block;
+      margin-left: 30px;
+  }
+
+  div.content-date {
+      display: inline-block;
+      margin-bottom: 10px;
   }
 
 }

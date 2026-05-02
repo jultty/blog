@@ -7,9 +7,11 @@
         <article class="blog-post">
           <h1 id="post-title">{{ page.title }}</h1>
           <div class="content-metadata">
-              <time class="post-date">
-                  {{- page.date | date(format="%Y-%m-%d %H:%M:%S") -}}
-              </time>
+              <div class="content-date">
+                  <time class="post-date">
+                      {{- page.date | date(format="%Y-%m-%d %H:%M:%S") -}}
+                  </time>
+              </div>
               {%- for taxonomy, terms in page.taxonomies -%}
               {%- if taxonomy == "tags" -%}
               <div class="content-tags"><span>tags:</span><ul>
