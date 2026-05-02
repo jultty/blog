@@ -69,11 +69,11 @@ body {
 }
 
 a.nav-tags-link {
-    color: light-dark(#0bb, #0fa);
+    color: light-dark(#0a9, #0fa);
     background: light-dark(#ccdfdf, #333);
     padding: 4px 6px;
     border-radius: 4px;
-    text-decoration-color: light-dark(#00923f, #0e6);
+    text-decoration-color: light-dark(#00803f, #0e6);
 }
 
 a.nav-tags-link:hover {
@@ -175,12 +175,6 @@ a.rss-link:hover {
 
 span.taxon-count {
     font-size: 12px;
-}
-
-.taxon-title  {
-    display: flex;
-    align-items: center;
-    width: 100%;
 }
 
 .taxon-title a.taxon-rss-link {
