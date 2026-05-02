@@ -1,6 +1,9 @@
 +++
 title = "[Meta] Aviso sobre os feeds RSS"
 date = 2024-09-01
+
+[taxonomies]
+tags = [ "meta" ]
 +++
 
 Para quem está assinando o feed RSS desse blog:

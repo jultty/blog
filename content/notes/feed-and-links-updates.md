@@ -1,6 +1,9 @@
 +++
 title = "[Meta] Feed & link updates"
 date = "2026-04-11T14:04:07-03:00"
+
+[taxonomies]
+tags = [ "meta" ]
 +++
 
 I've changed where the links RSS feed points its main URL to, linking directly to what I'm sharing instead of a page with nothing where you just click the actual link.
