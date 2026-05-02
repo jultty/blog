@@ -2,6 +2,9 @@
 title = "Scripts em OCaml"
 date = 2024-02-23
 aliases = ["posts/scripts-em-ocaml.html"]
+
+[taxonomies]
+tags = [ "ocaml" ]
 +++
 
 Este blog gera suas postagens com o Pandoc, mas quem faz o trabalho lógico de identificar os arquivos e montar os comandos é um pequeno script em OCaml.
@@ -11,7 +14,7 @@ Descobri essa linguagem quando comecei a investigar como poderia substituir o Ba
 O script se resume a:
 
 ```ocaml
-let pandoc_params = 
+let pandoc_params =
   "--css ../../assets/style.css -s --to html5 --metadata pagetitle='basename' "
 
 let vert md = begin

@@ -1,6 +1,9 @@
 +++
 title = "On self-hosting being a patch"
 date = 2024-11-23T15:00:00-03:00
+
+[taxonomies]
+tags = [ "self-hosting" ]
 +++
 
 Recently the blog post [Self-Hosting Isn't a Solution; It's A Patch](https://matduggan.com/self-hosting-isnt-a-solution-its-a-patch/) landed in my reading list via [Lobsters](https://lobste.rs/s/eisgx0/self_hosting_isn_t_solution_it_s_patch).
@@ -15,7 +18,7 @@ The second thought is that regulation and self-hosting are not opposed to each o
 
 The regulations in Europe during the past years have surprised in how strong they are in favoring interoperability and some decentralization. Also, more then a few stories about European tech funds putting money into open source projects have crossed the same channels that landed this article among my browser tabs.
 
-Neither of them is, alone, the solution, as you could also see regulation as a lubricant, a way of legitimizing the predatory practices of everyday capitalism by putting it into a nice, confined setting and stamping it with the seal of compliance, however you are able to ascertain it, while still allowing most of the damage to happen, be it a loophole, a cover-up or simply something that didn't happen to bother the regulators to begin with. 
+Neither of them is, alone, the solution, as you could also see regulation as a lubricant, a way of legitimizing the predatory practices of everyday capitalism by putting it into a nice, confined setting and stamping it with the seal of compliance, however you are able to ascertain it, while still allowing most of the damage to happen, be it a loophole, a cover-up or simply something that didn't happen to bother the regulators to begin with.
 
 In this sense, the act of building completely independent platforms, able to operate using their own software and infrastructure, comes from a whole different angle and a much more incisive one at that. It works not simply on the level of "how can we make these companies play nice" but of "how can we not depend on these companies to begin with". This is not solely a concern about reliability, as seen when the article notices how small and underfunded decentralized projects can simply vanish due to lack of funds or inability to stand up to legal threats, it is a concern about privacy and autonomy too.
 

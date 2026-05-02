@@ -2,6 +2,8 @@
   {%- set translation_count = page.translations | length %}
 {%- elif section %}
   {%- set translation_count = section.translations | length %}
+{%- else %}
+  {%- set translation_count = 0 %}
 {%- endif -%}
 <!DOCTYPE html>
 {%- if lang == "pt" %}
@@ -46,7 +48,20 @@
       <meta property="og:image" content="{{ get_url(path="assets/img/icons/kitty/kitty_circle_192.png") }}" />
       <meta name="fediverse:creator" content="@jutty@tilde.zone">
 
-      {% block rss -%}
+      <meta name="octo-policy" content="index">
+      {% if page.taxonomies -%}
+      {%- for taxonomy, terms in page.taxonomies -%}
+      {%- if taxonomy == "tags" -%}
+      {%- for tag in terms -%}
+      <link rel="octo:octothorpes" href="{{ tag }}">
+      {% endfor -%}
+      {%- endif -%}
+      {% endfor -%}
+      {%- endif -%}
+
+      {%- block extra_head %}{% endblock %}
+
+      {%- block rss -%}
       {%- if lang == "pt" %}
       {%- set locale_all_content = "Todo o conteúdo" %}
       {%- set locale_language_name = "Português" %}
@@ -59,7 +74,6 @@
       <link rel="alternate" type="application/rss+xml" title="{% if lang == "pt" %}Notas{% else %}Notes{% endif %} ({{ locale_language_name }})" href="{{ get_url(path="notes/atom.xml", lang=lang, trailing_slash=false) }}">
       <link rel="alternate" type="application/rss+xml" title="Links" href="{{ get_url(path="links/atom.xml", trailing_slash=false) }}">
       {%- endblock %}
-      {%- block extra_head %}{% endblock %}
 
       <script defer src="https://stats.jutty.dev/script.js" data-website-id="f402fd3a-d5db-4121-ac20-3ca2eaea338a"></script>
       <noscript><img src="https://stats.jutty.dev/p/rYMIdIgEV"></noscript>
@@ -86,8 +100,9 @@
               <li><a href="{{ get_url(path="posts", lang=lang) }}">Posts</a></li>
               <li><a href="{{ get_url(path="notes", lang=lang) }}">{% if lang == "pt" %}Notas{% else %}Notes{% endif %}</a></li>
               <li><a href="{{ get_url(path="links", lang=lang) }}">Links</a></li>
-              <li><a href="{{ get_url(path="feeds", lang=lang) }}">RSS</a></li>
-              <li><a href="https://tilde.zone/@jutty">Mastodon</a></li>
+              <li><a class="nav-tags-link" href="{{ get_url(path="tags", lang=lang) }}">Tags</a></li>
+              <li><a class="rss-link" href="{{ get_url(path="feeds", lang=lang) }}">RSS</a></li>
+              <li><a href="http://jutty.dev/#talk">Socials</a></li>
             </ul>
           </nav>
           {% if current_path and translation_count > 1 %}
@@ -110,7 +125,19 @@
         </main>
 
         <footer>
-          {%- block footer %}{% endblock -%}
+        {%- block footer %}
+            <hr/>
+            <p class="footer-text">
+              {%- if lang == "pt" %}feito por{% else %}made by{% endif %} <a href="https://jutty.dev">jutty</a>
+              {% if lang == "pt" %}com{% else %}with{% endif %} <a href="https://www.getzola.org/">Zola</a>
+              &bullet; <a href="https://codeberg.org/jutty/blog">{% if lang == "pt" %}código fonte{% else %}source code{% endif %}</a>
+              &bullet; <a href="https://jutty.dev/privacy">{% if lang == "pt" %}privacidade{% else %}privacy{% endif %}</a>
+              &bullet; <a href="{{ get_url(path="acknowledgments") }}">{% if lang == "pt" %}créditos{% else %}acknowledgments{% endif %}</a>
+              <br/>
+              {% if lang == "pt" %}gerado em{% else %}built{% endif %} <time>{{ now(utc=true) | date(format="%Y-%m-%d %H:%M") }} UTC</time>,
+              {{ now(timestamp=true) }}{% if lang == "pt" %}&#xba; segundo não-bissexto da Era Unix{% else %} non-leap seconds since the Unix Epoch{% endif %}
+            </p>
+        {% endblock footer -%}
         </footer>
       </div>
     </body>

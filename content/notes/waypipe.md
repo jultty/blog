@@ -1,6 +1,9 @@
 +++
 title = "Waypipe: graphical remote access for Wayland applications"
 date = 2025-05-28T19:29:14-03:00
+
+[taxonomies]
+tags = [ "linux", "FreeBSD", "wayland" ]
 +++
 
 Tried out [Waypipe](https://gitlab.freedesktop.org/mstoeckl/waypipe) today as a way to remotely control graphical Wayland applications between Alpine Linux and FreeBSD hosts and it's snappy on my wireless network + decade-old hardware combo!

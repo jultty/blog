@@ -1,6 +1,9 @@
 +++
 title = "Half an year on Alpine: just musl aside"
 date = 2025-08-31T20:05:26-03:00
+
+[taxonomies]
+tags = [ "linux", "alpine-linux" ]
 +++
 
 _**Warning**: Contains tongue-in-cheek language that might feel provocative if you have invested part of your identity into your software choices.[^1]_

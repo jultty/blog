@@ -2,6 +2,9 @@
 title = "Meeting the BSD family"
 date = 2024-05-20
 aliases = ["posts/meeting-the-bsd-family.html"]
+
+[taxonomies]
+tags = [ "bsd", "unix", "operating-systems" ]
 +++
 
 During this year I have been delving deeper and deeper in the BSD realm. Switching my home server to FreeBSD, trying NetBSD and OpenBSD on my backup machine, getting a cheap SSD to see how they'd all run on my main one, all beaming with the joy of tinkering and learning.
@@ -30,9 +33,9 @@ Now, to lay any zealousness aside and not make this a saccharine one-sided tale,
 
 This is certainly not something specific to BSD, but because it has such an engaged and savvy community, you definitely get to notice it sometimes. I'm talking about the tendency to identify with and then indiscriminately defend the software you use.
 
-One common meme you'll find is people complaining about lack of hardware support, especially wifi. In response, I've seen people stating with little nuance that any difficulty to getting your hardware to work on \<insert a BSD OS here> is to be explained by poor skills or lack of dedication in reading the documentation.
+One common meme you'll find is people complaining about lack of hardware support, especially wifi. In response, I've seen people stating with little nuance that any difficulty to getting your hardware to work on `<insert a BSD OS here>` is to be explained by poor skills or lack of dedication in reading the documentation.
 
-I see that as denial. When everyone around is just defending something to no end, no critiques allowed, it starts to feel... awkward, to say the least. 
+I see that as denial. When everyone around is just defending something to no end, no critiques allowed, it starts to feel... awkward, to say the least.
 
 Conversely, when I see people openly pointing out weaknesses in something I value and that I can tell they also care for, I feel relief and admiration for that person and that community at large. And thankfully I have also found a lot of this among the BSD folks.
 

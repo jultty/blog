@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{%- block content %}
+        <h1 class="title">{{ taxonomy.name }}</h1>
+        <ul class="taxon-list">
+          {%- for term in terms | sort(attribute="page_count") | reverse %}
+          <li>
+            <a href="{{ term.permalink -}}">
+                {{- term.name -}}
+            </a>
+            {%- if term.page_count > 0 -%}
+            <span class="taxon-count">
+                {{ term.page_count }} {% if term.page_count > 1 -%}{{ trans(key="page_plural", lang=lang) }}{% else %}{{ trans(key="page", lang=lang) }}{% endif -%}
+            </span>
+            {%- endif -%}
+            {%- if taxonomy.feed %}
+            <a class="rss-link" href="{{ get_taxonomy_url(kind=taxonomy.name, name=term.name, lang=lang) | regex_replace(pattern="/$", rep="") }}/atom.xml">RSS</a>
+            {%- endif -%}
+          </li>
+          {%- endfor %}
+        </ul>
+{%- endblock content %}

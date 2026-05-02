@@ -5,13 +5,29 @@ base_url = "https://blog.jutty.dev"
 default_language = "en"
 
 generate_feeds = true
-feed_filenames = ["rss.xml", "atom.xml"]
+feed_filenames = [ "atom.xml" ]
 
 taxonomies = [
-  { name = "tags", feed = true },
+  { name = "tags", feed = true, render = true },
 ]
 
+[markdown]
+smart_punctuation = true
+bottom_footnotes = true
+external_links_class = "out-link"
+insert_anchor_links = "right"
+
+[markdown.highlighting]
+theme = "night-owl"
+style = "class"
+
+[extra]
+title_separator = "-"
+
 [translations]
+page = "page"
+page_plural = "pages"
+
 [languages]
 
 [languages.pt]
@@ -20,13 +36,10 @@ feed_filenames = ["atom.xml"]
 title = "jutty.dev"
 description = "Vazamentos de uma memória nerd-computante"
 
-[markdown]
-smart_punctuation = true
-bottom_footnotes = true
+taxonomies = [
+  { name = "tags", feed = true, render = true },
+]
 
-[markdown.highlighting]
-theme = "night-owl"
-style = "class"
-
-[extra]
-title_separator = "-"
+[languages.pt.translations]
+page = "página"
+page_plural = "páginas"

@@ -4,10 +4,11 @@ A responsive, bilingual, RSS-ready and system-themed blog with zero lines of Jav
 
 ## Next
 - [ ] Make visited links purple
-- [ ] [Add tags](https://docs.octothorp.es/)
-- [ ] Implement webmentions ([ref. 1](https://github.com/PlaidWeb/Pushl), [ref. 2](https://www.owenyoung.com/en/blog/indieweb/))
+- [ ] Deploy webmentions ([ref. 1](https://github.com/PlaidWeb/Pushl), [ref. 2](https://www.owenyoung.com/en/blog/indieweb/))
+- [ ] Replace all translation conditionals with `trans` calls
 
 ## Done
+- [x] [Add tags](https://docs.octothorp.es/)
 - [x] Add footers to more pages
 - [x] Add links RSS feed to header metadata
 - [x] Columnar widescreen articles

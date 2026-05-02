@@ -2,13 +2,16 @@
 title = "Void on ZFS"
 date = 2024-06-09
 aliases = ["posts/void-on-zfs.html"]
+
+[taxonomies]
+tags = [ "void-linux", "zfs" ]
 +++
 
 ![An L-shaped desk with two laptops, an external monitor, a router and a third headless computer in a tower case with several power cables connected to a power strip on top of it. Next to the power strip are two cellphones, a long red box, and a charging case for Bluetooth headphones with a red LED on. The tower case has three stickers on it: one with the machine specifications, one the FreeBSD logo, and one reading "platform feodalism (sic) is so 1492". Scattered around the machines are some office supplies, medicine containers, a screwdriver, a notepad, a small notebook, an NVMe SSD card on top of its packaging, a mug, a water bottle and a scarf. Hanging on the wall are a small painting of a dead tree before the twilight, prayer beads, a sunflower-pattern keychain and a calendar. Between the desk and the camera, a green plastic chair has a pillow and blanket on top of it. A few wires and cardboard boxes are visible under the desk.](/assets/img/posts/void-on-zfs/desk.jpg)
 
 June is here. It brings the usual cold weather and some extra rhinitis complications. With that I find myself in a recovery mood Sunday, wrapped in a blanket with a mug of tea, a screwdriver, some notes on paper, a flash drive, a couple of NVMe cards and the trio of Unix-powered machines that will help me get this done.
 
-The mission is to get a root-on-ZFS EFI installation of Void Linux with ZFSBootMenu on a Dell Latitude 7480. 
+The mission is to get a root-on-ZFS EFI installation of Void Linux with ZFSBootMenu on a Dell Latitude 7480.
 
 To my left, a ceiling-collapse-survivor Sony VAIO is running NetBSD with spectrwm. It's split with sakura and tmux on a terminal to one side, where Neovim is storing these words, and Firefox on the other, ready to fetch all the docs. In the middle, the object of today's operation. And to my right, a headless PC board runs FreeBSD with ZFS, holding all the backups needed for the post-install tasks.
 
@@ -46,7 +49,7 @@ For example, `xpbps-query --cat /etc/zfsbootmenu/config.yaml zfsbootmenu` will s
 
 My first contact with ZFS was when using FreeBSD, which provides it as an option in its installer, making it a bit too easy not to try. Having a server on ZFS means all the data it holds can be safeguarded and transferred in robust ways, and mistakes are also easier to recover from.
 
-Aside from all the data integrity features and flexibility it brings, the features that interest me the most are the ones for managing snapshots. 
+Aside from all the data integrity features and flexibility it brings, the features that interest me the most are the ones for managing snapshots.
 
 ZFS snapshots allow you to store the filesystem state at a given point in time, and to compare against, access the content of, and fully revert to this state. After the guide has been followed throughout, an extra section at the end of this post has some snapshot basics.
 
@@ -54,7 +57,7 @@ ZFS snapshots allow you to store the filesystem state at a given point in time, 
 
 So, first things first, open the machine up and swap the NVMe cards. For me, that means getting my 128 GB NVMe stick, which I use basically for tests, and replace it with the 256 GB one which currently has Debian on it. Yes, I get by just fine with that much.
 
-While a bit dusty, the machine was overall in good state. The release date for the model is 2017, which for my computing standards is very recent. 
+While a bit dusty, the machine was overall in good state. The release date for the model is 2017, which for my computing standards is very recent.
 
 It has a single NVMe slot, one 16 GB RAM stick and one unused RAM slot. If you look closely, you can notice a dent on the vent tube connecting the cooler to the CPU. Despite this, it very rarely heats up.
 
@@ -151,7 +154,7 @@ zgenhostid -f 0x00bab10c
 
 If they must be unique, that seems odd.
 
-The value `0x00bab10c` actually has significance in the context of OpenZFS as an identifier (and leetspeak) for its uberblock. However, it apparently is totally unrelated to host IDs. 
+The value `0x00bab10c` actually has significance in the context of OpenZFS as an identifier (and leetspeak) for its uberblock. However, it apparently is totally unrelated to host IDs.
 
 Should you be curious still, you can refer to [this GitHub discussion](https://github.com/zbm-dev/zfsbootmenu/discussions/465) where a ZFSBootMenu user brought this exact question to the developers.
 
@@ -285,7 +288,7 @@ Option `-t` is for setting the typecode for each partition. Typecode `ef00` is f
 
 For a list of typecodes, see `sgdisk -L`.
 
-While just running these commands as-is is your safest option, you might have a different layout in mind or prefer an interactive UI. 
+While just running these commands as-is is your safest option, you might have a different layout in mind or prefer an interactive UI.
 
 For one thing, I've had issues in the past with the boot partition being too small, so I'll be using `2g` instead of `512m` for it.
 
@@ -309,7 +312,7 @@ Here's the `zpool(8)` man page:
 
 > A storage pool is a collection of devices that provides physical storage and data replication for ZFS datasets. All datasets within a storage pool share the same space.
 
-The definition of a dataset is then indicated to be at `zfs(8)`: 
+The definition of a dataset is then indicated to be at `zfs(8)`:
 
 > A dataset is identified by a unique path within the ZFS namespace: <br/>
 > `pool[/component]/component` for example: `rpool/var/log`
@@ -324,7 +327,7 @@ We'll be exploring only the `zpool-create(8)` command in depth, in particular th
 
 - `-f` force the use of virtual devices, even if they appear in use
 - `-o feature=value` set a pool feature
-- `-O property=value` set a file system property in the root file system of the pool 
+- `-O property=value` set a file system property in the root file system of the pool
 - `-o compatibility=off|legacy|file[,file]` specify a compatibility feature set
 - `-m mountpoint` the mountpoint (default: `/pool`)
 - `pool` the pool
@@ -477,7 +480,7 @@ To reconfigure **all** packages, just run `xbps-reconfigure -fa`. If you'd rathe
 
 #### root password
 
-As early as possible is a good time to run `passwd` and set the root password. 
+As early as possible is a good time to run `passwd` and set the root password.
 
 #### `rc.conf`
 `runit` reads the `/etc/rc.conf` file during startup to configure the system, setting up things like the keymap, hardware clock and terminal font.
@@ -597,7 +600,7 @@ We are all done. It's time to exit the chroot, unmount and export the pool.
 exit
 umount -n -R /mnt
 zpool export zroot
-``` 
+```
 
 If all above went well, we can now run `reboot`, remove the flash drive used for installation, and log in for the first time into our new system.
 

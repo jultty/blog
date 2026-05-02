@@ -1,3 +1,8 @@
+:root {
+    color-scheme: light dark;
+    --base-font-size: 1em;
+}
+
 @font-face {
   font-family: 'Mononoki';
   src: url('../fonts/Mononoki.ttf'), format('truetype');
@@ -63,6 +68,20 @@ body {
   margin-right: 20px;
 }
 
+a.nav-tags-link {
+    color: light-dark(#0bb, #0fa);
+    background: light-dark(#ccdfdf, #333);
+    padding: 4px 6px;
+    border-radius: 4px;
+    text-decoration-color: light-dark(#00923f, #0e6);
+}
+
+a.nav-tags-link:hover {
+    color: light-dark(#0aa, #0ff);
+    background: light-dark(#ddd, #002);
+    text-decoration-color: none;
+}
+
 #language-selector {
   justify-self: end;
   grid-area: lang;
@@ -96,6 +115,91 @@ ul {
   margin-top: 5px;
   margin-left: 0px;
   list-style: none;
+}
+
+div.contet-metadata {
+    display: inline;
+}
+
+div.content-tags {
+    display: inline;
+    font-size: 14px;
+    border: dashed;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #666;
+    padding: 4px 10px;
+    margin-left: 15px;
+}
+
+.link-page-metadata div.content-tags {
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.content-tags span {
+    color: light-dark(#063, #6db);
+}
+
+.content-tags ul {
+    display: inline;
+    padding-left: 0;
+}
+
+.content-tags li::before {
+  content: "";
+}
+
+.content-tags li {
+    display: inline;
+}
+
+
+a.rss-link {
+    color: light-dark(#eb5e00ff, #f60);
+    background: light-dark(#ddd, #333);
+    padding: 4px 6px;
+    border-radius: 4px;
+    text-decoration-color: #f40;
+}
+
+a.rss-link:hover {
+    color: light-dark(#333, #000);
+    background: light-dark(#ffa666ff, #8f3700);
+    text-decoration: none;
+}
+
+.taxon-list .rss-link {
+    font-size: 12px;
+}
+
+span.taxon-count {
+    font-size: 12px;
+}
+
+.taxon-title  {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.taxon-title a.taxon-rss-link {
+    margin-left: 10px;
+}
+
+.taxon-page-kind-label {
+    color: light-dark(#222, #999);
+    background: light-dark(#ccc, #333);
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+a.zola-anchor {
+    color: #555;
+    font-style: italic;
+    text-decoration: none;
 }
 
 details {
@@ -146,12 +250,20 @@ main {
   text-decoration-thickness: 0.1px;
 }
 
+.post-date {
+    display: inline;
+}
+
 .link-data {
     margin-top: 0
 }
 
 .link-data .link-author {
     margin-right: 20px;
+}
+
+.content-metadata .link-author {
+    margin-left: 30px;
 }
 
 article .post-date {
@@ -323,6 +435,15 @@ footer {
   .index-posts ul#posts {
     margin-top: 0px;
     padding-top: 0px;
+  }
+
+  .link-box .link-date, .link-box .link-author {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .link-box .link-date, .link-box div.content-tags {
+      margin-left: 30px;
   }
 
 }

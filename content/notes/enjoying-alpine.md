@@ -1,6 +1,9 @@
 +++
 title = "Enjoying Alpine as a daily driver"
 date = 2025-02-23T22:07:09-03:00
+
+[taxonomies]
+tags = [ "linux", "alpine-linux" ]
 +++
 
 I am happy to report that my Alpine root-on-ZFS experiment is -- apparently -- a success. I've been running it as my only OS on my laptop for the past week.

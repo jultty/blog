@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+{% endblock extra_head %}
+
+{%- block content %}
+    <h1 class="title taxon-title">{{ taxonomy.name }}: {{ term.name }}
+    {%- if taxonomy.feed %}
+    <a class="taxon-rss-link" href="{{ get_taxonomy_url(kind=taxonomy.name, name=term.name, lang=lang) | regex_replace(pattern="/$", rep="") }}/atom.xml">RSS</a>
+    </h1>
+    {%- endif -%}
+        <ul>
+          {%- for page in term.pages -%}
+          {%- set kind = page.components[0] -%}
+          <li>
+              {%- if kind == "posts" -%}
+              <a class="taxon-page-kind-label" href="/{{ kind }}">Post</a>
+              {%- elif kind == "notes" -%}
+              <a class="taxon-page-kind-label" href="/{{ kind }}">Note</a>
+              {%- elif kind == "links" -%}
+              <a class="taxon-page-kind-label" href="/{{ kind }}">Link</a>
+              {%- endif %}
+            <a href="{{ page.permalink -}}">{{ page.title }}</a>
+          </li>
+          {%- endfor %}
+        </ul>
+{%- endblock content %}
