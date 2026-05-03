@@ -7,6 +7,7 @@ cache=indexed.cache
 request_pause=7 # 1 second above rate limit of 10/minute
 
 touch "$cache"
+zola -r .. build
 feed=$(cat ../public/atom.xml)
 
 filter() {
