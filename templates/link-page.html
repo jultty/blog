@@ -5,9 +5,9 @@
     <h1 class="link-title">
         <a href="{{ page.extra.url }}" rel="octo:bookmarks">{{ page.title }}</a>
     </h1>
-    <div class="content-metadata link-page-metadata">
+    <div class="content-metadata">
         <span class="link-author">{% if lang == "pt" %}Por{% else %}By{% endif %} {{ page.authors | join(sep=", ") }}</span>
-        <time class="link-date"><strong>{% if lang == "pt" %}Linkado{% else %}Linked{% endif %} {{ page.date | date(format="%Y-%m-%d %H:%M:%S") }}</strong></time>
+        <time class="content-date"><strong>{% if lang == "pt" %}Linkado{% else %}Linked{% endif %} {{ page.date | date(format="%Y-%m-%d %H:%M:%S") }}</strong></time>
         {%- for taxonomy, terms in page.taxonomies -%}
         {%- if taxonomy == "tags" -%}
         <div class="content-tags"><span>tags:</span><ul>
@@ -20,7 +20,8 @@
         {%- endif -%}
         {% endfor -%}
     </div>
+</div>
 
-        {%- if page.extra.comment %}<p>{{ page.extra.comment }}</p>{% endif %}
-        {{- page.content | safe }}
+{%- if page.extra.comment %}<p>{{ page.extra.comment }}</p>{% endif %}
+{{- page.content | safe }}
 {%- endblock content %}

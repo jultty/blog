@@ -4,11 +4,11 @@
 {%- endblock -%}
 
 {% block content %}
-        <article class="blog-post">
-          <h1 id="post-title">{{ page.title }}</h1>
+        <article>
+          <h1>{{ page.title }}</h1>
           <div class="content-metadata">
               <div class="content-date">
-                  <time class="post-date">
+                  <time class="content-date">
                       {{- page.date | date(format="%Y-%m-%d %H:%M:%S") -}}
                   </time>
               </div>

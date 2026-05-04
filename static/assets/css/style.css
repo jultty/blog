@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'Mononoki';
-  src: url('../fonts/Mononoki.ttf'), format('truetype');
+  src: url('../fonts/Mononoki.ttf') format('truetype');
 }
 
 html {
@@ -79,7 +79,7 @@ a.nav-tags-link {
 a.nav-tags-link:hover {
     color: light-dark(#0aa, #0ff);
     background: light-dark(#ddd, #002);
-    text-decoration-color: none;
+    text-decoration: none;
 }
 
 #language-selector {
@@ -117,7 +117,7 @@ ul {
   list-style: none;
 }
 
-div.contet-metadata {
+div.content-metadata {
     display: inline;
 }
 
@@ -130,11 +130,6 @@ div.content-tags {
     border-color: #666;
     padding: 4px 10px;
     margin-left: 15px;
-}
-
-.link-page-metadata div.content-tags {
-    margin-left: 10px;
-    margin-top: 0px;
 }
 
 .content-tags span {
@@ -231,41 +226,31 @@ main {
     border: 2px dotted #888;
     border-radius: 12px;
     margin: 0 20px;
+    padding: 20px 5px;
 }
 
 .link-title {
+    margin-top: 0;
     margin-bottom: 5px;
 }
 
-.post-date, .link-date {
+.content-date {
   color: #777;
   font-size: 14px;
   margin-top: 0px;
   text-decoration-thickness: 0.1px;
 }
 
-div.post-date, div.content-date {
+div.content-date {
     display: inline;
-}
-
-div.post-date {
-    display: inline;
-}
-
-.link-data {
-    margin-top: 0
-}
-
-.link-data .link-author {
-    margin-right: 20px;
 }
 
 .content-metadata .link-author {
     margin-left: 30px;
 }
 
-article .post-date {
-  margin-left: 30px;
+article .content-date {
+  margin-left: 15px;
 }
 
 p {
@@ -273,7 +258,7 @@ p {
   line-height: 1.7em;
 }
 
-.article p {
+article p {
   margin: 25px 0px;
 }
 
@@ -389,7 +374,7 @@ footer {
 
 /* narrow */
 @media (max-width: 650px) {
-  .article {
+  article {
     margin: 0 20px;
   }
 
@@ -413,8 +398,8 @@ footer {
     margin-left: 20px;
   }
 
-  .post-date { display: block; }
-  .link-date { display: block; }
+  .content-date { display: block; }
+  .content-date { display: block; }
   .link-author { display: block; }
 
   ul#posts li:before, ul#links li:before {
@@ -435,12 +420,12 @@ footer {
     padding-top: 0px;
   }
 
-  .link-box .link-date, .link-box .link-author {
+  .link-box .content-date, .link-box .link-author {
       display: block;
       margin-bottom: 10px;
   }
 
-  .link-box .link-date, .link-box div.content-tags {
+  .link-box .content-date, .link-box div.content-tags {
       margin-left: 30px;
   }
 
@@ -482,7 +467,7 @@ footer {
   margin-left: 50px;
   }
 
-  .article {
+  article {
     margin: 0 45px;
   }
 }
@@ -592,7 +577,7 @@ footer {
     color: #bbb;
   }
 
-  .post-date {
+  .content-date {
     color: #888;
   }
 

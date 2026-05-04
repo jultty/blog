@@ -1,0 +1,31 @@
+:prefixed {
+    Level: error;
+    diagnostic: "Avoid prefixed properties";
+}
+
+style-value[name="color"]:not(:computed) {
+    level: error;
+    diagnostic: "Avoid color literals";
+}
+
+declaration:important {
+    level: error;
+    diagnostic: "Avoid !important";
+}
+
+declaration:unknown {
+    level: error;
+    diagnostic: "Unknown property";
+}
+
+declaration:empty {
+    level: error;
+    diagnostic: "Empty ruleset";
+}
+
+@stat --total-size { type: bytes; }
+:root { collect: --total-size; }
+
+/*
+    vi: ft=css
+*/
