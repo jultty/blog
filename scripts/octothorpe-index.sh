@@ -4,7 +4,7 @@ set -eu
 
 url_root=https://blog.jutty.dev
 git_root=$(git rev-parse --show-toplevel)
-cache=$git_root/scripts/octo-index.cache
+cache=${OCTO_CACHE:-"$git_root/scripts/octo-index.cache"}
 request_pause=7 # 1 second above rate limit of 10/minute
 
 touch "$cache"
