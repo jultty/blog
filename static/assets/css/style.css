@@ -81,8 +81,8 @@ a.nav-tags-link {
 }
 
 a.nav-tags-link:hover {
-    color: light-dark(#0aa, #0ff);
-    background: light-dark(#ddd, #002);
+    color: light-dark(#077, #0ff);
+    background: light-dark(#bdd, #002);
     text-decoration: none;
 }
 
@@ -190,8 +190,8 @@ span.taxon-count {
 }
 
 .taxon-kind:hover {
-    color: #0ff;
-    background: light-dark(#ddd, #022);
+    color: light-dark(#4ff, #0ff);
+    background: light-dark(#088, #022);
 }
 
 .tag-label {
