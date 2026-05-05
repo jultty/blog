@@ -2,7 +2,7 @@
 
 set -eu
 
-git_root=$(git rev-parse --show-toplevel)
+git_root=$(cd "$(dirname "$0")"; git rev-parse --show-toplevel)
 
 zola --root "$git_root" check --skip-external-links
 zola --root "$git_root" build

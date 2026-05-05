@@ -3,7 +3,7 @@
 exclusions='^(index-user-controls|subpage-user-controls|title|taxon-title)$'
 
 set -eu
-git_root=$(git rev-parse --show-toplevel)
+git_root=$(cd "$(dirname "$0")"; git rev-parse --show-toplevel)
 style="$git_root/static/assets/css/style.css"
 
 diff_classes() {
