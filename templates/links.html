@@ -7,17 +7,21 @@
           {%- for page in english_section.pages %}
           <li>
           {%- if page.content -%}
-          {%- set portuguese_page = get_page(path="links/" ~ page.slug ~ ".pt.md") %}
-            <time class="content-date"><a href="
-            {%- if lang == "pt" -%}
-              {{ portuguese_page.permalink -}}
-            {%- else -%}
-              {{ page.permalink -}}
-            {%- endif -%}
-            ">{{ page.date | date(format="%Y-%m-%d") -}}</a></time>
-          {%- else %}
+          {%- set portuguese_page = get_page(path="links/" ~ page.slug ~ ".pt.md") -%}
+              <time class="content-date"><a href="
+              {%- if lang == "pt" -%}
+                {{- portuguese_page.permalink -}}
+              {%- else -%}
+                {{- page.permalink -}}
+              {%- endif -%}
+              ">{{- page.date | date(format="%Y-%m-%d") -}}</a></time>
+          {%- else -%}
             <time class="content-date">{{ page.date | date(format="%Y-%m-%d") }}</time>
           {%- endif %}
+            {%- set tags = page.taxonomies["tags"] | default(value=[]) -%}
+            {%- if tags is containing("meta") %}
+            <span class="tag-label">Meta</span>
+            {% endif %}
             <a href="{{ page.extra.url | safe }}">{{ page.title }}</a>
             <small class="link-author">by {{ page.authors | join(sep=", ") }}</small>
           </li>

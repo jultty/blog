@@ -1,5 +1,5 @@
 +++
-title = "[Meta] Notice on RSS feeds"
+title = "Notice on RSS feeds"
 date = 2024-09-01
 
 [taxonomies]

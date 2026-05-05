@@ -8,6 +8,10 @@
   src: url('../fonts/Mononoki.ttf') format('truetype');
 }
 
+* {
+    transition: 1s;
+}
+
 html {
   font-family: 'Mononoki', monospace;
   height: 100%;
@@ -172,11 +176,25 @@ span.taxon-count {
     font-size: 12px;
 }
 
-.taxon-title a.taxon-rss-link {
-    margin-left: 10px;
+.taxon-title .rss-link {
+    font-size: 15px;
 }
 
-.taxon-page-kind-label {
+.taxon-kind {
+    color: light-dark(#222, #999);
+    background: light-dark(#ccc, #333);
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.taxon-kind:hover {
+    color: #0ff;
+    background: light-dark(#ddd, #022);
+}
+
+.tag-label {
     color: light-dark(#222, #999);
     background: light-dark(#ccc, #333);
     padding: 4px 6px;
@@ -230,14 +248,13 @@ main {
 }
 
 .link-title {
-    margin-top: 0;
-    margin-bottom: 5px;
+    margin: 0 10px 15px 30px;
 }
 
 .content-date {
   color: #777;
   font-size: 14px;
-  margin-top: 0px;
+  margin: 0;
   text-decoration-thickness: 0.1px;
 }
 
@@ -247,10 +264,6 @@ div.content-date {
 
 .content-metadata .link-author {
     margin-left: 30px;
-}
-
-article .content-date {
-  margin-left: 15px;
 }
 
 p {
@@ -271,7 +284,6 @@ a {
 a:hover {
   color: #007F80;
   text-decoration: underline dotted #39959A;
-  transition: 1500ms;
 }
 
 ol {
@@ -293,11 +305,11 @@ h1 {
   font-size: 25px;
   font-weight: bold;
   color: #444;
-  margin: 40px 0px 30px 30px;
+  margin: 40px 0px 30px 50px;
 }
 
 article h1 {
-  margin: 40px 0px 10px 30px;
+  margin: 10px 0;
 }
 
 h2, h3, h4 {
@@ -318,23 +330,24 @@ p code {
   background-color: #ccc;
   padding: 5px 6.5px;
   margin-right: 2px;
-  border-radius: 6px;
+  border-radius: 5px;
   font-size: 14px;
 }
 
 li code {
   background-color: #ccc;
   padding: 5px 8px;
-  border-radius: 6px;
+  border-radius: 5px;
   font-size: 14px;
 }
 
 main pre {
-  margin: 30px;
+  margin: 30px 0;
   border-color: #fff;
   padding: 20px;
   font-size: 16px;
   overflow: auto;
+  border-radius: 5px;
 }
 
 blockquote {
@@ -343,7 +356,7 @@ blockquote {
   padding: 10px 10px;
   margin: 10px 20px;
   font-style: italic;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 blockquote p code {
@@ -420,23 +433,30 @@ footer {
     padding-top: 0px;
   }
 
-  .link-box .content-date, .link-box .link-author {
-      display: block;
-      margin-bottom: 10px;
-  }
-
-  .link-box .content-date, .link-box div.content-tags {
-      margin-left: 30px;
-  }
-
-  div.content-tags {
-      display: inline-block;
-      margin-left: 30px;
+  h1.title {
+      margin-left: 20px;
+      margin-bottom: 20px;
   }
 
   div.content-date {
       display: inline-block;
       margin-bottom: 10px;
+  }
+
+  div.content-tags {
+      margin-left: 0;
+  }
+
+  .link-box h1,
+  .link-box div.content-metadata {
+      margin: 10px;
+      display: block;
+  }
+
+  .link-box span.link-author,
+  .link-box time.content-date,
+  .link-box div.content-tags {
+      margin: 10px 0;
   }
 
 }

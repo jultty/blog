@@ -3,11 +3,16 @@
 {% block content %}
         <h1 class="title">{{ section.title }}</h1>
         <ul id="posts">
-          {%- for page in section.pages %}
-          <li>
-            <time class="content-date">{{ page.date | date(format="%Y-%m-%d") }}</time>
-            <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+          {%- for page in section.pages -%}
+          <li><time class="content-date">
+              {{- page.date | date(format="%Y-%m-%d") -}}
+              </time>
+              {%- set tags = page.taxonomies["tags"] | default(value=[]) -%}
+              {%- if tags is containing("meta") %}
+              <span class="tag-label">Meta</span>
+              {% endif %}
+              <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
           </li>
-          {%- endfor %}
+          {%- endfor -%}
         </ul>
 {%- endblock content %}

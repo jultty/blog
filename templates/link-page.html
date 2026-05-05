@@ -7,7 +7,7 @@
     </h1>
     <div class="content-metadata">
         <span class="link-author">{% if lang == "pt" %}Por{% else %}By{% endif %} {{ page.authors | join(sep=", ") }}</span>
-        <time class="content-date"><strong>{% if lang == "pt" %}Linkado{% else %}Linked{% endif %} {{ page.date | date(format="%Y-%m-%d %H:%M:%S") }}</strong></time>
+        <time class="content-date">{% if lang == "pt" %}Linkado{% else %}Linked{% endif %} {{ page.date | date(format="%Y-%m-%d %H:%M:%S") }}</time>
         {%- for taxonomy, terms in page.taxonomies -%}
         {%- if taxonomy == "tags" -%}
         <div class="content-tags"><span>tags:</span><ul>

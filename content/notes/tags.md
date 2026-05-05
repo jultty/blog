@@ -1,5 +1,5 @@
 +++
-title = "[Meta] Tags, RSS explosion and Octothorpe Protocol"
+title = "Tags, RSS explosion and Octothorpe Protocol"
 date = "2026-05-02T17:53:18-03:00"
 
 [taxonomies]

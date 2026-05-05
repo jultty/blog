@@ -1,5 +1,5 @@
 +++
-title = "[Meta] Feed & link updates"
+title = "Feed & link updates"
 date = "2026-04-11T14:04:07-03:00"
 
 [taxonomies]
