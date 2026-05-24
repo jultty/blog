@@ -14,7 +14,11 @@ In composing this list, I was looking for a player with:
 - MPRIs
 - Scrobbling to both ListenBrainz and Libre.fm would be nice to have
 
-## Best GUI players
+## Best TUI
+
+[cmus](https://cmus.github.io/) is perhaps the player I've used the most. Shoutout to [musikcube](https://github.com/clangen/musikcube), which looks better, is simpler to navigate, has nice search and filter capabilities that cmus lacks, but that has a single dealbreaker for me: the lack of a hotkey to append the selected track into the queue.
+
+## Best GUI
 
 [fooyin](https://github.com/fooyin/fooyin) and [Quod Libet](https://quodlibet.readthedocs.io/).
 
@@ -22,17 +26,9 @@ fooyin is (clearly) heavily inspired by [foobar2000](https://www.foobar2000.org/
 
 Quod Libet is also very feature-packed. The tray icon did not show up on my system though.
 
-## Best TUI clients
-
-[cmus](https://cmus.github.io/) is perhaps the player I've used the most. Shoutout to [musikcube](https://github.com/clangen/musikcube), which looks better, is simpler to navigate, has nice search and filter capabilities that cmus lacks, but that has a single dealbreaker for me: the lack of a hotkey to append the selected track into the queue.
-
 ## MPD clients
 
 [MPD](https://www.musicpd.org/) (Music Player Daemon) is the queen of music players and has a plethora of available clients: GUI, CLI, TUI, even specialty things like [bgm-mpd](https://git.sr.ht/~nytpu/bgm-mpd), a player that places random breaks between songs to emulate the experience of game soundtracks. Because MPD frees the client developers from having to implement a backend, they can focus on creating excellent frontends, and this yielded a diversity of options.
-
-### GUI
-
-This one was harder than I expected. On the outset, I found players that _look_ very complete, such as [Euphonica](https://github.com/htkhiem/euphonica). It could be my machine and its quirks, but I couldn't get it to find MPD. So I guess I did _not_ find a maximalist GUI MPD client? At least nothing to the level of the other picks in this list.
 
 ### TUI
 
@@ -41,6 +37,12 @@ I usually will say that I like TUI things because they favor a state of flow bet
 But, to be fair, a music player is something you use to make your selection, and then it gets out of your way and can go on for hours and hours. So it's not exactly a huge attention hog, particularly because nearly all of them come with keyboard shortcuts and MPRIS integration.
 
 Nonetheless, there are plenty of TUI MPD clients, and the most frutiful lineage seems to have descended from MPD's own [ncmpc](https://www.musicpd.org/clients/ncmpc/), which inspired the venerable [ncmpcpp](https://rybczak.net/ncmpcpp/), which leads us to... ~ncmpcpprs~ [rmpc](https://rmpc.mierak.dev/overview/), which is a full-blown terminal junkie TUI for MPD.
+
+For a simpler option, you could try any of its ancestors and there's also [pms](https://github.com/kimtore/pms). You'll find many others, but actively developed ones are much fewer. If you have more recommendations on this category, do let me know!
+
+### GUI
+
+This one was harder than I expected. On the outset, I found players that _look_ very complete, such as [Euphonica](https://github.com/htkhiem/euphonica). It could be my machine and its quirks, but I couldn't get it to find MPD. So I guess I did _not_ find a maximalist GUI MPD client? At least nothing to the level of the other picks in this list.
 
 ### Honorable mention
 
