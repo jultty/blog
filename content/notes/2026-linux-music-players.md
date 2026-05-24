@@ -48,6 +48,6 @@ An honorable mention is in order for [Ymuse](https://yktoo.com/en/software/ymuse
 
 ## See also
 
-- MPD's [own list of clients](https://www.musicpd.org/clients/).
-- [Turntable](https://codeberg.org/GeopJr/Turntable), GUI + CLI for scrobbling from MPD to Last.fm, ListenBrainz, Libre.fm and Maloja
-- [mpd-mpris](https://github.com/natsukagami/mpd-mpris) and [mpDris2](https://github.com/eonpatapon/mpDris2), lets your MPD talk to everything
+- MPD's [own list of clients](https://www.musicpd.org/clients/)
+- [mpris-scrobbler](https://man.sr.ht/~mariusor/mpris-tools/mpris-scrobbler/), [Multi-Scrobbler](https://docs.multi-scrobbler.app/): scrobbling from MPD to Libre.fm, ListenBrainz, Last.fm, ...
+- [mpd-mpris](https://github.com/natsukagami/mpd-mpris) and [mpDris2](https://github.com/eonpatapon/mpDris2): lets your MPD talk to everything
