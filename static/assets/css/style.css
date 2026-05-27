@@ -353,9 +353,8 @@ main pre {
 blockquote {
   color: #333;
   background-color: #ddd;
-  padding: 10px 10px;
+  padding: 10px 40px;
   margin: 10px 20px;
-  font-style: italic;
   border-radius: 10px;
 }
 
@@ -459,6 +458,15 @@ footer {
       margin: 10px 0;
   }
 
+  blockquote {
+      padding: 0px 15px;
+      margin: 10px 0;
+     border-radius: 10px;
+  }
+
+  blockquote p {
+      padding: 10px 0;
+  }
 }
 
 /* tablet */
@@ -589,8 +597,8 @@ footer {
   }
 
   blockquote {
-    color: #888;
-    background-color: #1b1b1b;
+    color: #aaa;
+    background-color: #181818;
   }
 
   blockquote p code {
