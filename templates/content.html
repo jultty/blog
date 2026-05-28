@@ -9,7 +9,7 @@
           <div class="content-metadata">
               <div class="content-date">
                   <time class="content-date">
-                      {{- page.date | date(format="%Y-%m-%d %H:%M:%S") -}}
+                      {{- page.date | date(timezone="UTC", format="%Y-%m-%d %H:%M:%S") }} UTC
                   </time>
               </div>
               {%- for taxonomy, terms in page.taxonomies -%}
