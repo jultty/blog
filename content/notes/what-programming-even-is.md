@@ -16,7 +16,7 @@ I've personally always preferred the term _programmer_, which I suppose the Link
 
 But what if even programming had never been _just_ design and implementation of computer programs?
 
-Naur strikes at the heart of it:
+Naur strikes at the core of it:
 
 > programming properly should be regarded as an activity by which the programmers form or achieve a certain kind of insight, a theory, of the matters at hand. This suggestion is in contrast to what appears to be a more common notion, that programming should be regarded as a production of a program and certain other texts.
 
@@ -32,7 +32,7 @@ After a section on change, in which there is also the interesting remark that ch
 
 > The death of a program happens when the programmer team possessing its theory is dissolved.
 
-In this same section, he goes into how to properly do some programming necromancy, cautioning that trying to revive a program without contact with its authors and its original theory can end up reviving it with a different theory. What a missed opportunity to call it the program's _soul_, but alas, a serious computer scientist he was.
+In this same section, he goes into how to properly do some programming necromancy, cautioning that trying to revive a program without contact with its authors and its original theory can end up reviving it with a different theory. What a missed opportunity to call it the program's _spirit_, but alas, a serious computer scientist he was.
 
 Naur's piece is philosophical, always making stops to ask what something _is_. If you are interested, it is [available in full here](https://gwern.net/doc/cs/algorithm/1985-naur.pdf). It's featured in his 1992 book, _Computing: A Human Activity_. I'll leave you with one last quote, from his closing remarks, in which Naur pushes back on the notion that humans work better when they have their intellects confined:
 
